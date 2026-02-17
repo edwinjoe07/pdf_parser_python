@@ -1,0 +1,7293 @@
+[
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_1_1.jpeg",
+    "page_number": 1,
+    "bbox": [
+      1.01409912109375,
+      0.016845703125,
+      594.2540893554688,
+      841.8900146484375
+    ],
+    "order_index": 0,
+    "font_info": null
+  },
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n1/463",
+    "page_number": 1,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 1,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "SOA-C02",
+    "page_number": 1,
+    "bbox": [
+      362.6199951171875,
+      232.0760498046875,
+      449.29998779296875,
+      260.7160339355469
+    ],
+    "order_index": 2,
+    "font_info": {
+      "name": "Arial-BoldMT",
+      "size": 20.0,
+      "flags": 16,
+      "color": 16777215,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "557",
+    "page_number": 1,
+    "bbox": [
+      382.9110107421875,
+      295.6810302734375,
+      416.27099609375,
+      324.3210144042969
+    ],
+    "order_index": 3,
+    "font_info": {
+      "name": "Arial-BoldMT",
+      "size": 20.0,
+      "flags": 16,
+      "color": 16777215,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Thank you for choosing us for your SOA-C02 \npreparation! We're confident these materials will \nhelp you succeed. Best of luck with your studies!",
+    "page_number": 1,
+    "bbox": [
+      118.06499481201172,
+      643.988037109375,
+      494.29095458984375,
+      705.2999877929688
+    ],
+    "order_index": 4,
+    "font_info": {
+      "name": "Arial-BoldMT",
+      "size": 16.0,
+      "flags": 16,
+      "color": 128,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n2/463",
+    "page_number": 2,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 5,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Topic 1, Mix Questions",
+    "page_number": 2,
+    "bbox": [
+      57.8267707824707,
+      195.7229461669922,
+      158.0866241455078,
+      210.43893432617188
+    ],
+    "order_index": 6,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Question: 1",
+    "page_number": 2,
+    "bbox": [
+      57.8267707824707,
+      226.18504333496094,
+      124.1642074584961,
+      244.94387817382812
+    ],
+    "order_index": 7,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "[Security and Compliance]",
+    "page_number": 2,
+    "bbox": [
+      57.8267707824707,
+      260.09075927734375,
+      174.92083740234375,
+      274.8067321777344
+    ],
+    "order_index": 8,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A Sysops administrator creates an Amazon Elastic Kubernetes Service (Amazon EKS) cluster that uses\nAWS Fargate. The cluster is deployed successfully. The Sysops administrator needs to manage the\ncluster by using the kubect1 command line tool.",
+    "page_number": 2,
+    "bbox": [
+      57.8267707824707,
+      289.75823974609375,
+      504.89581298828125,
+      334.1416320800781
+    ],
+    "order_index": 9,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Which of the following must be configured on the Sysops administrator's machine so that kubect1\ncan communicate with the cluster API server?",
+    "page_number": 2,
+    "bbox": [
+      57.8267707824707,
+      349.092041015625,
+      492.96600341796875,
+      378.6417236328125
+    ],
+    "order_index": 10,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A. The kubeconfig file\nB. The kube-proxy Amazon EKS add-on\nC. The Fargate profile\nD. The eks-connector.yaml file",
+    "page_number": 2,
+    "bbox": [
+      57.8267707824707,
+      423.26068115234375,
+      229.3946075439453,
+      482.4789123535156
+    ],
+    "order_index": 11,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Answer: A",
+    "page_number": 2,
+    "bbox": [
+      416.14678955078125,
+      527.8925170898438,
+      475.2222900390625,
+      546.6513671875
+    ],
+    "order_index": 12,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Explanation:",
+    "page_number": 2,
+    "bbox": [
+      57.8267707824707,
+      576.6319580078125,
+      113.52427673339844,
+      591.3479614257812
+    ],
+    "order_index": 13,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "The kubeconfig file is a configuration file used to store cluster authentication information, which is\nrequired to make requests to the Amazon EKS cluster API server. The kubeconfig file will need to be\nconfigured on the SysOps administrator's machine in order for kubectl to be able to communicate\nwith the cluster API server.\nhttps://aws.amazon.com/blogs/developer/running-a-kubernetes-job-in-amazon-eks-on-aws-fargate-\nusing-aws-stepfunctions/",
+    "page_number": 2,
+    "bbox": [
+      57.8267707824707,
+      606.2993774414062,
+      508.5282897949219,
+      695.1840209960938
+    ],
+    "order_index": 14,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Question: 2",
+    "page_number": 2,
+    "bbox": [
+      57.8267707824707,
+      710.93017578125,
+      124.1642074584961,
+      729.6890258789062
+    ],
+    "order_index": 15,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "[Security and Compliance]",
+    "page_number": 2,
+    "bbox": [
+      57.8267707824707,
+      744.834716796875,
+      174.92083740234375,
+      759.5507202148438
+    ],
+    "order_index": 16,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_2_3.jpeg",
+    "page_number": 3,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 17,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_3_3.jpeg",
+    "page_number": 3,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 18,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_4_3.jpeg",
+    "page_number": 3,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 19,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_5_3.jpeg",
+    "page_number": 3,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 20,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_6_3.jpeg",
+    "page_number": 3,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 21,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_7_3.jpeg",
+    "page_number": 3,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 22,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_8_3.jpeg",
+    "page_number": 3,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 23,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_9_3.jpeg",
+    "page_number": 3,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 24,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_10_3.jpeg",
+    "page_number": 3,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 25,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_11_3.jpeg",
+    "page_number": 3,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 26,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_12_3.jpeg",
+    "page_number": 3,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 27,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_13_3.jpeg",
+    "page_number": 3,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 28,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_14_3.jpeg",
+    "page_number": 3,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 29,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_15_3.jpeg",
+    "page_number": 3,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 30,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_16_3.jpeg",
+    "page_number": 3,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 31,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_17_3.jpeg",
+    "page_number": 3,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 32,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_18_3.jpeg",
+    "page_number": 3,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 33,
+    "font_info": null
+  },
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n3/463",
+    "page_number": 3,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 34,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A Sysops administrator needs to configure automatic rotation for Amazon RDS database credentials.\nThe credentials must rotate every 30 days. The solution must integrate with Amazon RDS.",
+    "page_number": 3,
+    "bbox": [
+      57.8267707824707,
+      56.1264533996582,
+      502.41741943359375,
+      85.67617797851562
+    ],
+    "order_index": 35,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Which solution will meet these requirements with the LEAST operational overhead?",
+    "page_number": 3,
+    "bbox": [
+      57.8267707824707,
+      100.62760925292969,
+      432.00787353515625,
+      115.34359741210938
+    ],
+    "order_index": 36,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A. Store the credentials in AWS Systems Manager Parameter Store as a secure string. Configure\nautomatic rotation with a rotation interval of 30 days.\nB. Store the credentials in AWS Secrets Manager. Configure automatic rotation with a rotation\ninterval of 30 days.\nC. Store the credentials in a file in an Amazon S3 bucket. Deploy an AWS Lambda function to\nautomatically rotate the credentials every 30 days.\nD. Store the credentials in AWS Secrets Manager. Deploy an AWS Lambda function to automatically\nrotate the credentials every 30 days.",
+    "page_number": 3,
+    "bbox": [
+      57.8267707824707,
+      145.1288299560547,
+      498.1171875,
+      263.6808776855469
+    ],
+    "order_index": 37,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Answer: B",
+    "page_number": 3,
+    "bbox": [
+      416.38677978515625,
+      294.2611999511719,
+      474.8359069824219,
+      313.0200500488281
+    ],
+    "order_index": 38,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Explanation:",
+    "page_number": 3,
+    "bbox": [
+      57.8267707824707,
+      328.16644287109375,
+      113.52571105957031,
+      342.8824157714844
+    ],
+    "order_index": 39,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Storing the credentials in AWS Secrets Manager and configuring automatic rotation with a rotation\ninterval of 30 days is the most efficient way to meet the requirements with the least operational\noverhead. AWS Secrets Manager automatically rotates the credentials at the specified interval, so\nthere is no need for an additional AWS Lambda function or manual rotation. Additionally, Secrets\nManager is integrated with Amazon RDS, so the credentials can be easily used with the RDS\ndatabase.",
+    "page_number": 3,
+    "bbox": [
+      57.8267707824707,
+      357.8338623046875,
+      496.0353088378906,
+      446.718505859375
+    ],
+    "order_index": 40,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Question: 3",
+    "page_number": 3,
+    "bbox": [
+      57.8267707824707,
+      462.4650573730469,
+      124.1642074584961,
+      481.2239074707031
+    ],
+    "order_index": 41,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "[Deployment, Provisioning, and Automation]",
+    "page_number": 3,
+    "bbox": [
+      57.8267707824707,
+      496.37030029296875,
+      258.2082824707031,
+      511.0862731933594
+    ],
+    "order_index": 42,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A company has an application that runs only on Amazon EC2 Spot Instances. The instances run in an\nAmazon EC2 Auto Scaling group with scheduled scaling actions.",
+    "page_number": 3,
+    "bbox": [
+      57.8267707824707,
+      526.0377197265625,
+      500.8397521972656,
+      555.5874633789062
+    ],
+    "order_index": 43,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "However, the capacity does not always increase at the scheduled times, and instances terminate\nmany times a day. A Sysops administrator must ensure that the instances launch on time and have\nfewer interruptions.",
+    "page_number": 3,
+    "bbox": [
+      57.8267707824707,
+      570.5389404296875,
+      493.5843811035156,
+      614.9224243164062
+    ],
+    "order_index": 44,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Which action will meet these requirements?",
+    "page_number": 3,
+    "bbox": [
+      57.8267707824707,
+      629.8739013671875,
+      255.60806274414062,
+      644.5899047851562
+    ],
+    "order_index": 45,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A. Specify the capacity-optimized allocation strategy for Spot Instances. Add more instance types to\nthe Auto Scaling group.\nB. Specify the capacity-optimized allocation strategy for Spot Instances. Increase the size of the\ninstances in the Auto Scaling group.\nC. Specify the lowest-price allocation strategy for Spot Instances. Add more instance types to the\nAuto Scaling group.\nD. Specify the lowest-price allocation strategy for Spot Instances. Increase the size of the instances in",
+    "page_number": 3,
+    "bbox": [
+      57.8267707824707,
+      674.3750610351562,
+      504.9144592285156,
+      778.0934448242188
+    ],
+    "order_index": 46,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_2_3.jpeg",
+    "page_number": 4,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 47,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_3_3.jpeg",
+    "page_number": 4,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 48,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_4_3.jpeg",
+    "page_number": 4,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 49,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_5_3.jpeg",
+    "page_number": 4,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 50,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_6_3.jpeg",
+    "page_number": 4,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 51,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_7_3.jpeg",
+    "page_number": 4,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 52,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_8_3.jpeg",
+    "page_number": 4,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 53,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_9_3.jpeg",
+    "page_number": 4,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 54,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_10_3.jpeg",
+    "page_number": 4,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 55,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_11_3.jpeg",
+    "page_number": 4,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 56,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_12_3.jpeg",
+    "page_number": 4,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 57,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_13_3.jpeg",
+    "page_number": 4,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 58,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_14_3.jpeg",
+    "page_number": 4,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 59,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_15_3.jpeg",
+    "page_number": 4,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 60,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_16_3.jpeg",
+    "page_number": 4,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 61,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_17_3.jpeg",
+    "page_number": 4,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 62,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_18_3.jpeg",
+    "page_number": 4,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 63,
+    "font_info": null
+  },
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n4/463",
+    "page_number": 4,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 64,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "the Auto Scaling group.",
+    "page_number": 4,
+    "bbox": [
+      57.8267707824707,
+      56.1264533996582,
+      161.61358642578125,
+      70.84243774414062
+    ],
+    "order_index": 65,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Answer: A",
+    "page_number": 4,
+    "bbox": [
+      416.14678955078125,
+      101.42271423339844,
+      475.2222900390625,
+      120.18154907226562
+    ],
+    "order_index": 66,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Explanation:",
+    "page_number": 4,
+    "bbox": [
+      57.8267707824707,
+      135.32798767089844,
+      113.52571105957031,
+      150.04397583007812
+    ],
+    "order_index": 67,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Specifying the capacity-optimized allocation strategy for Spot Instances and adding more instance\ntypes to the Auto Scaling group is the best action to meet the requirements. Increasing the size of the\ninstances in the Auto Scaling group will not necessarily help with the launch time or reduce\ninterruptions, as the Spot Instances could still be interrupted even with larger instance sizes.",
+    "page_number": 4,
+    "bbox": [
+      57.8267707824707,
+      164.9954071044922,
+      508.94110107421875,
+      224.21255493164062
+    ],
+    "order_index": 68,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Question: 4",
+    "page_number": 4,
+    "bbox": [
+      57.8267707824707,
+      239.9591522216797,
+      124.1642074584961,
+      258.7179870605469
+    ],
+    "order_index": 69,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "[Monitoring, Reporting, and Automation]",
+    "page_number": 4,
+    "bbox": [
+      57.8267707824707,
+      273.8643798828125,
+      242.6082763671875,
+      288.5803527832031
+    ],
+    "order_index": 70,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A company stores its data in an Amazon S3 bucket. The company is required to classify the data and\nfind any sensitive personal information in its S3 files.",
+    "page_number": 4,
+    "bbox": [
+      57.8267707824707,
+      303.53179931640625,
+      499.87548828125,
+      333.0815124511719
+    ],
+    "order_index": 71,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Which solution will meet these requirements?",
+    "page_number": 4,
+    "bbox": [
+      57.8267707824707,
+      348.03302001953125,
+      264.2481384277344,
+      362.7489929199219
+    ],
+    "order_index": 72,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A. Create an AWS Config rule to discover sensitive personal information in the S3 files and mark\nthem as noncompliant.\nB. Create an S3 event-driven artificial intelligence/machine learning (AI/ML) pipeline to classify\nsensitive personal information by using Amazon Recognition.\nC. Enable Amazon GuardDuty. Configure S3 protection to monitor all data inside Amazon S3.\nD. Enable Amazon Macie. Create a discovery job that uses the managed data identifier.",
+    "page_number": 4,
+    "bbox": [
+      57.8267707824707,
+      392.5342102050781,
+      483.04119873046875,
+      481.4188537597656
+    ],
+    "order_index": 73,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Answer: D",
+    "page_number": 4,
+    "bbox": [
+      415.9067687988281,
+      511.9991760253906,
+      475.3163757324219,
+      530.758056640625
+    ],
+    "order_index": 74,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Explanation:",
+    "page_number": 4,
+    "bbox": [
+      57.8267707824707,
+      545.9043579101562,
+      113.52571105957031,
+      560.620361328125
+    ],
+    "order_index": 75,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Amazon Macie is a security service designed to help organizations find, classify, and protect sensitive\ndata stored in Amazon S3. Amazon Macie uses machine learning to automatically discover, classify,\nand protect sensitive data in Amazon S3. Creating a discovery job with the managed data identifier\nwill allow Macie to identify sensitive personal information in the S3 files and classify it accordingly.\nEnabling AWS Config and Amazon GuardDuty will not help with this requirement as they are not\ndesigned to automatically classify and protect data.",
+    "page_number": 4,
+    "bbox": [
+      57.8267707824707,
+      575.5718383789062,
+      506.0599365234375,
+      664.4564819335938
+    ],
+    "order_index": 76,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Question: 5",
+    "page_number": 4,
+    "bbox": [
+      57.8267707824707,
+      680.2030639648438,
+      124.1642074584961,
+      698.9619140625
+    ],
+    "order_index": 77,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "[Monitoring, Reporting, and Automation]",
+    "page_number": 4,
+    "bbox": [
+      57.8267707824707,
+      714.1082763671875,
+      242.6082763671875,
+      728.8242797851562
+    ],
+    "order_index": 78,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A company has an application that customers use to search for records on a website. The\napplication's data is stored in an Amazon Aurora DB cluster. The application's usage varies by season",
+    "page_number": 4,
+    "bbox": [
+      57.8267707824707,
+      743.7756958007812,
+      502.99835205078125,
+      773.325439453125
+    ],
+    "order_index": 79,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_2_3.jpeg",
+    "page_number": 5,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 80,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_3_3.jpeg",
+    "page_number": 5,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 81,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_4_3.jpeg",
+    "page_number": 5,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 82,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_5_3.jpeg",
+    "page_number": 5,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 83,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_6_3.jpeg",
+    "page_number": 5,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 84,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_7_3.jpeg",
+    "page_number": 5,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 85,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_8_3.jpeg",
+    "page_number": 5,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 86,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_9_3.jpeg",
+    "page_number": 5,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 87,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_10_3.jpeg",
+    "page_number": 5,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 88,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_11_3.jpeg",
+    "page_number": 5,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 89,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_12_3.jpeg",
+    "page_number": 5,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 90,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_13_3.jpeg",
+    "page_number": 5,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 91,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_14_3.jpeg",
+    "page_number": 5,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 92,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_15_3.jpeg",
+    "page_number": 5,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 93,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_16_3.jpeg",
+    "page_number": 5,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 94,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_17_3.jpeg",
+    "page_number": 5,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 95,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_18_3.jpeg",
+    "page_number": 5,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 96,
+    "font_info": null
+  },
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n5/463",
+    "page_number": 5,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 97,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "and by day of the week.\nThe website's popularity is increasing, and the website is experiencing slower performance because\nof increased load on the DB cluster during periods of peak activity. The application logs show that the\nperformance issues occur when users are searching for information. The same search is rarely\nperformed multiple times.\nA SysOps administrator must improve the performance of the platform by using a solution that\nmaximizes resource efficiency.\nWhich solution will meet these requirements?",
+    "page_number": 5,
+    "bbox": [
+      57.8267707824707,
+      56.1264533996582,
+      508.2210693359375,
+      174.67849731445312
+    ],
+    "order_index": 98,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A. Deploy an Amazon ElastiCache for Redis cluster in front of the DB cluster. Modify the application to\ncheck the cache before the application issues new queries to the database. Add the results of any\nqueries to the cache.\nB. Deploy an Aurora Replica for the DB cluster. Modify the application to use the reader endpoint for\nsearch operations. Use Aurora Auto Scaling to scale the number of replicas based on load. Most\nVoted\nC. Use Provisioned IOPS on the storage volumes that support the DB cluster to improve performance\nsufficiently to support the peak load on the application.\nD. Increase the instance size in the DB cluster to a size that is sufficient to support the peak load on\nthe application. Use Aurora Auto Scaling to scale the instance size based on load.",
+    "page_number": 5,
+    "bbox": [
+      57.8267707824707,
+      189.6299285888672,
+      509.0220642089844,
+      337.8495178222656
+    ],
+    "order_index": 99,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Answer: A",
+    "page_number": 5,
+    "bbox": [
+      416.14678955078125,
+      368.4298095703125,
+      475.2222900390625,
+      387.18865966796875
+    ],
+    "order_index": 100,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Explanation:",
+    "page_number": 5,
+    "bbox": [
+      57.8267707824707,
+      402.3350830078125,
+      113.52571105957031,
+      417.0510559082031
+    ],
+    "order_index": 101,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Step-by-Step\nUnderstand the Problem:\nThe application experiences slower performance during peak activity due to increased load on the\nAmazon Aurora DB cluster.\nPerformance issues occur primarily during search operations.\nThe goal is to improve performance and maximize resource efficiency.\nAnalyze the Requirements:\nThe solution should improve the performance of the platform.\nIt should maximize resource efficiency, which implies cost-effective and scalable options.\nEvaluate the Options:\nOption A: Deploy an Amazon ElastiCache for Redis cluster.\nElastiCache for Redis is a managed in-memory caching service that can significantly reduce the load\non the database by caching frequently accessed data.\nBy modifying the application to check the cache before querying the database, repeated searches for\nthe same information will be served from the cache, reducing the number of database reads.\nThis is efficient and cost-effective as it reduces database load and improves response times.\nOption B: Deploy an Aurora Replica and use Auto Scaling.\nAdding Aurora Replicas can help distribute read traffic and improve performance.\nAurora Auto Scaling can adjust the number of replicas based on the load.\nHowever, this option may not be as efficient in terms of resource usage compared to caching\nbecause it still involves querying the database.\nOption C: Use Provisioned IOPS.\nProvisioned IOPS can improve performance by providing fast and consistent I/O.",
+    "page_number": 5,
+    "bbox": [
+      57.8267707824707,
+      432.0025329589844,
+      506.8321838378906,
+      773.060546875
+    ],
+    "order_index": 102,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_2_3.jpeg",
+    "page_number": 6,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 103,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_3_3.jpeg",
+    "page_number": 6,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 104,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_4_3.jpeg",
+    "page_number": 6,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 105,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_5_3.jpeg",
+    "page_number": 6,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 106,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_6_3.jpeg",
+    "page_number": 6,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 107,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_7_3.jpeg",
+    "page_number": 6,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 108,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_8_3.jpeg",
+    "page_number": 6,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 109,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_9_3.jpeg",
+    "page_number": 6,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 110,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_10_3.jpeg",
+    "page_number": 6,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 111,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_11_3.jpeg",
+    "page_number": 6,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 112,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_12_3.jpeg",
+    "page_number": 6,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 113,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_13_3.jpeg",
+    "page_number": 6,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 114,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_14_3.jpeg",
+    "page_number": 6,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 115,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_15_3.jpeg",
+    "page_number": 6,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 116,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_16_3.jpeg",
+    "page_number": 6,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 117,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_17_3.jpeg",
+    "page_number": 6,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 118,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_18_3.jpeg",
+    "page_number": 6,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 119,
+    "font_info": null
+  },
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n6/463",
+    "page_number": 6,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 120,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "This option focuses on improving the underlying storage performance but doesn't address the\ninefficiency of handling repeated searches directly.\nOption D: Increase the instance size and use Auto Scaling.\nIncreasing the instance size can provide more resources to handle peak loads.\nAurora Auto Scaling can adjust instance sizes based on the load.\nThis option can be costly and may not be as efficient as caching in handling repeated searches.\nSelect the Best Solution:\nOption A is the best solution because it leverages caching to reduce the load on the database, which\ndirectly addresses the issue of repeated searches causing performance problems. Caching is\ngenerally more resource-efficient and cost-effective compared to scaling database instances or\nstorage.",
+    "page_number": 6,
+    "bbox": [
+      57.8267707824707,
+      56.1264533996582,
+      503.2334899902344,
+      219.17965698242188
+    ],
+    "order_index": 121,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Amazon ElastiCache for Redis Documentation\nAmazon Aurora Documentation\nAWS Auto Scaling\nUsing ElastiCache for Redis aligns with best practices for improving application performance by\noffloading repetitive read queries from the database, leading to faster response times and more\nefficient resource usage.",
+    "page_number": 6,
+    "bbox": [
+      57.8267707824707,
+      234.1311492919922,
+      484.70709228515625,
+      323.0157775878906
+    ],
+    "order_index": 122,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Question: 6",
+    "page_number": 6,
+    "bbox": [
+      57.8267707824707,
+      338.7623596191406,
+      124.1642074584961,
+      357.5212097167969
+    ],
+    "order_index": 123,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "[Security and Compliance]\nThe security team is concerned because the number of AWS Identity and Access Management (IAM)\npolicies being used in the environment is increasing. The team tasked a SysOps administrator to\nreport on the current number of IAM policies in use and the total available IAM policies.\nWhich AWS service should the administrator use to check how current IAM policy usage compares to\ncurrent service limits?",
+    "page_number": 6,
+    "bbox": [
+      57.8267707824707,
+      372.6676025390625,
+      507.1020202636719,
+      461.55224609375
+    ],
+    "order_index": 124,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A. AWS Trusted Advisor\nB. Amazon Inspector\nC. AWS Config\nD. AWS Organizations",
+    "page_number": 6,
+    "bbox": [
+      57.8267707824707,
+      491.3374328613281,
+      162.19114685058594,
+      550.5546264648438
+    ],
+    "order_index": 125,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Answer: A",
+    "page_number": 6,
+    "bbox": [
+      416.14678955078125,
+      581.1349487304688,
+      475.2222900390625,
+      599.893798828125
+    ],
+    "order_index": 126,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Explanation:",
+    "page_number": 6,
+    "bbox": [
+      57.8267707824707,
+      615.0401611328125,
+      113.52571105957031,
+      629.7561645507812
+    ],
+    "order_index": 127,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Step-by-Step\nUnderstand the Problem:\nThe security team is concerned about the increasing number of IAM policies.\nThe task is to report on the current number of IAM policies and compare them to the service limits.\nAnalyze the Requirements:\nThe solution should help in checking the usage of IAM policies against the service limits.\nEvaluate the Options:\nOption A: AWS Trusted Advisor\nAWS Trusted Advisor provides real-time guidance to help you provision your resources following AWS",
+    "page_number": 6,
+    "bbox": [
+      57.8267707824707,
+      644.7075805664062,
+      509.00714111328125,
+      778.0934448242188
+    ],
+    "order_index": 128,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_2_3.jpeg",
+    "page_number": 7,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 129,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_3_3.jpeg",
+    "page_number": 7,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 130,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_4_3.jpeg",
+    "page_number": 7,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 131,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_5_3.jpeg",
+    "page_number": 7,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 132,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_6_3.jpeg",
+    "page_number": 7,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 133,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_7_3.jpeg",
+    "page_number": 7,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 134,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_8_3.jpeg",
+    "page_number": 7,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 135,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_9_3.jpeg",
+    "page_number": 7,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 136,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_10_3.jpeg",
+    "page_number": 7,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 137,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_11_3.jpeg",
+    "page_number": 7,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 138,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_12_3.jpeg",
+    "page_number": 7,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 139,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_13_3.jpeg",
+    "page_number": 7,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 140,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_14_3.jpeg",
+    "page_number": 7,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 141,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_15_3.jpeg",
+    "page_number": 7,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 142,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_16_3.jpeg",
+    "page_number": 7,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 143,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_17_3.jpeg",
+    "page_number": 7,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 144,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_18_3.jpeg",
+    "page_number": 7,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 145,
+    "font_info": null
+  },
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n7/463",
+    "page_number": 7,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 146,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "best practices.\nIt includes a service limits check that alerts you when you are approaching the limits of your AWS\nservice usage, including IAM policies.\nOption B: Amazon Inspector\nAmazon Inspector is an automated security assessment service that helps improve the security and\ncompliance of applications deployed on AWS. It does not report on IAM policy usage.\nOption C: AWS Config\nAWS Config is a service that enables you to assess, audit, and evaluate the configurations of your\nAWS resources. While useful for compliance, it does not provide a comparison against service limits.\nOption D: AWS Organizations\nAWS Organizations helps you centrally manage and govern your environment as you grow and scale\nyour AWS resources. It does not provide insights into IAM policy limits.\nSelect the Best Solution:\nOption A: AWS Trusted Advisor is the correct answer because it includes a service limits check that\ncan report on the current number of IAM policies in use and compare them to the service limits.",
+    "page_number": 7,
+    "bbox": [
+      57.8267707824707,
+      56.1264533996582,
+      504.08355712890625,
+      278.5146179199219
+    ],
+    "order_index": 147,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "AWS Trusted Advisor Documentation\nIAM Service Limits\nAWS Trusted Advisor is the appropriate tool for monitoring IAM policy usage and comparing it\nagainst service limits, providing the necessary insights to manage and optimize IAM policies\neffectively.",
+    "page_number": 7,
+    "bbox": [
+      57.8267707824707,
+      293.466064453125,
+      476.4396057128906,
+      367.5169982910156
+    ],
+    "order_index": 148,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Question: 7",
+    "page_number": 7,
+    "bbox": [
+      57.8267707824707,
+      383.2635498046875,
+      124.1642074584961,
+      402.02239990234375
+    ],
+    "order_index": 149,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "[Deployment, Provisioning, and Automation]\nA company has a stateless application that is hosted on a fleet of 10 Amazon EC2 On-Demand\nInstances in an Auto Scaling group. A minimum of 6 instances are needed to meet service\nrequirements.\nWhich action will maintain uptime for the application MOST cost-effectively?",
+    "page_number": 7,
+    "bbox": [
+      57.8267707824707,
+      417.1687927246094,
+      472.7596435546875,
+      491.21966552734375
+    ],
+    "order_index": 150,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A. Use a Spot Fleet with an On-Demand capacity of 6 instances.\nB. Update the Auto Scaling group with a minimum of 6 On-Demand Instances and a maximum of 10\nOn-Demand Instances.\nC. Update the Auto Scaling group with a minimum of 1 On-Demand Instance and a maximum of 6\nOn-Demand Instances.\nD. Use a Spot Fleet with a target capacity of 6 instances.",
+    "page_number": 7,
+    "bbox": [
+      57.8267707824707,
+      521.0048828125,
+      500.885009765625,
+      609.8895263671875
+    ],
+    "order_index": 151,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Answer: A",
+    "page_number": 7,
+    "bbox": [
+      416.14678955078125,
+      640.4698486328125,
+      475.2222900390625,
+      659.2286987304688
+    ],
+    "order_index": 152,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Explanation:",
+    "page_number": 7,
+    "bbox": [
+      57.8267707824707,
+      674.3750610351562,
+      113.52571105957031,
+      689.091064453125
+    ],
+    "order_index": 153,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Step-by-Step\nUnderstand the Problem:\nThe company has a stateless application on 10 EC2 On-Demand Instances in an Auto Scaling group.\nAt least 6 instances are needed to meet service requirements.\nThe goal is to maintain uptime cost-effectively.",
+    "page_number": 7,
+    "bbox": [
+      57.8267707824707,
+      704.04248046875,
+      496.41357421875,
+      778.0934448242188
+    ],
+    "order_index": 154,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_2_3.jpeg",
+    "page_number": 8,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 155,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_3_3.jpeg",
+    "page_number": 8,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 156,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_4_3.jpeg",
+    "page_number": 8,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 157,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_5_3.jpeg",
+    "page_number": 8,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 158,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_6_3.jpeg",
+    "page_number": 8,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 159,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_7_3.jpeg",
+    "page_number": 8,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 160,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_8_3.jpeg",
+    "page_number": 8,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 161,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_9_3.jpeg",
+    "page_number": 8,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 162,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_10_3.jpeg",
+    "page_number": 8,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 163,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_11_3.jpeg",
+    "page_number": 8,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 164,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_12_3.jpeg",
+    "page_number": 8,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 165,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_13_3.jpeg",
+    "page_number": 8,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 166,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_14_3.jpeg",
+    "page_number": 8,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 167,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_15_3.jpeg",
+    "page_number": 8,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 168,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_16_3.jpeg",
+    "page_number": 8,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 169,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_17_3.jpeg",
+    "page_number": 8,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 170,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_18_3.jpeg",
+    "page_number": 8,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 171,
+    "font_info": null
+  },
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n8/463",
+    "page_number": 8,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 172,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Analyze the Requirements:\nMaintain a minimum of 6 instances to meet service requirements.\nOptimize costs by using a mix of instance types.\nEvaluate the Options:\nOption A: Use a Spot Fleet with an On-Demand capacity of 6 instances.\nSpot Fleets allow you to request a combination of On-Demand and Spot Instances.\nEnsuring a minimum of 6 On-Demand Instances guarantees the required capacity while leveraging\nlower-cost Spot Instances to meet additional demand.\nOption B: Update the Auto Scaling group with a minimum of 6 On-Demand Instances and a maximum\nof 10 On-Demand Instances.\nThis option ensures the minimum required capacity but does not optimize costs since it only uses On-\nDemand Instances.\nOption C: Update the Auto Scaling group with a minimum of 1 On-Demand Instance and a maximum\nof 6 On-Demand Instances.\nThis does not meet the requirement of maintaining at least 6 instances at all times.\nOption D: Use a Spot Fleet with a target capacity of 6 instances.\nThis option relies entirely on Spot Instances, which may not always be available, risking insufficient\ncapacity.\nSelect the Best Solution:\nOption A: Using a Spot Fleet with an On-Demand capacity of 6 instances ensures the necessary\nuptime with a cost-effective mix of On-Demand and Spot Instances.",
+    "page_number": 8,
+    "bbox": [
+      57.8267707824707,
+      56.1264533996582,
+      508.8647155761719,
+      367.5169982910156
+    ],
+    "order_index": 173,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Amazon EC2 Auto Scaling\nAmazon EC2 Spot Instances\nSpot Fleet Documentation\nUsing a Spot Fleet with a combination of On-Demand and Spot Instances offers a cost-effective\nsolution while ensuring the required minimum capacity for the application.",
+    "page_number": 8,
+    "bbox": [
+      57.8267707824707,
+      382.4684753417969,
+      478.4731750488281,
+      456.51934814453125
+    ],
+    "order_index": 174,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Question: 8",
+    "page_number": 8,
+    "bbox": [
+      57.8267707824707,
+      472.26593017578125,
+      124.1642074584961,
+      491.0247802734375
+    ],
+    "order_index": 175,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "[Monitoring, Reporting, and Automation]\nA SysOps administrator has launched a large general purpose Amazon EC2 instance to regularly\nprocess large data files. The instance has an attached 1 TB General Purpose SSD (gp2) Amazon Elastic\nBlock Store (Amazon EBS) volume. The instance also is EBS-optimized. To save costs, the SysOps\nadministrator stops the instance each evening and restarts the instance each morning.\nWhen data processing is active, Amazon CloudWatch metrics on the instance show a consistent 3.000\nVolumeReadOps. The SysOps administrator must improve the I/O performance while ensuring data\nintegrity.\nWhich action will meet these requirements?",
+    "page_number": 8,
+    "bbox": [
+      57.8267707824707,
+      506.171142578125,
+      508.80377197265625,
+      639.5570068359375
+    ],
+    "order_index": 176,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A. Change the instance type to a large, burstable, general purpose instance.\nB. Change the instance type to an extra large general purpose instance.\nC. Increase the EBS volume to a 2 TB General Purpose SSD (gp2) volume.\nD. Move the data that resides on the EBS volume to the instance store.",
+    "page_number": 8,
+    "bbox": [
+      57.8267707824707,
+      669.3421630859375,
+      393.45037841796875,
+      728.5593872070312
+    ],
+    "order_index": 177,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Answer: C",
+    "page_number": 8,
+    "bbox": [
+      416.62677001953125,
+      759.1396484375,
+      474.6304626464844,
+      777.8984985351562
+    ],
+    "order_index": 178,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_2_3.jpeg",
+    "page_number": 9,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 179,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_3_3.jpeg",
+    "page_number": 9,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 180,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_4_3.jpeg",
+    "page_number": 9,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 181,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_5_3.jpeg",
+    "page_number": 9,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 182,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_6_3.jpeg",
+    "page_number": 9,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 183,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_7_3.jpeg",
+    "page_number": 9,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 184,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_8_3.jpeg",
+    "page_number": 9,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 185,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_9_3.jpeg",
+    "page_number": 9,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 186,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_10_3.jpeg",
+    "page_number": 9,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 187,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_11_3.jpeg",
+    "page_number": 9,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 188,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_12_3.jpeg",
+    "page_number": 9,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 189,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_13_3.jpeg",
+    "page_number": 9,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 190,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_14_3.jpeg",
+    "page_number": 9,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 191,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_15_3.jpeg",
+    "page_number": 9,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 192,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_16_3.jpeg",
+    "page_number": 9,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 193,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_17_3.jpeg",
+    "page_number": 9,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 194,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_18_3.jpeg",
+    "page_number": 9,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 195,
+    "font_info": null
+  },
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n9/463",
+    "page_number": 9,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 196,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Explanation:",
+    "page_number": 9,
+    "bbox": [
+      57.8267707824707,
+      70.96018981933594,
+      113.52571105957031,
+      85.67617797851562
+    ],
+    "order_index": 197,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Step-by-Step\nUnderstand the Problem:\nThe EC2 instance processes large data files and uses a 1 TB General Purpose SSD (gp2) EBS volume.\nCloudWatch metrics show consistent high VolumeReadOps.\nThe requirement is to improve I/O performance while ensuring data integrity.\nAnalyze the Requirements:\nImprove I/O performance.\nMaintain data integrity.\nEvaluate the Options:\nOption A: Change the instance type to a large, burstable, general-purpose instance.\nBurstable instances provide a baseline level of CPU performance with the ability to burst to a higher\nlevel when needed. However, this does not address the I/O performance directly.\nOption B: Change the instance type to an extra-large general-purpose instance.\nA larger instance type might improve performance, but it does not directly address the I/O\nperformance of the EBS volume.\nOption C: Increase the EBS volume to a 2 TB General Purpose SSD (gp2) volume.\nIncreasing the size of a General Purpose SSD (gp2) volume can increase its IOPS. The larger the\nvolume, the higher the baseline performance in terms of IOPS.\nOption D: Move the data that resides on the EBS volume to the instance store.\nInstance store volumes provide high I/O performance but are ephemeral, meaning data will be lost if\nthe instance is stopped or terminated. This does not ensure data integrity.\nSelect the Best Solution:\nOption C: Increasing the EBS volume size to 2 TB will provide higher IOPS, improving I/O\nperformance while maintaining data integrity.",
+    "page_number": 9,
+    "bbox": [
+      57.8267707824707,
+      100.62760925292969,
+      506.1120300292969,
+      456.51934814453125
+    ],
+    "order_index": 198,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Amazon EBS Volume Types\nGeneral Purpose SSD (gp2) Volumes\nIncreasing the size of the General Purpose SSD (gp2) volume is an effective way to improve I/O\nperformance while ensuring data integrity remains intact.",
+    "page_number": 9,
+    "bbox": [
+      57.8267707824707,
+      471.4708251953125,
+      478.3337707519531,
+      530.6880493164062
+    ],
+    "order_index": 199,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Question: 9",
+    "page_number": 9,
+    "bbox": [
+      57.8267707824707,
+      546.4345703125,
+      124.1642074584961,
+      565.1934204101562
+    ],
+    "order_index": 200,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "[Monitoring, Reporting, and Automation]\nWith the threat of ransomware viruses encrypting and holding company data hostage, which action\nshould be taken to protect an Amazon S3 bucket?",
+    "page_number": 9,
+    "bbox": [
+      57.8267707824707,
+      580.33984375,
+      500.1162414550781,
+      624.7232666015625
+    ],
+    "order_index": 201,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A. Deny Post. Put. and Delete on the bucket.\nB. Enable server-side encryption on the bucket.\nC. Enable Amazon S3 versioning on the bucket.\nD. Enable snapshots on the bucket.",
+    "page_number": 9,
+    "bbox": [
+      57.8267707824707,
+      654.5084228515625,
+      268.6614685058594,
+      713.7256469726562
+    ],
+    "order_index": 202,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Answer: C",
+    "page_number": 9,
+    "bbox": [
+      416.62677001953125,
+      744.3059692382812,
+      474.6304626464844,
+      763.0648193359375
+    ],
+    "order_index": 203,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_2_3.jpeg",
+    "page_number": 10,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 204,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_3_3.jpeg",
+    "page_number": 10,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 205,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_4_3.jpeg",
+    "page_number": 10,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 206,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_5_3.jpeg",
+    "page_number": 10,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 207,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_6_3.jpeg",
+    "page_number": 10,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 208,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_7_3.jpeg",
+    "page_number": 10,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 209,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_8_3.jpeg",
+    "page_number": 10,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 210,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_9_3.jpeg",
+    "page_number": 10,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 211,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_10_3.jpeg",
+    "page_number": 10,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 212,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_11_3.jpeg",
+    "page_number": 10,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 213,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_12_3.jpeg",
+    "page_number": 10,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 214,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_13_3.jpeg",
+    "page_number": 10,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 215,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_14_3.jpeg",
+    "page_number": 10,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 216,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_15_3.jpeg",
+    "page_number": 10,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 217,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_16_3.jpeg",
+    "page_number": 10,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 218,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_17_3.jpeg",
+    "page_number": 10,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 219,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_18_3.jpeg",
+    "page_number": 10,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 220,
+    "font_info": null
+  },
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n10/463",
+    "page_number": 10,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 221,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Explanation:",
+    "page_number": 10,
+    "bbox": [
+      57.8267707824707,
+      56.1264533996582,
+      113.52571105957031,
+      70.84243774414062
+    ],
+    "order_index": 222,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Step-by-Step\nUnderstand the Problem:\nThe threat of ransomware encrypting and holding company data hostage.\nNeed to protect an Amazon S3 bucket.\nAnalyze the Requirements:\nEnsure that data in the S3 bucket is protected against unauthorized encryption or deletion.\nEvaluate the Options:\nOption A: Deny Post, Put, and Delete on the bucket.\nDenying these actions would prevent any uploads or modifications to the bucket, making it unusable.\nOption B: Enable server-side encryption on the bucket.\nServer-side encryption protects data at rest but does not prevent the encryption of data by\nransomware.\nOption C: Enable Amazon S3 versioning on the bucket.\nS3 versioning keeps multiple versions of an object in the bucket. If a file is overwritten or encrypted\nby ransomware, previous versions of the file can still be accessed.\nOption D: Enable snapshots on the bucket.\nAmazon S3 does not have a snapshot feature; this option is not applicable.\nSelect the Best Solution:\nOption C: Enabling Amazon S3 versioning is the best solution as it allows access to previous versions\nof objects, providing protection against ransomware encryption by retaining prior, unencrypted\nversions.",
+    "page_number": 10,
+    "bbox": [
+      57.8267707824707,
+      85.79393005371094,
+      508.3997802734375,
+      397.1844482421875
+    ],
+    "order_index": 223,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Amazon S3 Versioning\nBest Practices for Protecting Data with Amazon S3\nEnabling S3 versioning ensures that previous versions of objects are preserved, providing a safeguard\nagainst ransomware by allowing recovery of unencrypted versions of data.",
+    "page_number": 10,
+    "bbox": [
+      57.8267707824707,
+      412.13592529296875,
+      507.8042907714844,
+      471.3530578613281
+    ],
+    "order_index": 224,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Question: 10",
+    "page_number": 10,
+    "bbox": [
+      57.8267707824707,
+      487.09967041015625,
+      131.12648010253906,
+      505.8585205078125
+    ],
+    "order_index": 225,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "[High Availability, Backup, and Recovery]\nA SysOps administrator is evaluating Amazon Route 53 DNS options to address concerns about high\navailability for an on-premises website. The website consists of two servers: a primary active server\nand a secondary passive server. Route 53 should route traffic to the primary server if the associated\nhealth check returns 2xx or 3xx HTTP codes. All other traffic should be directed to the secondary\npassive server. The failover record type, set ID. and routing policy have been set appropriately for\nboth primary and secondary servers.\nWhich next step should be taken to configure Route 53?",
+    "page_number": 10,
+    "bbox": [
+      57.8267707824707,
+      521.0048828125,
+      500.3740234375,
+      639.5570068359375
+    ],
+    "order_index": 226,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A. Create an A record for each server. Associate the records with the Route 53 HTTP health check.\nB. Create an A record for each server. Associate the records with the Route 53 TCP health check.\nC. Create an alias record for each server with evaluate target health set to yes. Associate the records\nwith the Route 53 HTTP health check.\nD. Create an alias record for each server with evaluate target health set to yes. Associate the records\nwith the Route 53 TCP health check.",
+    "page_number": 10,
+    "bbox": [
+      57.8267707824707,
+      669.3421630859375,
+      503.70294189453125,
+      758.226806640625
+    ],
+    "order_index": 227,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_2_3.jpeg",
+    "page_number": 11,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 228,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_3_3.jpeg",
+    "page_number": 11,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 229,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_4_3.jpeg",
+    "page_number": 11,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 230,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_5_3.jpeg",
+    "page_number": 11,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 231,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_6_3.jpeg",
+    "page_number": 11,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 232,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_7_3.jpeg",
+    "page_number": 11,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 233,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_8_3.jpeg",
+    "page_number": 11,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 234,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_9_3.jpeg",
+    "page_number": 11,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 235,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_10_3.jpeg",
+    "page_number": 11,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 236,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_11_3.jpeg",
+    "page_number": 11,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 237,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_12_3.jpeg",
+    "page_number": 11,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 238,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_13_3.jpeg",
+    "page_number": 11,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 239,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_14_3.jpeg",
+    "page_number": 11,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 240,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_15_3.jpeg",
+    "page_number": 11,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 241,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_16_3.jpeg",
+    "page_number": 11,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 242,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_17_3.jpeg",
+    "page_number": 11,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 243,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_18_3.jpeg",
+    "page_number": 11,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 244,
+    "font_info": null
+  },
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n11/463",
+    "page_number": 11,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 245,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Answer: C",
+    "page_number": 11,
+    "bbox": [
+      416.62677001953125,
+      71.75523376464844,
+      474.6304626464844,
+      90.51406860351562
+    ],
+    "order_index": 246,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Explanation:",
+    "page_number": 11,
+    "bbox": [
+      57.8267707824707,
+      105.66050720214844,
+      113.52571105957031,
+      120.37649536132812
+    ],
+    "order_index": 247,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "To configure Route 53 for high availability with failover between a primary and a secondary server,\nthe following steps should be taken:\nCreate Health Checks:\nCreate HTTP health checks for both the primary and secondary servers. Ensure these health checks\nare configured to look for HTTP 2xx or 3xx status codes.\nReference: Creating and Updating Health Checks\nCreate Alias Records:\nCreate an alias record for the primary server. Set \"Evaluate Target Health\" to Yes. Associate this\nrecord with the primary server's HTTP health check.\nCreate an alias record for the secondary server. Set \"Evaluate Target Health\" to Yes. Associate this\nrecord with the secondary server's HTTP health check.\nReference: Creating Records by Using the Amazon Route 53 Console\nSet Routing Policy:\nEnsure the routing policy for both records is set to \"Failover.\"\nAssign appropriate \"Set IDs\" and configure the primary record as the primary failover record and the\nsecondary record as the secondary failover record.\nReference: Route 53 Routing Policies\nTest Configuration:\nTest the failover configuration to ensure that when the primary server health check fails, traffic is\nrouted to the secondary server.\nReference: Testing Failover",
+    "page_number": 11,
+    "bbox": [
+      57.8267707824707,
+      135.32798767089844,
+      503.90106201171875,
+      446.718505859375
+    ],
+    "order_index": 248,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Question: 11",
+    "page_number": 11,
+    "bbox": [
+      57.8267707824707,
+      462.4650573730469,
+      131.12648010253906,
+      481.2239074707031
+    ],
+    "order_index": 249,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "[Monitoring, Reporting, and Automation]\nA SysOps administrator noticed that a large number of Elastic IP addresses are being created on the\ncompany's AWS account, but they are not being associated with Amazon EC2 instances, and are\nincurring Elastic IP address charges in the monthly bill.\nHow can the administrator identify who is creating the Elastic IP addresses?",
+    "page_number": 11,
+    "bbox": [
+      57.8267707824707,
+      496.37030029296875,
+      499.8211364746094,
+      570.4212036132812
+    ],
+    "order_index": 250,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A. Attach a cost-allocation tag to each requested Elastic IP address with the IAM user name of the\ndeveloper who creates it.\nB. Query AWS CloudTrail logs by using Amazon Athena to search for Elastic IP address events.\nC. Create a CloudWatch alarm on the ElPCreated metric and send an Amazon SNS notification when\nthe alarm triggers.\nD. Use Amazon Inspector to get a report of all Elastic IP addresses created in the last 30 days.",
+    "page_number": 11,
+    "bbox": [
+      57.8267707824707,
+      600.2064208984375,
+      501.08209228515625,
+      689.091064453125
+    ],
+    "order_index": 251,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Answer: B",
+    "page_number": 11,
+    "bbox": [
+      416.38677978515625,
+      719.6713256835938,
+      474.8359069824219,
+      738.43017578125
+    ],
+    "order_index": 252,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Explanation:",
+    "page_number": 11,
+    "bbox": [
+      57.8267707824707,
+      753.5765380859375,
+      113.52571105957031,
+      768.2925415039062
+    ],
+    "order_index": 253,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_2_3.jpeg",
+    "page_number": 12,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 254,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_3_3.jpeg",
+    "page_number": 12,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 255,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_4_3.jpeg",
+    "page_number": 12,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 256,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_5_3.jpeg",
+    "page_number": 12,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 257,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_6_3.jpeg",
+    "page_number": 12,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 258,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_7_3.jpeg",
+    "page_number": 12,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 259,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_8_3.jpeg",
+    "page_number": 12,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 260,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_9_3.jpeg",
+    "page_number": 12,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 261,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_10_3.jpeg",
+    "page_number": 12,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 262,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_11_3.jpeg",
+    "page_number": 12,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 263,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_12_3.jpeg",
+    "page_number": 12,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 264,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_13_3.jpeg",
+    "page_number": 12,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 265,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_14_3.jpeg",
+    "page_number": 12,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 266,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_15_3.jpeg",
+    "page_number": 12,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 267,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_16_3.jpeg",
+    "page_number": 12,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 268,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_17_3.jpeg",
+    "page_number": 12,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 269,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_18_3.jpeg",
+    "page_number": 12,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 270,
+    "font_info": null
+  },
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n12/463",
+    "page_number": 12,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 271,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "To identify who is creating the Elastic IP addresses, the following steps should be taken:\nEnable CloudTrail Logging:\nEnsure AWS CloudTrail is enabled to log all API activities in your AWS account.\nReference: Setting Up AWS CloudTrail\nCreate an Athena Table for CloudTrail Logs:\nSet up an Athena table that points to the S3 bucket where CloudTrail logs are stored.\nReference: Creating Tables in Athena\nQuery CloudTrail Logs:\nUse Athena to run SQL queries to search for AllocateAddress events, which represent the creation of\nElastic IP addresses.\nExample Query:\nsql\nCopy code\nSELECT userIdentity.userName, eventTime, eventSource, eventName, requestParameters\nFROM cloudtrail_logs\nWHERE eventName = 'AllocateAddress';\nReference: Analyzing AWS CloudTrail Logs\nReview Results:\nReview the results to identify which IAM user or role is creating the Elastic IP addresses.\nReference: AWS CloudTrail Log Analysis",
+    "page_number": 12,
+    "bbox": [
+      57.8267707824707,
+      70.96018981933594,
+      504.6736145019531,
+      367.5169982910156
+    ],
+    "order_index": 272,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Question: 12",
+    "page_number": 12,
+    "bbox": [
+      57.8267707824707,
+      383.2635498046875,
+      131.12648010253906,
+      402.02239990234375
+    ],
+    "order_index": 273,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "[Monitoring, Reporting, and Automation]\nA company has an Amazon CloudFront distribution that uses an Amazon S3 bucket as its origin.\nDuring a review of the access logs, the company determines that some requests are going directly to\nthe S3 bucket by using the website hosting endpoint. A SysOps administrator must secure the S3\nbucket to allow requests only from CloudFront.\nWhat should the SysOps administrator do to meet this requirement?",
+    "page_number": 12,
+    "bbox": [
+      57.8267707824707,
+      417.1687927246094,
+      504.9420471191406,
+      506.05340576171875
+    ],
+    "order_index": 274,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A. Create an origin access identity (OAI) in CloudFront. Associate the OAI with the distribution.\nRemove access to and from other principals in the S3 bucket policy. Update the S3 bucket policy to\nallow access only from the OAI.\nB. Create an origin access identity (OAI) in CloudFront. Associate the OAI with the distribution.\nUpdate the S3 bucket policy to allow access only from the OAI. Create a new origin, and specify the\nS3 bucket as the new origin. Update the distribution behavior to use the new origin. Remove the\nexisting origin.\nC. Create an origin access identity (OAI) in CloudFront. Associate the OAI with the distribution.\nUpdate the S3 bucket policy to allow access only from the OAI. Disable website hosting. Create a new\norigin, and specify the S3 bucket as the new origin. Update the distribution behavior to use the new\norigin. Remove the existing origin.\nD. Update the S3 bucket policy to allow access only from the CloudFront distribution. Remove access\nto and from other principals in the S3 bucket policy. Disable website hosting. Create a new origin,\nand specify the S3 bucket as the new origin. Update the distribution behavior to use the new origin.\nRemove the existing origin.",
+    "page_number": 12,
+    "bbox": [
+      57.8267707824707,
+      535.838623046875,
+      508.43511962890625,
+      758.226806640625
+    ],
+    "order_index": 275,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_2_3.jpeg",
+    "page_number": 13,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 276,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_3_3.jpeg",
+    "page_number": 13,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 277,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_4_3.jpeg",
+    "page_number": 13,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 278,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_5_3.jpeg",
+    "page_number": 13,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 279,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_6_3.jpeg",
+    "page_number": 13,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 280,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_7_3.jpeg",
+    "page_number": 13,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 281,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_8_3.jpeg",
+    "page_number": 13,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 282,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_9_3.jpeg",
+    "page_number": 13,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 283,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_10_3.jpeg",
+    "page_number": 13,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 284,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_11_3.jpeg",
+    "page_number": 13,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 285,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_12_3.jpeg",
+    "page_number": 13,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 286,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_13_3.jpeg",
+    "page_number": 13,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 287,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_14_3.jpeg",
+    "page_number": 13,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 288,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_15_3.jpeg",
+    "page_number": 13,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 289,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_16_3.jpeg",
+    "page_number": 13,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 290,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_17_3.jpeg",
+    "page_number": 13,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 291,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_18_3.jpeg",
+    "page_number": 13,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 292,
+    "font_info": null
+  },
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n13/463",
+    "page_number": 13,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 293,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Answer: A",
+    "page_number": 13,
+    "bbox": [
+      416.14678955078125,
+      71.75523376464844,
+      475.2222900390625,
+      90.51406860351562
+    ],
+    "order_index": 294,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Explanation:",
+    "page_number": 13,
+    "bbox": [
+      57.8267707824707,
+      105.66050720214844,
+      113.52571105957031,
+      120.37649536132812
+    ],
+    "order_index": 295,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "To secure the S3 bucket and allow access only from CloudFront, the following steps should be taken:\nCreate an OAI in CloudFront:\nIn the CloudFront console, create an origin access identity (OAI) and associate it with your\nCloudFront distribution.\nReference: Restricting Access to S3 Buckets\nUpdate S3 Bucket Policy:\nModify the S3 bucket policy to allow access only from the OAI. This involves adding a policy\nstatement that grants the OAI permission to get objects from the bucket and removing any other\npublic access permissions.\nExample Policy:\njson\nCopy code\n{\n\"Version\": \"2012-10-17\",\n\"Statement\":\n[\n{\n\"Effect\": \"Allow\",\n\"Principal\": {\n\"AWS\": \"arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity E3EXAMPLE\"\n},\n\"Action\": \"s3:GetObject\",\n\"Resource\": \"arn:aws:s3:::example-bucket/*\"\n}\n]\n}\nReference: Bucket Policy Examples\nTest Configuration:\nEnsure that the S3 bucket is not publicly accessible and that requests to the bucket through the\nCloudFront distribution are successful.\nReference: Testing CloudFront OAI",
+    "page_number": 13,
+    "bbox": [
+      57.8267707824707,
+      135.32798767089844,
+      502.5987548828125,
+      595.0558471679688
+    ],
+    "order_index": 296,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Question: 13",
+    "page_number": 13,
+    "bbox": [
+      57.8267707824707,
+      610.8023681640625,
+      131.12648010253906,
+      629.5612182617188
+    ],
+    "order_index": 297,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "[Security and Compliance]\nA SysOps administrator must create an IAM policy for a developer who needs access to specific AWS\nservices. Based on the requirements, the SysOps administrator creates the following policy:",
+    "page_number": 13,
+    "bbox": [
+      57.8267707824707,
+      644.7075805664062,
+      503.00714111328125,
+      689.091064453125
+    ],
+    "order_index": 298,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_3_3.jpeg",
+    "page_number": 14,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 299,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_4_3.jpeg",
+    "page_number": 14,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 300,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_5_3.jpeg",
+    "page_number": 14,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 301,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_6_3.jpeg",
+    "page_number": 14,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 302,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_7_3.jpeg",
+    "page_number": 14,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 303,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_8_3.jpeg",
+    "page_number": 14,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 304,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_9_3.jpeg",
+    "page_number": 14,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 305,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_10_3.jpeg",
+    "page_number": 14,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 306,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_11_3.jpeg",
+    "page_number": 14,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 307,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_12_3.jpeg",
+    "page_number": 14,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 308,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_13_3.jpeg",
+    "page_number": 14,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 309,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_14_3.jpeg",
+    "page_number": 14,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 310,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_15_3.jpeg",
+    "page_number": 14,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 311,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_16_3.jpeg",
+    "page_number": 14,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 312,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_17_3.jpeg",
+    "page_number": 14,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 313,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_18_3.jpeg",
+    "page_number": 14,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 314,
+    "font_info": null
+  },
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n14/463",
+    "page_number": 14,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 315,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_2_3.jpeg",
+    "page_number": 14,
+    "bbox": [
+      57.8267707824707,
+      56.1246337890625,
+      458.62677001953125,
+      379.2879943847656
+    ],
+    "order_index": 316,
+    "font_info": null
+  },
+  {
+    "type": "text",
+    "content": "Which actions does this policy allow? (Select TWO.)",
+    "page_number": 14,
+    "bbox": [
+      57.8267707824707,
+      394.12353515625,
+      286.9700622558594,
+      408.8395080566406
+    ],
+    "order_index": 317,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A. Create an AWS Storage Gateway.\nB. Create an IAM role for an AWS Lambda function.\nC. Delete an Amazon Simple Queue Service (Amazon SQS) queue.\nD. Describe AWS load balancers.\nE. Invoke an AWS Lambda function.",
+    "page_number": 14,
+    "bbox": [
+      57.8267707824707,
+      438.6247253417969,
+      349.2955017089844,
+      512.6755981445312
+    ],
+    "order_index": 318,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Answer: D,E",
+    "page_number": 14,
+    "bbox": [
+      410.8667907714844,
+      543.2559204101562,
+      480.5372009277344,
+      562.0147705078125
+    ],
+    "order_index": 319,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Explanation:",
+    "page_number": 14,
+    "bbox": [
+      57.8267707824707,
+      577.1611328125,
+      113.52571105957031,
+      591.8771362304688
+    ],
+    "order_index": 320,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "The provided IAM policy grants the following permissions:\nDescribe AWS Load Balancers:\nThe policy allows actions with the prefix elasticloadbalancing:. This includes actions like\nDescribeLoadBalancers and other Describe* actions related to Elastic Load Balancing.\nReference: Elastic Load Balancing API Actions\nInvoke AWS Lambda Function:\nThe policy allows actions with the prefix lambda:, which includes InvokeFunction and other actions\nthat allow listing and describing Lambda functions.\nReference: AWS Lambda API Actions\nThe actions related to AWS Storage Gateway (create), IAM role (create), and Amazon SQS (delete)\nare not allowed by this policy. The policy only grants describe/list permissions for storagegateway,",
+    "page_number": 14,
+    "bbox": [
+      57.8267707824707,
+      606.82861328125,
+      497.20867919921875,
+      769.8818969726562
+    ],
+    "order_index": 321,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_2_3.jpeg",
+    "page_number": 15,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 322,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_3_3.jpeg",
+    "page_number": 15,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 323,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_4_3.jpeg",
+    "page_number": 15,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 324,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_5_3.jpeg",
+    "page_number": 15,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 325,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_6_3.jpeg",
+    "page_number": 15,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 326,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_7_3.jpeg",
+    "page_number": 15,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 327,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_8_3.jpeg",
+    "page_number": 15,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 328,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_9_3.jpeg",
+    "page_number": 15,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 329,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_10_3.jpeg",
+    "page_number": 15,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 330,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_11_3.jpeg",
+    "page_number": 15,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 331,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_12_3.jpeg",
+    "page_number": 15,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 332,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_13_3.jpeg",
+    "page_number": 15,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 333,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_14_3.jpeg",
+    "page_number": 15,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 334,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_15_3.jpeg",
+    "page_number": 15,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 335,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_16_3.jpeg",
+    "page_number": 15,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 336,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_17_3.jpeg",
+    "page_number": 15,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 337,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_18_3.jpeg",
+    "page_number": 15,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 338,
+    "font_info": null
+  },
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n15/463",
+    "page_number": 15,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 339,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "elasticloadbalancing, lambda, and list permissions for SQS.",
+    "page_number": 15,
+    "bbox": [
+      57.8267707824707,
+      56.1264533996582,
+      319.04986572265625,
+      70.84243774414062
+    ],
+    "order_index": 340,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Question: 14",
+    "page_number": 15,
+    "bbox": [
+      57.8267707824707,
+      86.58897399902344,
+      131.12648010253906,
+      105.34780883789062
+    ],
+    "order_index": 341,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "[Networking and Content Delivery]",
+    "page_number": 15,
+    "bbox": [
+      57.8267707824707,
+      120.49424743652344,
+      214.06724548339844,
+      135.21023559570312
+    ],
+    "order_index": 342,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A company is trying to connect two applications. One application runs in an on-premises data center\nthat has a hostname of hostl .onprem.private. The other application runs on an Amazon EC2 instance\nthat has a hostname of hostl.awscloud.private. An AWS Site-to-Site VPN connection is in place\nbetween the on-premises network and AWS.\nThe application that runs in the data center tries to connect to the application that runs on the EC2\ninstance, but DNS resolution fails. A SysOps administrator must implement DNS resolution between\non-premises and AWS resources.\nWhich solution allows the on-premises application to resolve the EC2 instance hostname?",
+    "page_number": 15,
+    "bbox": [
+      57.8267707824707,
+      150.1616668701172,
+      506.53179931640625,
+      268.7137145996094
+    ],
+    "order_index": 343,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A. Set up an Amazon Route 53 inbound resolver endpoint with a forwarding rule for the\nonprem.private hosted zone. Associate the resolver with the VPC of the EC2 instance. Configure the\non-premises DNS resolver to forward onprem.private DNS queries to the inbound resolver endpoint.\nB. Set up an Amazon Route 53 inbound resolver endpoint. Associate the resolver with the VPC of the\nEC2 instance. Configure the on-premises DNS resolver to forward awscloud.private DNS queries to\nthe inbound resolver endpoint.\nC. Set up an Amazon Route 53 outbound resolver endpoint with a forwarding rule for the\nonprem.private hosted zone. Associate the resolver with the AWS Region of the EC2 instance.\nConfigure the on-premises DNS resolver to forward onprem.private DNS queries to the outbound\nresolver endpoint.\nD. Set up an Amazon Route 53 outbound resolver endpoint. Associate the resolver with the AWS\nRegion of the EC2 instance. Configure the on-premises DNS resolver to forward awscloud.private DNS\nqueries to the outbound resolver endpoint.",
+    "page_number": 15,
+    "bbox": [
+      57.8267707824707,
+      298.49896240234375,
+      509.0018310546875,
+      491.21966552734375
+    ],
+    "order_index": 344,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Answer: A",
+    "page_number": 15,
+    "bbox": [
+      416.14678955078125,
+      521.7999877929688,
+      475.2222900390625,
+      540.558837890625
+    ],
+    "order_index": 345,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Explanation:",
+    "page_number": 15,
+    "bbox": [
+      57.8267707824707,
+      555.7052001953125,
+      113.52571105957031,
+      570.4212036132812
+    ],
+    "order_index": 346,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Step-by-Step\nUnderstand the Problem:\nThere are two applications, one in an on-premises data center and the other on an Amazon EC2\ninstance.\nDNS resolution fails when the on-premises application tries to connect to the EC2 instance.\nThe goal is to implement DNS resolution between on-premises and AWS resources.\nAnalyze the Requirements:\nNeed to resolve the hostname of the EC2 instance from the on-premises network.\nUtilize the existing AWS Site-to-Site VPN connection for DNS queries.\nEvaluate the Options:\nOption A: Set up an Amazon Route 53 inbound resolver endpoint with a forwarding rule for the\nonprem.private hosted zone.\nThis allows DNS queries from on-premises to be forwarded to Route 53 for resolution.",
+    "page_number": 15,
+    "bbox": [
+      57.8267707824707,
+      585.3726806640625,
+      482.637939453125,
+      778.0934448242188
+    ],
+    "order_index": 347,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_2_3.jpeg",
+    "page_number": 16,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 348,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_3_3.jpeg",
+    "page_number": 16,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 349,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_4_3.jpeg",
+    "page_number": 16,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 350,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_5_3.jpeg",
+    "page_number": 16,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 351,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_6_3.jpeg",
+    "page_number": 16,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 352,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_7_3.jpeg",
+    "page_number": 16,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 353,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_8_3.jpeg",
+    "page_number": 16,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 354,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_9_3.jpeg",
+    "page_number": 16,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 355,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_10_3.jpeg",
+    "page_number": 16,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 356,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_11_3.jpeg",
+    "page_number": 16,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 357,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_12_3.jpeg",
+    "page_number": 16,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 358,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_13_3.jpeg",
+    "page_number": 16,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 359,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_14_3.jpeg",
+    "page_number": 16,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 360,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_15_3.jpeg",
+    "page_number": 16,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 361,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_16_3.jpeg",
+    "page_number": 16,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 362,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_17_3.jpeg",
+    "page_number": 16,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 363,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_18_3.jpeg",
+    "page_number": 16,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 364,
+    "font_info": null
+  },
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n16/463",
+    "page_number": 16,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 365,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "The resolver endpoint is associated with the VPC, enabling resolution of AWS resources.\nOption B: Set up an Amazon Route 53 inbound resolver endpoint without specifying the forwarding\nrule.\nThis option does not address the specific need to resolve onprem.private DNS queries.\nOption C: Set up an Amazon Route 53 outbound resolver endpoint.\nOutbound resolver endpoints are used for forwarding DNS queries from AWS to on-premises, not\nvice versa.\nOption D: Set up an Amazon Route 53 outbound resolver endpoint without specifying the forwarding\nrule.\nSimilar to Option C, this does not meet the requirement of resolving on-premises queries in AWS.\nSelect the Best Solution:\nOption A: Setting up an inbound resolver endpoint with a forwarding rule for onprem.private and\nassociating it with the VPC ensures that DNS queries from on-premises can resolve AWS resources\neffectively.",
+    "page_number": 16,
+    "bbox": [
+      57.8267707824707,
+      56.1264533996582,
+      506.2401123046875,
+      263.6808776855469
+    ],
+    "order_index": 366,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Amazon Route 53 Resolver\nIntegrating AWS and On-Premises Networks with Route 53\nUsing an Amazon Route 53 inbound resolver endpoint with a forwarding rule ensures that on-\npremises applications can resolve EC2 instance hostnames effectively.",
+    "page_number": 16,
+    "bbox": [
+      57.8267707824707,
+      278.63238525390625,
+      474.9283142089844,
+      337.8495178222656
+    ],
+    "order_index": 367,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Question: 15",
+    "page_number": 16,
+    "bbox": [
+      57.8267707824707,
+      353.5960998535156,
+      131.12648010253906,
+      372.3549499511719
+    ],
+    "order_index": 368,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "[Security and Compliance]\nA large company is using AWS Organizations to manage its multi-account AWS environment.\nAccording to company policy, all users should have read-level access to a particular Amazon S3\nbucket in a central account. The S3 bucket data should not be available outside the organization. A\nSysOps administrator must set up the permissions and add a bucket policy to the S3 bucket.\nWhich parameters should be specified to accomplish this in the MOST efficient manner?",
+    "page_number": 16,
+    "bbox": [
+      57.8267707824707,
+      387.5013427734375,
+      494.469482421875,
+      476.3859558105469
+    ],
+    "order_index": 369,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A. Specify \"' as the principal and PrincipalOrgld as a condition.\nB. Specify all account numbers as the principal.\nC. Specify PrincipalOrgld as the principal.\nD. Specify the organization's management account as the principal.",
+    "page_number": 16,
+    "bbox": [
+      57.8267707824707,
+      506.171142578125,
+      356.2352600097656,
+      565.3883666992188
+    ],
+    "order_index": 370,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Answer: A",
+    "page_number": 16,
+    "bbox": [
+      416.14678955078125,
+      595.9686889648438,
+      475.2222900390625,
+      614.7275390625
+    ],
+    "order_index": 371,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Explanation:",
+    "page_number": 16,
+    "bbox": [
+      57.8267707824707,
+      629.8739013671875,
+      113.52571105957031,
+      644.5899047851562
+    ],
+    "order_index": 372,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Step-by-Step\nUnderstand the Problem:\nEnsure all users in the organization have read-level access to a specific S3 bucket.\nThe data should not be accessible outside the organization.\nAnalyze the Requirements:\nGrant read access to users within the organization.\nPrevent access from outside the organization.\nEvaluate the Options:",
+    "page_number": 16,
+    "bbox": [
+      57.8267707824707,
+      659.5413208007812,
+      417.94146728515625,
+      778.0934448242188
+    ],
+    "order_index": 373,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_2_3.jpeg",
+    "page_number": 17,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 374,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_4_3.jpeg",
+    "page_number": 17,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 375,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_5_3.jpeg",
+    "page_number": 17,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 376,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_6_3.jpeg",
+    "page_number": 17,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 377,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_7_3.jpeg",
+    "page_number": 17,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 378,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_8_3.jpeg",
+    "page_number": 17,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 379,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_9_3.jpeg",
+    "page_number": 17,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 380,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_10_3.jpeg",
+    "page_number": 17,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 381,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_11_3.jpeg",
+    "page_number": 17,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 382,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_12_3.jpeg",
+    "page_number": 17,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 383,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_13_3.jpeg",
+    "page_number": 17,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 384,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_14_3.jpeg",
+    "page_number": 17,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 385,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_15_3.jpeg",
+    "page_number": 17,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 386,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_16_3.jpeg",
+    "page_number": 17,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 387,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_17_3.jpeg",
+    "page_number": 17,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 388,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_18_3.jpeg",
+    "page_number": 17,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 389,
+    "font_info": null
+  },
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n17/463",
+    "page_number": 17,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 390,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Option A: Specify \"*\" as the principal and PrincipalOrgId as a condition.\nThis grants access to all AWS principals but restricts it to those within the specified organization using\nthe PrincipalOrgId condition.\nOption B: Specify all account numbers as the principal.\nThis is impractical for a large organization and requires constant updates if accounts are added or\nremoved.\nOption C: Specify PrincipalOrgId as the principal.\nThe PrincipalOrgId condition must be used within a policy, not as a principal.\nOption D: Specify the organization's management account as the principal.\nThis grants access only to the management account, not to all users within the organization.\nSelect the Best Solution:\nOption A: Using \"*\" as the principal with the PrincipalOrgId condition ensures all users within the\norganization have the required access while preventing external access.",
+    "page_number": 17,
+    "bbox": [
+      57.8267707824707,
+      56.1264533996582,
+      507.9149169921875,
+      248.84713745117188
+    ],
+    "order_index": 391,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Amazon S3 Bucket Policies\nAWS Organizations Policy Examples\nUsing \"*\" as the principal with the PrincipalOrgId condition efficiently grants read access to the S3\nbucket for all users within the organization.",
+    "page_number": 17,
+    "bbox": [
+      57.8267707824707,
+      263.79864501953125,
+      492.7180480957031,
+      323.0157775878906
+    ],
+    "order_index": 392,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Question: 16",
+    "page_number": 17,
+    "bbox": [
+      57.8267707824707,
+      338.7623596191406,
+      131.12648010253906,
+      357.5212097167969
+    ],
+    "order_index": 393,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "[Security and Compliance]\nA SysOps administrator is attempting to download patches from the internet into an instance in a\nprivate subnet. An internet gateway exists for the VPC, and a NAT gateway has been deployed on the\npublic subnet; however, the instance has no internet connectivity. The resources deployed into the\nprivate subnet must be inaccessible directly from the public internet.",
+    "page_number": 17,
+    "bbox": [
+      57.8267707824707,
+      372.6676025390625,
+      505.5810546875,
+      446.718505859375
+    ],
+    "order_index": 394,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_3_3.jpeg",
+    "page_number": 17,
+    "bbox": [
+      57.8267707824707,
+      461.66815185546875,
+      371.7467956542969,
+      645.7653198242188
+    ],
+    "order_index": 395,
+    "font_info": null
+  },
+  {
+    "type": "text",
+    "content": "What should be added to the private subnet's route table in order to address this issue, given the\ninformation provided?",
+    "page_number": 17,
+    "bbox": [
+      57.8267707824707,
+      645.7671508789062,
+      489.9811096191406,
+      675.31689453125
+    ],
+    "order_index": 396,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A. 0.0.0.0/0 IGW\nB. 0.0.0.0/0 NAT\nC. 10.0.1.0/24 IGW\nD. 10.0.1.0/24 NAT",
+    "page_number": 17,
+    "bbox": [
+      57.8267707824707,
+      705.10205078125,
+      142.66761779785156,
+      764.3192749023438
+    ],
+    "order_index": 397,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_2_3.jpeg",
+    "page_number": 18,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 398,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_3_3.jpeg",
+    "page_number": 18,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 399,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_4_3.jpeg",
+    "page_number": 18,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 400,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_5_3.jpeg",
+    "page_number": 18,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 401,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_6_3.jpeg",
+    "page_number": 18,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 402,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_7_3.jpeg",
+    "page_number": 18,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 403,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_8_3.jpeg",
+    "page_number": 18,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 404,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_9_3.jpeg",
+    "page_number": 18,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 405,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_10_3.jpeg",
+    "page_number": 18,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 406,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_11_3.jpeg",
+    "page_number": 18,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 407,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_12_3.jpeg",
+    "page_number": 18,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 408,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_13_3.jpeg",
+    "page_number": 18,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 409,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_14_3.jpeg",
+    "page_number": 18,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 410,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_15_3.jpeg",
+    "page_number": 18,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 411,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_16_3.jpeg",
+    "page_number": 18,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 412,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_17_3.jpeg",
+    "page_number": 18,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 413,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_18_3.jpeg",
+    "page_number": 18,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 414,
+    "font_info": null
+  },
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n18/463",
+    "page_number": 18,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 415,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Answer: B",
+    "page_number": 18,
+    "bbox": [
+      416.38677978515625,
+      86.58897399902344,
+      474.8359069824219,
+      105.34780883789062
+    ],
+    "order_index": 416,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Explanation:",
+    "page_number": 18,
+    "bbox": [
+      57.8267707824707,
+      120.49424743652344,
+      113.52571105957031,
+      135.21023559570312
+    ],
+    "order_index": 417,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Understand the Problem:\nAn instance in a private subnet needs internet access for downloading patches.\nThere is an existing NAT gateway in the public subnet.\nAnalyze the Requirements:\nProvide internet access to the private subnet instance through the NAT gateway.\nEnsure resources in the private subnet remain inaccessible from the public internet.\nEvaluate the Options:\nOption A: 0.0.0.0/0 IGW.\nThis would route traffic directly to the internet gateway, exposing the instance to the public internet.\nOption B: 0.0.0.0/0 NAT.\nThis routes traffic destined for the internet through the NAT gateway, allowing outbound connections\nwhile keeping the instance protected from inbound internet traffic.\nOption C: 10.0.1.0/24 IGW.\nThis does not provide the necessary route for internet access and incorrectly uses the internet\ngateway for local traffic.\nOption D: 10.0.1.0/24 NAT.\nThis also incorrectly uses the NAT gateway for local traffic, which is unnecessary.\nSelect the Best Solution:\nOption B: Adding a route for 0.0.0.0/0 with the target set to the NAT gateway ensures that the private\nsubnet instance can access the internet while remaining protected from inbound internet traffic.",
+    "page_number": 18,
+    "bbox": [
+      57.8267707824707,
+      150.1616668701172,
+      508.70330810546875,
+      446.718505859375
+    ],
+    "order_index": 418,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Amazon VPC NAT Gateways\nPrivate Subnet Route Table\nConfiguring the private subnet route table to use the NAT gateway for 0.0.0.0/0 ensures secure and\nefficient internet access for instances in the private subnet.",
+    "page_number": 18,
+    "bbox": [
+      57.8267707824707,
+      461.66998291015625,
+      498.67547607421875,
+      520.8871459960938
+    ],
+    "order_index": 419,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Question: 17",
+    "page_number": 18,
+    "bbox": [
+      57.8267707824707,
+      536.6337280273438,
+      131.12648010253906,
+      555.392578125
+    ],
+    "order_index": 420,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "[Deployment, Provisioning, and Automation]\nA SysOps administrator applies the following policy to an AWS CloudFormation stack:",
+    "page_number": 18,
+    "bbox": [
+      57.8267707824707,
+      570.5389404296875,
+      436.358642578125,
+      600.0886840820312
+    ],
+    "order_index": 421,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_2_3.jpeg",
+    "page_number": 19,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 422,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_3_3.jpeg",
+    "page_number": 19,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 423,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_5_3.jpeg",
+    "page_number": 19,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 424,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_6_3.jpeg",
+    "page_number": 19,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 425,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_7_3.jpeg",
+    "page_number": 19,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 426,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_8_3.jpeg",
+    "page_number": 19,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 427,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_9_3.jpeg",
+    "page_number": 19,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 428,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_10_3.jpeg",
+    "page_number": 19,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 429,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_11_3.jpeg",
+    "page_number": 19,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 430,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_12_3.jpeg",
+    "page_number": 19,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 431,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_13_3.jpeg",
+    "page_number": 19,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 432,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_14_3.jpeg",
+    "page_number": 19,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 433,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_15_3.jpeg",
+    "page_number": 19,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 434,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_16_3.jpeg",
+    "page_number": 19,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 435,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_17_3.jpeg",
+    "page_number": 19,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 436,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_18_3.jpeg",
+    "page_number": 19,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 437,
+    "font_info": null
+  },
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n19/463",
+    "page_number": 19,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 438,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_4_3.jpeg",
+    "page_number": 19,
+    "bbox": [
+      57.8267707824707,
+      56.1246337890625,
+      561.8267822265625,
+      380.8773193359375
+    ],
+    "order_index": 439,
+    "font_info": null
+  },
+  {
+    "type": "text",
+    "content": "What is the result of this policy?",
+    "page_number": 19,
+    "bbox": [
+      57.8267707824707,
+      395.712890625,
+      200.8695526123047,
+      410.4288635253906
+    ],
+    "order_index": 440,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A. Users that assume an IAM role with a logical ID that begins with \"Production\" are prevented from\nrunning the update-stack command.\nB. Users can update all resources in the stack except for resources that have a logical ID that begins\nwith \"Production\".\nC. Users can update all resources in the stack except for resources that have an attribute that begins\nwith \"Production\".\nD. Users in an IAM group with a logical ID that begins with \"Production\" are prevented from running\nthe update-stack command.",
+    "page_number": 19,
+    "bbox": [
+      57.8267707824707,
+      440.2140808105469,
+      503.1101989746094,
+      558.7661743164062
+    ],
+    "order_index": 441,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Answer: B",
+    "page_number": 19,
+    "bbox": [
+      416.38677978515625,
+      589.346435546875,
+      474.8359069824219,
+      608.1052856445312
+    ],
+    "order_index": 442,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Explanation:",
+    "page_number": 19,
+    "bbox": [
+      57.8267707824707,
+      623.2516479492188,
+      113.52571105957031,
+      637.9676513671875
+    ],
+    "order_index": 443,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "The policy provided includes two statements:\nThe first statement explicitly denies the Update:* action on resources with a LogicalResourceId that\nbegins with \"Production\".\nThe second statement allows the Update:* action on all resources.\nIn AWS IAM policy evaluation logic, explicit denies always take precedence over allows. Therefore,\nthe effect of this policy is that users can update all resources in the stack except for those with a\nlogical ID that begins with \"Production\".\nReference:",
+    "page_number": 19,
+    "bbox": [
+      57.8267707824707,
+      652.9191284179688,
+      499.4811096191406,
+      771.4712524414062
+    ],
+    "order_index": 444,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_2_3.jpeg",
+    "page_number": 20,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 445,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_3_3.jpeg",
+    "page_number": 20,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 446,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_4_3.jpeg",
+    "page_number": 20,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 447,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_5_3.jpeg",
+    "page_number": 20,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 448,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_6_3.jpeg",
+    "page_number": 20,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 449,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_7_3.jpeg",
+    "page_number": 20,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 450,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_8_3.jpeg",
+    "page_number": 20,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 451,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_9_3.jpeg",
+    "page_number": 20,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 452,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_10_3.jpeg",
+    "page_number": 20,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 453,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_11_3.jpeg",
+    "page_number": 20,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 454,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_12_3.jpeg",
+    "page_number": 20,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 455,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_13_3.jpeg",
+    "page_number": 20,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 456,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_14_3.jpeg",
+    "page_number": 20,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 457,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_15_3.jpeg",
+    "page_number": 20,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 458,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_16_3.jpeg",
+    "page_number": 20,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 459,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_17_3.jpeg",
+    "page_number": 20,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 460,
+    "font_info": null
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_18_3.jpeg",
+    "page_number": 20,
+    "bbox": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "order_index": 461,
+    "font_info": null
+  },
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n20/463",
+    "page_number": 20,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 462,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "IAM JSON Policy Elements: Effect\nPolicy Evaluation Logic",
+    "page_number": 20,
+    "bbox": [
+      57.8267707824707,
+      56.1264533996582,
+      205.242919921875,
+      85.67617797851562
+    ],
+    "order_index": 463,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Question: 18",
+    "page_number": 20,
+    "bbox": [
+      57.8267707824707,
+      101.42271423339844,
+      131.12648010253906,
+      120.18154907226562
+    ],
+    "order_index": 464,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "[Monitoring, Reporting, and Automation]\nA company's IT department noticed an increase in the spend of their developer AWS account. There\nare over 50 developers using the account, and the finance team wants to determine the service costs\nincurred by each developer.\nWhat should a SysOps administrator do to collect this information? (Select TWO.)",
+    "page_number": 20,
+    "bbox": [
+      57.8267707824707,
+      135.32798767089844,
+      507.2935791015625,
+      209.37881469726562
+    ],
+    "order_index": 465,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A. Activate the createdBy tag in the account.\nB. Analyze the usage with Amazon CloudWatch dashboards.\nC. Analyze the usage with Cost Explorer.\nD. Configure AWS Trusted Advisor to track resource usage.\nE. Create a billing alarm in AWS Budgets.",
+    "page_number": 20,
+    "bbox": [
+      57.8267707824707,
+      239.16404724121094,
+      324.07928466796875,
+      313.2149353027344
+    ],
+    "order_index": 466,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Answer: A,C",
+    "page_number": 20,
+    "bbox": [
+      410.62677001953125,
+      343.7952575683594,
+      480.8736877441406,
+      362.5541076660156
+    ],
+    "order_index": 467,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Explanation:",
+    "page_number": 20,
+    "bbox": [
+      57.8267707824707,
+      377.7004699707031,
+      113.52571105957031,
+      392.41644287109375
+    ],
+    "order_index": 468,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "To determine the service costs incurred by each developer, follow these steps:\nActivate the createdBy Tag:\nTagging resources with a createdBy tag helps identify which user created the resource. This tag\nshould be applied consistently across all resources created by the developers.\nReference: Tagging Your Resources\nAnalyze Usage with Cost Explorer:\nUse Cost Explorer to filter and group cost and usage data by the createdBy tag. This provides a\nbreakdown of costs incurred by each developer.\nReference: Analyzing Your Costs with Cost Explorer\nThese two steps together will provide a detailed analysis of the costs incurred by each developer in\nthe AWS account.",
+    "page_number": 20,
+    "bbox": [
+      57.8267707824707,
+      407.3679504394531,
+      498.43438720703125,
+      570.4212036132812
+    ],
+    "order_index": 469,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Question: 19",
+    "page_number": 20,
+    "bbox": [
+      57.8267707824707,
+      586.1677856445312,
+      131.12648010253906,
+      604.9266357421875
+    ],
+    "order_index": 470,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "[High Availability, Backup, and Recovery]\nA company website contains a web tier and a database tier on AWS. The web tier consists of Amazon\nEC2 instances that run in an Auto Scaling group across two Availability Zones. The database tier runs\non an Amazon ROS for MySQL Multi-AZ DB instance. The database subnet network ACLs are\nrestricted to only the web subnets that need access to the database. The web subnets use the default\nnetwork ACL with the default rules.\nThe company's operations team has added a third subnet to the Auto Scaling group configuration.\nAfter an Auto Scaling event occurs, some users report that they intermittently receive an error\nmessage. The error message states that the server cannot connect to the database. The operations\nteam has confirmed that the route tables are correct and that the required ports are open on all",
+    "page_number": 20,
+    "bbox": [
+      57.8267707824707,
+      620.072998046875,
+      509.07391357421875,
+      768.2925415039062
+    ],
+    "order_index": 471,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  }
+]

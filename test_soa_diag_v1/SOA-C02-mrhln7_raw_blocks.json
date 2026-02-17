@@ -1,0 +1,255 @@
+[
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n13/463",
+    "page_number": 13,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 0,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Answer: A",
+    "page_number": 13,
+    "bbox": [
+      416.14678955078125,
+      71.75523376464844,
+      475.2222900390625,
+      90.51406860351562
+    ],
+    "order_index": 1,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Explanation:",
+    "page_number": 13,
+    "bbox": [
+      57.8267707824707,
+      105.66050720214844,
+      113.52571105957031,
+      120.37649536132812
+    ],
+    "order_index": 2,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "To secure the S3 bucket and allow access only from CloudFront, the following steps should be taken:\nCreate an OAI in CloudFront:\nIn the CloudFront console, create an origin access identity (OAI) and associate it with your\nCloudFront distribution.\nReference: Restricting Access to S3 Buckets\nUpdate S3 Bucket Policy:\nModify the S3 bucket policy to allow access only from the OAI. This involves adding a policy\nstatement that grants the OAI permission to get objects from the bucket and removing any other\npublic access permissions.\nExample Policy:\njson\nCopy code\n{\n\"Version\": \"2012-10-17\",\n\"Statement\":\n[\n{\n\"Effect\": \"Allow\",\n\"Principal\": {\n\"AWS\": \"arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity E3EXAMPLE\"\n},\n\"Action\": \"s3:GetObject\",\n\"Resource\": \"arn:aws:s3:::example-bucket/*\"\n}\n]\n}\nReference: Bucket Policy Examples\nTest Configuration:\nEnsure that the S3 bucket is not publicly accessible and that requests to the bucket through the\nCloudFront distribution are successful.\nReference: Testing CloudFront OAI",
+    "page_number": 13,
+    "bbox": [
+      57.8267707824707,
+      135.32798767089844,
+      502.5987548828125,
+      595.0558471679688
+    ],
+    "order_index": 3,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Question: 13",
+    "page_number": 13,
+    "bbox": [
+      57.8267707824707,
+      610.8023681640625,
+      131.12648010253906,
+      629.5612182617188
+    ],
+    "order_index": 4,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "[Security and Compliance]\nA SysOps administrator must create an IAM policy for a developer who needs access to specific AWS\nservices. Based on the requirements, the SysOps administrator creates the following policy:",
+    "page_number": 13,
+    "bbox": [
+      57.8267707824707,
+      644.7075805664062,
+      503.00714111328125,
+      689.091064453125
+    ],
+    "order_index": 5,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n14/463",
+    "page_number": 14,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 6,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_1_964_14.jpeg",
+    "page_number": 14,
+    "bbox": [
+      57.8267707824707,
+      56.1246337890625,
+      458.62677001953125,
+      379.2879943847656
+    ],
+    "order_index": 7,
+    "font_info": null
+  },
+  {
+    "type": "text",
+    "content": "Which actions does this policy allow? (Select TWO.)",
+    "page_number": 14,
+    "bbox": [
+      57.8267707824707,
+      394.12353515625,
+      286.9700622558594,
+      408.8395080566406
+    ],
+    "order_index": 8,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A. Create an AWS Storage Gateway.\nB. Create an IAM role for an AWS Lambda function.\nC. Delete an Amazon Simple Queue Service (Amazon SQS) queue.\nD. Describe AWS load balancers.\nE. Invoke an AWS Lambda function.",
+    "page_number": 14,
+    "bbox": [
+      57.8267707824707,
+      438.6247253417969,
+      349.2955017089844,
+      512.6755981445312
+    ],
+    "order_index": 9,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Answer: D,E",
+    "page_number": 14,
+    "bbox": [
+      410.8667907714844,
+      543.2559204101562,
+      480.5372009277344,
+      562.0147705078125
+    ],
+    "order_index": 10,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Explanation:",
+    "page_number": 14,
+    "bbox": [
+      57.8267707824707,
+      577.1611328125,
+      113.52571105957031,
+      591.8771362304688
+    ],
+    "order_index": 11,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "The provided IAM policy grants the following permissions:\nDescribe AWS Load Balancers:\nThe policy allows actions with the prefix elasticloadbalancing:. This includes actions like\nDescribeLoadBalancers and other Describe* actions related to Elastic Load Balancing.\nReference: Elastic Load Balancing API Actions\nInvoke AWS Lambda Function:\nThe policy allows actions with the prefix lambda:, which includes InvokeFunction and other actions\nthat allow listing and describing Lambda functions.\nReference: AWS Lambda API Actions\nThe actions related to AWS Storage Gateway (create), IAM role (create), and Amazon SQS (delete)\nare not allowed by this policy. The policy only grants describe/list permissions for storagegateway,",
+    "page_number": 14,
+    "bbox": [
+      57.8267707824707,
+      606.82861328125,
+      497.20867919921875,
+      769.8818969726562
+    ],
+    "order_index": 12,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  }
+]

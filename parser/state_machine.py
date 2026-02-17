@@ -17,7 +17,9 @@ from .models import (
     AnomalyType,
     BlockType,
     ContentBlock,
+    FontInfo,
     ParsedQuestion,
+    QuestionOption,
     Section,
 )
 
@@ -51,176 +53,207 @@ IGNORE_PATTERNS = [
     re.compile(r"^\s*(Page\s*)?\d+\s*(/|of)\s*\d+\s*$", re.IGNORECASE), # "8/528", "Page 8 of 528"
     re.compile(r"^\s*Question\s*\d+\s*$"), # Solo "Question 5" (not the anchor)
     re.compile(r"^https?://[^\s]+$"), # Lone URLs
+    re.compile(r"^\s*Box\s*\d+\s*:", re.IGNORECASE), # "Box 1:", "Box 2:" noise
+    re.compile(r"^\s*Select and Place:", re.IGNORECASE), # "Select and Place:" noise
 ]
 
 
 class ParserState(Enum):
-    """Internal states of the parsing machine."""
+    """Internal states based on visual section detection."""
     SEEKING_QUESTION = "SEEKING_QUESTION"
-    READING_QUESTION = "READING_QUESTION"
-    READING_OPTIONS = "READING_OPTIONS"
-    READING_ANSWER = "READING_ANSWER"
-    READING_EXPLANATION = "READING_EXPLANATION"
+    QUESTION_BODY = "QUESTION_BODY"
+    OPTION = "OPTION"
+    ANSWER = "ANSWER"
+    EXPLANATION = "EXPLANATION"
 
 
 class StateMachineParser:
     """
     Finite State Machine that transforms an ordered sequence of ContentBlocks
-    into structured ParsedQuestion entities.
+    into structured ParsedQuestion entities with strict media ownership.
     """
 
     def __init__(self):
         self.state = ParserState.SEEKING_QUESTION
         self.current_question: Optional[ParsedQuestion] = None
+        self.current_option: Optional[QuestionOption] = None
         self.questions: list[ParsedQuestion] = []
         self.question_numbers: set[int] = set()
 
     def parse(self, blocks: list[ContentBlock]) -> list[ParsedQuestion]:
-        """
-        Parse a list of blocks into questions.
-        
-        Args:
-            blocks: List of ContentBlock objects in reading order.
-            
-        Returns:
-            List of ParsedQuestion objects.
-        """
+        """Parse blocks into structured questions."""
         self.state = ParserState.SEEKING_QUESTION
         self.current_question = None
+        self.current_option = None
         self.questions = []
         self.question_numbers = set()
 
         for block in blocks:
             self._process_block(block)
 
-        # Finalize the last question if any
+        # Finalize the last question
         if self.current_question:
             self._finalize_question()
 
         return self.questions
 
     def _process_block(self, block: ContentBlock):
-        """Process a single content block based on current state."""
+        """Process a block based on strict visual context."""
 
-        # 1. Images are always added to the current section (if any)
+        # ─── 1. Image Block: Strict Assignment ───
         if block.type == BlockType.IMAGE:
-            if self.current_question:
-                section = self._get_current_section_key()
-                self.current_question.blocks[section].append(block)
-                self.current_question.page_end = max(
-                    self.current_question.page_end, block.page_number
-                )
+            if not self.current_question:
+                logger.debug(f"Skipping orphan image (pre-amble) at page {block.page_number}")
+                return
+
+            self._assign_image(block)
             return
 
-        # 2. Text blocks: split into lines for high-resolution anchor detection
+        # ─── 2. Text Block: State Transitions & Content ───
         lines = block.content.split("\n")
+        
         for line in lines:
             line_str = line.strip()
             if not line_str:
                 continue
-
-            # ─── Noise Reduction ───
+            
+            # Check noise patterns (Headers/Footers)
             if any(p.match(line_str) for p in IGNORE_PATTERNS):
                 continue
 
-            # ─── Anchor Detection ───
-
-            # Question Start (Highest Priority)
+            # Anchor Detection (Case-Insensitive)
+            
+            # Question Anchor (e.g. "Question: 13")
             q_match = QUESTION_PATTERN.match(line_str)
             if q_match:
                 q_num = int(q_match.group(1))
                 self._start_new_question(q_num, block)
-                remainder = line_str[q_match.end() :].strip()
+                remainder = line_str[q_match.end():].strip()
                 if remainder:
-                    self._add_to_section(remainder, block)
+                    self._append_text(remainder)
                 continue
 
-            # Don't process before first question
             if not self.current_question:
                 continue
 
-            # Answer Anchor
+            # Option Anchor (e.g. "A.")
+            opt_match = OPTION_PATTERN.match(line_str)
+            if opt_match and self.state in [ParserState.QUESTION_BODY, ParserState.OPTION]:
+                key = opt_match.group(1).upper()
+                self._start_new_option(key)
+                remainder = line_str[opt_match.end():].strip()
+                if remainder:
+                    self._append_text(remainder)
+                continue
+
+            # Answer Anchor (e.g. "Answer: B")
             ans_match = ANSWER_PATTERN.match(line_str)
             if ans_match:
-                self.state = ParserState.READING_ANSWER
-                remainder = line_str[ans_match.end() :].strip()
+                self.state = ParserState.ANSWER
+                self.current_option = None
+                remainder = line_str[ans_match.end():].strip()
                 if remainder:
-                    self._add_to_section(remainder, block)
+                    self._append_text(remainder)
                 continue
 
-            # Explanation/Reference Anchor
+            # Explanation Anchor (e.g. "Explanation:")
             exp_match = EXPLANATION_PATTERN.match(line_str)
             if exp_match:
-                self.state = ParserState.READING_EXPLANATION
-                remainder = line_str[exp_match.end() :].strip()
+                self.state = ParserState.EXPLANATION
+                self.current_option = None
+                remainder = line_str[exp_match.end():].strip()
                 if remainder:
-                    self._add_to_section(remainder, block)
+                    self._append_text(remainder)
                 continue
 
-            # Option Anchor (Only valid in Question/Options phase)
-            opt_match = OPTION_PATTERN.match(line_str)
-            if opt_match and self.state in [
-                ParserState.READING_QUESTION,
-                ParserState.READING_OPTIONS,
-            ]:
-                self.state = ParserState.READING_OPTIONS
-                self._add_to_section(line_str, block)
-                continue
+            # Accumulate content in current state
+            self._append_text(line_str)
 
-            # ─── Content Accumulation ───
-            self._add_to_section(line_str, block)
-
-    def _start_new_question(self, q_num: int, anchor_block: ContentBlock):
-        """Finalize current question and start a new one."""
+    def _start_new_question(self, q_num: int, block: ContentBlock):
+        """Finalize previous and start fresh state."""
         if self.current_question:
             self._finalize_question()
 
-        logger.info(f"Detected Question {q_num} on page {anchor_block.page_number}")
+        logger.info(f"Detected Question {q_num} on page {block.page_number}")
+        
         self.current_question = ParsedQuestion(
             question_number=q_num,
-            page_start=anchor_block.page_number,
-            page_end=anchor_block.page_number,
+            page_start=block.page_number,
+            page_end=block.page_number,
         )
-
-        # Basic duplicate detection
-        if q_num in self.question_numbers:
-            self.current_question.anomalies.append(
-                Anomaly(
-                    type=AnomalyType.DUPLICATE_QUESTION_NUMBER,
-                    severity=40,
-                    message=f"Duplicate question number detected: {q_num}",
-                    context={"number": q_num},
-                )
-            )
-
+        self.current_option = None
+        self.state = ParserState.QUESTION_BODY
         self.question_numbers.add(q_num)
-        self.state = ParserState.READING_QUESTION
 
-    def _add_to_section(self, content: str, source: ContentBlock):
-        """Add text content to current active section."""
-        key = self._get_current_section_key()
-        self.current_question.blocks[key].append(self._clone_block(source, content))
-        self.current_question.page_end = max(
-            self.current_question.page_end, source.page_number
-        )
+    def _start_new_option(self, key: str):
+        """Switch to OPTION state and create structure."""
+        self.state = ParserState.OPTION
+        self.current_option = QuestionOption(key=key)
+        self.current_question.options.append(self.current_option)
 
-    def _get_current_section_key(self) -> str:
-        """Map enum state to dictionary block key."""
-        if self.state == ParserState.READING_QUESTION:
-            return "question"
-        if self.state == ParserState.READING_OPTIONS:
-            return "options"
-        if self.state == ParserState.READING_ANSWER:
-            return "answer"
-        if self.state == ParserState.READING_EXPLANATION:
-            return "explanation"
-        return "question"
+    def _append_text(self, text: str):
+        """Append text to the active part of the current question."""
+        if not self.current_question:
+            return
+
+        if self.state == ParserState.QUESTION_BODY:
+            if self.current_question.question_text:
+                self.current_question.question_text += " " + text
+            else:
+                self.current_question.question_text = text
+        
+        elif self.state == ParserState.OPTION:
+            if self.current_option:
+                if self.current_option.text:
+                    self.current_option.text += " " + text
+                else:
+                    self.current_option.text = text
+        
+        elif self.state == ParserState.ANSWER:
+            if self.current_question.answer_text:
+                self.current_question.answer_text += " " + text
+            else:
+                self.current_question.answer_text = text
+        
+        elif self.state == ParserState.EXPLANATION:
+            if self.current_question.explanation_text:
+                self.current_question.explanation_text += " " + text
+            else:
+                self.current_question.explanation_text = text
+
+    def _assign_image(self, block: ContentBlock):
+        """Strict assignment of images based on state."""
+        q = self.current_question
+        path = block.content
+        
+        # Debug logging as requested
+        print(f"[Q{q.question_number}] Assigning image to {self.state}")
+        
+        if self.state == ParserState.QUESTION_BODY:
+            q.question_images.append(path)
+        
+        elif self.state == ParserState.OPTION:
+            if self.current_option:
+                self.current_option.images.append(path)
+            else:
+                # Fallback to question body if option object missing
+                q.question_images.append(path)
+        
+        elif self.state == ParserState.ANSWER:
+            q.answer_images.append(path)
+        
+        elif self.state == ParserState.EXPLANATION:
+            q.explanation_images.append(path)
+        
+        else:
+            logger.warning(f"Orphan image at page {block.page_number} in state {self.state}")
+
+        q.page_end = max(q.page_end, block.page_number)
 
     def _finalize_question(self):
-        """Apply final logic to a finished question."""
+        """Basic validation and storage."""
         q = self.current_question
         
-        # Basic integrity checks
         if not q.has_question_text:
             q.anomalies.append(Anomaly(
                 type=AnomalyType.MISSING_QUESTION_TEXT,
@@ -235,39 +268,13 @@ class StateMachineParser:
                 message="Question has no answer section"
             ))
 
-        if q.has_explanation and not q.has_answer:
+        # Check for orphan sections (images only) -> Move to anomaly logic
+        if not q.question_text and q.question_images:
             q.anomalies.append(Anomaly(
-                type=AnomalyType.EXPLANATION_WITHOUT_ANSWER,
-                severity=50,
-                message="Explanation exists but answer is missing"
+                type=AnomalyType.ORPHAN_IMAGE,
+                severity=30,
+                message="Question body contains only images",
+                context={"section": "question"}
             ))
-
-        if not q.has_explanation:
-            q.anomalies.append(Anomaly(
-                type=AnomalyType.MISSING_EXPLANATION,
-                severity=20,
-                message="Question has no explanation"
-            ))
-
-        # Check for orphan images (sections with only images)
-        for section, blocks in q.blocks.items():
-            if blocks and all(b.type == BlockType.IMAGE for b in blocks):
-                q.anomalies.append(Anomaly(
-                    type=AnomalyType.ORPHAN_IMAGE,
-                    severity=30,
-                    message=f"Section '{section}' contains only images",
-                    context={"section": section}
-                ))
 
         self.questions.append(q)
-
-    def _clone_block(self, block: ContentBlock, new_content: str) -> ContentBlock:
-        """Create a copy of a block with modified content (for inline anchors)."""
-        return ContentBlock(
-            type=block.type,
-            content=new_content,
-            page_number=block.page_number,
-            bbox=block.bbox,
-            order_index=block.order_index,
-            font_info=block.font_info,
-        )

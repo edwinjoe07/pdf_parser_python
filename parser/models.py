@@ -121,27 +121,41 @@ class Anomaly(BaseModel):
 # ─── Question Model ──────────────────────────────────────────────────────────
 
 
+class QuestionOption(BaseModel):
+    """
+    A single answer option with its own text and images.
+    Ensures strict ownership of media.
+    """
+    key: str  # "A", "B", "C", etc.
+    text: str = ""
+    images: list[str] = Field(default_factory=list)
+
+
 class ParsedQuestion(BaseModel):
     """
-    A fully parsed question entity with all sections
-    and associated anomalies.
+    A fully parsed question entity with strict section-based ownership of content.
     """
     question_number: int
     question_type: QuestionType = QuestionType.MCQ
+    
+    question_text: str = ""
+    question_images: list[str] = Field(default_factory=list)
+
+    options: list[QuestionOption] = Field(default_factory=list)
+
+    answer_text: str = ""
+    answer_images: list[str] = Field(default_factory=list)
+
+    explanation_text: str = ""
+    explanation_images: list[str] = Field(default_factory=list)
+
+    # Metadata & Tracking
     page_start: int
     page_end: int
-    blocks: dict[str, list[ContentBlock]] = Field(
-        default_factory=lambda: {
-            "question": [],
-            "options": [],
-            "answer": [],
-            "explanation": []
-        }
-    )
     anomalies: list[Anomaly] = Field(default_factory=list)
     raw_text: str = Field(
         default="",
-        description="Full raw text of the question for search/debug"
+        description="Full raw text for debug"
     )
 
     @computed_field
@@ -155,36 +169,25 @@ class ParsedQuestion(BaseModel):
     @computed_field
     @property
     def has_question_text(self) -> bool:
-        return any(
-            b.type == BlockType.TEXT and b.content.strip()
-            for b in self.blocks.get("question", [])
-        )
+        return bool(self.question_text.strip())
 
     @computed_field
     @property
     def has_answer(self) -> bool:
-        return any(
-            b.type == BlockType.TEXT and b.content.strip()
-            for b in self.blocks.get("answer", [])
-        )
+        return bool(self.answer_text.strip())
 
     @computed_field
     @property
     def has_explanation(self) -> bool:
-        return any(
-            b.type == BlockType.TEXT and b.content.strip()
-            for b in self.blocks.get("explanation", [])
-        )
+        return bool(self.explanation_text.strip())
 
     @computed_field
     @property
     def image_count(self) -> int:
-        return sum(
-            1
-            for section_blocks in self.blocks.values()
-            for b in section_blocks
-            if b.type == BlockType.IMAGE
-        )
+        count = len(self.question_images) + len(self.answer_images) + len(self.explanation_images)
+        for opt in self.options:
+            count += len(opt.images)
+        return count
 
 
 # ─── Exam / Parse Result Models ──────────────────────────────────────────────

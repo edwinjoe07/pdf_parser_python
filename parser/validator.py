@@ -97,13 +97,6 @@ class ValidationEngine:
             if not q.has_explanation:
                 report.questions_missing_explanation.append(q.question_number)
 
-            # Count orphan images
-            for section_blocks in q.blocks.values():
-                for block in section_blocks:
-                    if block.type == BlockType.IMAGE:
-                        # Check if there's question context for this image
-                        pass  # Images are attached to sections, so not truly orphan
-
             # Count anomalies by type
             for anomaly in q.anomalies:
                 key = anomaly.type.value

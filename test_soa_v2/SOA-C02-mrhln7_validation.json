@@ -1,0 +1,17 @@
+{
+  "total_questions_detected": 19,
+  "structured_successfully": 18,
+  "missing_question_numbers": [],
+  "duplicate_question_numbers": [],
+  "questions_missing_answer": [
+    19
+  ],
+  "questions_missing_explanation": [
+    19
+  ],
+  "orphan_images": 0,
+  "anomaly_breakdown": {
+    "missing_answer": 1
+  },
+  "success_rate": 94.74
+}

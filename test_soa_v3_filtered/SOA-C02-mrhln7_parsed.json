@@ -1,0 +1,199 @@
+{
+  "exam": {
+    "name": "SOA-C02-mrhln7",
+    "provider": "",
+    "version": "",
+    "source_pdf": "SOA-C02-mrhln7.pdf",
+    "total_pages": 463,
+    "file_hash": "058c036026ba6acb71c5d6fd95059112497a0deada65747b56e55cff2ff43e9d",
+    "file_size_bytes": 3684536
+  },
+  "parse_version": {
+    "parser_version": "1.0.0",
+    "parse_timestamp": "2026-02-17T10:44:06.682316+00:00",
+    "raw_block_count": 35,
+    "structured_question_count": 4
+  },
+  "questions": [
+    {
+      "question_number": 12,
+      "question_type": "mcq",
+      "question_text": "[Monitoring, Reporting, and Automation] A company has an Amazon CloudFront distribution that uses an Amazon S3 bucket as its origin. During a review of the access logs, the company determines that some requests are going directly to the S3 bucket by using the website hosting endpoint. A SysOps administrator must secure the S3 bucket to allow requests only from CloudFront. What should the SysOps administrator do to meet this requirement?",
+      "question_images": [],
+      "options": [
+        {
+          "key": "A",
+          "text": "Create an origin access identity (OAI) in CloudFront. Associate the OAI with the distribution. Remove access to and from other principals in the S3 bucket policy. Update the S3 bucket policy to allow access only from the OAI.",
+          "images": []
+        },
+        {
+          "key": "B",
+          "text": "Create an origin access identity (OAI) in CloudFront. Associate the OAI with the distribution. Update the S3 bucket policy to allow access only from the OAI. Create a new origin, and specify the S3 bucket as the new origin. Update the distribution behavior to use the new origin. Remove the existing origin.",
+          "images": []
+        },
+        {
+          "key": "C",
+          "text": "Create an origin access identity (OAI) in CloudFront. Associate the OAI with the distribution. Update the S3 bucket policy to allow access only from the OAI. Disable website hosting. Create a new origin, and specify the S3 bucket as the new origin. Update the distribution behavior to use the new origin. Remove the existing origin.",
+          "images": []
+        },
+        {
+          "key": "D",
+          "text": "Update the S3 bucket policy to allow access only from the CloudFront distribution. Remove access to and from other principals in the S3 bucket policy. Disable website hosting. Create a new origin, and specify the S3 bucket as the new origin. Update the distribution behavior to use the new origin. Remove the existing origin.",
+          "images": []
+        }
+      ],
+      "answer_text": "A",
+      "answer_images": [],
+      "explanation_text": "To secure the S3 bucket and allow access only from CloudFront, the following steps should be taken: Create an OAI in CloudFront: In the CloudFront console, create an origin access identity (OAI) and associate it with your CloudFront distribution. Restricting Access to S3 Buckets Update S3 Bucket Policy: Modify the S3 bucket policy to allow access only from the OAI. This involves adding a policy statement that grants the OAI permission to get objects from the bucket and removing any other public access permissions. Example Policy: json Copy code { \"Version\": \"2012-10-17\", \"Statement\": [ { \"Effect\": \"Allow\", \"Principal\": { \"AWS\": \"arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity E3EXAMPLE\" }, \"Action\": \"s3:GetObject\", \"Resource\": \"arn:aws:s3:::example-bucket/*\" } ] } Bucket Policy Examples Test Configuration: Ensure that the S3 bucket is not publicly accessible and that requests to the bucket through the CloudFront distribution are successful. Testing CloudFront OAI",
+      "explanation_images": [],
+      "page_start": 12,
+      "page_end": 12,
+      "anomalies": [],
+      "raw_text": "",
+      "anomaly_score": 0,
+      "has_question_text": true,
+      "has_answer": true,
+      "has_explanation": true,
+      "image_count": 0
+    },
+    {
+      "question_number": 13,
+      "question_type": "mcq",
+      "question_text": "[Security and Compliance] A SysOps administrator must create an IAM policy for a developer who needs access to specific AWS services. Based on the requirements, the SysOps administrator creates the following policy: Which actions does this policy allow? (Select TWO.)",
+      "question_images": [],
+      "options": [
+        {
+          "key": "A",
+          "text": "Create an AWS Storage Gateway.",
+          "images": []
+        },
+        {
+          "key": "B",
+          "text": "Create an IAM role for an AWS Lambda function.",
+          "images": []
+        },
+        {
+          "key": "C",
+          "text": "Delete an Amazon Simple Queue Service (Amazon SQS) queue.",
+          "images": []
+        },
+        {
+          "key": "D",
+          "text": "Describe AWS load balancers.",
+          "images": []
+        },
+        {
+          "key": "E",
+          "text": "Invoke an AWS Lambda function.",
+          "images": []
+        }
+      ],
+      "answer_text": "D,E",
+      "answer_images": [],
+      "explanation_text": "The provided IAM policy grants the following permissions: Describe AWS Load Balancers: The policy allows actions with the prefix elasticloadbalancing:. This includes actions like DescribeLoadBalancers and other Describe* actions related to Elastic Load Balancing. Elastic Load Balancing API Actions Invoke AWS Lambda Function: The policy allows actions with the prefix lambda:, which includes InvokeFunction and other actions that allow listing and describing Lambda functions. AWS Lambda API Actions The actions related to AWS Storage Gateway (create), IAM role (create), and Amazon SQS (delete) are not allowed by this policy. The policy only grants describe/list permissions for storagegateway, elasticloadbalancing, lambda, and list permissions for SQS.",
+      "explanation_images": [],
+      "page_start": 13,
+      "page_end": 13,
+      "anomalies": [],
+      "raw_text": "",
+      "anomaly_score": 0,
+      "has_question_text": true,
+      "has_answer": true,
+      "has_explanation": true,
+      "image_count": 0
+    },
+    {
+      "question_number": 14,
+      "question_type": "mcq",
+      "question_text": "[Networking and Content Delivery] A company is trying to connect two applications. One application runs in an on-premises data center that has a hostname of hostl .onprem.private. The other application runs on an Amazon EC2 instance that has a hostname of hostl.awscloud.private. An AWS Site-to-Site VPN connection is in place between the on-premises network and AWS. The application that runs in the data center tries to connect to the application that runs on the EC2 instance, but DNS resolution fails. A SysOps administrator must implement DNS resolution between on-premises and AWS resources. Which solution allows the on-premises application to resolve the EC2 instance hostname?",
+      "question_images": [],
+      "options": [
+        {
+          "key": "A",
+          "text": "Set up an Amazon Route 53 inbound resolver endpoint with a forwarding rule for the onprem.private hosted zone. Associate the resolver with the VPC of the EC2 instance. Configure the on-premises DNS resolver to forward onprem.private DNS queries to the inbound resolver endpoint.",
+          "images": []
+        },
+        {
+          "key": "B",
+          "text": "Set up an Amazon Route 53 inbound resolver endpoint. Associate the resolver with the VPC of the EC2 instance. Configure the on-premises DNS resolver to forward awscloud.private DNS queries to the inbound resolver endpoint.",
+          "images": []
+        },
+        {
+          "key": "C",
+          "text": "Set up an Amazon Route 53 outbound resolver endpoint with a forwarding rule for the onprem.private hosted zone. Associate the resolver with the AWS Region of the EC2 instance. Configure the on-premises DNS resolver to forward onprem.private DNS queries to the outbound resolver endpoint.",
+          "images": []
+        },
+        {
+          "key": "D",
+          "text": "Set up an Amazon Route 53 outbound resolver endpoint. Associate the resolver with the AWS Region of the EC2 instance. Configure the on-premises DNS resolver to forward awscloud.private DNS queries to the outbound resolver endpoint.",
+          "images": []
+        }
+      ],
+      "answer_text": "A",
+      "answer_images": [],
+      "explanation_text": "Step-by-Step Understand the Problem: There are two applications, one in an on-premises data center and the other on an Amazon EC2 instance. DNS resolution fails when the on-premises application tries to connect to the EC2 instance. The goal is to implement DNS resolution between on-premises and AWS resources. Analyze the Requirements: Need to resolve the hostname of the EC2 instance from the on-premises network. Utilize the existing AWS Site-to-Site VPN connection for DNS queries. Evaluate the Options: Option A: Set up an Amazon Route 53 inbound resolver endpoint with a forwarding rule for the onprem.private hosted zone. This allows DNS queries from on-premises to be forwarded to Route 53 for resolution. The resolver endpoint is associated with the VPC, enabling resolution of AWS resources. Option B: Set up an Amazon Route 53 inbound resolver endpoint without specifying the forwarding rule. This option does not address the specific need to resolve onprem.private DNS queries. Option C: Set up an Amazon Route 53 outbound resolver endpoint. Outbound resolver endpoints are used for forwarding DNS queries from AWS to on-premises, not vice versa. Option D: Set up an Amazon Route 53 outbound resolver endpoint without specifying the forwarding rule. Similar to Option C, this does not meet the requirement of resolving on-premises queries in AWS. Select the Best Solution: Option A: Setting up an inbound resolver endpoint with a forwarding rule for onprem.private and associating it with the VPC ensures that DNS queries from on-premises can resolve AWS resources effectively. Amazon Route 53 Resolver Integrating AWS and On-Premises Networks with Route 53 Using an Amazon Route 53 inbound resolver endpoint with a forwarding rule ensures that on- premises applications can resolve EC2 instance hostnames effectively.",
+      "explanation_images": [],
+      "page_start": 15,
+      "page_end": 15,
+      "anomalies": [],
+      "raw_text": "",
+      "anomaly_score": 0,
+      "has_question_text": true,
+      "has_answer": true,
+      "has_explanation": true,
+      "image_count": 0
+    },
+    {
+      "question_number": 15,
+      "question_type": "mcq",
+      "question_text": "[Security and Compliance] A large company is using AWS Organizations to manage its multi-account AWS environment. According to company policy, all users should have read-level access to a particular Amazon S3 bucket in a central account. The S3 bucket data should not be available outside the organization. A SysOps administrator must set up the permissions and add a bucket policy to the S3 bucket. Which parameters should be specified to accomplish this in the MOST efficient manner?",
+      "question_images": [],
+      "options": [
+        {
+          "key": "A",
+          "text": "Specify \"' as the principal and PrincipalOrgld as a condition.",
+          "images": []
+        },
+        {
+          "key": "B",
+          "text": "Specify all account numbers as the principal.",
+          "images": []
+        },
+        {
+          "key": "C",
+          "text": "Specify PrincipalOrgld as the principal.",
+          "images": []
+        },
+        {
+          "key": "D",
+          "text": "Specify the organization's management account as the principal.",
+          "images": []
+        }
+      ],
+      "answer_text": "A",
+      "answer_images": [],
+      "explanation_text": "Step-by-Step Understand the Problem: Ensure all users in the organization have read-level access to a specific S3 bucket. The data should not be accessible outside the organization. Analyze the Requirements: Grant read access to users within the organization. Prevent access from outside the organization. Evaluate the Options:",
+      "explanation_images": [],
+      "page_start": 16,
+      "page_end": 16,
+      "anomalies": [],
+      "raw_text": "",
+      "anomaly_score": 0,
+      "has_question_text": true,
+      "has_answer": true,
+      "has_explanation": true,
+      "image_count": 0
+    }
+  ],
+  "validation": {
+    "total_questions_detected": 4,
+    "structured_successfully": 4,
+    "missing_question_numbers": [],
+    "duplicate_question_numbers": [],
+    "questions_missing_answer": [],
+    "questions_missing_explanation": [],
+    "orphan_images": 0,
+    "anomaly_breakdown": {},
+    "success_rate": 100.0
+  }
+}

@@ -1,0 +1,1341 @@
+[
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n12/463",
+    "page_number": 12,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 0,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "To identify who is creating the Elastic IP addresses, the following steps should be taken:\nEnable CloudTrail Logging:\nEnsure AWS CloudTrail is enabled to log all API activities in your AWS account.\nReference: Setting Up AWS CloudTrail\nCreate an Athena Table for CloudTrail Logs:\nSet up an Athena table that points to the S3 bucket where CloudTrail logs are stored.\nReference: Creating Tables in Athena\nQuery CloudTrail Logs:\nUse Athena to run SQL queries to search for AllocateAddress events, which represent the creation of\nElastic IP addresses.\nExample Query:\nsql\nCopy code\nSELECT userIdentity.userName, eventTime, eventSource, eventName, requestParameters\nFROM cloudtrail_logs\nWHERE eventName = 'AllocateAddress';\nReference: Analyzing AWS CloudTrail Logs\nReview Results:\nReview the results to identify which IAM user or role is creating the Elastic IP addresses.\nReference: AWS CloudTrail Log Analysis",
+    "page_number": 12,
+    "bbox": [
+      57.8267707824707,
+      70.96018981933594,
+      504.6736145019531,
+      367.5169982910156
+    ],
+    "order_index": 1,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Question: 12",
+    "page_number": 12,
+    "bbox": [
+      57.8267707824707,
+      383.2635498046875,
+      131.12648010253906,
+      402.02239990234375
+    ],
+    "order_index": 2,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "[Monitoring, Reporting, and Automation]\nA company has an Amazon CloudFront distribution that uses an Amazon S3 bucket as its origin.\nDuring a review of the access logs, the company determines that some requests are going directly to\nthe S3 bucket by using the website hosting endpoint. A SysOps administrator must secure the S3\nbucket to allow requests only from CloudFront.\nWhat should the SysOps administrator do to meet this requirement?",
+    "page_number": 12,
+    "bbox": [
+      57.8267707824707,
+      417.1687927246094,
+      504.9420471191406,
+      506.05340576171875
+    ],
+    "order_index": 3,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A. Create an origin access identity (OAI) in CloudFront. Associate the OAI with the distribution.\nRemove access to and from other principals in the S3 bucket policy. Update the S3 bucket policy to\nallow access only from the OAI.\nB. Create an origin access identity (OAI) in CloudFront. Associate the OAI with the distribution.\nUpdate the S3 bucket policy to allow access only from the OAI. Create a new origin, and specify the\nS3 bucket as the new origin. Update the distribution behavior to use the new origin. Remove the\nexisting origin.\nC. Create an origin access identity (OAI) in CloudFront. Associate the OAI with the distribution.\nUpdate the S3 bucket policy to allow access only from the OAI. Disable website hosting. Create a new\norigin, and specify the S3 bucket as the new origin. Update the distribution behavior to use the new\norigin. Remove the existing origin.\nD. Update the S3 bucket policy to allow access only from the CloudFront distribution. Remove access\nto and from other principals in the S3 bucket policy. Disable website hosting. Create a new origin,\nand specify the S3 bucket as the new origin. Update the distribution behavior to use the new origin.\nRemove the existing origin.",
+    "page_number": 12,
+    "bbox": [
+      57.8267707824707,
+      535.838623046875,
+      508.43511962890625,
+      758.226806640625
+    ],
+    "order_index": 4,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n13/463",
+    "page_number": 13,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 5,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Answer: A",
+    "page_number": 13,
+    "bbox": [
+      416.14678955078125,
+      71.75523376464844,
+      475.2222900390625,
+      90.51406860351562
+    ],
+    "order_index": 6,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Explanation:",
+    "page_number": 13,
+    "bbox": [
+      57.8267707824707,
+      105.66050720214844,
+      113.52571105957031,
+      120.37649536132812
+    ],
+    "order_index": 7,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "To secure the S3 bucket and allow access only from CloudFront, the following steps should be taken:\nCreate an OAI in CloudFront:\nIn the CloudFront console, create an origin access identity (OAI) and associate it with your\nCloudFront distribution.\nReference: Restricting Access to S3 Buckets\nUpdate S3 Bucket Policy:\nModify the S3 bucket policy to allow access only from the OAI. This involves adding a policy\nstatement that grants the OAI permission to get objects from the bucket and removing any other\npublic access permissions.\nExample Policy:\njson\nCopy code\n{\n\"Version\": \"2012-10-17\",\n\"Statement\":\n[\n{\n\"Effect\": \"Allow\",\n\"Principal\": {\n\"AWS\": \"arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity E3EXAMPLE\"\n},\n\"Action\": \"s3:GetObject\",\n\"Resource\": \"arn:aws:s3:::example-bucket/*\"\n}\n]\n}\nReference: Bucket Policy Examples\nTest Configuration:\nEnsure that the S3 bucket is not publicly accessible and that requests to the bucket through the\nCloudFront distribution are successful.\nReference: Testing CloudFront OAI",
+    "page_number": 13,
+    "bbox": [
+      57.8267707824707,
+      135.32798767089844,
+      502.5987548828125,
+      595.0558471679688
+    ],
+    "order_index": 8,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Question: 13",
+    "page_number": 13,
+    "bbox": [
+      57.8267707824707,
+      610.8023681640625,
+      131.12648010253906,
+      629.5612182617188
+    ],
+    "order_index": 9,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "[Security and Compliance]\nA SysOps administrator must create an IAM policy for a developer who needs access to specific AWS\nservices. Based on the requirements, the SysOps administrator creates the following policy:",
+    "page_number": 13,
+    "bbox": [
+      57.8267707824707,
+      644.7075805664062,
+      503.00714111328125,
+      689.091064453125
+    ],
+    "order_index": 10,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n14/463",
+    "page_number": 14,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 11,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_1_964_14.jpeg",
+    "page_number": 14,
+    "bbox": [
+      57.8267707824707,
+      56.1246337890625,
+      458.62677001953125,
+      379.2879943847656
+    ],
+    "order_index": 12,
+    "font_info": null
+  },
+  {
+    "type": "text",
+    "content": "Which actions does this policy allow? (Select TWO.)",
+    "page_number": 14,
+    "bbox": [
+      57.8267707824707,
+      394.12353515625,
+      286.9700622558594,
+      408.8395080566406
+    ],
+    "order_index": 13,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A. Create an AWS Storage Gateway.\nB. Create an IAM role for an AWS Lambda function.\nC. Delete an Amazon Simple Queue Service (Amazon SQS) queue.\nD. Describe AWS load balancers.\nE. Invoke an AWS Lambda function.",
+    "page_number": 14,
+    "bbox": [
+      57.8267707824707,
+      438.6247253417969,
+      349.2955017089844,
+      512.6755981445312
+    ],
+    "order_index": 14,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Answer: D,E",
+    "page_number": 14,
+    "bbox": [
+      410.8667907714844,
+      543.2559204101562,
+      480.5372009277344,
+      562.0147705078125
+    ],
+    "order_index": 15,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Explanation:",
+    "page_number": 14,
+    "bbox": [
+      57.8267707824707,
+      577.1611328125,
+      113.52571105957031,
+      591.8771362304688
+    ],
+    "order_index": 16,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "The provided IAM policy grants the following permissions:\nDescribe AWS Load Balancers:\nThe policy allows actions with the prefix elasticloadbalancing:. This includes actions like\nDescribeLoadBalancers and other Describe* actions related to Elastic Load Balancing.\nReference: Elastic Load Balancing API Actions\nInvoke AWS Lambda Function:\nThe policy allows actions with the prefix lambda:, which includes InvokeFunction and other actions\nthat allow listing and describing Lambda functions.\nReference: AWS Lambda API Actions\nThe actions related to AWS Storage Gateway (create), IAM role (create), and Amazon SQS (delete)\nare not allowed by this policy. The policy only grants describe/list permissions for storagegateway,",
+    "page_number": 14,
+    "bbox": [
+      57.8267707824707,
+      606.82861328125,
+      497.20867919921875,
+      769.8818969726562
+    ],
+    "order_index": 17,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n15/463",
+    "page_number": 15,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 18,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "elasticloadbalancing, lambda, and list permissions for SQS.",
+    "page_number": 15,
+    "bbox": [
+      57.8267707824707,
+      56.1264533996582,
+      319.04986572265625,
+      70.84243774414062
+    ],
+    "order_index": 19,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Question: 14",
+    "page_number": 15,
+    "bbox": [
+      57.8267707824707,
+      86.58897399902344,
+      131.12648010253906,
+      105.34780883789062
+    ],
+    "order_index": 20,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "[Networking and Content Delivery]",
+    "page_number": 15,
+    "bbox": [
+      57.8267707824707,
+      120.49424743652344,
+      214.06724548339844,
+      135.21023559570312
+    ],
+    "order_index": 21,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A company is trying to connect two applications. One application runs in an on-premises data center\nthat has a hostname of hostl .onprem.private. The other application runs on an Amazon EC2 instance\nthat has a hostname of hostl.awscloud.private. An AWS Site-to-Site VPN connection is in place\nbetween the on-premises network and AWS.\nThe application that runs in the data center tries to connect to the application that runs on the EC2\ninstance, but DNS resolution fails. A SysOps administrator must implement DNS resolution between\non-premises and AWS resources.\nWhich solution allows the on-premises application to resolve the EC2 instance hostname?",
+    "page_number": 15,
+    "bbox": [
+      57.8267707824707,
+      150.1616668701172,
+      506.53179931640625,
+      268.7137145996094
+    ],
+    "order_index": 22,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A. Set up an Amazon Route 53 inbound resolver endpoint with a forwarding rule for the\nonprem.private hosted zone. Associate the resolver with the VPC of the EC2 instance. Configure the\non-premises DNS resolver to forward onprem.private DNS queries to the inbound resolver endpoint.\nB. Set up an Amazon Route 53 inbound resolver endpoint. Associate the resolver with the VPC of the\nEC2 instance. Configure the on-premises DNS resolver to forward awscloud.private DNS queries to\nthe inbound resolver endpoint.\nC. Set up an Amazon Route 53 outbound resolver endpoint with a forwarding rule for the\nonprem.private hosted zone. Associate the resolver with the AWS Region of the EC2 instance.\nConfigure the on-premises DNS resolver to forward onprem.private DNS queries to the outbound\nresolver endpoint.\nD. Set up an Amazon Route 53 outbound resolver endpoint. Associate the resolver with the AWS\nRegion of the EC2 instance. Configure the on-premises DNS resolver to forward awscloud.private DNS\nqueries to the outbound resolver endpoint.",
+    "page_number": 15,
+    "bbox": [
+      57.8267707824707,
+      298.49896240234375,
+      509.0018310546875,
+      491.21966552734375
+    ],
+    "order_index": 23,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Answer: A",
+    "page_number": 15,
+    "bbox": [
+      416.14678955078125,
+      521.7999877929688,
+      475.2222900390625,
+      540.558837890625
+    ],
+    "order_index": 24,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Explanation:",
+    "page_number": 15,
+    "bbox": [
+      57.8267707824707,
+      555.7052001953125,
+      113.52571105957031,
+      570.4212036132812
+    ],
+    "order_index": 25,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Step-by-Step\nUnderstand the Problem:\nThere are two applications, one in an on-premises data center and the other on an Amazon EC2\ninstance.\nDNS resolution fails when the on-premises application tries to connect to the EC2 instance.\nThe goal is to implement DNS resolution between on-premises and AWS resources.\nAnalyze the Requirements:\nNeed to resolve the hostname of the EC2 instance from the on-premises network.\nUtilize the existing AWS Site-to-Site VPN connection for DNS queries.\nEvaluate the Options:\nOption A: Set up an Amazon Route 53 inbound resolver endpoint with a forwarding rule for the\nonprem.private hosted zone.\nThis allows DNS queries from on-premises to be forwarded to Route 53 for resolution.",
+    "page_number": 15,
+    "bbox": [
+      57.8267707824707,
+      585.3726806640625,
+      482.637939453125,
+      778.0934448242188
+    ],
+    "order_index": 26,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n16/463",
+    "page_number": 16,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 27,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "The resolver endpoint is associated with the VPC, enabling resolution of AWS resources.\nOption B: Set up an Amazon Route 53 inbound resolver endpoint without specifying the forwarding\nrule.\nThis option does not address the specific need to resolve onprem.private DNS queries.\nOption C: Set up an Amazon Route 53 outbound resolver endpoint.\nOutbound resolver endpoints are used for forwarding DNS queries from AWS to on-premises, not\nvice versa.\nOption D: Set up an Amazon Route 53 outbound resolver endpoint without specifying the forwarding\nrule.\nSimilar to Option C, this does not meet the requirement of resolving on-premises queries in AWS.\nSelect the Best Solution:\nOption A: Setting up an inbound resolver endpoint with a forwarding rule for onprem.private and\nassociating it with the VPC ensures that DNS queries from on-premises can resolve AWS resources\neffectively.",
+    "page_number": 16,
+    "bbox": [
+      57.8267707824707,
+      56.1264533996582,
+      506.2401123046875,
+      263.6808776855469
+    ],
+    "order_index": 28,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Amazon Route 53 Resolver\nIntegrating AWS and On-Premises Networks with Route 53\nUsing an Amazon Route 53 inbound resolver endpoint with a forwarding rule ensures that on-\npremises applications can resolve EC2 instance hostnames effectively.",
+    "page_number": 16,
+    "bbox": [
+      57.8267707824707,
+      278.63238525390625,
+      474.9283142089844,
+      337.8495178222656
+    ],
+    "order_index": 29,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Question: 15",
+    "page_number": 16,
+    "bbox": [
+      57.8267707824707,
+      353.5960998535156,
+      131.12648010253906,
+      372.3549499511719
+    ],
+    "order_index": 30,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "[Security and Compliance]\nA large company is using AWS Organizations to manage its multi-account AWS environment.\nAccording to company policy, all users should have read-level access to a particular Amazon S3\nbucket in a central account. The S3 bucket data should not be available outside the organization. A\nSysOps administrator must set up the permissions and add a bucket policy to the S3 bucket.\nWhich parameters should be specified to accomplish this in the MOST efficient manner?",
+    "page_number": 16,
+    "bbox": [
+      57.8267707824707,
+      387.5013427734375,
+      494.469482421875,
+      476.3859558105469
+    ],
+    "order_index": 31,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A. Specify \"' as the principal and PrincipalOrgld as a condition.\nB. Specify all account numbers as the principal.\nC. Specify PrincipalOrgld as the principal.\nD. Specify the organization's management account as the principal.",
+    "page_number": 16,
+    "bbox": [
+      57.8267707824707,
+      506.171142578125,
+      356.2352600097656,
+      565.3883666992188
+    ],
+    "order_index": 32,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Answer: A",
+    "page_number": 16,
+    "bbox": [
+      416.14678955078125,
+      595.9686889648438,
+      475.2222900390625,
+      614.7275390625
+    ],
+    "order_index": 33,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Explanation:",
+    "page_number": 16,
+    "bbox": [
+      57.8267707824707,
+      629.8739013671875,
+      113.52571105957031,
+      644.5899047851562
+    ],
+    "order_index": 34,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Step-by-Step\nUnderstand the Problem:\nEnsure all users in the organization have read-level access to a specific S3 bucket.\nThe data should not be accessible outside the organization.\nAnalyze the Requirements:\nGrant read access to users within the organization.\nPrevent access from outside the organization.\nEvaluate the Options:",
+    "page_number": 16,
+    "bbox": [
+      57.8267707824707,
+      659.5413208007812,
+      417.94146728515625,
+      778.0934448242188
+    ],
+    "order_index": 35,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n17/463",
+    "page_number": 17,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 36,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Option A: Specify \"*\" as the principal and PrincipalOrgId as a condition.\nThis grants access to all AWS principals but restricts it to those within the specified organization using\nthe PrincipalOrgId condition.\nOption B: Specify all account numbers as the principal.\nThis is impractical for a large organization and requires constant updates if accounts are added or\nremoved.\nOption C: Specify PrincipalOrgId as the principal.\nThe PrincipalOrgId condition must be used within a policy, not as a principal.\nOption D: Specify the organization's management account as the principal.\nThis grants access only to the management account, not to all users within the organization.\nSelect the Best Solution:\nOption A: Using \"*\" as the principal with the PrincipalOrgId condition ensures all users within the\norganization have the required access while preventing external access.",
+    "page_number": 17,
+    "bbox": [
+      57.8267707824707,
+      56.1264533996582,
+      507.9149169921875,
+      248.84713745117188
+    ],
+    "order_index": 37,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Amazon S3 Bucket Policies\nAWS Organizations Policy Examples\nUsing \"*\" as the principal with the PrincipalOrgId condition efficiently grants read access to the S3\nbucket for all users within the organization.",
+    "page_number": 17,
+    "bbox": [
+      57.8267707824707,
+      263.79864501953125,
+      492.7180480957031,
+      323.0157775878906
+    ],
+    "order_index": 38,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Question: 16",
+    "page_number": 17,
+    "bbox": [
+      57.8267707824707,
+      338.7623596191406,
+      131.12648010253906,
+      357.5212097167969
+    ],
+    "order_index": 39,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "[Security and Compliance]\nA SysOps administrator is attempting to download patches from the internet into an instance in a\nprivate subnet. An internet gateway exists for the VPC, and a NAT gateway has been deployed on the\npublic subnet; however, the instance has no internet connectivity. The resources deployed into the\nprivate subnet must be inaccessible directly from the public internet.",
+    "page_number": 17,
+    "bbox": [
+      57.8267707824707,
+      372.6676025390625,
+      505.5810546875,
+      446.718505859375
+    ],
+    "order_index": 40,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_2_968_17.jpeg",
+    "page_number": 17,
+    "bbox": [
+      57.8267707824707,
+      461.66815185546875,
+      371.7467956542969,
+      645.7653198242188
+    ],
+    "order_index": 41,
+    "font_info": null
+  },
+  {
+    "type": "text",
+    "content": "What should be added to the private subnet's route table in order to address this issue, given the\ninformation provided?",
+    "page_number": 17,
+    "bbox": [
+      57.8267707824707,
+      645.7671508789062,
+      489.9811096191406,
+      675.31689453125
+    ],
+    "order_index": 42,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A. 0.0.0.0/0 IGW\nB. 0.0.0.0/0 NAT\nC. 10.0.1.0/24 IGW\nD. 10.0.1.0/24 NAT",
+    "page_number": 17,
+    "bbox": [
+      57.8267707824707,
+      705.10205078125,
+      142.66761779785156,
+      764.3192749023438
+    ],
+    "order_index": 43,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n18/463",
+    "page_number": 18,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 44,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Answer: B",
+    "page_number": 18,
+    "bbox": [
+      416.38677978515625,
+      86.58897399902344,
+      474.8359069824219,
+      105.34780883789062
+    ],
+    "order_index": 45,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Explanation:",
+    "page_number": 18,
+    "bbox": [
+      57.8267707824707,
+      120.49424743652344,
+      113.52571105957031,
+      135.21023559570312
+    ],
+    "order_index": 46,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Understand the Problem:\nAn instance in a private subnet needs internet access for downloading patches.\nThere is an existing NAT gateway in the public subnet.\nAnalyze the Requirements:\nProvide internet access to the private subnet instance through the NAT gateway.\nEnsure resources in the private subnet remain inaccessible from the public internet.\nEvaluate the Options:\nOption A: 0.0.0.0/0 IGW.\nThis would route traffic directly to the internet gateway, exposing the instance to the public internet.\nOption B: 0.0.0.0/0 NAT.\nThis routes traffic destined for the internet through the NAT gateway, allowing outbound connections\nwhile keeping the instance protected from inbound internet traffic.\nOption C: 10.0.1.0/24 IGW.\nThis does not provide the necessary route for internet access and incorrectly uses the internet\ngateway for local traffic.\nOption D: 10.0.1.0/24 NAT.\nThis also incorrectly uses the NAT gateway for local traffic, which is unnecessary.\nSelect the Best Solution:\nOption B: Adding a route for 0.0.0.0/0 with the target set to the NAT gateway ensures that the private\nsubnet instance can access the internet while remaining protected from inbound internet traffic.",
+    "page_number": 18,
+    "bbox": [
+      57.8267707824707,
+      150.1616668701172,
+      508.70330810546875,
+      446.718505859375
+    ],
+    "order_index": 47,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Amazon VPC NAT Gateways\nPrivate Subnet Route Table\nConfiguring the private subnet route table to use the NAT gateway for 0.0.0.0/0 ensures secure and\nefficient internet access for instances in the private subnet.",
+    "page_number": 18,
+    "bbox": [
+      57.8267707824707,
+      461.66998291015625,
+      498.67547607421875,
+      520.8871459960938
+    ],
+    "order_index": 48,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Question: 17",
+    "page_number": 18,
+    "bbox": [
+      57.8267707824707,
+      536.6337280273438,
+      131.12648010253906,
+      555.392578125
+    ],
+    "order_index": 49,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "[Deployment, Provisioning, and Automation]\nA SysOps administrator applies the following policy to an AWS CloudFormation stack:",
+    "page_number": 18,
+    "bbox": [
+      57.8267707824707,
+      570.5389404296875,
+      436.358642578125,
+      600.0886840820312
+    ],
+    "order_index": 50,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n19/463",
+    "page_number": 19,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 51,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_3_971_19.jpeg",
+    "page_number": 19,
+    "bbox": [
+      57.8267707824707,
+      56.1246337890625,
+      561.8267822265625,
+      380.8773193359375
+    ],
+    "order_index": 52,
+    "font_info": null
+  },
+  {
+    "type": "text",
+    "content": "What is the result of this policy?",
+    "page_number": 19,
+    "bbox": [
+      57.8267707824707,
+      395.712890625,
+      200.8695526123047,
+      410.4288635253906
+    ],
+    "order_index": 53,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A. Users that assume an IAM role with a logical ID that begins with \"Production\" are prevented from\nrunning the update-stack command.\nB. Users can update all resources in the stack except for resources that have a logical ID that begins\nwith \"Production\".\nC. Users can update all resources in the stack except for resources that have an attribute that begins\nwith \"Production\".\nD. Users in an IAM group with a logical ID that begins with \"Production\" are prevented from running\nthe update-stack command.",
+    "page_number": 19,
+    "bbox": [
+      57.8267707824707,
+      440.2140808105469,
+      503.1101989746094,
+      558.7661743164062
+    ],
+    "order_index": 54,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Answer: B",
+    "page_number": 19,
+    "bbox": [
+      416.38677978515625,
+      589.346435546875,
+      474.8359069824219,
+      608.1052856445312
+    ],
+    "order_index": 55,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Explanation:",
+    "page_number": 19,
+    "bbox": [
+      57.8267707824707,
+      623.2516479492188,
+      113.52571105957031,
+      637.9676513671875
+    ],
+    "order_index": 56,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "The policy provided includes two statements:\nThe first statement explicitly denies the Update:* action on resources with a LogicalResourceId that\nbegins with \"Production\".\nThe second statement allows the Update:* action on all resources.\nIn AWS IAM policy evaluation logic, explicit denies always take precedence over allows. Therefore,\nthe effect of this policy is that users can update all resources in the stack except for those with a\nlogical ID that begins with \"Production\".\nReference:",
+    "page_number": 19,
+    "bbox": [
+      57.8267707824707,
+      652.9191284179688,
+      499.4811096191406,
+      771.4712524414062
+    ],
+    "order_index": 57,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n20/463",
+    "page_number": 20,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 58,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "IAM JSON Policy Elements: Effect\nPolicy Evaluation Logic",
+    "page_number": 20,
+    "bbox": [
+      57.8267707824707,
+      56.1264533996582,
+      205.242919921875,
+      85.67617797851562
+    ],
+    "order_index": 59,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Question: 18",
+    "page_number": 20,
+    "bbox": [
+      57.8267707824707,
+      101.42271423339844,
+      131.12648010253906,
+      120.18154907226562
+    ],
+    "order_index": 60,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "[Monitoring, Reporting, and Automation]\nA company's IT department noticed an increase in the spend of their developer AWS account. There\nare over 50 developers using the account, and the finance team wants to determine the service costs\nincurred by each developer.\nWhat should a SysOps administrator do to collect this information? (Select TWO.)",
+    "page_number": 20,
+    "bbox": [
+      57.8267707824707,
+      135.32798767089844,
+      507.2935791015625,
+      209.37881469726562
+    ],
+    "order_index": 61,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A. Activate the createdBy tag in the account.\nB. Analyze the usage with Amazon CloudWatch dashboards.\nC. Analyze the usage with Cost Explorer.\nD. Configure AWS Trusted Advisor to track resource usage.\nE. Create a billing alarm in AWS Budgets.",
+    "page_number": 20,
+    "bbox": [
+      57.8267707824707,
+      239.16404724121094,
+      324.07928466796875,
+      313.2149353027344
+    ],
+    "order_index": 62,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Answer: A,C",
+    "page_number": 20,
+    "bbox": [
+      410.62677001953125,
+      343.7952575683594,
+      480.8736877441406,
+      362.5541076660156
+    ],
+    "order_index": 63,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Explanation:",
+    "page_number": 20,
+    "bbox": [
+      57.8267707824707,
+      377.7004699707031,
+      113.52571105957031,
+      392.41644287109375
+    ],
+    "order_index": 64,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "To determine the service costs incurred by each developer, follow these steps:\nActivate the createdBy Tag:\nTagging resources with a createdBy tag helps identify which user created the resource. This tag\nshould be applied consistently across all resources created by the developers.\nReference: Tagging Your Resources\nAnalyze Usage with Cost Explorer:\nUse Cost Explorer to filter and group cost and usage data by the createdBy tag. This provides a\nbreakdown of costs incurred by each developer.\nReference: Analyzing Your Costs with Cost Explorer\nThese two steps together will provide a detailed analysis of the costs incurred by each developer in\nthe AWS account.",
+    "page_number": 20,
+    "bbox": [
+      57.8267707824707,
+      407.3679504394531,
+      498.43438720703125,
+      570.4212036132812
+    ],
+    "order_index": 65,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Question: 19",
+    "page_number": 20,
+    "bbox": [
+      57.8267707824707,
+      586.1677856445312,
+      131.12648010253906,
+      604.9266357421875
+    ],
+    "order_index": 66,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "[High Availability, Backup, and Recovery]\nA company website contains a web tier and a database tier on AWS. The web tier consists of Amazon\nEC2 instances that run in an Auto Scaling group across two Availability Zones. The database tier runs\non an Amazon ROS for MySQL Multi-AZ DB instance. The database subnet network ACLs are\nrestricted to only the web subnets that need access to the database. The web subnets use the default\nnetwork ACL with the default rules.\nThe company's operations team has added a third subnet to the Auto Scaling group configuration.\nAfter an Auto Scaling event occurs, some users report that they intermittently receive an error\nmessage. The error message states that the server cannot connect to the database. The operations\nteam has confirmed that the route tables are correct and that the required ports are open on all",
+    "page_number": 20,
+    "bbox": [
+      57.8267707824707,
+      620.072998046875,
+      509.07391357421875,
+      768.2925415039062
+    ],
+    "order_index": 67,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  }
+]

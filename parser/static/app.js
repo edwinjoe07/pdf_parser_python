@@ -596,13 +596,13 @@ function filterQuestions() {
     return S.questions.filter(q => {
         // Search
         if (search) {
-            const text = getQuestionPreview(q).toLowerCase();
+            const text = (q.question_text || "").toLowerCase();
             if (!text.includes(search) && !String(q.question_number).includes(search)) return false;
         }
 
         // Status filter
-        const hasAnswer = getSectionText(q, 'answer').length > 0;
-        const hasExpl = getSectionText(q, 'explanation').length > 0;
+        const hasAnswer = (q.answer_text || "").length > 0;
+        const hasExpl = (q.explanation_text || "").length > 0;
         const score = q.anomaly_score || 0;
 
         if (status === 'clean' && (score > 0 || !hasAnswer)) return false;
@@ -611,7 +611,7 @@ function filterQuestions() {
         if (status === 'missing-explanation' && hasExpl) return false;
 
         // Type filter
-        const images = countImages(q);
+        const images = q.image_count || 0;
         const multiPage = q.page_start !== q.page_end;
 
         if (type === 'with-images' && images === 0) return false;
@@ -658,39 +658,22 @@ function selectQ(qn) {
     // Header
     document.getElementById('qd-qnum').textContent = qn;
     document.getElementById('qd-line').innerHTML =
-        `PAGE ${q.page_start}${q.page_end !== q.page_start ? '-' + q.page_end : ''} IN PDF • <span class="qdetail-mode">REVEAL_ONLY MODE</span>`;
+        `PAGE ${q.page_start}${q.page_end !== q.page_start ? '-' + q.page_end : ''} IN PDF • <span class="qdetail-mode">STRICT_MAPPING MODE</span>`;
 
-    // Options & Cleaning
-    const questionText = getSectionText(q, 'question');
-    const optionsText = getSectionText(q, 'options');
-    let options = [];
-    let displayQuestion = questionText;
-
-    if (optionsText) {
-        // Use pre-parsed options from its own section
-        options = extractOptions(optionsText);
-    } else {
-        // Fallback: extract and strip from question statement (legacy)
-        options = extractOptions(questionText);
-        displayQuestion = stripOptions(questionText, options);
-    }
-
+    // Content
+    const displayQuestion = q.question_text || "";
     document.getElementById('qd-question').value = displayQuestion;
     document.getElementById('qd-charcount').textContent = `${displayQuestion.length} chars`;
 
     // Answer
-    const answerText = getSectionText(q, 'answer');
-    // Strip label "Answer: B" -> "B"
-    const cleanAnswer = answerText.replace(/^\s*(?:Correct\s+)?(?:Answer|Ans|Key)[\s.:]*/i, '').replace(/\.$/, '').trim();
-    document.getElementById('qd-answer').value = cleanAnswer.slice(0, 100);
+    document.getElementById('qd-answer').value = q.answer_text || "";
 
     // Explanation
-    const explText = getSectionText(q, 'explanation');
-    document.getElementById('qd-explanation').value = explText;
+    document.getElementById('qd-explanation').value = q.explanation_text || "";
 
-    // Render Media
+    // Render Media (strictly structured in JSON)
     renderMedia(q, 'question', 'qd-media-question');
-    renderMedia(q, 'options', 'qd-media-options');
+    clearMediaBox('qd-media-options');
     renderMedia(q, 'answer', 'qd-media-answer');
     renderMedia(q, 'explanation', 'qd-media-explanation');
 
@@ -698,7 +681,7 @@ function selectQ(qn) {
     document.getElementById('qd-type').value = (q.question_type || 'MCQ').toUpperCase();
 
     // Render options
-    renderOptionsUI(options, getSectionText(q, 'answer'));
+    renderOptionsUI(q.options || [], q);
 
     // Raw output
     renderRawOutput(q);
@@ -742,40 +725,190 @@ function stripOptions(text, options) {
     return cleaned.trim();
 }
 
-function renderOptionsUI(options, answerText = '') {
+function renderOptionsUI(options, q) {
     const container = document.getElementById('qd-options');
 
-    // Clean answer text for checking
-    const cleanAnswer = answerText.replace(/^\s*(?:Correct\s+)?(?:Answer|Ans|Key)[\s.:]*/i, '').replace(/\.$/, '').trim();
-
     // If no options found, show placeholders
-    if (options.length === 0) {
+    if (!options || options.length === 0) {
         const letters = ['A', 'B', 'C', 'D'];
         options = letters.map(l => ({
-            letter: l,
+            key: l,
             text: '',
-            correct: cleanAnswer.includes(l)
+            images: []
         }));
     }
 
-    container.innerHTML = options.map(opt => `
-        <div class="option-item">
-            <span class="option-letter">${opt.letter}</span>
-            <div style="flex:1; min-width:0;">
-                <span class="option-text">${esc(opt.text) || '<em style="color:var(--t4)">Empty option</em>'}</span>
+    container.innerHTML = options.map(opt => {
+        const imgs = opt.images || [];
+        const imagesHtml = imgs.length > 0
+            ? `<div class="option-media">${imgs.map(src => {
+                const imgSrc = imgSrcFromContent(src);
+                return `<img src="${imgSrc}" class="q-thumbnail option-thumbnail" 
+                             onclick="openLightbox('${imgSrc}', 'Option ${opt.key}')" 
+                             title="Option ${opt.key} image">`;
+            }).join('')}</div>`
+            : '';
+
+        return `
+            <div class="option-item">
+                <span class="option-letter">${opt.key}</span>
+                <div style="flex:1; min-width:0;">
+                    <span class="option-text">${esc(opt.text) || '<em style="color:var(--t4)">Empty option</em>'}</span>
+                    ${imagesHtml}
+                </div>
+                <input type="checkbox" class="option-check" title="Correct answer">
+                <button class="option-remove" onclick="this.closest('.option-item').remove()" title="Remove">×</button>
             </div>
-            <input type="checkbox" class="option-check" ${opt.correct || cleanAnswer.includes(opt.letter) ? 'checked' : ''} title="Correct answer">
-            <button class="option-remove" onclick="this.closest('.option-item').remove()" title="Remove">×</button>
-        </div>
-    `).join('');
+        `;
+    }).join('');
 }
 
+/**
+ * Build a map of option letter -> image paths from blocks.options.
+ * Images are associated with the most recently seen option letter.
+ * Applies proximity filtering on the options section first, then
+ * deduplicates per-option.
+ */
+function buildOptionImageMap(q) {
+    const map = {};
+    if (!q || !q.blocks || !q.blocks.options) return map;
+
+    // Pre-filter: only keep images that pass proximity check
+    const filteredBlocks = getFilteredOptionBlocks(q.blocks.options);
+
+    let currentLetter = null;
+    const optLetterRegex = /^\s*([A-Z])[.):\s]/;
+    const seenPerOption = {};
+
+    for (const block of filteredBlocks) {
+        if (block.type === 'text') {
+            const m = optLetterRegex.exec(block.content);
+            if (m) {
+                currentLetter = m[1];
+                if (!map[currentLetter]) {
+                    map[currentLetter] = [];
+                    seenPerOption[currentLetter] = new Set();
+                }
+            }
+        } else if (block.type === 'image' && currentLetter) {
+            const key = block.content.replace(/\\/g, '/');
+            if (!seenPerOption[currentLetter]) {
+                seenPerOption[currentLetter] = new Set();
+                map[currentLetter] = [];
+            }
+            if (!seenPerOption[currentLetter].has(key)) {
+                seenPerOption[currentLetter].add(key);
+                map[currentLetter].push(block.content);
+            }
+        }
+    }
+    return map;
+}
+
+/**
+ * Filter option blocks by per-text-block proximity.
+ * Keeps all text blocks, but only images whose order_index is
+ * within MARGIN of ANY text block’s order_index.
+ */
+function getFilteredOptionBlocks(blocks) {
+    const MARGIN = 10;
+    const textIndices = blocks
+        .filter(b => b.type === 'text' && typeof b.order_index === 'number')
+        .map(b => b.order_index);
+
+    if (textIndices.length === 0) return blocks; // keep all if no text
+
+    return blocks.filter(b => {
+        if (b.type !== 'image') return true; // keep all non-image blocks
+        const idx = b.order_index;
+        if (typeof idx !== 'number') return true;
+        return textIndices.some(ti => Math.abs(idx - ti) <= MARGIN);
+    });
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// IMAGE FILTERING — order_index proximity + deduplication
+// ═══════════════════════════════════════════════════════════════════════════
+
+/**
+ * Filter images to only those that contextually belong to a section.
+ *
+ * Strategy:
+ *   1. For each TEXT block, define a proximity window:
+ *      [text.order_index - MARGIN, text.order_index + MARGIN].
+ *   2. Keep only images whose order_index falls within ANY text
+ *      block’s proximity window (per-block, NOT min/max range).
+ *   3. Deduplicate by image path (same file shown once only).
+ *
+ * Per-block proximity avoids the problem where widely-spaced text
+ * blocks create a huge range that captures unrelated images.
+ */
+function getFilteredSectionImages(blocks) {
+    const MARGIN = 10; // order_index tolerance around each text block
+
+    const images = blocks.filter(b => b.type === 'image');
+    if (images.length === 0) return [];
+
+    // Gather text block order_indices
+    const textIndices = blocks
+        .filter(b => b.type === 'text' && typeof b.order_index === 'number')
+        .map(b => b.order_index);
+
+    let filtered;
+    if (textIndices.length > 0) {
+        filtered = images.filter(img => {
+            const idx = img.order_index;
+            if (typeof idx !== 'number') return true; // keep if no index data
+            // Image must be within MARGIN of ANY text block
+            return textIndices.some(ti => Math.abs(idx - ti) <= MARGIN);
+        });
+    } else {
+        // No text in section — keep all images (dedup will still apply)
+        filtered = images;
+    }
+
+    // Deduplicate by content path, then cap to prevent UI flooding
+    const MAX_SECTION_IMAGES = 15;
+    const deduped = dedupeImageBlocks(filtered);
+    return deduped.slice(0, MAX_SECTION_IMAGES);
+}
+
+/** Remove duplicate image blocks (same content path). */
+function dedupeImageBlocks(images) {
+    const seen = new Set();
+    return images.filter(img => {
+        const key = img.content.replace(/\\/g, '/');
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
+    });
+}
+
+/** Convert an image content path to a root-relative URL. */
+function imgSrcFromContent(content) {
+    let c = content.replace(/\\/g, '/');
+    let src;
+    if (c.startsWith('questions/') || c.startsWith('storage/') || c.startsWith('output/')) {
+        src = '/' + c;
+    } else {
+        src = '/questions/' + c;
+    }
+    return src.replace(/\/+/g, '/');
+}
+
+/**
+ * Render images for a specific section only.
+ * Images are proximity-filtered + deduplicated so that only
+ * contextually relevant images appear under their section.
+ */
 function renderMedia(q, section, containerId) {
     const container = document.getElementById(containerId);
     if (!container) return;
 
-    const blocks = (q.blocks && q.blocks[section]) || [];
-    const images = blocks.filter(b => b.type === 'image');
+    let images = [];
+    if (section === 'question') images = q.question_images || [];
+    else if (section === 'answer') images = q.answer_images || [];
+    else if (section === 'explanation') images = q.explanation_images || [];
 
     if (images.length === 0) {
         container.style.display = 'none';
@@ -784,24 +917,21 @@ function renderMedia(q, section, containerId) {
     }
 
     container.style.display = 'flex';
-    container.innerHTML = images.map(img => {
-        let content = img.content.replace(/\\/g, '/');
-
-        // Ensure root-relative URL
-        let src = '';
-        if (content.startsWith('questions/') || content.startsWith('storage/') || content.startsWith('output/')) {
-            src = '/' + content;
-        } else {
-            src = '/questions/' + content;
-        }
-
-        // Clean up double slashes
-        src = src.replace(/\/+/g, '/');
-
+    container.innerHTML = images.map(path => {
+        const src = imgSrcFromContent(path);
         return `<img src="${src}" class="q-thumbnail" 
-                     onclick="openLightbox('${src}', 'Question ${q.question_number} — ${section.toUpperCase()}')"
+                     onclick="openLightbox('${src}', 'Question ${q.question_number} — ${section.toUpperCase()}')" 
                      title="Click to preview">`;
     }).join('');
+}
+
+/** Hide a media box container (used to clear the combined options grid). */
+function clearMediaBox(containerId) {
+    const container = document.getElementById(containerId);
+    if (container) {
+        container.style.display = 'none';
+        container.innerHTML = '';
+    }
 }
 
 function addOption() {
@@ -824,23 +954,27 @@ function addOption() {
 
 function renderRawOutput(q) {
     const raw = document.getElementById('qd-raw');
-    let text = '';
+    let text = "";
 
-    if (q.blocks) {
-        for (const [section, blocks] of Object.entries(q.blocks)) {
-            if (blocks && blocks.length > 0) {
-                text += `[${section.toUpperCase()}]\n`;
-                for (const b of blocks) {
-                    if (b.type === 'text') {
-                        text += b.content + '\n';
-                    } else if (b.type === 'image') {
-                        text += `[IMAGE: ${b.content}]\n`;
-                    }
-                }
-                text += '\n';
-            }
-        }
+    text += `[QUESTION]\n${q.question_text}\n`;
+    if (q.question_images?.length) text += `Images: ${q.question_images.join(', ')}\n`;
+    text += "\n";
+
+    if (q.options?.length) {
+        text += "[OPTIONS]\n";
+        q.options.forEach(opt => {
+            text += `${opt.key}. ${opt.text}\n`;
+            if (opt.images?.length) text += `  Images: ${opt.images.join(', ')}\n`;
+        });
+        text += "\n";
     }
+
+    text += `[ANSWER]\n${q.answer_text}\n`;
+    if (q.answer_images?.length) text += `Images: ${q.answer_images.join(', ')}\n`;
+    text += "\n";
+
+    text += `[EXPLANATION]\n${q.explanation_text}\n`;
+    if (q.explanation_images?.length) text += `Images: ${q.explanation_images.join(', ')}\n`;
 
     raw.textContent = text || 'No raw data available';
 }
@@ -872,7 +1006,7 @@ function countImages(q) {
     let count = 0;
     for (const blocks of Object.values(q.blocks)) {
         if (Array.isArray(blocks)) {
-            count += blocks.filter(b => b.type === 'image').length;
+            count += getFilteredSectionImages(blocks).length;
         }
     }
     return count;
