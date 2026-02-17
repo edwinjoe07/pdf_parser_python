@@ -292,13 +292,23 @@ function renderImportsTable() {
             warningRow = `</tr><tr><td colspan="9" style="padding:0"><div class="table-warning">⚠ No questions detected after parsing</div></td>`;
         }
 
+        // Status Badge + Progress
+        let statusBadge = `<span class="sbadge sbadge--${statusKey}"><span class="sbadge__dot"></span> ${statusLabel}</span>`;
+        if (statusKey === 'processing' && j.progress > 0 && j.progress < 100) {
+            statusBadge = `
+                <div class="progress-col">
+                    <span class="sbadge sbadge--processing"><span class="sbadge__dot"></span> ${j.progress}%</span>
+                    <div class="mini-progress"><div class="mini-progress__fill" style="width:${j.progress}%"></div></div>
+                </div>`;
+        }
+
         rows += `
             <tr>
                 <td class="fid">${id.slice(0, 6)}</td>
                 <td class="fname">${esc(j.filename || 'unknown.pdf')}</td>
                 <td>${j.size ? fmtSize(j.size) : '—'}</td>
                 <td>${j.pages || '—'}</td>
-                <td><span class="sbadge sbadge--${statusKey}"><span class="sbadge__dot"></span> ${statusLabel}</span></td>
+                <td>${statusBadge}</td>
                 <td>${confHtml}</td>
                 <td>${j.questions_count != null ? j.questions_count : '—'}</td>
                 <td>${fmtAgo(j.created_at)}</td>
@@ -651,16 +661,28 @@ function selectQ(qn) {
         `PAGE ${q.page_start}${q.page_end !== q.page_start ? '-' + q.page_end : ''} IN PDF • <span class="qdetail-mode">REVEAL_ONLY MODE</span>`;
 
     // Options & Cleaning
-    const questionText = getQuestionPreview(q);
-    const options = extractOptions(questionText);
-    const cleanedQuestion = stripOptions(questionText, options);
+    const questionText = getSectionText(q, 'question');
+    const optionsText = getSectionText(q, 'options');
+    let options = [];
+    let displayQuestion = questionText;
 
-    document.getElementById('qd-question').value = cleanedQuestion;
-    document.getElementById('qd-charcount').textContent = `${cleanedQuestion.length} chars`;
+    if (optionsText) {
+        // Use pre-parsed options from its own section
+        options = extractOptions(optionsText);
+    } else {
+        // Fallback: extract and strip from question statement (legacy)
+        options = extractOptions(questionText);
+        displayQuestion = stripOptions(questionText, options);
+    }
+
+    document.getElementById('qd-question').value = displayQuestion;
+    document.getElementById('qd-charcount').textContent = `${displayQuestion.length} chars`;
 
     // Answer
     const answerText = getSectionText(q, 'answer');
-    document.getElementById('qd-answer').value = answerText.slice(0, 100);
+    // Strip label "Answer: B" -> "B"
+    const cleanAnswer = answerText.replace(/^\s*(?:Correct\s+)?(?:Answer|Ans|Key)[\s.:]*/i, '').replace(/\.$/, '').trim();
+    document.getElementById('qd-answer').value = cleanAnswer.slice(0, 100);
 
     // Explanation
     const explText = getSectionText(q, 'explanation');
@@ -668,6 +690,7 @@ function selectQ(qn) {
 
     // Render Media
     renderMedia(q, 'question', 'qd-media-question');
+    renderMedia(q, 'options', 'qd-media-options');
     renderMedia(q, 'answer', 'qd-media-answer');
     renderMedia(q, 'explanation', 'qd-media-explanation');
 
@@ -699,11 +722,14 @@ function selectQ(qn) {
 }
 
 function extractOptions(text) {
-    const optionRegex = /^[  ]*([A-F])[.):\s]+(.+)/gm;
+    const optionRegex = /^[  ]*([A-Z])[.):\s]+(.+)/gm;
     const options = [];
     let m;
     while ((m = optionRegex.exec(text)) !== null) {
-        options.push({ letter: m[1], text: m[2].trim(), raw: m[0] });
+        let rawText = m[2].trim();
+        // Remove trailing "Answer: X" if it leaked onto the same line
+        rawText = rawText.replace(/\s*(?:Correct\s+)?(?:Answer|Ans|Key)[\s.:]*[A-Z].*$/i, '');
+        options.push({ letter: m[1], text: rawText.trim(), raw: m[0] });
     }
     return options;
 }
@@ -719,13 +745,16 @@ function stripOptions(text, options) {
 function renderOptionsUI(options, answerText = '') {
     const container = document.getElementById('qd-options');
 
+    // Clean answer text for checking
+    const cleanAnswer = answerText.replace(/^\s*(?:Correct\s+)?(?:Answer|Ans|Key)[\s.:]*/i, '').replace(/\.$/, '').trim();
+
     // If no options found, show placeholders
     if (options.length === 0) {
         const letters = ['A', 'B', 'C', 'D'];
         options = letters.map(l => ({
             letter: l,
             text: '',
-            correct: answerText.includes(l)
+            correct: cleanAnswer.includes(l)
         }));
     }
 
@@ -735,7 +764,7 @@ function renderOptionsUI(options, answerText = '') {
             <div style="flex:1; min-width:0;">
                 <span class="option-text">${esc(opt.text) || '<em style="color:var(--t4)">Empty option</em>'}</span>
             </div>
-            <input type="checkbox" class="option-check" ${opt.correct || answerText.includes(opt.letter) ? 'checked' : ''} title="Correct answer">
+            <input type="checkbox" class="option-check" ${opt.correct || cleanAnswer.includes(opt.letter) ? 'checked' : ''} title="Correct answer">
             <button class="option-remove" onclick="this.closest('.option-item').remove()" title="Remove">×</button>
         </div>
     `).join('');
@@ -756,8 +785,19 @@ function renderMedia(q, section, containerId) {
 
     container.style.display = 'flex';
     container.innerHTML = images.map(img => {
-        // Path normalization: replace backslashes (Windows legacy) and ensure single leading slash
-        const src = `/${img.content}`.replace(/\\/g, '/').replace(/\/+/g, '/');
+        let content = img.content.replace(/\\/g, '/');
+
+        // Ensure root-relative URL
+        let src = '';
+        if (content.startsWith('questions/') || content.startsWith('storage/') || content.startsWith('output/')) {
+            src = '/' + content;
+        } else {
+            src = '/questions/' + content;
+        }
+
+        // Clean up double slashes
+        src = src.replace(/\/+/g, '/');
+
         return `<img src="${src}" class="q-thumbnail" 
                      onclick="openLightbox('${src}', 'Question ${q.question_number} — ${section.toUpperCase()}')"
                      title="Click to preview">`;

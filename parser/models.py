@@ -133,6 +133,7 @@ class ParsedQuestion(BaseModel):
     blocks: dict[str, list[ContentBlock]] = Field(
         default_factory=lambda: {
             "question": [],
+            "options": [],
             "answer": [],
             "explanation": []
         }

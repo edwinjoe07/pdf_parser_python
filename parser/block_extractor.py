@@ -7,6 +7,7 @@ Preserves layout information, font metadata, and exact positioning.
 
 from __future__ import annotations
 
+import hashlib
 import logging
 import os
 from pathlib import Path
@@ -150,39 +151,111 @@ class BlockExtractor:
     def _extract_images_from_page(
         self, page: fitz.Page, page_num: int, start_order: int
     ) -> list[ContentBlock]:
-        """Extract high-quality images from a page."""
+        """Extract high-quality images from a page with xref-caching for speed."""
         image_blocks: list[ContentBlock] = []
-        
+        doc = page.parent
+
+        # Initialize caches if not present
+        if not hasattr(self, "_image_cache"):
+            self._image_cache = {}  # xref -> {rel_path, is_logo}
+            self._image_hashes = {} # hash -> {rel_path, count}
+            self._image_counter = 0
+
         images = page.get_images(full=True)
+        if len(images) > 2000:
+            logger.warning(f"Page {page_num} has {len(images)} images. Skipping to avoid overload.")
+            return []
+
         for img_idx, img in enumerate(images):
             xref = img[0]
-            base_image = page.parent.extract_image(xref)
             
-            # Filter small images (icons, separators)
-            if (base_image["width"] < self.min_image_size or 
-                base_image["height"] < self.min_image_size):
+            # Fast Metadata Filter: Skip tiny icons BEFORE extraction
+            width, height = img[2], img[3]
+            if width < self.min_image_size or height < self.min_image_size:
+                self._image_cache[xref] = {"is_logo": True}
                 continue
 
-            # Save image
-            img_filename = f"page{page_num}_img{img_idx + 1}.{self.image_format}"
-            img_path = self.image_output_dir / img_filename
-            
-            with open(img_path, "wb") as f:
-                f.write(base_image["image"])
+            # Check xref cache first (VERY FAST)
+            if xref in self._image_cache:
+                cached = self._image_cache[xref]
+                if cached.get("is_logo"):
+                    continue
+                
+                # We still need to find the bbox for THIS instance on THIS page
+                rects = page.get_image_rects(xref)
+                bbox = rects[0] if rects else (0, 0, 0, 0)
+                if isinstance(bbox, fitz.Rect):
+                    bbox = (bbox.x0, bbox.y0, bbox.x1, bbox.y1)
 
-            # Find image bounding box on the page
-            # Note: Multiple instances of same xref might exist
-            rects = page.get_image_rects(xref)
-            bbox = rects[0] if rects else (0, 0, 0, 0)
-            if isinstance(bbox, fitz.Rect):
-                bbox = (bbox.x0, bbox.y0, bbox.x1, bbox.y1)
+                image_blocks.append(ContentBlock(
+                    type=BlockType.IMAGE,
+                    content=cached["rel_path"],
+                    page_number=page_num,
+                    bbox=bbox,
+                    order_index=start_order + img_idx,
+                ))
+                continue
 
-            image_blocks.append(ContentBlock(
-                type=BlockType.IMAGE,
-                content=img_filename,
-                page_number=page_num,
-                bbox=bbox,
-                order_index=start_order + img_idx,
-            ))
+            try:
+                base_image = doc.extract_image(xref)
+                if not base_image:
+                    continue
+
+                # 1. Filter small images (icons, separators) - Fast
+                width, height = base_image["width"], base_image["height"]
+                if width < self.min_image_size or height < self.min_image_size:
+                    self._image_cache[xref] = {"is_logo": True}
+                    continue
+
+                # 2. Filter repeating images (logos, watermarks) - Expensive
+                img_data = base_image["image"]
+                img_hash = hashlib.md5(img_data).hexdigest()
+                
+                if img_hash not in self._image_hashes:
+                    self._image_hashes[img_hash] = {"rel_path": None, "count": 0}
+                
+                self._image_hashes[img_hash]["count"] += 1
+                
+                if self._image_hashes[img_hash]["count"] > 2:
+                    self._image_cache[xref] = {"is_logo": True}
+                    continue
+
+                # Save new image or reuse existing if hash matches
+                if self._image_hashes[img_hash]["rel_path"]:
+                    rel_path = self._image_hashes[img_hash]["rel_path"]
+                else:
+                    self._image_counter += 1
+                    ext = base_image["ext"]
+                    img_filename = f"q_img_{self._image_counter}_{page_num}.{ext}"
+                    img_path = self.image_output_dir / img_filename
+                    
+                    with open(img_path, "wb") as f:
+                        f.write(img_data)
+                    rel_path = f"questions/{self.image_output_dir.name}/{img_filename}"
+                    self._image_hashes[img_hash]["rel_path"] = rel_path
+
+                # Get bbox for this instance
+                rects = page.get_image_rects(xref)
+                bbox = rects[0] if rects else (0, 0, 0, 0)
+                if isinstance(bbox, fitz.Rect):
+                    bbox = (bbox.x0, bbox.y0, bbox.x1, bbox.y1)
+
+                # Cache successful extraction
+                self._image_cache[xref] = {
+                    "rel_path": rel_path,
+                    "is_logo": False
+                }
+                self._image_hashes[img_hash]["rel_path"] = rel_path
+
+                image_blocks.append(ContentBlock(
+                    type=BlockType.IMAGE,
+                    content=rel_path,
+                    page_number=page_num,
+                    bbox=bbox,
+                    order_index=start_order + img_idx,
+                ))
+
+            except Exception as e:
+                logger.warning(f"Failed extracting image {xref} on page {page_num}: {e}")
 
         return image_blocks

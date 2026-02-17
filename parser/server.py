@@ -80,14 +80,23 @@ def create_app(config: dict = None) -> Flask:
 
     @app.route("/questions/<path:filename>")
     def serve_questions(filename):
+        # Normalize: strip redundant prefixes if they leaked in
+        for prefix in ["questions/", "storage/", "output/"]:
+            if filename.startswith(prefix):
+                filename = filename[len(prefix):]
+        
+        logger.debug(f"Serving question image: {filename}")
+        
         # 1. Try absolute path in output/questions
         output_q = Path(app.config["OUTPUT_DIR"]) / "questions"
-        if (output_q / filename).exists():
+        target = output_q / filename
+        if target.exists():
             return send_from_directory(str(output_q), filename)
         
         # 2. Try legacy storage/questions
         storage_q = project_root / "storage" / "questions"
-        if (storage_q / filename).exists():
+        target = storage_q / filename
+        if target.exists():
             return send_from_directory(str(storage_q), filename)
 
         # 3. Last ditch: Recursive search for filename if it's just a file (no uuid)
@@ -97,6 +106,7 @@ def create_app(config: dict = None) -> Flask:
             for p in storage_q.rglob(filename):
                 return send_from_directory(str(p.parent), p.name)
 
+        logger.warning(f"Image NOT FOUND: {filename}")
         return jsonify({"error": "Image not found", "path": filename}), 404
 
     return app
