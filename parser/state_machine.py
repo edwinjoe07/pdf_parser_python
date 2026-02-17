@@ -267,8 +267,17 @@ class StateMachineParser:
                 severity=60,
                 message="Question has no answer section"
             ))
+        else:
+            # Automatically mark correct options based on answer_text
+            # Regex to find single uppercase letters usually representing keys (A, B, C...)
+            # We look for A, B or A, B, C or Answer: A etc.
+            ans_keys = re.findall(r"\b([A-Z])\b", q.answer_text.upper())
+            if ans_keys:
+                for opt in q.options:
+                    if opt.key.upper() in ans_keys:
+                        opt.is_correct = True
 
-        # Check for orphan sections (images only) -> Move to anomaly logic
+        # Check for orphan sections (images only)
         if not q.question_text and q.question_images:
             q.anomalies.append(Anomaly(
                 type=AnomalyType.ORPHAN_IMAGE,

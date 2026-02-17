@@ -128,6 +128,7 @@ class QuestionOption(BaseModel):
     """
     key: str  # "A", "B", "C", etc.
     text: str = ""
+    is_correct: bool = False
     images: list[str] = Field(default_factory=list)
 
 
@@ -222,6 +223,7 @@ class ValidationReport(BaseModel):
     duplicate_question_numbers: list[int] = Field(default_factory=list)
     questions_missing_answer: list[int] = Field(default_factory=list)
     questions_missing_explanation: list[int] = Field(default_factory=list)
+    failed_to_structure: list[int] = Field(default_factory=list)
     orphan_images: int = 0
     anomaly_breakdown: dict[str, int] = Field(default_factory=dict)
 

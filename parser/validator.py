@@ -88,6 +88,8 @@ class ValidationEngine:
 
             if is_structured:
                 structured_count += 1
+            else:
+                report.failed_to_structure.append(q.question_number)
 
             # Track missing answers
             if not q.has_answer:
@@ -120,6 +122,12 @@ class ValidationEngine:
             f"Structured Successfully: {report.structured_successfully} "
             f"({report.success_rate}%)"
         )
+        
+        if report.failed_to_structure:
+            logger.warning(
+                f"Failed to Structure: {len(report.failed_to_structure)} "
+                f"({report.failed_to_structure})"
+            )
         logger.info(
             f"Missing Question Numbers: "
             f"{len(report.missing_question_numbers)}"

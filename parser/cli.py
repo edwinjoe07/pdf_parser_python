@@ -444,6 +444,13 @@ def _display_validation_table(validation: dict):
         "[green]✓[/]" if rate >= 90 else "[yellow]⚠[/]",
     )
 
+    failed = validation.get("failed_to_structure", [])
+    table.add_row(
+        "Failed to Structure",
+        str(len(failed)),
+        status_icon(len(failed)),
+    )
+
     missing = validation.get("missing_question_numbers", [])
     table.add_row(
         "Missing Question Numbers",
