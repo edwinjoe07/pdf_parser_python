@@ -20,10 +20,127 @@ document.addEventListener('DOMContentLoaded', () => {
     initNav();
     initUploadModal();
     initReviewPage();
+    initMissingPanel();
     initLightbox();
     checkHealth();
+    loadPreviousJobs();
     setInterval(checkHealth, 12000);
 });
+
+// ═══════════════════════════════════════════════════════════════════════════
+// LOAD PREVIOUS JOBS (persisted in SQLite)
+// ═══════════════════════════════════════════════════════════════════════════
+
+async function loadPreviousJobs() {
+    try {
+        const r = await fetch(`${API}/api/jobs`);
+        if (!r.ok) return;
+        const list = await r.json();
+        for (const j of list) {
+            if (S.jobs[j.id]) continue; // already in memory
+            S.jobs[j.id] = {
+                id: j.id,
+                exam_db_id: j.exam_db_id || null,
+                filename: j.filename || 'unknown.pdf',
+                pdf_path: j.pdf_path || '',
+                status: j.status || 'completed',
+                progress: j.progress ?? 100,
+                created_at: j.created_at || new Date().toISOString(),
+                error: j.error || null,
+                questions_count: j.questions_count,
+                confidence: null,
+                _result: null,
+            };
+        }
+    } catch (e) {
+        console.warn('Failed to load previous jobs:', e);
+    }
+
+    // Also load from /exams (new-style background-parsed exams)
+    try {
+        const r2 = await fetch(`${API}/exams`);
+        if (r2.ok) {
+            const exams = await r2.json();
+            for (const ex of exams) {
+                const key = `exam_${ex.id}`;
+                if (S.jobs[key]) continue;
+                // Check if this exam is already loaded by job_id
+                const alreadyLoaded = Object.values(S.jobs).some(
+                    j => j.exam_db_id === ex.id
+                );
+                if (alreadyLoaded) continue;
+
+                S.jobs[key] = {
+                    id: key,
+                    exam_db_id: ex.id,
+                    filename: ex.original_filename || ex.name || 'unknown.pdf',
+                    pdf_path: ex.file_path || '',
+                    size: ex.file_size_bytes || 0,
+                    status: mapExamStatus(ex.status),
+                    progress: ex.status === 'completed' ? 100 : Math.round(((ex.current_page || 0) / Math.max(ex.total_pages || 1, 1)) * 100),
+                    created_at: ex.created_at || new Date().toISOString(),
+                    error: ex.last_error || null,
+                    questions_count: ex.total_questions || 0,
+                    pages: ex.total_pages || 0,
+                    confidence: null,
+                    _result: null,
+                };
+
+                // Start polling if still processing
+                if (ex.status === 'processing' || ex.status === 'pending') {
+                    startExamPoll(ex.id, key);
+                }
+            }
+        }
+    } catch (e) {
+        console.warn('Failed to load /exams:', e);
+    }
+
+    renderImportsTable();
+    updateStatusCards();
+}
+
+function mapExamStatus(dbStatus) {
+    const map = {
+        'completed': 'parsed',
+        'processing': 'processing',
+        'pending': 'queued',
+        'paused': 'paused',
+        'failed': 'failed',
+    };
+    return map[dbStatus] || dbStatus;
+}
+
+function startExamPoll(examDbId, jobKey) {
+    if (S.pollTimers[jobKey]) return;
+    S.pollTimers[jobKey] = setInterval(async () => {
+        try {
+            const r = await fetch(`${API}/exam/${examDbId}/progress`);
+            if (!r.ok) return;
+            const p = await r.json();
+
+            const j = S.jobs[jobKey];
+            if (!j) return;
+            j.progress = p.percentage || 0;
+            j.questions_count = p.total_questions || 0;
+            j.pages = p.total_pages || 0;
+            j.status = mapExamStatus(p.status);
+
+            if (p.status === 'completed' || p.status === 'failed') {
+                clearInterval(S.pollTimers[jobKey]);
+                delete S.pollTimers[jobKey];
+                if (p.status === 'completed') {
+                    toast(`\u2713 Parsed: ${j.filename || jobKey}`, 'success');
+                } else {
+                    toast(`\u2717 Failed: ${p.last_error || 'Unknown error'}`, 'error');
+                }
+            }
+
+            renderImportsTable();
+            updateStatusCards();
+        } catch { }
+    }, 3000);
+}
 
 // ═══════════════════════════════════════════════════════════════════════════
 // NAVIGATION
@@ -143,24 +260,27 @@ async function doUpload() {
     fd.append('log_level', document.getElementById('up-loglevel').value);
 
     try {
-        const res = await fetch(`${API}/api/parse`, { method: 'POST', body: fd });
+        const res = await fetch(`${API}/upload`, { method: 'POST', body: fd });
         if (!res.ok) throw new Error((await res.json()).error || 'Upload failed');
 
         const data = await res.json();
         toast(`Parse started: ${S.uploadFile.name}`, 'success');
 
-        S.jobs[data.job_id] = {
-            id: data.job_id,
+        const jobKey = `exam_${data.exam_id}`;
+        S.jobs[jobKey] = {
+            id: jobKey,
+            exam_db_id: data.exam_id,
             filename: S.uploadFile.name,
             size: S.uploadFile.size,
-            status: 'queued',
+            status: 'processing',
             created_at: new Date().toISOString(),
-            questions_count: null,
+            questions_count: 0,
             confidence: null,
-            pages: null,
+            pages: data.total_pages || null,
+            _result: null,
         };
 
-        startPoll(data.job_id);
+        startExamPoll(data.exam_id, jobKey);
         document.getElementById('upload-modal').style.display = 'none';
         renderImportsTable();
         updateStatusCards();
@@ -249,6 +369,7 @@ function renderImportsTable() {
             'processing': 'processing',
             'parsed': 'parsed',
             'completed': 'parsed',
+            'paused': 'queued',
             'failed': 'failed'
         };
         const statusKey = statusMap[st] || st;
@@ -322,7 +443,7 @@ function renderImportsTable() {
 
 function updateStatusCards() {
     const all = Object.values(S.jobs);
-    const pending = all.filter(j => j.status === 'queued').length;
+    const pending = all.filter(j => j.status === 'queued' || j.status === 'paused').length;
     const active = all.filter(j => j.status === 'processing').length;
     const done = all.filter(j => j.status === 'parsed' || j.status === 'completed').length;
 
@@ -335,8 +456,19 @@ function updateStatusCards() {
 // TABLE ACTIONS
 // ═══════════════════════════════════════════════════════════════════════════
 
-function deleteJob(jobId) {
-    if (!confirm('Delete this parse job?')) return;
+async function deleteJob(jobId) {
+    if (!confirm('Delete this parse job and all its data?')) return;
+
+    const j = S.jobs[jobId];
+    // Call server DELETE endpoint
+    if (j && j.exam_db_id) {
+        try {
+            await fetch(`${API}/exam/${j.exam_db_id}`, { method: 'DELETE' });
+        } catch (e) {
+            console.warn('Server delete failed:', e);
+        }
+    }
+
     delete S.jobs[jobId];
     if (S.pollTimers[jobId]) {
         clearInterval(S.pollTimers[jobId]);
@@ -350,9 +482,40 @@ function deleteJob(jobId) {
 async function reParse(jobId) {
     const j = S.jobs[jobId];
     if (!j) return;
-    toast('Re-parse: Please upload the file again', 'warning');
-    document.getElementById('upload-modal').style.display = 'flex';
-    resetUploadModal();
+
+    if (j.pdf_path) {
+        if (!confirm(`Re-parse existing file: ${j.filename}?\nThis will clear current results.`)) return;
+
+        try {
+            toast('Starting re-parse...', 'info');
+            const res = await fetch(`${API}/api/parse`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    file_path: j.pdf_path,
+                    exam_name: j.filename.replace('.pdf', ''),
+                    exam_id: j.id.startsWith('exam_') ? j.id.replace('exam_', '') : j.id
+                })
+            });
+            if (!res.ok) throw new Error((await res.json()).error || 'Re-parse failed');
+            const data = await res.json();
+
+            // Re-use current job entry or let polling update it
+            j.status = 'queued';
+            j.progress = 0;
+            j.error = null;
+
+            startPoll(data.job_id); // Start polling the new job
+            toast('Re-parse started', 'success');
+            renderImportsTable();
+        } catch (err) {
+            toast(`Error: ${err.message}`, 'error');
+        }
+    } else {
+        toast('Original file path not found. Please upload again.', 'warning');
+        document.getElementById('upload-modal').style.display = 'flex';
+        resetUploadModal();
+    }
 }
 
 function showLogs(jobId) {
@@ -476,10 +639,25 @@ async function openReview(jobId) {
     let result = j._result;
     if (!result) {
         try {
-            const r = await fetch(`${API}/api/result/${jobId}`);
+            let r;
+            if (j.exam_db_id) {
+                // New-style exam: fetch by integer exam_id
+                r = await fetch(`${API}/exam/${j.exam_db_id}`);
+            } else {
+                // Old-style job: fetch by UUID job_id
+                r = await fetch(`${API}/api/result/${jobId}`);
+            }
             if (!r.ok) throw new Error('Failed to fetch');
             result = await r.json();
             S.jobs[jobId]._result = result;
+
+            // Update confidence from validation data
+            const v = result.validation || {};
+            const det = v.total_questions_detected || 0;
+            const suc = v.structured_successfully || v.fully_structured_count || 0;
+            j.confidence = det > 0 ? Math.round((suc / det) * 100) : 0;
+            j.pages = result.exam?.total_pages || j.pages;
+            j.questions_count = result.questions?.length || j.questions_count;
         } catch (err) {
             toast(`Error loading result: ${err.message}`, 'error');
             return;
@@ -494,32 +672,76 @@ async function openReview(jobId) {
 
     // Fill header
     document.getElementById('review-filename').textContent = j.filename || 'Unknown PDF';
+    const idDisplay = j.exam_db_id ? `Exam #${j.exam_db_id}` : `#${jobId.slice(0, 6)}`;
     document.getElementById('review-meta').textContent =
-        `ID #${jobId.slice(0, 6)} · ${j.size ? fmtSize(j.size) : '0.0 B'} · ${result.exam?.total_pages || 0} pages`;
+        `${idDisplay} \u00b7 ${j.size ? fmtSize(j.size) : (result.exam?.file_size_bytes ? fmtSize(result.exam.file_size_bytes) : '0.0 B')} \u00b7 ${result.exam?.total_pages || 0} pages`;
 
     // Fill stats
     const v = result.validation || {};
     const detected = v.total_questions_detected || 0;
     const parsed = v.structured_successfully || 0;
-    const missing = detected - parsed;
+    const trulyMissing = (v.missing_questions || []).length;
+    const partialCount = (v.partially_structured || []).length;
+    const noAnswerCount = (v.questions_missing_answer || []).length;
+    const incomplete = trulyMissing + partialCount;
     const integrity = detected > 0 ? Math.round((parsed / detected) * 100) : 0;
 
     document.getElementById('rs-detected').textContent = detected;
     document.getElementById('rs-parsed').textContent = parsed;
-    document.getElementById('rs-missing').textContent = missing;
+    document.getElementById('rs-missing').textContent = incomplete;
     document.getElementById('rs-integrity').textContent = `${integrity}%`;
+
+    // Update the card label based on what the issues actually are
+    const missingLabel = document.getElementById('rs-missing-label');
+    const missingDesc = document.getElementById('rs-missing-desc');
+    if (missingLabel && missingDesc) {
+        if (trulyMissing > 0 && partialCount > 0) {
+            missingLabel.textContent = 'MISSING / INCOMPLETE';
+            missingDesc.textContent = `${trulyMissing} lost, ${partialCount} partially structured`;
+        } else if (trulyMissing > 0) {
+            missingLabel.textContent = 'MISSING / LOST';
+            missingDesc.textContent = 'Detected but failed to structure';
+        } else if (partialCount > 0) {
+            missingLabel.textContent = 'INCOMPLETE';
+            missingDesc.textContent = 'Parsed but missing required fields';
+        } else {
+            missingLabel.textContent = 'MISSING / LOST';
+            missingDesc.textContent = 'Detection but failed to structure';
+        }
+    }
 
     // Alert banner
     const alert = document.getElementById('review-alert');
-    if (missing > 0) {
+    const alertText = document.getElementById('review-alert-text');
+    const btnShowMissing = document.getElementById('btn-show-missing');
+    const hasIssues = trulyMissing > 0 || partialCount > 0 || noAnswerCount > 0;
+
+    if (trulyMissing > 0 && partialCount > 0) {
         alert.className = 'alert-banner alert-banner--warning';
-        alert.innerHTML = `⚠ INTEGRITY ALERT: ${missing} QUESTIONS MISSING`;
+        alertText.textContent = `\u26a0 INTEGRITY ALERT: ${trulyMissing} MISSING, ${partialCount} INCOMPLETE`;
+        btnShowMissing.style.display = 'inline-flex';
+        btnShowMissing.textContent = 'View Details';
+    } else if (trulyMissing > 0) {
+        alert.className = 'alert-banner alert-banner--warning';
+        alertText.textContent = `\u26a0 INTEGRITY ALERT: ${trulyMissing} QUESTION${trulyMissing !== 1 ? 'S' : ''} MISSING`;
+        btnShowMissing.style.display = 'inline-flex';
+        btnShowMissing.textContent = 'View Details';
+    } else if (partialCount > 0 || noAnswerCount > 0) {
+        alert.className = 'alert-banner alert-banner--warning';
+        alertText.textContent = `\u26a0 ${partialCount} INCOMPLETE QUESTION${partialCount !== 1 ? 'S' : ''}${noAnswerCount > 0 ? `, ${noAnswerCount} MISSING ANSWER${noAnswerCount !== 1 ? 'S' : ''}` : ''}`;
+        btnShowMissing.style.display = 'inline-flex';
+        btnShowMissing.textContent = 'View Details';
     } else if (integrity === 100) {
         alert.className = 'alert-banner alert-banner--success';
-        alert.innerHTML = `✓ ALL ${detected} QUESTIONS PARSED SUCCESSFULLY`;
+        alertText.textContent = `\u2713 ALL ${detected} QUESTIONS PARSED SUCCESSFULLY`;
+        btnShowMissing.style.display = 'none';
     } else {
         alert.className = 'alert-banner alert-banner--hidden';
+        btnShowMissing.style.display = 'none';
     }
+
+    // Build missing questions panel data
+    buildMissingPanel(v);
 
     // Reset detail
     document.getElementById('qdetail-content').classList.remove('qdetail-content--visible');
@@ -531,6 +753,146 @@ async function openReview(jobId) {
 
     // Render question list
     renderQList();
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// MISSING QUESTIONS PANEL
+// ═══════════════════════════════════════════════════════════════════════════
+
+function initMissingPanel() {
+    // "View Details" button on alert banner
+    document.getElementById('btn-show-missing').addEventListener('click', () => {
+        const panel = document.getElementById('missing-panel');
+        panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+    });
+
+    // Close button
+    document.getElementById('btn-close-missing').addEventListener('click', () => {
+        document.getElementById('missing-panel').style.display = 'none';
+    });
+
+    // Tab switching
+    document.querySelectorAll('.missing-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+            document.querySelectorAll('.missing-tab').forEach(t => t.classList.remove('missing-tab--active'));
+            document.querySelectorAll('.missing-tab-content').forEach(c => c.classList.remove('missing-tab-content--active'));
+            tab.classList.add('missing-tab--active');
+            const target = tab.dataset.tab;
+            document.getElementById(`content-${target}`).classList.add('missing-tab-content--active');
+        });
+    });
+}
+
+function buildMissingPanel(v) {
+    const missingQuestions = v.missing_questions || [];
+    const partiallyStructured = v.partially_structured || [];
+    const noAnswer = v.questions_missing_answer || [];
+    const sequenceGaps = v.sequence_gaps || [];
+    const duplicates = v.duplicate_question_numbers || [];
+    const rawDetected = v.total_questions_detected || 0;
+    const fullyStructured = v.fully_structured_count || v.structured_successfully || 0;
+
+    const totalIssues = missingQuestions.length + partiallyStructured.length;
+
+    // Panel header count
+    document.getElementById('missing-panel-count').textContent = totalIssues;
+
+    // Summary stats
+    document.getElementById('ms-raw-detected').textContent = rawDetected;
+    document.getElementById('ms-fully-parsed').textContent = fullyStructured;
+    document.getElementById('ms-partial').textContent = partiallyStructured.length;
+    document.getElementById('ms-missing').textContent = missingQuestions.length;
+    document.getElementById('ms-gaps').textContent = sequenceGaps.length;
+    document.getElementById('ms-duplicates').textContent = duplicates.length;
+
+    // Tab badges
+    document.getElementById('tab-missing-count').textContent = missingQuestions.length;
+    document.getElementById('tab-partial-count').textContent = partiallyStructured.length;
+    document.getElementById('tab-no-answer-count').textContent = noAnswer.length;
+    document.getElementById('tab-gaps-count').textContent = sequenceGaps.length;
+
+    // ── Tab: Missing Questions ──
+    const missingTbody = document.getElementById('missing-tbody');
+    const missingEmpty = document.getElementById('missing-empty');
+    if (missingQuestions.length === 0) {
+        missingTbody.innerHTML = '';
+        missingEmpty.style.display = 'flex';
+    } else {
+        missingEmpty.style.display = 'none';
+        missingTbody.innerHTML = missingQuestions.map(mq => {
+            const reasons = (mq.reason || 'Unknown').split(';').map(r => r.trim()).filter(Boolean);
+            const reasonHtml = reasons.map(r => {
+                let cls = 'red';
+                if (r.toLowerCase().includes('header') || r.toLowerCase().includes('footer') || r.toLowerCase().includes('noise')) cls = 'amber';
+                if (r.toLowerCase().includes('split') || r.toLowerCase().includes('page boundary')) cls = 'cyan';
+                return `<span class="reason-tag reason-tag--${cls}">${esc(r)}</span>`;
+            }).join(' ');
+            return `
+                <tr>
+                    <td class="qnum-cell">Q${mq.question_number}</td>
+                    <td class="page-cell">${mq.page_detected || '—'}</td>
+                    <td class="reason-cell">${reasonHtml}</td>
+                </tr>`;
+        }).join('');
+    }
+
+    // ── Tab: Partially Structured ──
+    const partialTbody = document.getElementById('partial-tbody');
+    const partialEmpty = document.getElementById('partial-empty');
+    if (partiallyStructured.length === 0) {
+        partialTbody.innerHTML = '';
+        partialEmpty.style.display = 'flex';
+    } else {
+        partialEmpty.style.display = 'none';
+        partialTbody.innerHTML = partiallyStructured.map(pq => {
+            const issues = (pq.reasons || []).map(r => {
+                const label = r.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+                return `<span class="reason-tag reason-tag--amber">${esc(label)}</span>`;
+            }).join(' ');
+            return `
+                <tr>
+                    <td class="qnum-cell">Q${pq.question_number}</td>
+                    <td class="page-cell">${pq.page_start || '—'}${pq.page_end && pq.page_end !== pq.page_start ? '-' + pq.page_end : ''}</td>
+                    <td>${pq.has_question_text ? '<span class="cell-check">\u2713</span>' : '<span class="cell-cross">\u2717</span>'}</td>
+                    <td>${pq.has_answer ? '<span class="cell-check">\u2713</span>' : '<span class="cell-cross">\u2717</span>'}</td>
+                    <td>${pq.has_explanation ? '<span class="cell-check">\u2713</span>' : '<span class="cell-cross">\u2717</span>'}</td>
+                    <td class="reason-cell">${issues || '<span style="color:var(--t4)">—</span>'}</td>
+                </tr>`;
+        }).join('');
+    }
+
+    // ── Tab: No Answer ──
+    const noAnswerGrid = document.getElementById('no-answer-grid');
+    const noAnswerEmpty = document.getElementById('no-answer-empty');
+    if (noAnswer.length === 0) {
+        noAnswerGrid.innerHTML = '';
+        noAnswerEmpty.style.display = 'flex';
+    } else {
+        noAnswerEmpty.style.display = 'none';
+        noAnswerGrid.innerHTML = noAnswer.map(n =>
+            `<span class="numgrid-chip numgrid-chip--amber" title="Question ${n} is missing an answer">Q${n}</span>`
+        ).join('');
+    }
+
+    // ── Tab: Sequence Gaps ──
+    const gapsGrid = document.getElementById('gaps-grid');
+    const gapsEmpty = document.getElementById('gaps-empty');
+    if (sequenceGaps.length === 0) {
+        gapsGrid.innerHTML = '';
+        gapsEmpty.style.display = 'flex';
+    } else {
+        gapsEmpty.style.display = 'none';
+        gapsGrid.innerHTML = sequenceGaps.map(n =>
+            `<span class="numgrid-chip numgrid-chip--red" title="Question ${n} — not found in raw text or parsed output">Q${n}</span>`
+        ).join('');
+    }
+
+    // Auto-show panel if there are missing questions
+    if (missingQuestions.length > 0 || partiallyStructured.length > 0) {
+        document.getElementById('missing-panel').style.display = 'block';
+    } else {
+        document.getElementById('missing-panel').style.display = 'none';
+    }
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -596,13 +958,13 @@ function filterQuestions() {
     return S.questions.filter(q => {
         // Search
         if (search) {
-            const text = (q.question_text || "").toLowerCase();
+            const text = getQuestionPreview(q).toLowerCase();
             if (!text.includes(search) && !String(q.question_number).includes(search)) return false;
         }
 
         // Status filter
-        const hasAnswer = (q.answer_text || "").length > 0;
-        const hasExpl = (q.explanation_text || "").length > 0;
+        const hasAnswer = getSectionText(q, 'answer').length > 0;
+        const hasExpl = getSectionText(q, 'explanation').length > 0;
         const score = q.anomaly_score || 0;
 
         if (status === 'clean' && (score > 0 || !hasAnswer)) return false;
@@ -611,7 +973,7 @@ function filterQuestions() {
         if (status === 'missing-explanation' && hasExpl) return false;
 
         // Type filter
-        const images = q.image_count || 0;
+        const images = countImages(q);
         const multiPage = q.page_start !== q.page_end;
 
         if (type === 'with-images' && images === 0) return false;
@@ -658,21 +1020,39 @@ function selectQ(qn) {
     // Header
     document.getElementById('qd-qnum').textContent = qn;
     document.getElementById('qd-line').innerHTML =
-        `PAGE ${q.page_start}${q.page_end !== q.page_start ? '-' + q.page_end : ''} IN PDF • <span class="qdetail-mode">STRICT_MAPPING MODE</span>`;
+        `PAGE ${q.page_start}${q.page_end !== q.page_start ? '-' + q.page_end : ''} IN PDF • <span class="qdetail-mode">REVEAL_ONLY MODE</span>`;
 
-    // Content
-    const displayQuestion = q.question_text || "";
+    // Options & Cleaning
+    const questionText = getSectionText(q, 'question');
+    const optionsText = getSectionText(q, 'options');
+    let options = [];
+    let displayQuestion = questionText;
+
+    if (optionsText) {
+        // Use pre-parsed options from its own section
+        options = extractOptions(optionsText);
+    } else {
+        // Fallback: extract and strip from question statement (legacy)
+        options = extractOptions(questionText);
+        displayQuestion = stripOptions(questionText, options);
+    }
+
     document.getElementById('qd-question').value = displayQuestion;
     document.getElementById('qd-charcount').textContent = `${displayQuestion.length} chars`;
 
     // Answer
-    document.getElementById('qd-answer').value = q.answer_text || "";
+    const answerText = getSectionText(q, 'answer');
+    // Strip label "Answer: B" -> "B"
+    const cleanAnswer = answerText.replace(/^\s*(?:Correct\s+)?(?:Answer|Ans|Key)[\s.:]*/i, '').replace(/\.$/, '').trim();
+    document.getElementById('qd-answer').value = cleanAnswer.slice(0, 100);
 
     // Explanation
-    document.getElementById('qd-explanation').value = q.explanation_text || "";
+    const explText = getSectionText(q, 'explanation');
+    document.getElementById('qd-explanation').value = explText;
 
-    // Render Media (strictly structured in JSON)
+    // Render Media (section-scoped — never combined)
     renderMedia(q, 'question', 'qd-media-question');
+    // Option images are rendered inline per-option inside renderOptionsUI
     clearMediaBox('qd-media-options');
     renderMedia(q, 'answer', 'qd-media-answer');
     renderMedia(q, 'explanation', 'qd-media-explanation');
@@ -680,8 +1060,8 @@ function selectQ(qn) {
     // Type
     document.getElementById('qd-type').value = (q.question_type || 'MCQ').toUpperCase();
 
-    // Render options
-    renderOptionsUI(q.options || [], q);
+    // Render options (with per-option images from blocks)
+    renderOptionsUI(options, getSectionText(q, 'answer'), q);
 
     // Raw output
     renderRawOutput(q);
@@ -725,38 +1105,44 @@ function stripOptions(text, options) {
     return cleaned.trim();
 }
 
-function renderOptionsUI(options, q) {
+function renderOptionsUI(options, answerText = '', q = null) {
     const container = document.getElementById('qd-options');
 
+    // Clean answer text for checking
+    const cleanAnswer = answerText.replace(/^\s*(?:Correct\s+)?(?:Answer|Ans|Key)[\s.:]*/i, '').replace(/\.$/, '').trim();
+
     // If no options found, show placeholders
-    if (!options || options.length === 0) {
+    if (options.length === 0) {
         const letters = ['A', 'B', 'C', 'D'];
         options = letters.map(l => ({
-            key: l,
+            letter: l,
             text: '',
-            images: []
+            correct: cleanAnswer.includes(l)
         }));
     }
 
+    // Associate images from blocks.options with individual option letters
+    const optionImages = buildOptionImageMap(q);
+
     container.innerHTML = options.map(opt => {
-        const imgs = opt.images || [];
+        const imgs = optionImages[opt.letter] || [];
         const imagesHtml = imgs.length > 0
             ? `<div class="option-media">${imgs.map(src => {
                 const imgSrc = imgSrcFromContent(src);
                 return `<img src="${imgSrc}" class="q-thumbnail option-thumbnail" 
-                             onclick="openLightbox('${imgSrc}', 'Option ${opt.key}')" 
-                             title="Option ${opt.key} image">`;
+                             onclick="openLightbox('${imgSrc}', 'Option ${opt.letter}')" 
+                             title="Option ${opt.letter} image">`;
             }).join('')}</div>`
             : '';
 
         return `
             <div class="option-item">
-                <span class="option-letter">${opt.key}</span>
+                <span class="option-letter">${opt.letter}</span>
                 <div style="flex:1; min-width:0;">
                     <span class="option-text">${esc(opt.text) || '<em style="color:var(--t4)">Empty option</em>'}</span>
                     ${imagesHtml}
                 </div>
-                <input type="checkbox" class="option-check" title="Correct answer">
+                <input type="checkbox" class="option-check" ${opt.correct || cleanAnswer.includes(opt.letter) ? 'checked' : ''} title="Correct answer">
                 <button class="option-remove" onclick="this.closest('.option-item').remove()" title="Remove">×</button>
             </div>
         `;
@@ -905,10 +1291,8 @@ function renderMedia(q, section, containerId) {
     const container = document.getElementById(containerId);
     if (!container) return;
 
-    let images = [];
-    if (section === 'question') images = q.question_images || [];
-    else if (section === 'answer') images = q.answer_images || [];
-    else if (section === 'explanation') images = q.explanation_images || [];
+    const blocks = (q.blocks && q.blocks[section]) || [];
+    const images = getFilteredSectionImages(blocks);
 
     if (images.length === 0) {
         container.style.display = 'none';
@@ -917,8 +1301,8 @@ function renderMedia(q, section, containerId) {
     }
 
     container.style.display = 'flex';
-    container.innerHTML = images.map(path => {
-        const src = imgSrcFromContent(path);
+    container.innerHTML = images.map(img => {
+        const src = imgSrcFromContent(img.content);
         return `<img src="${src}" class="q-thumbnail" 
                      onclick="openLightbox('${src}', 'Question ${q.question_number} — ${section.toUpperCase()}')" 
                      title="Click to preview">`;
@@ -954,27 +1338,23 @@ function addOption() {
 
 function renderRawOutput(q) {
     const raw = document.getElementById('qd-raw');
-    let text = "";
+    let text = '';
 
-    text += `[QUESTION]\n${q.question_text}\n`;
-    if (q.question_images?.length) text += `Images: ${q.question_images.join(', ')}\n`;
-    text += "\n";
-
-    if (q.options?.length) {
-        text += "[OPTIONS]\n";
-        q.options.forEach(opt => {
-            text += `${opt.key}. ${opt.text}\n`;
-            if (opt.images?.length) text += `  Images: ${opt.images.join(', ')}\n`;
-        });
-        text += "\n";
+    if (q.blocks) {
+        for (const [section, blocks] of Object.entries(q.blocks)) {
+            if (blocks && blocks.length > 0) {
+                text += `[${section.toUpperCase()}]\n`;
+                for (const b of blocks) {
+                    if (b.type === 'text') {
+                        text += b.content + '\n';
+                    } else if (b.type === 'image') {
+                        text += `[IMAGE: ${b.content}]\n`;
+                    }
+                }
+                text += '\n';
+            }
+        }
     }
-
-    text += `[ANSWER]\n${q.answer_text}\n`;
-    if (q.answer_images?.length) text += `Images: ${q.answer_images.join(', ')}\n`;
-    text += "\n";
-
-    text += `[EXPLANATION]\n${q.explanation_text}\n`;
-    if (q.explanation_images?.length) text += `Images: ${q.explanation_images.join(', ')}\n`;
 
     raw.textContent = text || 'No raw data available';
 }

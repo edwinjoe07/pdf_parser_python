@@ -49,12 +49,17 @@ EXPLANATION_PATTERN = re.compile(
 
 # Patterns to ignore (headers, footers, page counters)
 IGNORE_PATTERNS = [
-    re.compile(r"^\s*Questions and Answers PDF.*$", re.IGNORECASE), # Heuristic for common dumps
-    re.compile(r"^\s*(Page\s*)?\d+\s*(/|of)\s*\d+\s*$", re.IGNORECASE), # "8/528", "Page 8 of 528"
-    re.compile(r"^\s*Question\s*\d+\s*$"), # Solo "Question 5" (not the anchor)
-    re.compile(r"^https?://[^\s]+$"), # Lone URLs
-    re.compile(r"^\s*Box\s*\d+\s*:", re.IGNORECASE), # "Box 1:", "Box 2:" noise
-    re.compile(r"^\s*Select and Place:", re.IGNORECASE), # "Select and Place:" noise
+    re.compile(r"^\s*Questions and Answers PDF.*$",
+               re.IGNORECASE),  # Heuristic for common dumps
+    re.compile(r"^\s*(Page\s*)?\d+\s*(/|of)\s*\d+\s*$",
+               re.IGNORECASE),  # "8/528", "Page 8 of 528"
+    # Solo "Question 5" (not the anchor)
+    re.compile(r"^\s*Question\s*\d+\s*$"),
+    re.compile(r"^https?://[^\s]+$"),  # Lone URLs
+    # "Box 1:", "Box 2:" noise
+    re.compile(r"^\s*Box\s*\d+\s*:", re.IGNORECASE),
+    # "Select and Place:" noise
+    re.compile(r"^\s*Select and Place:", re.IGNORECASE),
 ]
 
 
@@ -80,6 +85,19 @@ class StateMachineParser:
         self.questions: list[ParsedQuestion] = []
         self.question_numbers: set[int] = set()
 
+    def reset(self):
+        """Reset the state machine for a fresh parsing run."""
+        self.state = ParserState.SEEKING_QUESTION
+        self.current_question = None
+        self.current_option = None
+        self.questions = []
+        self.question_numbers = set()
+
+    def finalize(self):
+        """Finalize any pending (in-progress) question at end of parsing."""
+        if self.current_question:
+            self._finalize_question()
+
     def parse(self, blocks: list[ContentBlock]) -> list[ParsedQuestion]:
         """Parse blocks into structured questions."""
         self.state = ParserState.SEEKING_QUESTION
@@ -103,7 +121,8 @@ class StateMachineParser:
         # ─── 1. Image Block: Strict Assignment ───
         if block.type == BlockType.IMAGE:
             if not self.current_question:
-                logger.debug(f"Skipping orphan image (pre-amble) at page {block.page_number}")
+                logger.debug(
+                    f"Skipping orphan image (pre-amble) at page {block.page_number}")
                 return
 
             self._assign_image(block)
@@ -111,18 +130,18 @@ class StateMachineParser:
 
         # ─── 2. Text Block: State Transitions & Content ───
         lines = block.content.split("\n")
-        
+
         for line in lines:
             line_str = line.strip()
             if not line_str:
                 continue
-            
+
             # Check noise patterns (Headers/Footers)
             if any(p.match(line_str) for p in IGNORE_PATTERNS):
                 continue
 
             # Anchor Detection (Case-Insensitive)
-            
+
             # Question Anchor (e.g. "Question: 13")
             q_match = QUESTION_PATTERN.match(line_str)
             if q_match:
@@ -175,7 +194,7 @@ class StateMachineParser:
             self._finalize_question()
 
         logger.info(f"Detected Question {q_num} on page {block.page_number}")
-        
+
         self.current_question = ParsedQuestion(
             question_number=q_num,
             page_start=block.page_number,
@@ -201,20 +220,20 @@ class StateMachineParser:
                 self.current_question.question_text += " " + text
             else:
                 self.current_question.question_text = text
-        
+
         elif self.state == ParserState.OPTION:
             if self.current_option:
                 if self.current_option.text:
                     self.current_option.text += " " + text
                 else:
                     self.current_option.text = text
-        
+
         elif self.state == ParserState.ANSWER:
             if self.current_question.answer_text:
                 self.current_question.answer_text += " " + text
             else:
                 self.current_question.answer_text = text
-        
+
         elif self.state == ParserState.EXPLANATION:
             if self.current_question.explanation_text:
                 self.current_question.explanation_text += " " + text
@@ -225,35 +244,36 @@ class StateMachineParser:
         """Strict assignment of images based on state."""
         q = self.current_question
         path = block.content
-        
+
         # Debug logging as requested
         print(f"[Q{q.question_number}] Assigning image to {self.state}")
-        
+
         if self.state == ParserState.QUESTION_BODY:
             q.question_images.append(path)
-        
+
         elif self.state == ParserState.OPTION:
             if self.current_option:
                 self.current_option.images.append(path)
             else:
                 # Fallback to question body if option object missing
                 q.question_images.append(path)
-        
+
         elif self.state == ParserState.ANSWER:
             q.answer_images.append(path)
-        
+
         elif self.state == ParserState.EXPLANATION:
             q.explanation_images.append(path)
-        
+
         else:
-            logger.warning(f"Orphan image at page {block.page_number} in state {self.state}")
+            logger.warning(
+                f"Orphan image at page {block.page_number} in state {self.state}")
 
         q.page_end = max(q.page_end, block.page_number)
 
     def _finalize_question(self):
         """Basic validation and storage."""
         q = self.current_question
-        
+
         if not q.has_question_text:
             q.anomalies.append(Anomaly(
                 type=AnomalyType.MISSING_QUESTION_TEXT,
