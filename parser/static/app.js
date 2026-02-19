@@ -369,7 +369,7 @@ function renderImportsTable() {
             'processing': 'processing',
             'parsed': 'parsed',
             'completed': 'parsed',
-            'paused': 'queued',
+            'paused': 'paused',
             'failed': 'failed'
         };
         const statusKey = statusMap[st] || st;
@@ -398,9 +398,26 @@ function renderImportsTable() {
                 <button class="alink alink--delete" onclick="deleteJob('${id}')">Delete</button>`;
         } else if (statusKey === 'failed') {
             actions = `
+                <button class="alink alink--resume" onclick="resumeJob('${id}')">Resume</button>
                 <button class="alink alink--reparse" onclick="reParse('${id}')">Re-parse</button>
                 <button class="alink alink--logs" onclick="showLogs('${id}')">Logs</button>
                 <button class="alink alink--delete" onclick="deleteJob('${id}')">Delete</button>`;
+        } else if (statusKey === 'processing') {
+            actions = `
+                <button class="alink alink--review" onclick="openReview('${id}')">Review</button>
+                <button class="alink alink--pause" onclick="pauseJob('${id}')">Pause</button>
+                <button class="alink alink--cancel" onclick="cancelJob('${id}')">Cancel</button>
+                <button class="alink alink--logs" onclick="showLogs('${id}')">Logs</button>`;
+        } else if (statusKey === 'paused') {
+            actions = `
+               <button class="alink alink--review" onclick="openReview('${id}')">Review</button>
+               <button class="alink alink--resume" onclick="resumeJob('${id}')">Resume</button>
+               <button class="alink alink--cancel" onclick="cancelJob('${id}')">Cancel</button>
+               <button class="alink alink--logs" onclick="showLogs('${id}')">Logs</button>`;
+        } else if (statusKey === 'queued') {
+            actions = `
+                <button class="alink alink--cancel" onclick="cancelJob('${id}')">Cancel</button>
+                <button class="alink alink--logs" onclick="showLogs('${id}')">Logs</button>`;
         } else {
             actions = `<span class="spinner"></span>`;
         }
@@ -477,6 +494,51 @@ async function deleteJob(jobId) {
     renderImportsTable();
     updateStatusCards();
     toast('Job deleted', 'info');
+}
+
+async function pauseJob(jobId) {
+    const j = S.jobs[jobId];
+    if (!j || !j.exam_db_id) return;
+    try {
+        const res = await fetch(`${API}/exam/${j.exam_db_id}/pause`, { method: 'POST' });
+        if (!res.ok) throw new Error((await res.json()).error || 'Pause failed');
+        toast('Pause signal sent', 'info');
+        // Let polling update the UI, or force it now
+        j.status = 'paused';
+        renderImportsTable();
+    } catch (err) {
+        toast(`Error: ${err.message}`, 'error');
+    }
+}
+
+async function resumeJob(jobId) {
+    const j = S.jobs[jobId];
+    if (!j || !j.exam_db_id) return;
+    try {
+        const res = await fetch(`${API}/exam/${j.exam_db_id}/resume`, { method: 'POST' });
+        if (!res.ok) throw new Error((await res.json()).error || 'Resume failed');
+        toast('Resume signal sent', 'success');
+        j.status = 'processing';
+        renderImportsTable();
+        startExamPoll(j.exam_db_id, jobId);
+    } catch (err) {
+        toast(`Error: ${err.message}`, 'error');
+    }
+}
+
+async function cancelJob(jobId) {
+    if (!confirm('Cancel this parsing job?')) return;
+    const j = S.jobs[jobId];
+    if (!j || !j.exam_db_id) return;
+    try {
+        const res = await fetch(`${API}/exam/${j.exam_db_id}/cancel`, { method: 'POST' });
+        if (!res.ok) throw new Error((await res.json()).error || 'Cancel failed');
+        toast('Parsing cancelled', 'warning');
+        j.status = 'failed';
+        renderImportsTable();
+    } catch (err) {
+        toast(`Error: ${err.message}`, 'error');
+    }
 }
 
 async function reParse(jobId) {

@@ -1054,6 +1054,34 @@ def exam_progress(exam_id: int):
     })
 
 
+@app.route("/exam/<int:exam_id>/cancel", methods=["POST"])
+def cancel_exam(exam_id: int):
+    """
+    Cancel a running parse job.
+    Stops the worker and marks the exam as 'failed' with a 'Cancelled by user' message.
+    """
+    exam = db.get_exam(exam_id)
+    if not exam:
+        return jsonify({"error": "Exam not found"}), 404
+
+    # signal the in-memory worker to stop
+    worker = background_worker.get_worker(exam_id)
+    if worker:
+        worker.request_stop()
+    
+    # Update status in DB
+    db.update_exam(exam_id, status="failed", last_error="Cancelled by user")
+    
+    logger.info(f"Exam {exam_id}: Parsing cancelled by user.")
+
+    return jsonify({
+        "success": True,
+        "exam_id": exam_id,
+        "status": "failed",
+        "message": "Parsing cancelled.",
+    })
+
+
 @app.route("/exam/<int:exam_id>/validation", methods=["GET"])
 def exam_validation(exam_id: int):
     """
