@@ -1,0 +1,11 @@
+{
+  "total_questions_detected": 4,
+  "structured_successfully": 4,
+  "missing_question_numbers": [],
+  "duplicate_question_numbers": [],
+  "questions_missing_answer": [],
+  "questions_missing_explanation": [],
+  "orphan_images": 0,
+  "anomaly_breakdown": {},
+  "success_rate": 100.0
+}

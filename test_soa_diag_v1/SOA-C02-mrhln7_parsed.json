@@ -1,0 +1,78 @@
+{
+  "exam": {
+    "name": "SOA-C02-mrhln7",
+    "provider": "",
+    "version": "",
+    "source_pdf": "SOA-C02-mrhln7.pdf",
+    "total_pages": 463,
+    "file_hash": "058c036026ba6acb71c5d6fd95059112497a0deada65747b56e55cff2ff43e9d",
+    "file_size_bytes": 3684536
+  },
+  "parse_version": {
+    "parser_version": "1.0.0",
+    "parse_timestamp": "2026-02-17T10:55:09.518212+00:00",
+    "raw_block_count": 13,
+    "structured_question_count": 1
+  },
+  "questions": [
+    {
+      "question_number": 13,
+      "question_type": "mcq",
+      "question_text": "[Security and Compliance] A SysOps administrator must create an IAM policy for a developer who needs access to specific AWS services. Based on the requirements, the SysOps administrator creates the following policy: Which actions does this policy allow? (Select TWO.)",
+      "question_images": [
+        "questions/SOA-C02-mrhln7/q_img_1_964_14.jpeg"
+      ],
+      "options": [
+        {
+          "key": "A",
+          "text": "Create an AWS Storage Gateway.",
+          "images": []
+        },
+        {
+          "key": "B",
+          "text": "Create an IAM role for an AWS Lambda function.",
+          "images": []
+        },
+        {
+          "key": "C",
+          "text": "Delete an Amazon Simple Queue Service (Amazon SQS) queue.",
+          "images": []
+        },
+        {
+          "key": "D",
+          "text": "Describe AWS load balancers.",
+          "images": []
+        },
+        {
+          "key": "E",
+          "text": "Invoke an AWS Lambda function.",
+          "images": []
+        }
+      ],
+      "answer_text": "D,E",
+      "answer_images": [],
+      "explanation_text": "The provided IAM policy grants the following permissions: Describe AWS Load Balancers: The policy allows actions with the prefix elasticloadbalancing:. This includes actions like DescribeLoadBalancers and other Describe* actions related to Elastic Load Balancing. Elastic Load Balancing API Actions Invoke AWS Lambda Function: The policy allows actions with the prefix lambda:, which includes InvokeFunction and other actions that allow listing and describing Lambda functions. AWS Lambda API Actions The actions related to AWS Storage Gateway (create), IAM role (create), and Amazon SQS (delete) are not allowed by this policy. The policy only grants describe/list permissions for storagegateway,",
+      "explanation_images": [],
+      "page_start": 13,
+      "page_end": 14,
+      "anomalies": [],
+      "raw_text": "",
+      "anomaly_score": 0,
+      "has_question_text": true,
+      "has_answer": true,
+      "has_explanation": true,
+      "image_count": 1
+    }
+  ],
+  "validation": {
+    "total_questions_detected": 1,
+    "structured_successfully": 1,
+    "missing_question_numbers": [],
+    "duplicate_question_numbers": [],
+    "questions_missing_answer": [],
+    "questions_missing_explanation": [],
+    "orphan_images": 0,
+    "anomaly_breakdown": {},
+    "success_rate": 100.0
+  }
+}

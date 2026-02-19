@@ -1,0 +1,235 @@
+{
+  "exam": {
+    "name": "SOA-C02-mrhln7",
+    "provider": "",
+    "version": "",
+    "source_pdf": "SOA-C02-mrhln7.pdf",
+    "total_pages": 463,
+    "file_hash": "058c036026ba6acb71c5d6fd95059112497a0deada65747b56e55cff2ff43e9d",
+    "file_size_bytes": 3684536
+  },
+  "parse_version": {
+    "parser_version": "1.0.0",
+    "parse_timestamp": "2026-02-17T10:55:59.240728+00:00",
+    "raw_block_count": 52,
+    "structured_question_count": 5
+  },
+  "questions": [
+    {
+      "question_number": 1,
+      "question_type": "mcq",
+      "question_text": "[Security and Compliance] A Sysops administrator creates an Amazon Elastic Kubernetes Service (Amazon EKS) cluster that uses AWS Fargate. The cluster is deployed successfully. The Sysops administrator needs to manage the cluster by using the kubect1 command line tool. Which of the following must be configured on the Sysops administrator's machine so that kubect1 can communicate with the cluster API server?",
+      "question_images": [],
+      "options": [
+        {
+          "key": "A",
+          "text": "The kubeconfig file",
+          "images": []
+        },
+        {
+          "key": "B",
+          "text": "The kube-proxy Amazon EKS add-on",
+          "images": []
+        },
+        {
+          "key": "C",
+          "text": "The Fargate profile",
+          "images": []
+        },
+        {
+          "key": "D",
+          "text": "The eks-connector.yaml file",
+          "images": []
+        }
+      ],
+      "answer_text": "A",
+      "answer_images": [],
+      "explanation_text": "The kubeconfig file is a configuration file used to store cluster authentication information, which is required to make requests to the Amazon EKS cluster API server. The kubeconfig file will need to be configured on the SysOps administrator's machine in order for kubectl to be able to communicate with the cluster API server. using-aws-stepfunctions/",
+      "explanation_images": [],
+      "page_start": 2,
+      "page_end": 2,
+      "anomalies": [],
+      "raw_text": "",
+      "anomaly_score": 0,
+      "has_question_text": true,
+      "has_answer": true,
+      "has_explanation": true,
+      "image_count": 0
+    },
+    {
+      "question_number": 2,
+      "question_type": "mcq",
+      "question_text": "[Security and Compliance] A Sysops administrator needs to configure automatic rotation for Amazon RDS database credentials. The credentials must rotate every 30 days. The solution must integrate with Amazon RDS. Which solution will meet these requirements with the LEAST operational overhead?",
+      "question_images": [],
+      "options": [
+        {
+          "key": "A",
+          "text": "Store the credentials in AWS Systems Manager Parameter Store as a secure string. Configure automatic rotation with a rotation interval of 30 days.",
+          "images": []
+        },
+        {
+          "key": "B",
+          "text": "Store the credentials in AWS Secrets Manager. Configure automatic rotation with a rotation interval of 30 days.",
+          "images": []
+        },
+        {
+          "key": "C",
+          "text": "Store the credentials in a file in an Amazon S3 bucket. Deploy an AWS Lambda function to automatically rotate the credentials every 30 days.",
+          "images": []
+        },
+        {
+          "key": "D",
+          "text": "Store the credentials in AWS Secrets Manager. Deploy an AWS Lambda function to automatically rotate the credentials every 30 days.",
+          "images": []
+        }
+      ],
+      "answer_text": "B",
+      "answer_images": [],
+      "explanation_text": "Storing the credentials in AWS Secrets Manager and configuring automatic rotation with a rotation interval of 30 days is the most efficient way to meet the requirements with the least operational overhead. AWS Secrets Manager automatically rotates the credentials at the specified interval, so there is no need for an additional AWS Lambda function or manual rotation. Additionally, Secrets Manager is integrated with Amazon RDS, so the credentials can be easily used with the RDS database.",
+      "explanation_images": [],
+      "page_start": 2,
+      "page_end": 2,
+      "anomalies": [],
+      "raw_text": "",
+      "anomaly_score": 0,
+      "has_question_text": true,
+      "has_answer": true,
+      "has_explanation": true,
+      "image_count": 0
+    },
+    {
+      "question_number": 3,
+      "question_type": "mcq",
+      "question_text": "[Deployment, Provisioning, and Automation] A company has an application that runs only on Amazon EC2 Spot Instances. The instances run in an Amazon EC2 Auto Scaling group with scheduled scaling actions. However, the capacity does not always increase at the scheduled times, and instances terminate many times a day. A Sysops administrator must ensure that the instances launch on time and have fewer interruptions. Which action will meet these requirements?",
+      "question_images": [],
+      "options": [
+        {
+          "key": "A",
+          "text": "Specify the capacity-optimized allocation strategy for Spot Instances. Add more instance types to the Auto Scaling group.",
+          "images": []
+        },
+        {
+          "key": "B",
+          "text": "Specify the capacity-optimized allocation strategy for Spot Instances. Increase the size of the instances in the Auto Scaling group.",
+          "images": []
+        },
+        {
+          "key": "C",
+          "text": "Specify the lowest-price allocation strategy for Spot Instances. Add more instance types to the Auto Scaling group.",
+          "images": []
+        },
+        {
+          "key": "D",
+          "text": "Specify the lowest-price allocation strategy for Spot Instances. Increase the size of the instances in the Auto Scaling group.",
+          "images": []
+        }
+      ],
+      "answer_text": "A",
+      "answer_images": [],
+      "explanation_text": "Specifying the capacity-optimized allocation strategy for Spot Instances and adding more instance types to the Auto Scaling group is the best action to meet the requirements. Increasing the size of the instances in the Auto Scaling group will not necessarily help with the launch time or reduce interruptions, as the Spot Instances could still be interrupted even with larger instance sizes.",
+      "explanation_images": [],
+      "page_start": 3,
+      "page_end": 3,
+      "anomalies": [],
+      "raw_text": "",
+      "anomaly_score": 0,
+      "has_question_text": true,
+      "has_answer": true,
+      "has_explanation": true,
+      "image_count": 0
+    },
+    {
+      "question_number": 4,
+      "question_type": "mcq",
+      "question_text": "[Monitoring, Reporting, and Automation] A company stores its data in an Amazon S3 bucket. The company is required to classify the data and find any sensitive personal information in its S3 files. Which solution will meet these requirements?",
+      "question_images": [],
+      "options": [
+        {
+          "key": "A",
+          "text": "Create an AWS Config rule to discover sensitive personal information in the S3 files and mark them as noncompliant.",
+          "images": []
+        },
+        {
+          "key": "B",
+          "text": "Create an S3 event-driven artificial intelligence/machine learning (AI/ML) pipeline to classify sensitive personal information by using Amazon Recognition.",
+          "images": []
+        },
+        {
+          "key": "C",
+          "text": "Enable Amazon GuardDuty. Configure S3 protection to monitor all data inside Amazon S3.",
+          "images": []
+        },
+        {
+          "key": "D",
+          "text": "Enable Amazon Macie. Create a discovery job that uses the managed data identifier.",
+          "images": []
+        }
+      ],
+      "answer_text": "D",
+      "answer_images": [],
+      "explanation_text": "Amazon Macie is a security service designed to help organizations find, classify, and protect sensitive data stored in Amazon S3. Amazon Macie uses machine learning to automatically discover, classify, and protect sensitive data in Amazon S3. Creating a discovery job with the managed data identifier will allow Macie to identify sensitive personal information in the S3 files and classify it accordingly. Enabling AWS Config and Amazon GuardDuty will not help with this requirement as they are not designed to automatically classify and protect data.",
+      "explanation_images": [],
+      "page_start": 4,
+      "page_end": 4,
+      "anomalies": [],
+      "raw_text": "",
+      "anomaly_score": 0,
+      "has_question_text": true,
+      "has_answer": true,
+      "has_explanation": true,
+      "image_count": 0
+    },
+    {
+      "question_number": 5,
+      "question_type": "mcq",
+      "question_text": "[Monitoring, Reporting, and Automation] A company has an application that customers use to search for records on a website. The application's data is stored in an Amazon Aurora DB cluster. The application's usage varies by season and by day of the week. The website's popularity is increasing, and the website is experiencing slower performance because of increased load on the DB cluster during periods of peak activity. The application logs show that the performance issues occur when users are searching for information. The same search is rarely performed multiple times. A SysOps administrator must improve the performance of the platform by using a solution that maximizes resource efficiency. Which solution will meet these requirements?",
+      "question_images": [],
+      "options": [
+        {
+          "key": "A",
+          "text": "Deploy an Amazon ElastiCache for Redis cluster in front of the DB cluster. Modify the application to check the cache before the application issues new queries to the database. Add the results of any queries to the cache.",
+          "images": []
+        },
+        {
+          "key": "B",
+          "text": "Deploy an Aurora Replica for the DB cluster. Modify the application to use the reader endpoint for search operations. Use Aurora Auto Scaling to scale the number of replicas based on load. Most Voted",
+          "images": []
+        },
+        {
+          "key": "C",
+          "text": "Use Provisioned IOPS on the storage volumes that support the DB cluster to improve performance sufficiently to support the peak load on the application.",
+          "images": []
+        },
+        {
+          "key": "D",
+          "text": "Increase the instance size in the DB cluster to a size that is sufficient to support the peak load on the application. Use Aurora Auto Scaling to scale the instance size based on load.",
+          "images": []
+        }
+      ],
+      "answer_text": "A",
+      "answer_images": [],
+      "explanation_text": "Step-by-Step Understand the Problem: The application experiences slower performance during peak activity due to increased load on the Amazon Aurora DB cluster. Performance issues occur primarily during search operations. The goal is to improve performance and maximize resource efficiency. Analyze the Requirements: The solution should improve the performance of the platform. It should maximize resource efficiency, which implies cost-effective and scalable options. Evaluate the Options: Option A: Deploy an Amazon ElastiCache for Redis cluster. ElastiCache for Redis is a managed in-memory caching service that can significantly reduce the load on the database by caching frequently accessed data. By modifying the application to check the cache before querying the database, repeated searches for the same information will be served from the cache, reducing the number of database reads. This is efficient and cost-effective as it reduces database load and improves response times. Option B: Deploy an Aurora Replica and use Auto Scaling. Adding Aurora Replicas can help distribute read traffic and improve performance. Aurora Auto Scaling can adjust the number of replicas based on the load. However, this option may not be as efficient in terms of resource usage compared to caching because it still involves querying the database. Option C: Use Provisioned IOPS. Provisioned IOPS can improve performance by providing fast and consistent I/O.",
+      "explanation_images": [],
+      "page_start": 4,
+      "page_end": 4,
+      "anomalies": [],
+      "raw_text": "",
+      "anomaly_score": 0,
+      "has_question_text": true,
+      "has_answer": true,
+      "has_explanation": true,
+      "image_count": 0
+    }
+  ],
+  "validation": {
+    "total_questions_detected": 5,
+    "structured_successfully": 5,
+    "missing_question_numbers": [],
+    "duplicate_question_numbers": [],
+    "questions_missing_answer": [],
+    "questions_missing_explanation": [],
+    "orphan_images": 0,
+    "anomaly_breakdown": {},
+    "success_rate": 100.0
+  }
+}

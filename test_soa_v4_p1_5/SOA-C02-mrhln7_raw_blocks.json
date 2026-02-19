@@ -1,0 +1,1035 @@
+[
+  {
+    "type": "image",
+    "content": "questions/SOA-C02-mrhln7/q_img_1_1471_1.jpeg",
+    "page_number": 1,
+    "bbox": [
+      1.01409912109375,
+      0.016845703125,
+      594.2540893554688,
+      841.8900146484375
+    ],
+    "order_index": 0,
+    "font_info": null
+  },
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n1/463",
+    "page_number": 1,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 1,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "SOA-C02",
+    "page_number": 1,
+    "bbox": [
+      362.6199951171875,
+      232.0760498046875,
+      449.29998779296875,
+      260.7160339355469
+    ],
+    "order_index": 2,
+    "font_info": {
+      "name": "Arial-BoldMT",
+      "size": 20.0,
+      "flags": 16,
+      "color": 16777215,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "557",
+    "page_number": 1,
+    "bbox": [
+      382.9110107421875,
+      295.6810302734375,
+      416.27099609375,
+      324.3210144042969
+    ],
+    "order_index": 3,
+    "font_info": {
+      "name": "Arial-BoldMT",
+      "size": 20.0,
+      "flags": 16,
+      "color": 16777215,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Thank you for choosing us for your SOA-C02 \npreparation! We're confident these materials will \nhelp you succeed. Best of luck with your studies!",
+    "page_number": 1,
+    "bbox": [
+      118.06499481201172,
+      643.988037109375,
+      494.29095458984375,
+      705.2999877929688
+    ],
+    "order_index": 4,
+    "font_info": {
+      "name": "Arial-BoldMT",
+      "size": 16.0,
+      "flags": 16,
+      "color": 128,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n2/463",
+    "page_number": 2,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 5,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Topic 1, Mix Questions",
+    "page_number": 2,
+    "bbox": [
+      57.8267707824707,
+      195.7229461669922,
+      158.0866241455078,
+      210.43893432617188
+    ],
+    "order_index": 6,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Question: 1",
+    "page_number": 2,
+    "bbox": [
+      57.8267707824707,
+      226.18504333496094,
+      124.1642074584961,
+      244.94387817382812
+    ],
+    "order_index": 7,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "[Security and Compliance]",
+    "page_number": 2,
+    "bbox": [
+      57.8267707824707,
+      260.09075927734375,
+      174.92083740234375,
+      274.8067321777344
+    ],
+    "order_index": 8,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A Sysops administrator creates an Amazon Elastic Kubernetes Service (Amazon EKS) cluster that uses\nAWS Fargate. The cluster is deployed successfully. The Sysops administrator needs to manage the\ncluster by using the kubect1 command line tool.",
+    "page_number": 2,
+    "bbox": [
+      57.8267707824707,
+      289.75823974609375,
+      504.89581298828125,
+      334.1416320800781
+    ],
+    "order_index": 9,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Which of the following must be configured on the Sysops administrator's machine so that kubect1\ncan communicate with the cluster API server?",
+    "page_number": 2,
+    "bbox": [
+      57.8267707824707,
+      349.092041015625,
+      492.96600341796875,
+      378.6417236328125
+    ],
+    "order_index": 10,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A. The kubeconfig file\nB. The kube-proxy Amazon EKS add-on\nC. The Fargate profile\nD. The eks-connector.yaml file",
+    "page_number": 2,
+    "bbox": [
+      57.8267707824707,
+      423.26068115234375,
+      229.3946075439453,
+      482.4789123535156
+    ],
+    "order_index": 11,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Answer: A",
+    "page_number": 2,
+    "bbox": [
+      416.14678955078125,
+      527.8925170898438,
+      475.2222900390625,
+      546.6513671875
+    ],
+    "order_index": 12,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Explanation:",
+    "page_number": 2,
+    "bbox": [
+      57.8267707824707,
+      576.6319580078125,
+      113.52427673339844,
+      591.3479614257812
+    ],
+    "order_index": 13,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "The kubeconfig file is a configuration file used to store cluster authentication information, which is\nrequired to make requests to the Amazon EKS cluster API server. The kubeconfig file will need to be\nconfigured on the SysOps administrator's machine in order for kubectl to be able to communicate\nwith the cluster API server.\nhttps://aws.amazon.com/blogs/developer/running-a-kubernetes-job-in-amazon-eks-on-aws-fargate-\nusing-aws-stepfunctions/",
+    "page_number": 2,
+    "bbox": [
+      57.8267707824707,
+      606.2993774414062,
+      508.5282897949219,
+      695.1840209960938
+    ],
+    "order_index": 14,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Question: 2",
+    "page_number": 2,
+    "bbox": [
+      57.8267707824707,
+      710.93017578125,
+      124.1642074584961,
+      729.6890258789062
+    ],
+    "order_index": 15,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "[Security and Compliance]",
+    "page_number": 2,
+    "bbox": [
+      57.8267707824707,
+      744.834716796875,
+      174.92083740234375,
+      759.5507202148438
+    ],
+    "order_index": 16,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n3/463",
+    "page_number": 3,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 17,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A Sysops administrator needs to configure automatic rotation for Amazon RDS database credentials.\nThe credentials must rotate every 30 days. The solution must integrate with Amazon RDS.",
+    "page_number": 3,
+    "bbox": [
+      57.8267707824707,
+      56.1264533996582,
+      502.41741943359375,
+      85.67617797851562
+    ],
+    "order_index": 18,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Which solution will meet these requirements with the LEAST operational overhead?",
+    "page_number": 3,
+    "bbox": [
+      57.8267707824707,
+      100.62760925292969,
+      432.00787353515625,
+      115.34359741210938
+    ],
+    "order_index": 19,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A. Store the credentials in AWS Systems Manager Parameter Store as a secure string. Configure\nautomatic rotation with a rotation interval of 30 days.\nB. Store the credentials in AWS Secrets Manager. Configure automatic rotation with a rotation\ninterval of 30 days.\nC. Store the credentials in a file in an Amazon S3 bucket. Deploy an AWS Lambda function to\nautomatically rotate the credentials every 30 days.\nD. Store the credentials in AWS Secrets Manager. Deploy an AWS Lambda function to automatically\nrotate the credentials every 30 days.",
+    "page_number": 3,
+    "bbox": [
+      57.8267707824707,
+      145.1288299560547,
+      498.1171875,
+      263.6808776855469
+    ],
+    "order_index": 20,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Answer: B",
+    "page_number": 3,
+    "bbox": [
+      416.38677978515625,
+      294.2611999511719,
+      474.8359069824219,
+      313.0200500488281
+    ],
+    "order_index": 21,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Explanation:",
+    "page_number": 3,
+    "bbox": [
+      57.8267707824707,
+      328.16644287109375,
+      113.52571105957031,
+      342.8824157714844
+    ],
+    "order_index": 22,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Storing the credentials in AWS Secrets Manager and configuring automatic rotation with a rotation\ninterval of 30 days is the most efficient way to meet the requirements with the least operational\noverhead. AWS Secrets Manager automatically rotates the credentials at the specified interval, so\nthere is no need for an additional AWS Lambda function or manual rotation. Additionally, Secrets\nManager is integrated with Amazon RDS, so the credentials can be easily used with the RDS\ndatabase.",
+    "page_number": 3,
+    "bbox": [
+      57.8267707824707,
+      357.8338623046875,
+      496.0353088378906,
+      446.718505859375
+    ],
+    "order_index": 23,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Question: 3",
+    "page_number": 3,
+    "bbox": [
+      57.8267707824707,
+      462.4650573730469,
+      124.1642074584961,
+      481.2239074707031
+    ],
+    "order_index": 24,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "[Deployment, Provisioning, and Automation]",
+    "page_number": 3,
+    "bbox": [
+      57.8267707824707,
+      496.37030029296875,
+      258.2082824707031,
+      511.0862731933594
+    ],
+    "order_index": 25,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A company has an application that runs only on Amazon EC2 Spot Instances. The instances run in an\nAmazon EC2 Auto Scaling group with scheduled scaling actions.",
+    "page_number": 3,
+    "bbox": [
+      57.8267707824707,
+      526.0377197265625,
+      500.8397521972656,
+      555.5874633789062
+    ],
+    "order_index": 26,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "However, the capacity does not always increase at the scheduled times, and instances terminate\nmany times a day. A Sysops administrator must ensure that the instances launch on time and have\nfewer interruptions.",
+    "page_number": 3,
+    "bbox": [
+      57.8267707824707,
+      570.5389404296875,
+      493.5843811035156,
+      614.9224243164062
+    ],
+    "order_index": 27,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Which action will meet these requirements?",
+    "page_number": 3,
+    "bbox": [
+      57.8267707824707,
+      629.8739013671875,
+      255.60806274414062,
+      644.5899047851562
+    ],
+    "order_index": 28,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A. Specify the capacity-optimized allocation strategy for Spot Instances. Add more instance types to\nthe Auto Scaling group.\nB. Specify the capacity-optimized allocation strategy for Spot Instances. Increase the size of the\ninstances in the Auto Scaling group.\nC. Specify the lowest-price allocation strategy for Spot Instances. Add more instance types to the\nAuto Scaling group.\nD. Specify the lowest-price allocation strategy for Spot Instances. Increase the size of the instances in",
+    "page_number": 3,
+    "bbox": [
+      57.8267707824707,
+      674.3750610351562,
+      504.9144592285156,
+      778.0934448242188
+    ],
+    "order_index": 29,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n4/463",
+    "page_number": 4,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 30,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "the Auto Scaling group.",
+    "page_number": 4,
+    "bbox": [
+      57.8267707824707,
+      56.1264533996582,
+      161.61358642578125,
+      70.84243774414062
+    ],
+    "order_index": 31,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Answer: A",
+    "page_number": 4,
+    "bbox": [
+      416.14678955078125,
+      101.42271423339844,
+      475.2222900390625,
+      120.18154907226562
+    ],
+    "order_index": 32,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Explanation:",
+    "page_number": 4,
+    "bbox": [
+      57.8267707824707,
+      135.32798767089844,
+      113.52571105957031,
+      150.04397583007812
+    ],
+    "order_index": 33,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Specifying the capacity-optimized allocation strategy for Spot Instances and adding more instance\ntypes to the Auto Scaling group is the best action to meet the requirements. Increasing the size of the\ninstances in the Auto Scaling group will not necessarily help with the launch time or reduce\ninterruptions, as the Spot Instances could still be interrupted even with larger instance sizes.",
+    "page_number": 4,
+    "bbox": [
+      57.8267707824707,
+      164.9954071044922,
+      508.94110107421875,
+      224.21255493164062
+    ],
+    "order_index": 34,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Question: 4",
+    "page_number": 4,
+    "bbox": [
+      57.8267707824707,
+      239.9591522216797,
+      124.1642074584961,
+      258.7179870605469
+    ],
+    "order_index": 35,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "[Monitoring, Reporting, and Automation]",
+    "page_number": 4,
+    "bbox": [
+      57.8267707824707,
+      273.8643798828125,
+      242.6082763671875,
+      288.5803527832031
+    ],
+    "order_index": 36,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A company stores its data in an Amazon S3 bucket. The company is required to classify the data and\nfind any sensitive personal information in its S3 files.",
+    "page_number": 4,
+    "bbox": [
+      57.8267707824707,
+      303.53179931640625,
+      499.87548828125,
+      333.0815124511719
+    ],
+    "order_index": 37,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Which solution will meet these requirements?",
+    "page_number": 4,
+    "bbox": [
+      57.8267707824707,
+      348.03302001953125,
+      264.2481384277344,
+      362.7489929199219
+    ],
+    "order_index": 38,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A. Create an AWS Config rule to discover sensitive personal information in the S3 files and mark\nthem as noncompliant.\nB. Create an S3 event-driven artificial intelligence/machine learning (AI/ML) pipeline to classify\nsensitive personal information by using Amazon Recognition.\nC. Enable Amazon GuardDuty. Configure S3 protection to monitor all data inside Amazon S3.\nD. Enable Amazon Macie. Create a discovery job that uses the managed data identifier.",
+    "page_number": 4,
+    "bbox": [
+      57.8267707824707,
+      392.5342102050781,
+      483.04119873046875,
+      481.4188537597656
+    ],
+    "order_index": 39,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Answer: D",
+    "page_number": 4,
+    "bbox": [
+      415.9067687988281,
+      511.9991760253906,
+      475.3163757324219,
+      530.758056640625
+    ],
+    "order_index": 40,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Explanation:",
+    "page_number": 4,
+    "bbox": [
+      57.8267707824707,
+      545.9043579101562,
+      113.52571105957031,
+      560.620361328125
+    ],
+    "order_index": 41,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Amazon Macie is a security service designed to help organizations find, classify, and protect sensitive\ndata stored in Amazon S3. Amazon Macie uses machine learning to automatically discover, classify,\nand protect sensitive data in Amazon S3. Creating a discovery job with the managed data identifier\nwill allow Macie to identify sensitive personal information in the S3 files and classify it accordingly.\nEnabling AWS Config and Amazon GuardDuty will not help with this requirement as they are not\ndesigned to automatically classify and protect data.",
+    "page_number": 4,
+    "bbox": [
+      57.8267707824707,
+      575.5718383789062,
+      506.0599365234375,
+      664.4564819335938
+    ],
+    "order_index": 42,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Question: 5",
+    "page_number": 4,
+    "bbox": [
+      57.8267707824707,
+      680.2030639648438,
+      124.1642074584961,
+      698.9619140625
+    ],
+    "order_index": 43,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "[Monitoring, Reporting, and Automation]",
+    "page_number": 4,
+    "bbox": [
+      57.8267707824707,
+      714.1082763671875,
+      242.6082763671875,
+      728.8242797851562
+    ],
+    "order_index": 44,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A company has an application that customers use to search for records on a website. The\napplication's data is stored in an Amazon Aurora DB cluster. The application's usage varies by season",
+    "page_number": 4,
+    "bbox": [
+      57.8267707824707,
+      743.7756958007812,
+      502.99835205078125,
+      773.325439453125
+    ],
+    "order_index": 45,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n5/463",
+    "page_number": 5,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 46,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "and by day of the week.\nThe website's popularity is increasing, and the website is experiencing slower performance because\nof increased load on the DB cluster during periods of peak activity. The application logs show that the\nperformance issues occur when users are searching for information. The same search is rarely\nperformed multiple times.\nA SysOps administrator must improve the performance of the platform by using a solution that\nmaximizes resource efficiency.\nWhich solution will meet these requirements?",
+    "page_number": 5,
+    "bbox": [
+      57.8267707824707,
+      56.1264533996582,
+      508.2210693359375,
+      174.67849731445312
+    ],
+    "order_index": 47,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A. Deploy an Amazon ElastiCache for Redis cluster in front of the DB cluster. Modify the application to\ncheck the cache before the application issues new queries to the database. Add the results of any\nqueries to the cache.\nB. Deploy an Aurora Replica for the DB cluster. Modify the application to use the reader endpoint for\nsearch operations. Use Aurora Auto Scaling to scale the number of replicas based on load. Most\nVoted\nC. Use Provisioned IOPS on the storage volumes that support the DB cluster to improve performance\nsufficiently to support the peak load on the application.\nD. Increase the instance size in the DB cluster to a size that is sufficient to support the peak load on\nthe application. Use Aurora Auto Scaling to scale the instance size based on load.",
+    "page_number": 5,
+    "bbox": [
+      57.8267707824707,
+      189.6299285888672,
+      509.0220642089844,
+      337.8495178222656
+    ],
+    "order_index": 48,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Answer: A",
+    "page_number": 5,
+    "bbox": [
+      416.14678955078125,
+      368.4298095703125,
+      475.2222900390625,
+      387.18865966796875
+    ],
+    "order_index": 49,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Explanation:",
+    "page_number": 5,
+    "bbox": [
+      57.8267707824707,
+      402.3350830078125,
+      113.52571105957031,
+      417.0510559082031
+    ],
+    "order_index": 50,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Step-by-Step\nUnderstand the Problem:\nThe application experiences slower performance during peak activity due to increased load on the\nAmazon Aurora DB cluster.\nPerformance issues occur primarily during search operations.\nThe goal is to improve performance and maximize resource efficiency.\nAnalyze the Requirements:\nThe solution should improve the performance of the platform.\nIt should maximize resource efficiency, which implies cost-effective and scalable options.\nEvaluate the Options:\nOption A: Deploy an Amazon ElastiCache for Redis cluster.\nElastiCache for Redis is a managed in-memory caching service that can significantly reduce the load\non the database by caching frequently accessed data.\nBy modifying the application to check the cache before querying the database, repeated searches for\nthe same information will be served from the cache, reducing the number of database reads.\nThis is efficient and cost-effective as it reduces database load and improves response times.\nOption B: Deploy an Aurora Replica and use Auto Scaling.\nAdding Aurora Replicas can help distribute read traffic and improve performance.\nAurora Auto Scaling can adjust the number of replicas based on the load.\nHowever, this option may not be as efficient in terms of resource usage compared to caching\nbecause it still involves querying the database.\nOption C: Use Provisioned IOPS.\nProvisioned IOPS can improve performance by providing fast and consistent I/O.",
+    "page_number": 5,
+    "bbox": [
+      57.8267707824707,
+      432.0025329589844,
+      506.8321838378906,
+      773.060546875
+    ],
+    "order_index": 51,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  }
+]

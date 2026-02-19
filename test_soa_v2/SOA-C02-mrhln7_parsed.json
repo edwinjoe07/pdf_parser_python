@@ -1,0 +1,1136 @@
+{
+  "exam": {
+    "name": "SOA-C02-mrhln7",
+    "provider": "",
+    "version": "",
+    "source_pdf": "SOA-C02-mrhln7.pdf",
+    "total_pages": 463,
+    "file_hash": "058c036026ba6acb71c5d6fd95059112497a0deada65747b56e55cff2ff43e9d",
+    "file_size_bytes": 3684536
+  },
+  "parse_version": {
+    "parser_version": "1.0.0",
+    "parse_timestamp": "2026-02-17T10:42:41.377232+00:00",
+    "raw_block_count": 472,
+    "structured_question_count": 19
+  },
+  "questions": [
+    {
+      "question_number": 1,
+      "question_type": "mcq",
+      "question_text": "[Security and Compliance] A Sysops administrator creates an Amazon Elastic Kubernetes Service (Amazon EKS) cluster that uses AWS Fargate. The cluster is deployed successfully. The Sysops administrator needs to manage the cluster by using the kubect1 command line tool. Which of the following must be configured on the Sysops administrator's machine so that kubect1 can communicate with the cluster API server?",
+      "question_images": [],
+      "options": [
+        {
+          "key": "A",
+          "text": "The kubeconfig file",
+          "images": []
+        },
+        {
+          "key": "B",
+          "text": "The kube-proxy Amazon EKS add-on",
+          "images": []
+        },
+        {
+          "key": "C",
+          "text": "The Fargate profile",
+          "images": []
+        },
+        {
+          "key": "D",
+          "text": "The eks-connector.yaml file",
+          "images": []
+        }
+      ],
+      "answer_text": "A",
+      "answer_images": [],
+      "explanation_text": "The kubeconfig file is a configuration file used to store cluster authentication information, which is required to make requests to the Amazon EKS cluster API server. The kubeconfig file will need to be configured on the SysOps administrator's machine in order for kubectl to be able to communicate with the cluster API server. using-aws-stepfunctions/",
+      "explanation_images": [],
+      "page_start": 2,
+      "page_end": 2,
+      "anomalies": [],
+      "raw_text": "",
+      "anomaly_score": 0,
+      "has_question_text": true,
+      "has_answer": true,
+      "has_explanation": true,
+      "image_count": 0
+    },
+    {
+      "question_number": 2,
+      "question_type": "mcq",
+      "question_text": "[Security and Compliance] A Sysops administrator needs to configure automatic rotation for Amazon RDS database credentials. The credentials must rotate every 30 days. The solution must integrate with Amazon RDS. Which solution will meet these requirements with the LEAST operational overhead?",
+      "question_images": [
+        "questions/SOA-C02-mrhln7/q_img_2_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_3_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_4_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_5_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_6_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_7_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_8_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_9_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_10_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_11_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_12_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_13_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_14_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_15_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_16_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_17_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_18_3.jpeg"
+      ],
+      "options": [
+        {
+          "key": "A",
+          "text": "Store the credentials in AWS Systems Manager Parameter Store as a secure string. Configure automatic rotation with a rotation interval of 30 days.",
+          "images": []
+        },
+        {
+          "key": "B",
+          "text": "Store the credentials in AWS Secrets Manager. Configure automatic rotation with a rotation interval of 30 days.",
+          "images": []
+        },
+        {
+          "key": "C",
+          "text": "Store the credentials in a file in an Amazon S3 bucket. Deploy an AWS Lambda function to automatically rotate the credentials every 30 days.",
+          "images": []
+        },
+        {
+          "key": "D",
+          "text": "Store the credentials in AWS Secrets Manager. Deploy an AWS Lambda function to automatically rotate the credentials every 30 days.",
+          "images": []
+        }
+      ],
+      "answer_text": "B",
+      "answer_images": [],
+      "explanation_text": "Storing the credentials in AWS Secrets Manager and configuring automatic rotation with a rotation interval of 30 days is the most efficient way to meet the requirements with the least operational overhead. AWS Secrets Manager automatically rotates the credentials at the specified interval, so there is no need for an additional AWS Lambda function or manual rotation. Additionally, Secrets Manager is integrated with Amazon RDS, so the credentials can be easily used with the RDS database.",
+      "explanation_images": [],
+      "page_start": 2,
+      "page_end": 3,
+      "anomalies": [],
+      "raw_text": "",
+      "anomaly_score": 0,
+      "has_question_text": true,
+      "has_answer": true,
+      "has_explanation": true,
+      "image_count": 17
+    },
+    {
+      "question_number": 3,
+      "question_type": "mcq",
+      "question_text": "[Deployment, Provisioning, and Automation] A company has an application that runs only on Amazon EC2 Spot Instances. The instances run in an Amazon EC2 Auto Scaling group with scheduled scaling actions. However, the capacity does not always increase at the scheduled times, and instances terminate many times a day. A Sysops administrator must ensure that the instances launch on time and have fewer interruptions. Which action will meet these requirements?",
+      "question_images": [],
+      "options": [
+        {
+          "key": "A",
+          "text": "Specify the capacity-optimized allocation strategy for Spot Instances. Add more instance types to the Auto Scaling group.",
+          "images": []
+        },
+        {
+          "key": "B",
+          "text": "Specify the capacity-optimized allocation strategy for Spot Instances. Increase the size of the instances in the Auto Scaling group.",
+          "images": []
+        },
+        {
+          "key": "C",
+          "text": "Specify the lowest-price allocation strategy for Spot Instances. Add more instance types to the Auto Scaling group.",
+          "images": []
+        },
+        {
+          "key": "D",
+          "text": "Specify the lowest-price allocation strategy for Spot Instances. Increase the size of the instances in the Auto Scaling group.",
+          "images": [
+            "questions/SOA-C02-mrhln7/q_img_2_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_3_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_4_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_5_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_6_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_7_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_8_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_9_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_10_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_11_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_12_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_13_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_14_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_15_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_16_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_17_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_18_3.jpeg"
+          ]
+        }
+      ],
+      "answer_text": "A",
+      "answer_images": [],
+      "explanation_text": "Specifying the capacity-optimized allocation strategy for Spot Instances and adding more instance types to the Auto Scaling group is the best action to meet the requirements. Increasing the size of the instances in the Auto Scaling group will not necessarily help with the launch time or reduce interruptions, as the Spot Instances could still be interrupted even with larger instance sizes.",
+      "explanation_images": [],
+      "page_start": 3,
+      "page_end": 4,
+      "anomalies": [],
+      "raw_text": "",
+      "anomaly_score": 0,
+      "has_question_text": true,
+      "has_answer": true,
+      "has_explanation": true,
+      "image_count": 17
+    },
+    {
+      "question_number": 4,
+      "question_type": "mcq",
+      "question_text": "[Monitoring, Reporting, and Automation] A company stores its data in an Amazon S3 bucket. The company is required to classify the data and find any sensitive personal information in its S3 files. Which solution will meet these requirements?",
+      "question_images": [],
+      "options": [
+        {
+          "key": "A",
+          "text": "Create an AWS Config rule to discover sensitive personal information in the S3 files and mark them as noncompliant.",
+          "images": []
+        },
+        {
+          "key": "B",
+          "text": "Create an S3 event-driven artificial intelligence/machine learning (AI/ML) pipeline to classify sensitive personal information by using Amazon Recognition.",
+          "images": []
+        },
+        {
+          "key": "C",
+          "text": "Enable Amazon GuardDuty. Configure S3 protection to monitor all data inside Amazon S3.",
+          "images": []
+        },
+        {
+          "key": "D",
+          "text": "Enable Amazon Macie. Create a discovery job that uses the managed data identifier.",
+          "images": []
+        }
+      ],
+      "answer_text": "D",
+      "answer_images": [],
+      "explanation_text": "Amazon Macie is a security service designed to help organizations find, classify, and protect sensitive data stored in Amazon S3. Amazon Macie uses machine learning to automatically discover, classify, and protect sensitive data in Amazon S3. Creating a discovery job with the managed data identifier will allow Macie to identify sensitive personal information in the S3 files and classify it accordingly. Enabling AWS Config and Amazon GuardDuty will not help with this requirement as they are not designed to automatically classify and protect data.",
+      "explanation_images": [],
+      "page_start": 4,
+      "page_end": 4,
+      "anomalies": [],
+      "raw_text": "",
+      "anomaly_score": 0,
+      "has_question_text": true,
+      "has_answer": true,
+      "has_explanation": true,
+      "image_count": 0
+    },
+    {
+      "question_number": 5,
+      "question_type": "mcq",
+      "question_text": "[Monitoring, Reporting, and Automation] A company has an application that customers use to search for records on a website. The application's data is stored in an Amazon Aurora DB cluster. The application's usage varies by season and by day of the week. The website's popularity is increasing, and the website is experiencing slower performance because of increased load on the DB cluster during periods of peak activity. The application logs show that the performance issues occur when users are searching for information. The same search is rarely performed multiple times. A SysOps administrator must improve the performance of the platform by using a solution that maximizes resource efficiency. Which solution will meet these requirements?",
+      "question_images": [
+        "questions/SOA-C02-mrhln7/q_img_2_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_3_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_4_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_5_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_6_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_7_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_8_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_9_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_10_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_11_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_12_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_13_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_14_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_15_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_16_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_17_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_18_3.jpeg"
+      ],
+      "options": [
+        {
+          "key": "A",
+          "text": "Deploy an Amazon ElastiCache for Redis cluster in front of the DB cluster. Modify the application to check the cache before the application issues new queries to the database. Add the results of any queries to the cache.",
+          "images": []
+        },
+        {
+          "key": "B",
+          "text": "Deploy an Aurora Replica for the DB cluster. Modify the application to use the reader endpoint for search operations. Use Aurora Auto Scaling to scale the number of replicas based on load. Most Voted",
+          "images": []
+        },
+        {
+          "key": "C",
+          "text": "Use Provisioned IOPS on the storage volumes that support the DB cluster to improve performance sufficiently to support the peak load on the application.",
+          "images": []
+        },
+        {
+          "key": "D",
+          "text": "Increase the instance size in the DB cluster to a size that is sufficient to support the peak load on the application. Use Aurora Auto Scaling to scale the instance size based on load.",
+          "images": []
+        }
+      ],
+      "answer_text": "A",
+      "answer_images": [],
+      "explanation_text": "Step-by-Step Understand the Problem: The application experiences slower performance during peak activity due to increased load on the Amazon Aurora DB cluster. Performance issues occur primarily during search operations. The goal is to improve performance and maximize resource efficiency. Analyze the Requirements: The solution should improve the performance of the platform. It should maximize resource efficiency, which implies cost-effective and scalable options. Evaluate the Options: Option A: Deploy an Amazon ElastiCache for Redis cluster. ElastiCache for Redis is a managed in-memory caching service that can significantly reduce the load on the database by caching frequently accessed data. By modifying the application to check the cache before querying the database, repeated searches for the same information will be served from the cache, reducing the number of database reads. This is efficient and cost-effective as it reduces database load and improves response times. Option B: Deploy an Aurora Replica and use Auto Scaling. Adding Aurora Replicas can help distribute read traffic and improve performance. Aurora Auto Scaling can adjust the number of replicas based on the load. However, this option may not be as efficient in terms of resource usage compared to caching because it still involves querying the database. Option C: Use Provisioned IOPS. Provisioned IOPS can improve performance by providing fast and consistent I/O. This option focuses on improving the underlying storage performance but doesn't address the inefficiency of handling repeated searches directly. Option D: Increase the instance size and use Auto Scaling. Increasing the instance size can provide more resources to handle peak loads. Aurora Auto Scaling can adjust instance sizes based on the load. This option can be costly and may not be as efficient as caching in handling repeated searches. Select the Best Solution: Option A is the best solution because it leverages caching to reduce the load on the database, which directly addresses the issue of repeated searches causing performance problems. Caching is generally more resource-efficient and cost-effective compared to scaling database instances or storage. Amazon ElastiCache for Redis Documentation Amazon Aurora Documentation AWS Auto Scaling Using ElastiCache for Redis aligns with best practices for improving application performance by offloading repetitive read queries from the database, leading to faster response times and more efficient resource usage.",
+      "explanation_images": [
+        "questions/SOA-C02-mrhln7/q_img_2_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_3_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_4_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_5_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_6_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_7_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_8_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_9_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_10_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_11_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_12_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_13_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_14_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_15_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_16_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_17_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_18_3.jpeg"
+      ],
+      "page_start": 4,
+      "page_end": 6,
+      "anomalies": [],
+      "raw_text": "",
+      "anomaly_score": 0,
+      "has_question_text": true,
+      "has_answer": true,
+      "has_explanation": true,
+      "image_count": 34
+    },
+    {
+      "question_number": 6,
+      "question_type": "mcq",
+      "question_text": "[Security and Compliance] The security team is concerned because the number of AWS Identity and Access Management (IAM) policies being used in the environment is increasing. The team tasked a SysOps administrator to report on the current number of IAM policies in use and the total available IAM policies. Which AWS service should the administrator use to check how current IAM policy usage compares to current service limits?",
+      "question_images": [],
+      "options": [
+        {
+          "key": "A",
+          "text": "AWS Trusted Advisor",
+          "images": []
+        },
+        {
+          "key": "B",
+          "text": "Amazon Inspector",
+          "images": []
+        },
+        {
+          "key": "C",
+          "text": "AWS Config",
+          "images": []
+        },
+        {
+          "key": "D",
+          "text": "AWS Organizations",
+          "images": []
+        }
+      ],
+      "answer_text": "A",
+      "answer_images": [],
+      "explanation_text": "Step-by-Step Understand the Problem: The security team is concerned about the increasing number of IAM policies. The task is to report on the current number of IAM policies and compare them to the service limits. Analyze the Requirements: The solution should help in checking the usage of IAM policies against the service limits. Evaluate the Options: Option A: AWS Trusted Advisor AWS Trusted Advisor provides real-time guidance to help you provision your resources following AWS best practices. It includes a service limits check that alerts you when you are approaching the limits of your AWS service usage, including IAM policies. Option B: Amazon Inspector Amazon Inspector is an automated security assessment service that helps improve the security and compliance of applications deployed on AWS. It does not report on IAM policy usage. Option C: AWS Config AWS Config is a service that enables you to assess, audit, and evaluate the configurations of your AWS resources. While useful for compliance, it does not provide a comparison against service limits. Option D: AWS Organizations AWS Organizations helps you centrally manage and govern your environment as you grow and scale your AWS resources. It does not provide insights into IAM policy limits. Select the Best Solution: Option A: AWS Trusted Advisor is the correct answer because it includes a service limits check that can report on the current number of IAM policies in use and compare them to the service limits. AWS Trusted Advisor Documentation IAM Service Limits AWS Trusted Advisor is the appropriate tool for monitoring IAM policy usage and comparing it against service limits, providing the necessary insights to manage and optimize IAM policies effectively.",
+      "explanation_images": [
+        "questions/SOA-C02-mrhln7/q_img_2_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_3_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_4_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_5_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_6_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_7_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_8_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_9_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_10_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_11_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_12_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_13_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_14_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_15_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_16_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_17_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_18_3.jpeg"
+      ],
+      "page_start": 6,
+      "page_end": 7,
+      "anomalies": [],
+      "raw_text": "",
+      "anomaly_score": 0,
+      "has_question_text": true,
+      "has_answer": true,
+      "has_explanation": true,
+      "image_count": 17
+    },
+    {
+      "question_number": 7,
+      "question_type": "mcq",
+      "question_text": "[Deployment, Provisioning, and Automation] A company has a stateless application that is hosted on a fleet of 10 Amazon EC2 On-Demand Instances in an Auto Scaling group. A minimum of 6 instances are needed to meet service requirements. Which action will maintain uptime for the application MOST cost-effectively?",
+      "question_images": [],
+      "options": [
+        {
+          "key": "A",
+          "text": "Use a Spot Fleet with an On-Demand capacity of 6 instances.",
+          "images": []
+        },
+        {
+          "key": "B",
+          "text": "Update the Auto Scaling group with a minimum of 6 On-Demand Instances and a maximum of 10 On-Demand Instances.",
+          "images": []
+        },
+        {
+          "key": "C",
+          "text": "Update the Auto Scaling group with a minimum of 1 On-Demand Instance and a maximum of 6 On-Demand Instances.",
+          "images": []
+        },
+        {
+          "key": "D",
+          "text": "Use a Spot Fleet with a target capacity of 6 instances.",
+          "images": []
+        }
+      ],
+      "answer_text": "A",
+      "answer_images": [],
+      "explanation_text": "Step-by-Step Understand the Problem: The company has a stateless application on 10 EC2 On-Demand Instances in an Auto Scaling group. At least 6 instances are needed to meet service requirements. The goal is to maintain uptime cost-effectively. Analyze the Requirements: Maintain a minimum of 6 instances to meet service requirements. Optimize costs by using a mix of instance types. Evaluate the Options: Option A: Use a Spot Fleet with an On-Demand capacity of 6 instances. Spot Fleets allow you to request a combination of On-Demand and Spot Instances. Ensuring a minimum of 6 On-Demand Instances guarantees the required capacity while leveraging lower-cost Spot Instances to meet additional demand. Option B: Update the Auto Scaling group with a minimum of 6 On-Demand Instances and a maximum of 10 On-Demand Instances. This option ensures the minimum required capacity but does not optimize costs since it only uses On- Demand Instances. Option C: Update the Auto Scaling group with a minimum of 1 On-Demand Instance and a maximum of 6 On-Demand Instances. This does not meet the requirement of maintaining at least 6 instances at all times. Option D: Use a Spot Fleet with a target capacity of 6 instances. This option relies entirely on Spot Instances, which may not always be available, risking insufficient capacity. Select the Best Solution: Option A: Using a Spot Fleet with an On-Demand capacity of 6 instances ensures the necessary uptime with a cost-effective mix of On-Demand and Spot Instances. Amazon EC2 Auto Scaling Amazon EC2 Spot Instances Spot Fleet Documentation Using a Spot Fleet with a combination of On-Demand and Spot Instances offers a cost-effective solution while ensuring the required minimum capacity for the application.",
+      "explanation_images": [
+        "questions/SOA-C02-mrhln7/q_img_2_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_3_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_4_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_5_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_6_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_7_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_8_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_9_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_10_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_11_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_12_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_13_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_14_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_15_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_16_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_17_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_18_3.jpeg"
+      ],
+      "page_start": 7,
+      "page_end": 8,
+      "anomalies": [],
+      "raw_text": "",
+      "anomaly_score": 0,
+      "has_question_text": true,
+      "has_answer": true,
+      "has_explanation": true,
+      "image_count": 17
+    },
+    {
+      "question_number": 8,
+      "question_type": "mcq",
+      "question_text": "[Monitoring, Reporting, and Automation] A SysOps administrator has launched a large general purpose Amazon EC2 instance to regularly process large data files. The instance has an attached 1 TB General Purpose SSD (gp2) Amazon Elastic Block Store (Amazon EBS) volume. The instance also is EBS-optimized. To save costs, the SysOps administrator stops the instance each evening and restarts the instance each morning. When data processing is active, Amazon CloudWatch metrics on the instance show a consistent 3.000 VolumeReadOps. The SysOps administrator must improve the I/O performance while ensuring data integrity. Which action will meet these requirements?",
+      "question_images": [],
+      "options": [
+        {
+          "key": "A",
+          "text": "Change the instance type to a large, burstable, general purpose instance.",
+          "images": []
+        },
+        {
+          "key": "B",
+          "text": "Change the instance type to an extra large general purpose instance.",
+          "images": []
+        },
+        {
+          "key": "C",
+          "text": "Increase the EBS volume to a 2 TB General Purpose SSD (gp2) volume.",
+          "images": []
+        },
+        {
+          "key": "D",
+          "text": "Move the data that resides on the EBS volume to the instance store.",
+          "images": []
+        }
+      ],
+      "answer_text": "C",
+      "answer_images": [
+        "questions/SOA-C02-mrhln7/q_img_2_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_3_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_4_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_5_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_6_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_7_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_8_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_9_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_10_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_11_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_12_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_13_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_14_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_15_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_16_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_17_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_18_3.jpeg"
+      ],
+      "explanation_text": "Step-by-Step Understand the Problem: The EC2 instance processes large data files and uses a 1 TB General Purpose SSD (gp2) EBS volume. CloudWatch metrics show consistent high VolumeReadOps. The requirement is to improve I/O performance while ensuring data integrity. Analyze the Requirements: Improve I/O performance. Maintain data integrity. Evaluate the Options: Option A: Change the instance type to a large, burstable, general-purpose instance. Burstable instances provide a baseline level of CPU performance with the ability to burst to a higher level when needed. However, this does not address the I/O performance directly. Option B: Change the instance type to an extra-large general-purpose instance. A larger instance type might improve performance, but it does not directly address the I/O performance of the EBS volume. Option C: Increase the EBS volume to a 2 TB General Purpose SSD (gp2) volume. Increasing the size of a General Purpose SSD (gp2) volume can increase its IOPS. The larger the volume, the higher the baseline performance in terms of IOPS. Option D: Move the data that resides on the EBS volume to the instance store. Instance store volumes provide high I/O performance but are ephemeral, meaning data will be lost if the instance is stopped or terminated. This does not ensure data integrity. Select the Best Solution: Option C: Increasing the EBS volume size to 2 TB will provide higher IOPS, improving I/O performance while maintaining data integrity. Amazon EBS Volume Types General Purpose SSD (gp2) Volumes Increasing the size of the General Purpose SSD (gp2) volume is an effective way to improve I/O performance while ensuring data integrity remains intact.",
+      "explanation_images": [],
+      "page_start": 8,
+      "page_end": 9,
+      "anomalies": [],
+      "raw_text": "",
+      "anomaly_score": 0,
+      "has_question_text": true,
+      "has_answer": true,
+      "has_explanation": true,
+      "image_count": 17
+    },
+    {
+      "question_number": 9,
+      "question_type": "mcq",
+      "question_text": "[Monitoring, Reporting, and Automation] With the threat of ransomware viruses encrypting and holding company data hostage, which action should be taken to protect an Amazon S3 bucket?",
+      "question_images": [],
+      "options": [
+        {
+          "key": "A",
+          "text": "Deny Post. Put. and Delete on the bucket.",
+          "images": []
+        },
+        {
+          "key": "B",
+          "text": "Enable server-side encryption on the bucket.",
+          "images": []
+        },
+        {
+          "key": "C",
+          "text": "Enable Amazon S3 versioning on the bucket.",
+          "images": []
+        },
+        {
+          "key": "D",
+          "text": "Enable snapshots on the bucket.",
+          "images": []
+        }
+      ],
+      "answer_text": "C",
+      "answer_images": [
+        "questions/SOA-C02-mrhln7/q_img_2_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_3_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_4_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_5_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_6_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_7_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_8_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_9_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_10_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_11_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_12_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_13_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_14_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_15_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_16_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_17_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_18_3.jpeg"
+      ],
+      "explanation_text": "Step-by-Step Understand the Problem: The threat of ransomware encrypting and holding company data hostage. Need to protect an Amazon S3 bucket. Analyze the Requirements: Ensure that data in the S3 bucket is protected against unauthorized encryption or deletion. Evaluate the Options: Option A: Deny Post, Put, and Delete on the bucket. Denying these actions would prevent any uploads or modifications to the bucket, making it unusable. Option B: Enable server-side encryption on the bucket. Server-side encryption protects data at rest but does not prevent the encryption of data by ransomware. Option C: Enable Amazon S3 versioning on the bucket. S3 versioning keeps multiple versions of an object in the bucket. If a file is overwritten or encrypted by ransomware, previous versions of the file can still be accessed. Option D: Enable snapshots on the bucket. Amazon S3 does not have a snapshot feature; this option is not applicable. Select the Best Solution: Option C: Enabling Amazon S3 versioning is the best solution as it allows access to previous versions of objects, providing protection against ransomware encryption by retaining prior, unencrypted versions. Amazon S3 Versioning Best Practices for Protecting Data with Amazon S3 Enabling S3 versioning ensures that previous versions of objects are preserved, providing a safeguard against ransomware by allowing recovery of unencrypted versions of data.",
+      "explanation_images": [],
+      "page_start": 9,
+      "page_end": 10,
+      "anomalies": [],
+      "raw_text": "",
+      "anomaly_score": 0,
+      "has_question_text": true,
+      "has_answer": true,
+      "has_explanation": true,
+      "image_count": 17
+    },
+    {
+      "question_number": 10,
+      "question_type": "mcq",
+      "question_text": "[High Availability, Backup, and Recovery] A SysOps administrator is evaluating Amazon Route 53 DNS options to address concerns about high availability for an on-premises website. The website consists of two servers: a primary active server and a secondary passive server. Route 53 should route traffic to the primary server if the associated health check returns 2xx or 3xx HTTP codes. All other traffic should be directed to the secondary passive server. The failover record type, set ID. and routing policy have been set appropriately for both primary and secondary servers. Which next step should be taken to configure Route 53?",
+      "question_images": [],
+      "options": [
+        {
+          "key": "A",
+          "text": "Create an A record for each server. Associate the records with the Route 53 HTTP health check.",
+          "images": []
+        },
+        {
+          "key": "B",
+          "text": "Create an A record for each server. Associate the records with the Route 53 TCP health check.",
+          "images": []
+        },
+        {
+          "key": "C",
+          "text": "Create an alias record for each server with evaluate target health set to yes. Associate the records with the Route 53 HTTP health check.",
+          "images": []
+        },
+        {
+          "key": "D",
+          "text": "Create an alias record for each server with evaluate target health set to yes. Associate the records with the Route 53 TCP health check.",
+          "images": [
+            "questions/SOA-C02-mrhln7/q_img_2_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_3_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_4_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_5_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_6_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_7_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_8_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_9_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_10_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_11_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_12_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_13_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_14_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_15_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_16_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_17_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_18_3.jpeg"
+          ]
+        }
+      ],
+      "answer_text": "C",
+      "answer_images": [],
+      "explanation_text": "To configure Route 53 for high availability with failover between a primary and a secondary server, the following steps should be taken: Create Health Checks: Create HTTP health checks for both the primary and secondary servers. Ensure these health checks are configured to look for HTTP 2xx or 3xx status codes. Creating and Updating Health Checks Create Alias Records: Create an alias record for the primary server. Set \"Evaluate Target Health\" to Yes. Associate this record with the primary server's HTTP health check. Create an alias record for the secondary server. Set \"Evaluate Target Health\" to Yes. Associate this record with the secondary server's HTTP health check. Creating Records by Using the Amazon Route 53 Console Set Routing Policy: Ensure the routing policy for both records is set to \"Failover.\" Assign appropriate \"Set IDs\" and configure the primary record as the primary failover record and the secondary record as the secondary failover record. Route 53 Routing Policies Test Configuration: Test the failover configuration to ensure that when the primary server health check fails, traffic is routed to the secondary server. Testing Failover",
+      "explanation_images": [],
+      "page_start": 10,
+      "page_end": 11,
+      "anomalies": [],
+      "raw_text": "",
+      "anomaly_score": 0,
+      "has_question_text": true,
+      "has_answer": true,
+      "has_explanation": true,
+      "image_count": 17
+    },
+    {
+      "question_number": 11,
+      "question_type": "mcq",
+      "question_text": "[Monitoring, Reporting, and Automation] A SysOps administrator noticed that a large number of Elastic IP addresses are being created on the company's AWS account, but they are not being associated with Amazon EC2 instances, and are incurring Elastic IP address charges in the monthly bill. How can the administrator identify who is creating the Elastic IP addresses?",
+      "question_images": [],
+      "options": [
+        {
+          "key": "A",
+          "text": "Attach a cost-allocation tag to each requested Elastic IP address with the IAM user name of the developer who creates it.",
+          "images": []
+        },
+        {
+          "key": "B",
+          "text": "Query AWS CloudTrail logs by using Amazon Athena to search for Elastic IP address events.",
+          "images": []
+        },
+        {
+          "key": "C",
+          "text": "Create a CloudWatch alarm on the ElPCreated metric and send an Amazon SNS notification when the alarm triggers.",
+          "images": []
+        },
+        {
+          "key": "D",
+          "text": "Use Amazon Inspector to get a report of all Elastic IP addresses created in the last 30 days.",
+          "images": []
+        }
+      ],
+      "answer_text": "B",
+      "answer_images": [],
+      "explanation_text": "To identify who is creating the Elastic IP addresses, the following steps should be taken: Enable CloudTrail Logging: Ensure AWS CloudTrail is enabled to log all API activities in your AWS account. Setting Up AWS CloudTrail Create an Athena Table for CloudTrail Logs: Set up an Athena table that points to the S3 bucket where CloudTrail logs are stored. Creating Tables in Athena Query CloudTrail Logs: Use Athena to run SQL queries to search for AllocateAddress events, which represent the creation of Elastic IP addresses. Example Query: sql Copy code SELECT userIdentity.userName, eventTime, eventSource, eventName, requestParameters FROM cloudtrail_logs WHERE eventName = 'AllocateAddress'; Analyzing AWS CloudTrail Logs Review Results: Review the results to identify which IAM user or role is creating the Elastic IP addresses. AWS CloudTrail Log Analysis",
+      "explanation_images": [
+        "questions/SOA-C02-mrhln7/q_img_2_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_3_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_4_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_5_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_6_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_7_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_8_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_9_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_10_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_11_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_12_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_13_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_14_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_15_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_16_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_17_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_18_3.jpeg"
+      ],
+      "page_start": 11,
+      "page_end": 12,
+      "anomalies": [],
+      "raw_text": "",
+      "anomaly_score": 0,
+      "has_question_text": true,
+      "has_answer": true,
+      "has_explanation": true,
+      "image_count": 17
+    },
+    {
+      "question_number": 12,
+      "question_type": "mcq",
+      "question_text": "[Monitoring, Reporting, and Automation] A company has an Amazon CloudFront distribution that uses an Amazon S3 bucket as its origin. During a review of the access logs, the company determines that some requests are going directly to the S3 bucket by using the website hosting endpoint. A SysOps administrator must secure the S3 bucket to allow requests only from CloudFront. What should the SysOps administrator do to meet this requirement?",
+      "question_images": [],
+      "options": [
+        {
+          "key": "A",
+          "text": "Create an origin access identity (OAI) in CloudFront. Associate the OAI with the distribution. Remove access to and from other principals in the S3 bucket policy. Update the S3 bucket policy to allow access only from the OAI.",
+          "images": []
+        },
+        {
+          "key": "B",
+          "text": "Create an origin access identity (OAI) in CloudFront. Associate the OAI with the distribution. Update the S3 bucket policy to allow access only from the OAI. Create a new origin, and specify the S3 bucket as the new origin. Update the distribution behavior to use the new origin. Remove the existing origin.",
+          "images": []
+        },
+        {
+          "key": "C",
+          "text": "Create an origin access identity (OAI) in CloudFront. Associate the OAI with the distribution. Update the S3 bucket policy to allow access only from the OAI. Disable website hosting. Create a new origin, and specify the S3 bucket as the new origin. Update the distribution behavior to use the new origin. Remove the existing origin.",
+          "images": []
+        },
+        {
+          "key": "D",
+          "text": "Update the S3 bucket policy to allow access only from the CloudFront distribution. Remove access to and from other principals in the S3 bucket policy. Disable website hosting. Create a new origin, and specify the S3 bucket as the new origin. Update the distribution behavior to use the new origin. Remove the existing origin.",
+          "images": [
+            "questions/SOA-C02-mrhln7/q_img_2_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_3_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_4_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_5_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_6_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_7_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_8_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_9_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_10_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_11_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_12_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_13_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_14_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_15_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_16_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_17_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_18_3.jpeg"
+          ]
+        }
+      ],
+      "answer_text": "A",
+      "answer_images": [],
+      "explanation_text": "To secure the S3 bucket and allow access only from CloudFront, the following steps should be taken: Create an OAI in CloudFront: In the CloudFront console, create an origin access identity (OAI) and associate it with your CloudFront distribution. Restricting Access to S3 Buckets Update S3 Bucket Policy: Modify the S3 bucket policy to allow access only from the OAI. This involves adding a policy statement that grants the OAI permission to get objects from the bucket and removing any other public access permissions. Example Policy: json Copy code { \"Version\": \"2012-10-17\", \"Statement\": [ { \"Effect\": \"Allow\", \"Principal\": { \"AWS\": \"arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity E3EXAMPLE\" }, \"Action\": \"s3:GetObject\", \"Resource\": \"arn:aws:s3:::example-bucket/*\" } ] } Bucket Policy Examples Test Configuration: Ensure that the S3 bucket is not publicly accessible and that requests to the bucket through the CloudFront distribution are successful. Testing CloudFront OAI",
+      "explanation_images": [],
+      "page_start": 12,
+      "page_end": 13,
+      "anomalies": [],
+      "raw_text": "",
+      "anomaly_score": 0,
+      "has_question_text": true,
+      "has_answer": true,
+      "has_explanation": true,
+      "image_count": 17
+    },
+    {
+      "question_number": 13,
+      "question_type": "mcq",
+      "question_text": "[Security and Compliance] A SysOps administrator must create an IAM policy for a developer who needs access to specific AWS services. Based on the requirements, the SysOps administrator creates the following policy: Which actions does this policy allow? (Select TWO.)",
+      "question_images": [
+        "questions/SOA-C02-mrhln7/q_img_3_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_4_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_5_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_6_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_7_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_8_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_9_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_10_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_11_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_12_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_13_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_14_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_15_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_16_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_17_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_18_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_2_3.jpeg"
+      ],
+      "options": [
+        {
+          "key": "A",
+          "text": "Create an AWS Storage Gateway.",
+          "images": []
+        },
+        {
+          "key": "B",
+          "text": "Create an IAM role for an AWS Lambda function.",
+          "images": []
+        },
+        {
+          "key": "C",
+          "text": "Delete an Amazon Simple Queue Service (Amazon SQS) queue.",
+          "images": []
+        },
+        {
+          "key": "D",
+          "text": "Describe AWS load balancers.",
+          "images": []
+        },
+        {
+          "key": "E",
+          "text": "Invoke an AWS Lambda function.",
+          "images": []
+        }
+      ],
+      "answer_text": "D,E",
+      "answer_images": [],
+      "explanation_text": "The provided IAM policy grants the following permissions: Describe AWS Load Balancers: The policy allows actions with the prefix elasticloadbalancing:. This includes actions like DescribeLoadBalancers and other Describe* actions related to Elastic Load Balancing. Elastic Load Balancing API Actions Invoke AWS Lambda Function: The policy allows actions with the prefix lambda:, which includes InvokeFunction and other actions that allow listing and describing Lambda functions. AWS Lambda API Actions The actions related to AWS Storage Gateway (create), IAM role (create), and Amazon SQS (delete) are not allowed by this policy. The policy only grants describe/list permissions for storagegateway, elasticloadbalancing, lambda, and list permissions for SQS.",
+      "explanation_images": [
+        "questions/SOA-C02-mrhln7/q_img_2_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_3_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_4_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_5_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_6_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_7_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_8_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_9_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_10_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_11_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_12_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_13_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_14_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_15_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_16_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_17_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_18_3.jpeg"
+      ],
+      "page_start": 13,
+      "page_end": 15,
+      "anomalies": [],
+      "raw_text": "",
+      "anomaly_score": 0,
+      "has_question_text": true,
+      "has_answer": true,
+      "has_explanation": true,
+      "image_count": 34
+    },
+    {
+      "question_number": 14,
+      "question_type": "mcq",
+      "question_text": "[Networking and Content Delivery] A company is trying to connect two applications. One application runs in an on-premises data center that has a hostname of hostl .onprem.private. The other application runs on an Amazon EC2 instance that has a hostname of hostl.awscloud.private. An AWS Site-to-Site VPN connection is in place between the on-premises network and AWS. The application that runs in the data center tries to connect to the application that runs on the EC2 instance, but DNS resolution fails. A SysOps administrator must implement DNS resolution between on-premises and AWS resources. Which solution allows the on-premises application to resolve the EC2 instance hostname?",
+      "question_images": [],
+      "options": [
+        {
+          "key": "A",
+          "text": "Set up an Amazon Route 53 inbound resolver endpoint with a forwarding rule for the onprem.private hosted zone. Associate the resolver with the VPC of the EC2 instance. Configure the on-premises DNS resolver to forward onprem.private DNS queries to the inbound resolver endpoint.",
+          "images": []
+        },
+        {
+          "key": "B",
+          "text": "Set up an Amazon Route 53 inbound resolver endpoint. Associate the resolver with the VPC of the EC2 instance. Configure the on-premises DNS resolver to forward awscloud.private DNS queries to the inbound resolver endpoint.",
+          "images": []
+        },
+        {
+          "key": "C",
+          "text": "Set up an Amazon Route 53 outbound resolver endpoint with a forwarding rule for the onprem.private hosted zone. Associate the resolver with the AWS Region of the EC2 instance. Configure the on-premises DNS resolver to forward onprem.private DNS queries to the outbound resolver endpoint.",
+          "images": []
+        },
+        {
+          "key": "D",
+          "text": "Set up an Amazon Route 53 outbound resolver endpoint. Associate the resolver with the AWS Region of the EC2 instance. Configure the on-premises DNS resolver to forward awscloud.private DNS queries to the outbound resolver endpoint.",
+          "images": []
+        }
+      ],
+      "answer_text": "A",
+      "answer_images": [],
+      "explanation_text": "Step-by-Step Understand the Problem: There are two applications, one in an on-premises data center and the other on an Amazon EC2 instance. DNS resolution fails when the on-premises application tries to connect to the EC2 instance. The goal is to implement DNS resolution between on-premises and AWS resources. Analyze the Requirements: Need to resolve the hostname of the EC2 instance from the on-premises network. Utilize the existing AWS Site-to-Site VPN connection for DNS queries. Evaluate the Options: Option A: Set up an Amazon Route 53 inbound resolver endpoint with a forwarding rule for the onprem.private hosted zone. This allows DNS queries from on-premises to be forwarded to Route 53 for resolution. The resolver endpoint is associated with the VPC, enabling resolution of AWS resources. Option B: Set up an Amazon Route 53 inbound resolver endpoint without specifying the forwarding rule. This option does not address the specific need to resolve onprem.private DNS queries. Option C: Set up an Amazon Route 53 outbound resolver endpoint. Outbound resolver endpoints are used for forwarding DNS queries from AWS to on-premises, not vice versa. Option D: Set up an Amazon Route 53 outbound resolver endpoint without specifying the forwarding rule. Similar to Option C, this does not meet the requirement of resolving on-premises queries in AWS. Select the Best Solution: Option A: Setting up an inbound resolver endpoint with a forwarding rule for onprem.private and associating it with the VPC ensures that DNS queries from on-premises can resolve AWS resources effectively. Amazon Route 53 Resolver Integrating AWS and On-Premises Networks with Route 53 Using an Amazon Route 53 inbound resolver endpoint with a forwarding rule ensures that on- premises applications can resolve EC2 instance hostnames effectively.",
+      "explanation_images": [
+        "questions/SOA-C02-mrhln7/q_img_2_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_3_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_4_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_5_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_6_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_7_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_8_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_9_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_10_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_11_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_12_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_13_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_14_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_15_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_16_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_17_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_18_3.jpeg"
+      ],
+      "page_start": 15,
+      "page_end": 16,
+      "anomalies": [],
+      "raw_text": "",
+      "anomaly_score": 0,
+      "has_question_text": true,
+      "has_answer": true,
+      "has_explanation": true,
+      "image_count": 17
+    },
+    {
+      "question_number": 15,
+      "question_type": "mcq",
+      "question_text": "[Security and Compliance] A large company is using AWS Organizations to manage its multi-account AWS environment. According to company policy, all users should have read-level access to a particular Amazon S3 bucket in a central account. The S3 bucket data should not be available outside the organization. A SysOps administrator must set up the permissions and add a bucket policy to the S3 bucket. Which parameters should be specified to accomplish this in the MOST efficient manner?",
+      "question_images": [],
+      "options": [
+        {
+          "key": "A",
+          "text": "Specify \"' as the principal and PrincipalOrgld as a condition.",
+          "images": []
+        },
+        {
+          "key": "B",
+          "text": "Specify all account numbers as the principal.",
+          "images": []
+        },
+        {
+          "key": "C",
+          "text": "Specify PrincipalOrgld as the principal.",
+          "images": []
+        },
+        {
+          "key": "D",
+          "text": "Specify the organization's management account as the principal.",
+          "images": []
+        }
+      ],
+      "answer_text": "A",
+      "answer_images": [],
+      "explanation_text": "Step-by-Step Understand the Problem: Ensure all users in the organization have read-level access to a specific S3 bucket. The data should not be accessible outside the organization. Analyze the Requirements: Grant read access to users within the organization. Prevent access from outside the organization. Evaluate the Options: Option A: Specify \"*\" as the principal and PrincipalOrgId as a condition. This grants access to all AWS principals but restricts it to those within the specified organization using the PrincipalOrgId condition. Option B: Specify all account numbers as the principal. This is impractical for a large organization and requires constant updates if accounts are added or removed. Option C: Specify PrincipalOrgId as the principal. The PrincipalOrgId condition must be used within a policy, not as a principal. Option D: Specify the organization's management account as the principal. This grants access only to the management account, not to all users within the organization. Select the Best Solution: Option A: Using \"*\" as the principal with the PrincipalOrgId condition ensures all users within the organization have the required access while preventing external access. Amazon S3 Bucket Policies AWS Organizations Policy Examples Using \"*\" as the principal with the PrincipalOrgId condition efficiently grants read access to the S3 bucket for all users within the organization.",
+      "explanation_images": [
+        "questions/SOA-C02-mrhln7/q_img_2_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_4_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_5_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_6_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_7_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_8_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_9_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_10_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_11_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_12_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_13_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_14_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_15_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_16_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_17_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_18_3.jpeg"
+      ],
+      "page_start": 16,
+      "page_end": 17,
+      "anomalies": [],
+      "raw_text": "",
+      "anomaly_score": 0,
+      "has_question_text": true,
+      "has_answer": true,
+      "has_explanation": true,
+      "image_count": 16
+    },
+    {
+      "question_number": 16,
+      "question_type": "mcq",
+      "question_text": "[Security and Compliance] A SysOps administrator is attempting to download patches from the internet into an instance in a private subnet. An internet gateway exists for the VPC, and a NAT gateway has been deployed on the public subnet; however, the instance has no internet connectivity. The resources deployed into the private subnet must be inaccessible directly from the public internet. What should be added to the private subnet's route table in order to address this issue, given the information provided?",
+      "question_images": [
+        "questions/SOA-C02-mrhln7/q_img_3_3.jpeg"
+      ],
+      "options": [
+        {
+          "key": "A",
+          "text": "0.0.0.0/0 IGW",
+          "images": []
+        },
+        {
+          "key": "B",
+          "text": "0.0.0.0/0 NAT",
+          "images": []
+        },
+        {
+          "key": "C",
+          "text": "10.0.1.0/24 IGW",
+          "images": []
+        },
+        {
+          "key": "D",
+          "text": "10.0.1.0/24 NAT",
+          "images": [
+            "questions/SOA-C02-mrhln7/q_img_2_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_3_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_4_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_5_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_6_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_7_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_8_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_9_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_10_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_11_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_12_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_13_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_14_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_15_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_16_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_17_3.jpeg",
+            "questions/SOA-C02-mrhln7/q_img_18_3.jpeg"
+          ]
+        }
+      ],
+      "answer_text": "B",
+      "answer_images": [],
+      "explanation_text": "Understand the Problem: An instance in a private subnet needs internet access for downloading patches. There is an existing NAT gateway in the public subnet. Analyze the Requirements: Provide internet access to the private subnet instance through the NAT gateway. Ensure resources in the private subnet remain inaccessible from the public internet. Evaluate the Options: Option A: 0.0.0.0/0 IGW. This would route traffic directly to the internet gateway, exposing the instance to the public internet. Option B: 0.0.0.0/0 NAT. This routes traffic destined for the internet through the NAT gateway, allowing outbound connections while keeping the instance protected from inbound internet traffic. Option C: 10.0.1.0/24 IGW. This does not provide the necessary route for internet access and incorrectly uses the internet gateway for local traffic. Option D: 10.0.1.0/24 NAT. This also incorrectly uses the NAT gateway for local traffic, which is unnecessary. Select the Best Solution: Option B: Adding a route for 0.0.0.0/0 with the target set to the NAT gateway ensures that the private subnet instance can access the internet while remaining protected from inbound internet traffic. Amazon VPC NAT Gateways Private Subnet Route Table Configuring the private subnet route table to use the NAT gateway for 0.0.0.0/0 ensures secure and efficient internet access for instances in the private subnet.",
+      "explanation_images": [],
+      "page_start": 17,
+      "page_end": 18,
+      "anomalies": [],
+      "raw_text": "",
+      "anomaly_score": 0,
+      "has_question_text": true,
+      "has_answer": true,
+      "has_explanation": true,
+      "image_count": 18
+    },
+    {
+      "question_number": 17,
+      "question_type": "mcq",
+      "question_text": "[Deployment, Provisioning, and Automation] A SysOps administrator applies the following policy to an AWS CloudFormation stack: What is the result of this policy?",
+      "question_images": [
+        "questions/SOA-C02-mrhln7/q_img_2_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_3_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_5_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_6_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_7_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_8_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_9_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_10_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_11_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_12_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_13_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_14_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_15_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_16_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_17_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_18_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_4_3.jpeg"
+      ],
+      "options": [
+        {
+          "key": "A",
+          "text": "Users that assume an IAM role with a logical ID that begins with \"Production\" are prevented from running the update-stack command.",
+          "images": []
+        },
+        {
+          "key": "B",
+          "text": "Users can update all resources in the stack except for resources that have a logical ID that begins with \"Production\".",
+          "images": []
+        },
+        {
+          "key": "C",
+          "text": "Users can update all resources in the stack except for resources that have an attribute that begins with \"Production\".",
+          "images": []
+        },
+        {
+          "key": "D",
+          "text": "Users in an IAM group with a logical ID that begins with \"Production\" are prevented from running the update-stack command.",
+          "images": []
+        }
+      ],
+      "answer_text": "B",
+      "answer_images": [],
+      "explanation_text": "The policy provided includes two statements: The first statement explicitly denies the Update:* action on resources with a LogicalResourceId that begins with \"Production\". The second statement allows the Update:* action on all resources. In AWS IAM policy evaluation logic, explicit denies always take precedence over allows. Therefore, the effect of this policy is that users can update all resources in the stack except for those with a logical ID that begins with \"Production\". IAM JSON Policy Elements: Effect Policy Evaluation Logic",
+      "explanation_images": [
+        "questions/SOA-C02-mrhln7/q_img_2_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_3_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_4_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_5_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_6_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_7_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_8_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_9_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_10_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_11_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_12_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_13_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_14_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_15_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_16_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_17_3.jpeg",
+        "questions/SOA-C02-mrhln7/q_img_18_3.jpeg"
+      ],
+      "page_start": 18,
+      "page_end": 20,
+      "anomalies": [],
+      "raw_text": "",
+      "anomaly_score": 0,
+      "has_question_text": true,
+      "has_answer": true,
+      "has_explanation": true,
+      "image_count": 34
+    },
+    {
+      "question_number": 18,
+      "question_type": "mcq",
+      "question_text": "[Monitoring, Reporting, and Automation] A company's IT department noticed an increase in the spend of their developer AWS account. There are over 50 developers using the account, and the finance team wants to determine the service costs incurred by each developer. What should a SysOps administrator do to collect this information? (Select TWO.)",
+      "question_images": [],
+      "options": [
+        {
+          "key": "A",
+          "text": "Activate the createdBy tag in the account.",
+          "images": []
+        },
+        {
+          "key": "B",
+          "text": "Analyze the usage with Amazon CloudWatch dashboards.",
+          "images": []
+        },
+        {
+          "key": "C",
+          "text": "Analyze the usage with Cost Explorer.",
+          "images": []
+        },
+        {
+          "key": "D",
+          "text": "Configure AWS Trusted Advisor to track resource usage.",
+          "images": []
+        },
+        {
+          "key": "E",
+          "text": "Create a billing alarm in AWS Budgets.",
+          "images": []
+        }
+      ],
+      "answer_text": "A,C",
+      "answer_images": [],
+      "explanation_text": "To determine the service costs incurred by each developer, follow these steps: Activate the createdBy Tag: Tagging resources with a createdBy tag helps identify which user created the resource. This tag should be applied consistently across all resources created by the developers. Tagging Your Resources Analyze Usage with Cost Explorer: Use Cost Explorer to filter and group cost and usage data by the createdBy tag. This provides a breakdown of costs incurred by each developer. Analyzing Your Costs with Cost Explorer These two steps together will provide a detailed analysis of the costs incurred by each developer in the AWS account.",
+      "explanation_images": [],
+      "page_start": 20,
+      "page_end": 20,
+      "anomalies": [],
+      "raw_text": "",
+      "anomaly_score": 0,
+      "has_question_text": true,
+      "has_answer": true,
+      "has_explanation": true,
+      "image_count": 0
+    },
+    {
+      "question_number": 19,
+      "question_type": "mcq",
+      "question_text": "[High Availability, Backup, and Recovery] A company website contains a web tier and a database tier on AWS. The web tier consists of Amazon EC2 instances that run in an Auto Scaling group across two Availability Zones. The database tier runs on an Amazon ROS for MySQL Multi-AZ DB instance. The database subnet network ACLs are restricted to only the web subnets that need access to the database. The web subnets use the default network ACL with the default rules. The company's operations team has added a third subnet to the Auto Scaling group configuration. After an Auto Scaling event occurs, some users report that they intermittently receive an error message. The error message states that the server cannot connect to the database. The operations team has confirmed that the route tables are correct and that the required ports are open on all",
+      "question_images": [],
+      "options": [],
+      "answer_text": "",
+      "answer_images": [],
+      "explanation_text": "",
+      "explanation_images": [],
+      "page_start": 20,
+      "page_end": 20,
+      "anomalies": [
+        {
+          "type": "missing_answer",
+          "severity": 60,
+          "message": "Question has no answer section",
+          "context": null
+        }
+      ],
+      "raw_text": "",
+      "anomaly_score": 60,
+      "has_question_text": true,
+      "has_answer": false,
+      "has_explanation": false,
+      "image_count": 0
+    }
+  ],
+  "validation": {
+    "total_questions_detected": 19,
+    "structured_successfully": 18,
+    "missing_question_numbers": [],
+    "duplicate_question_numbers": [],
+    "questions_missing_answer": [
+      19
+    ],
+    "questions_missing_explanation": [
+      19
+    ],
+    "orphan_images": 0,
+    "anomaly_breakdown": {
+      "missing_answer": 1
+    },
+    "success_rate": 94.74
+  }
+}
