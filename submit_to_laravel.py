@@ -186,34 +186,50 @@ def transform_parsed_to_laravel(
 
     Parser output:
         question_text, question_images[], options[].text, options[].is_correct,
-        options[].images[], explanation_text, explanation_images[]
+        options[].images[], explanation_text, explanation_images[],
+        question_type (mcq/hotspot/etc.)
 
     Laravel API expects:
         question (HTML), explanation (HTML),
         options[].text (HTML), options[].is_correct (bool)
+
+    HOTSPOT questions:
+        - Have no selectable A/B/C/D options
+        - question_type = "hotspot" from the parser
+        - Included with "HOTSPOT" prefix so the frontend can detect them
+        - Frontend shows a "Reveal Answer" button instead of options
     """
     questions = parse_result.get("questions", [])
     transformed = []
 
     for q in questions:
         # Skip questions with anomalies (missing answer, etc.)
-        if q.get("anomaly_score", 0) >= 50:
+        # but NOT hotspot questions — they legitimately have no selectable options
+        is_hotspot = q.get("question_type", "mcq") == "hotspot"
+
+        if q.get("anomaly_score", 0) >= 50 and not is_hotspot:
             logger.warning(
                 f"Skipping question #{q['question_number']} "
                 f"(anomaly_score={q['anomaly_score']})"
             )
             continue
 
-        # Skip questions with no options
-        if not q.get("options"):
+        # Skip non-hotspot questions with no options
+        if not q.get("options") and not is_hotspot:
             logger.warning(
                 f"Skipping question #{q['question_number']} (no options)"
             )
             continue
 
+        # For HOTSPOT questions, prepend "HOTSPOT\n" to the question text
+        # so the Laravel frontend can detect them (it checks if text starts with "HOTSPOT")
+        question_text = q.get("question_text", "")
+        if is_hotspot and not question_text.upper().startswith("HOTSPOT"):
+            question_text = "HOTSPOT\n" + question_text
+
         # Build rich HTML for question text + images
         question_html = embed_images_in_text(
-            q.get("question_text", ""),
+            question_text,
             q.get("question_images", []),
             image_base_dir,
         )
@@ -225,7 +241,7 @@ def transform_parsed_to_laravel(
             image_base_dir,
         )
 
-        # Transform options
+        # Transform options (empty for HOTSPOT questions)
         laravel_options = []
         for opt in q.get("options", []):
             # Embed option images into option text
@@ -247,6 +263,7 @@ def transform_parsed_to_laravel(
         })
 
     return transformed
+
 
 
 # ─── Submit to Laravel ───────────────────────────────────────────────────────

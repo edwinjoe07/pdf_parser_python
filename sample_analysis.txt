@@ -1,0 +1,403 @@
+=== Analyzer Target: MuleSoft/MCD-LEVEL-1-d12xgk.pdf ===
+Total Pages: 218
+--- Page 1 ---
+Questions and Answers PDF
+1/218
+Thank you for choosing us for your MCD - 
+Level 1 preparation! We're confident these 
+materials will help you succeed. Best of luck 
+with your studies!
+MCD - Level 1
+235
+
+...
+--- Page 2 ---
+Question: 1
+Refer to the exhibit.
+What expression correctly specifies input parameters to pass the city and state values to the SQL
+query?
+A)
+B)
+Questions and Answers PDF
+2/218
+
+...
+--- Page 110 ---
+B. WSDL file
+C. JSON file
+D. plain text file documenting API's
+Answer: B
+Explanation:
+Web Services Description Language. WSDL is used to describe SOAP based web services
+Question: 108
+What does C4E stands for in MuleSoft recommended IT operating model?
+A. Centre for Empowerment
+B. Centre for Engagement
+C. Centre for Enablement
+D. Centre for Excellence
+Answer: C
+Explanation:
+Centre for Enablement (C4E) is an IT operating model that enables an enterprise to build reusable
+assets, accumulate API’s, leverage best practices and knowledge to enable self service and efficient
+delivery in the organization and implement new solutions faster
+Question: 109
+Which of the below functionality is provided by zip operator in DataWeave?
+A. Merges elements of two lists (arrays) into a single list
+B. Used for sending attachments
+C. Minimize the size of long text using encoding.
+D. All of the above
+Answer: A
+Explanation:
+Correct answer is Merges elements of two lists (arrays) into a single list
+MuleSoft Doc Reference : https://docs.mulesoft.com/mule-runtime/4.3/dw-core-functions-zip
+Question: 110
+Refer to the exhibit. What is the output of logger component?
+Questions and Answers PDF
+110/218
+
+...
+
+==================================================
+
+=== Analyzer Target: Android/AND-402-cqncxl.pdf ===
+Total Pages: 30
+--- Page 1 ---
+Questions and Answers PDF
+1/30
+Thank you for choosing us for your AND-402 
+preparation! We're confident these materials 
+will help you succeed. Best of luck with your 
+studies!
+AND-402
+107
+
+...
+--- Page 2 ---
+Question: 1
+How many level of protection are there in Permission?
+A. Seven.
+B. User Defined.
+C. Four.
+D. Depends of the Android OS version.
+Answer: C
+Question: 2
+What are the permissions which are granted automatically without user’s approval called?
+A. Signature Permissions
+B. System Permissions
+C. Dangerous Permissions
+D. Normal Permission
+Answer: D
+Question: 3
+Which permission listed below is a normal permission?
+A. SET_WALLPAPER
+B. READ_CALENDAR
+C. FACTORY_TEST
+D. REBOOT
+Answer: A
+Question: 4
+Dangerous Permissions can cause real harm or damage to user’s Personal___________.
+A. Data
+B. Money
+C. Device
+D. All choices are correct.
+Answer: D
+Questions and Answers PDF
+2/30
+
+...
+--- Page 16 ---
+C. The backupAgent agent should be specified in application tag inside AndroidManifest.xml.
+D. The internet permission in the AndroidManifest file to communicate with the Google server.
+Answer: D
+Question: 57
+Which of the following is NOT true about “auto” value given to the installLocation attribute in the
+<manifest> tag?
+A. By default, when an application is installed for the first time, a memory error is given in case the
+space is not available in the internal memory.
+B. The application is installed on internal memory by default if space is available
+C. In case of unavailability of space in internal memory the application is installed on external
+memory
+D. Once installed, the application can be moved from internal to external memory and vice versa.
+Answer: A
+Question: 58
+Which of the following are helper classes provided by Android to backup data to Google server?
+(Choose two)
+A. FileBackupHelper
+B. DatabaseBackupHelper
+C. SharedPreferencesBackupHelper
+D. MapBackupHelper
+Answer: AC
+Question: 59
+Which of the following is NOT true about setting two applications to share same Linux ID?
+A. Both applications must be running in background to check if they are sharing same Linux ID.
+B. The applications just need to be installed on single device, for checking their Linux ID, they need
+not to be running.
+C. Android's adb tool can be used to check the applications that if they are sharing same Linux ID.
+D. Making two applications sharing same Linux ID must have same value of sharedU
+...
+
+==================================================
+
+=== Analyzer Target: Adobe/9A0-410-3tur6a.pdf ===
+Total Pages: 23
+--- Page 1 ---
+Questions and Answers PDF
+1/23
+Thank you for choosing us for your 9A0-410 
+preparation! We're confident these materials 
+will help you succeed. Best of luck with your 
+studies!
+9A0-410
+80
+
+...
+--- Page 2 ---
+Question: 1
+A client uploads XDPs from Workbench. The client cannot render the forms as HTML5. What should
+the client do?
+A. Change the time interval on the FormsReplicationScheduler
+B. Change the profile resource super type in the FormsManager AddOn Configuration
+C. Change the FormsManager AddOn Configuration to synchronize synchronously
+D. Change the time interval on the FormsManager AddOn Configuration
+Answer: B
+Question: 2
+How should a developer support mobile devices for the Search and Lister component?
+A. Within the edit dialog of the search pane, click the Enable Mobile checkbox
+B. Within the edit dialog of the list pane, click the Enable Mobile checkbox
+C. Build a custom component
+D. Do nothing. The component adjusts accordingly
+Answer: D
+Explanation:
+Forms Portal Search & Lister component is mobile device friendly and adapts accordingly. All three
+default views: Grid, Card, Panel relayouts according to the device in which site is opened provided
+with the fact that web page also adapts. The simple fact is that, Search & Lister is a component only
+and does not govern page level styling.
+Question: 3
+What is a reason to use a form fragments when designing templates to be rendered as PDF?
+A. To fully integrate with analytics
+B. To allow multiple forms to use the same fields
+C. To improve publisher system performance
+D. To make sure fragments are not replicated to a publisher
+Answer: B
+Questions and Answers PDF
+2/23
+
+...
+--- Page 12 ---
+A. Improved Image Quality
+B. Improved Lazy Loading
+C. Improved Search Time
+D. Improved Render Time
+Answer: C
+Question: 40
+Why should a developer add the ‘addfields.jsp’ to the custom submit sling:Folder?
+A. To register the custom submit action for use within the CRX
+B. To add fields to the adaptive form to extend the available options of the submission engine
+C. To control which form fields will be submitted and consumed by the submission target
+D. To expose additional input in the dialog window within the component
+Answer: B
+Question: 41
+In which situation must a custom Workflow Step Component be created?
+A. Additional metadata needs to be persisted in the Workflow
+B. The step requires an editable title and description
+C. The Workflow has exceeded its maximum size
+D. To extend the capabilities of the workflow
+Answer: D
+Question: 42
+A high volume solution requires a developer to validate the input XML before it can be used by other
+services. How should this use case be handled?
+A. By writing a validator in a script object
+B. By checking off ‘validate input’ on the input variable
+C. By manually validating each item in the XML structure
+D. By writing a validator custom component
+Answer: A
+Question: 43
+Which three main properties are required to create a remote function?
+Questions and Answers PDF
+12/23
+
+...
+
+==================================================
+
+=== Analyzer Target: PEGA/PEGACUIS71V1-89cze0.pdf ===
+Total Pages: 22
+--- Page 1 ---
+Questions and Answers PDF
+1/22
+Thank you for choosing us for your 
+PEGACUIS71V1 preparation! We're confident 
+these materials will help you succeed. Best 
+of luck with your studies!
+PEGACUIS71V1
+53
+
+...
+--- Page 2 ---
+Question: 1
+A form should display a clickable link for viewing the Terms and Conditions on a modal dialog when
+the user selects a check box with the text "I want to view the Terms and Conditions'. When testing
+the form, the link is not displayed when the check box is selected. What could be wrong? (Choose
+One)
+A. In the section rule that is rendering the form, the 'Run On Client" attribute in the HTML tab is not
+enabled.
+B. In the flow action rule that references the section rule rendering the form, "Run On Client"
+attribute in the HTML tab is not enabled.
+C. In the section rule that is rendering the form, on the cell that has the check box, the "Refresh
+section' is not being invoked.
+D. In the section rule that is rendering the form, on the cell that has the link, the "Run On Client3 is
+not enabled.
+Answer: C
+Question: 2
+Which component of the skin uses inheritance so that changing it in one place alters every other
+component where it is referenced? (Choose One)
+A. Format
+B. Included Style
+C. Component
+D. Mixin
+Answer: D
+Question: 3
+Inline, Inline grid double, Inline grid triple are saved in the system as____________. (Choose One)
+A. Controls
+B. Layout types
+C. Formats
+D. Mixins
+Questions and Answers PDF
+2/22
+
+...
+--- Page 12 ---
+Question: 28
+In which of the following scenarios, do you need to enable the “Run On Client" checkbox for the
+refresh to occur client side? (Choose One)
+A. When the user's role gels changed in the middle of case processing and they should view
+additional fields based on the new role.
+B. When users click the Edit button causing the fields in the form to appear editable.
+C. When users click the refresh icon which should refresh the list of cases assigned to that user.
+D. When users modify the order which should trigger the recalculation of the line item and order
+totals.
+Answer: B
+Question: 29
+Of the following scenarios, which one represents a good use case for using a Radio Button control
+over a dropdown control? {Choose One)
+A. When the list of choices are a handful, say less than 5.
+B. When the list of values are static and defined in the property rule form as a local list
+C. Whenever you need to preset a default value.
+D. Whenever the field is required and selection is required.
+Answer: A
+Question: 30
+You have a requirement that the system must convert text entered by a user to all UPPERCASE before
+it is saved. Which method should you use to accomplish this? (Choose One)
+A. Invoke a data transform which invokes a function to change the text to UPPERCASE when the
+value changes
+B. Use a validate rule on the field to enforce users to enter the text in UPPERCASE
+C. Create an action set which invokes a function to change to the text to UPPERCASE when the value
+changes
+D. Use an E
+...
+
+==================================================
+
+=== Analyzer Target: Cloudera/CCA175-bjbiaf.pdf ===
+Total Pages: 83
+--- Page 1 ---
+Questions and Answers PDF
+1/83
+Thank you for choosing us for your CCA175 
+preparation! We're confident these materials will 
+help you succeed. Best of luck with your studies!
+CCA175
+96
+
+...
+--- Page 2 ---
+Question: 1
+Problem Scenario 1:
+You have been given MySQL DB with following details.
+user=retail_dba
+password=cloudera
+database=retail_db
+table=retail_db.categories
+jdbc URL = jdbc:mysql://quickstart:3306/retail_db
+Please accomplish following activities.
+1. Connect MySQL DB and check the content of the tables.
+2. Copy "retaildb.categories" table to hdfs, without specifying directory name.
+3. Copy "retaildb.categories" table to hdfs, in a directory name "categories_target".
+4. Copy "retaildb.categories" table to hdfs, in a warehouse directory name "categories_warehouse".
+Answer:
+Solution :
+Step 1 : Connecting to existing MySQL Database mysql --user=retail_dba --password=cloudera
+retail_db
+Step 2 : Show all the available tables show tables;
+Step 3 : View/Count data from a table in MySQL select count(1} from categories;
+Step 4 : Check the currently available data in HDFS directory hdfs dfs -Is
+Step 5 : Import Single table (Without specifying directory).
+sqoop
+import
+--connect
+jdbc:mysql://quickstart:3306/retail_db
+-username=retail_dba
+-
+password=cloudera -table=categories
+Note : Please check you dont have space between before or after '=' sign. Sqoop uses the
+MapReduce framework to copy data from RDBMS to hdfs
+Step 6 : Read the data from one of the partition, created using above command, hdfs dfs -
+catxategories/part-m-00000
+Step 7 : Specifying target directory in import command (We are using number of mappers =1, you
+can
+change
+accordingly)
+sqoop
+import
+-connect
+jdbc:mysql://qu
+...
+--- Page 42 ---
+val mapper = field.map(x=> A)
+mapper.map(x => x.map(x=> {B})).collect
+Please fill inAand B so it can generate below final output
+Array(Array(3070811,1963,109G, 0, "US", "CA", 0,1, 0)
+,Array(3022811,1963,1096, 0, "US", "CA", 0,1, 56)
+,Array(3033811,1963,1096, 0, "US", "CA", 0,1, 23)
+)
+Answer:
+Solution :
+A. x.split(",”-1)
+B. if (x. isEmpty) 0 else x
+Question: 41
+Problem Scenario 41 : You have been given below code snippet.
+val aul = sc.parallelize(List (("a" , Array(1,2)), ("b" , Array(1,2))))
+val au2 = sc.parallelize(List (("a" , Array(3)), ("b" , Array(2))))
+Apply the Spark method, which will generate below output.
+Array[(String, Array[lnt])] = Array((a,Array(1, 2)), (b,Array(1, 2)), (a(Array(3)), (b,Array(2)))
+Answer:
+Solution:
+au1.union(au2)
+Question: 42
+Problem Scenario 42 : You have been given a file (sparklO/sales.txt), with the content as given in
+below.
+spark10/sales.txt
+Department,Designation,costToCompany,State
+Sales,Trainee,12000,UP
+Sales,Lead,32000,AP
+Sales,Lead,32000,LA
+Sales,Lead,32000,TN
+Sales,Lead,32000,AP
+Sales,Lead,32000,TN
+Sales,Lead,32000,LA
+Sales,Lead,32000,LA
+Marketing,Associate,18000,TN
+Marketing,Associate,18000,TN
+HR,Manager,58000,TN
+And want to produce the output as a csv with group by Department,Designation,State with
+additional columns with sum(costToCompany)and TotalEmployeeCountt
+Should get result like
+Dept,Desg,state,empCount,totalCost
+Sales,Lead,AP,2,64000
+Questions and Answers PDF
+42/83
+
+...
+
+==================================================
+

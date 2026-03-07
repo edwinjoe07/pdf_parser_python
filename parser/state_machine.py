@@ -3,6 +3,20 @@ State Machine Parser
 ====================
 Deterministic state machine for detecting certification exam question structure
 based on text-anchors (Question, Answer, Explanation).
+
+Optimized for the Dumpsgate / exam-dump PDF format:
+    - Cover page (page 1): title, boilerplate, exam code, question count
+    - Header on every page: "Questions and Answers PDF\n{page}/{total}"
+    - Footer URLs: e.g. https://dumpsgate.com/...
+    - Question structure:
+        Question: N
+        <question text>
+        A. <option>
+        B. <option>
+        ...
+        Answer: <letter(s)>
+        Explanation: / Reference: / Solution: / Rationale:
+        <explanation text>
 """
 
 from __future__ import annotations
@@ -20,6 +34,7 @@ from .models import (
     FontInfo,
     ParsedQuestion,
     QuestionOption,
+    QuestionType,
     Section,
 )
 
@@ -27,14 +42,14 @@ logger = logging.getLogger(__name__)
 
 # ─── Anchor Patterns ──────────────────────────────────────────────────────────
 
-# Matches "Question: 1", "Question 42" at start of line
+# Matches "Question: 1", "Question 42", "Question: 123" at start of line
 QUESTION_PATTERN = re.compile(
     r"^\s*Question\s*:?\s*(\d+)", re.IGNORECASE
 )
 
-# Matches "A.", "B.", "A)", "(A)" style options
+# Matches "A.", "B.", "A)", "(A)" style options — letter followed by . or )
 OPTION_PATTERN = re.compile(
-    r"^\s*([A-Z])[\.\)]\s*", re.IGNORECASE
+    r"^\s*\(?([A-Z])\s*[\.\)]\s*", re.IGNORECASE
 )
 
 # Matches "Answer:", "Answer", "ANSWER:", "Correct Answer:", "Ans:", "Ans."
@@ -42,25 +57,46 @@ ANSWER_PATTERN = re.compile(
     r"^\s*(?:Correct\s+)?(?:Answer|Ans|Key)[\s.:]*", re.IGNORECASE
 )
 
-# Matches "Explanation:", "Reference:", "Rationale:"
+# Matches "Explanation:", "Reference:", "Rationale:", "Solution:"
 EXPLANATION_PATTERN = re.compile(
-    r"^\s*(Explanation|Reference|Rationale)\s*:?\s*", re.IGNORECASE
+    r"^\s*(Explanation|Reference|Rationale|Solution)\s*:?\s*", re.IGNORECASE
 )
 
-# Patterns to ignore (headers, footers, page counters, exam dump boilerplate)
+# Matches standalone "HOTSPOT" line (case-insensitive)
+HOTSPOT_PATTERN = re.compile(r"^\s*HOTSPOT\s*$", re.IGNORECASE)
+
+# ─── Noise / Boilerplate Patterns ─────────────────────────────────────────────
+# These lines are ALWAYS ignored, no matter what parser state we are in.
 IGNORE_PATTERNS = [
+    # ── Dumpsgate PDF header/footer ──
     re.compile(r"^\s*Questions and Answers PDF.*$",
-               re.IGNORECASE),  # Heuristic for common dumps
+               re.IGNORECASE),
+    # Page counters: "8/528", "Page 8 of 528", "2/10", "110/218"
     re.compile(r"^\s*(Page\s*)?\d+\s*(/|of)\s*\d+\s*$",
-               re.IGNORECASE),  # "8/528", "Page 8 of 528"
-    # Solo "Question 5" (not the anchor)
-    re.compile(r"^\s*Question\s*\d+\s*$"),
-    re.compile(r"^https?://[^\s]+$"),  # Lone URLs
-    # "Box 1:", "Box 2:" noise
-    re.compile(r"^\s*Box\s*\d+\s*:", re.IGNORECASE),
-    # "Select and Place:" noise
-    re.compile(r"^\s*Select and Place:", re.IGNORECASE),
-    # Exam dump boilerplate
+               re.IGNORECASE),
+
+    # ── Cover page boilerplate ──
+    # "Thank you for choosing us for your <EXAM> preparation!"
+    re.compile(r"^\s*Thank\s+you\s+for\s+(choosing|your)\b", re.IGNORECASE),
+    # "We're confident these materials will help you succeed."
+    re.compile(r"^\s*We.re\s+confident\s+these\s+materials\b", re.IGNORECASE),
+    # "Best of luck with your studies!"
+    re.compile(r"^\s*Best\s+of\s+luck\s+with\s+your\s+studies", re.IGNORECASE),
+    # Lines that are just the exam code or question count (standalone short alphanumeric)
+    # e.g. "RHIA", "1828", "SAFe-RTE", "286", "CTP"
+    # Only match these on the cover page — handled separately in _is_cover_page_noise
+
+    # ── Section headers / topic markers ──
+    re.compile(r"^\s*Topic\s+\d+[\s,]", re.IGNORECASE),
+    re.compile(r"^\s*Product\s+Questions\s*:\s*\d+\s*$", re.IGNORECASE),
+
+    # ── Separator lines ──
+    re.compile(r"^\s*[=\-]{4,}\s*$"),  # "============" or "------------"
+
+    # ── Lone URLs ──
+    re.compile(r"^\s*https?://[^\s]+\s*$"),
+
+    # ── Dumpsgate boilerplate text ──
     re.compile(r"^\s*Thank\s+you\s+for\s+your\s+visit\.?\s*$", re.IGNORECASE),
     re.compile(r"^\s*Visit\s+us\s+at\b", re.IGNORECASE),
     re.compile(r"^\s*For\s+more\s+questions\b", re.IGNORECASE),
@@ -68,7 +104,21 @@ IGNORE_PATTERNS = [
     re.compile(r"^\s*Download\s+free\b", re.IGNORECASE),
     re.compile(r"examtopics?\.(com|org|net)", re.IGNORECASE),
     re.compile(r"certification.s*prep", re.IGNORECASE),
+    re.compile(r"dumpsgate\.com", re.IGNORECASE),
+
+    # ── Box/drag-drop noise ──
+    re.compile(r"^\s*Box\s*\d+\s*:", re.IGNORECASE),
+    re.compile(r"^\s*Select and Place:", re.IGNORECASE),
 ]
+
+# Cover page noise: standalone lines that are just a number or short exam code
+# These are only checked on pages where no question has been detected yet
+COVER_PAGE_NOISE = re.compile(
+    r"^\s*(?:\d{1,5}|[A-Z][A-Za-z0-9\-_\.]{0,30})\s*$"
+)
+
+# Pattern to detect standalone "Question N" without content (just a page-end artifact)
+SOLO_QUESTION_NUM = re.compile(r"^\s*Question\s*\d+\s*$", re.IGNORECASE)
 
 
 class ParserState(Enum):
@@ -92,6 +142,7 @@ class StateMachineParser:
         self.current_option: Optional[QuestionOption] = None
         self.questions: list[ParsedQuestion] = []
         self.question_numbers: set[int] = set()
+        self._cover_page_done = False  # Track if we've moved past page 1
 
     def reset(self):
         """Reset the state machine for a fresh parsing run."""
@@ -100,6 +151,7 @@ class StateMachineParser:
         self.current_option = None
         self.questions = []
         self.question_numbers = set()
+        self._cover_page_done = False
 
     def finalize(self):
         """Finalize any pending (in-progress) question at end of parsing."""
@@ -113,6 +165,7 @@ class StateMachineParser:
         self.current_option = None
         self.questions = []
         self.question_numbers = set()
+        self._cover_page_done = False
 
         for block in blocks:
             self._process_block(block)
@@ -144,8 +197,8 @@ class StateMachineParser:
             if not line_str:
                 continue
 
-            # Check noise patterns (Headers/Footers)
-            if any(p.match(line_str) for p in IGNORE_PATTERNS):
+            # Check noise patterns (Headers/Footers/Boilerplate)
+            if self._is_noise(line_str, block.page_number):
                 continue
 
             # Anchor Detection (Case-Insensitive)
@@ -153,6 +206,14 @@ class StateMachineParser:
             # Question Anchor (e.g. "Question: 13")
             q_match = QUESTION_PATTERN.match(line_str)
             if q_match:
+                # Check if this is just a standalone "Question N" at page end
+                # (these appear as artifacts and should be ignored)
+                if SOLO_QUESTION_NUM.match(line_str):
+                    # Only ignore if it's a solo "Question N" with no colon
+                    # "Question: N" with colon IS a real anchor
+                    if ":" not in line_str:
+                        continue
+
                 q_num = int(q_match.group(1))
                 self._start_new_question(q_num, block)
                 remainder = line_str[q_match.end():].strip()
@@ -160,7 +221,16 @@ class StateMachineParser:
                     self._append_text(remainder)
                 continue
 
+            # HOTSPOT marker — standalone line right after question anchor
+            if self.current_question and self.state == ParserState.QUESTION_BODY:
+                if HOTSPOT_PATTERN.match(line_str):
+                    self.current_question.question_type = QuestionType.HOTSPOT
+                    logger.info(f"Question {self.current_question.question_number} marked as HOTSPOT")
+                    continue
+
             if not self.current_question:
+                # Before any question is detected, skip everything
+                # (covers page 1 boilerplate, topic headers, etc.)
                 continue
 
             # Option Anchor (e.g. "A.")
@@ -183,7 +253,7 @@ class StateMachineParser:
                     self._append_text(remainder)
                 continue
 
-            # Explanation Anchor (e.g. "Explanation:")
+            # Explanation Anchor (e.g. "Explanation:", "Reference:", "Solution:")
             exp_match = EXPLANATION_PATTERN.match(line_str)
             if exp_match:
                 self.state = ParserState.EXPLANATION
@@ -196,10 +266,27 @@ class StateMachineParser:
             # Accumulate content in current state
             self._append_text(line_str)
 
+    def _is_noise(self, line: str, page_number: int) -> bool:
+        """Check if a line is noise (headers, footers, boilerplate)."""
+        # Standard noise patterns
+        if any(p.match(line) for p in IGNORE_PATTERNS):
+            return True
+
+        # On the cover page (page 1, before any question detected),
+        # also filter out standalone exam codes and numbers
+        if not self._cover_page_done and not self.current_question:
+            if COVER_PAGE_NOISE.match(line):
+                return True
+
+        return False
+
     def _start_new_question(self, q_num: int, block: ContentBlock):
         """Finalize previous and start fresh state."""
         if self.current_question:
             self._finalize_question()
+
+        # We've definitely moved past the cover page
+        self._cover_page_done = True
 
         logger.info(f"Detected Question {q_num} on page {block.page_number}")
 
@@ -279,8 +366,9 @@ class StateMachineParser:
         q.page_end = max(q.page_end, block.page_number)
 
     def _finalize_question(self):
-        """Basic validation and storage."""
+        """Basic validation, answer marking, and storage."""
         q = self.current_question
+        is_hotspot = q.question_type == QuestionType.HOTSPOT
 
         # ── Remove ghost/empty options (no text AND no images) ──
         q.options = [
@@ -302,21 +390,19 @@ class StateMachineParser:
                 message="Question has no text content"
             ))
 
-        if not q.has_answer:
-            q.anomalies.append(Anomaly(
-                type=AnomalyType.MISSING_ANSWER,
-                severity=60,
-                message="Question has no answer section"
-            ))
-        else:
-            # Automatically mark correct options based on answer_text
-            # Regex to find single uppercase letters usually representing keys (A, B, C...)
-            # We look for A, B or A, B, C or Answer: A etc.
-            ans_keys = re.findall(r"\b([A-Z])\b", q.answer_text.upper())
-            if ans_keys:
-                for opt in q.options:
-                    if opt.key.upper() in ans_keys:
-                        opt.is_correct = True
+        # HOTSPOT questions are expected to have no selectable options
+        # and their "answer" is typically an image — so skip answer
+        # anomaly flagging for HOTSPOT questions
+        if not is_hotspot:
+            if not q.has_answer:
+                q.anomalies.append(Anomaly(
+                    type=AnomalyType.MISSING_ANSWER,
+                    severity=60,
+                    message="Question has no answer section"
+                ))
+            else:
+                # ── Mark correct options from answer text ──
+                self._mark_correct_options(q)
 
         # Check for orphan sections (images only)
         if not q.question_text and q.question_images:
@@ -328,3 +414,46 @@ class StateMachineParser:
             ))
 
         self.questions.append(q)
+
+    def _mark_correct_options(self, q: ParsedQuestion):
+        """
+        Parse the answer_text to find correct option keys and mark them.
+
+        Handles multiple formats:
+            - "B"           → single answer
+            - "C, D"        → comma-separated
+            - "AB"          → concatenated (no space)
+            - "A,B"         → comma-separated (no space)
+            - "A, C"        → comma-separated with space
+            - "AD"          → concatenated
+        """
+        answer = q.answer_text.strip().upper()
+        if not answer:
+            return
+
+        # Get the set of valid option keys for this question
+        valid_keys = {opt.key.upper() for opt in q.options}
+
+        # Strategy 1: Find comma/space separated letters
+        # e.g., "C, D" → ["C", "D"], "A,B" → ["A", "B"]
+        ans_keys = set()
+
+        # Try splitting by comma first
+        if "," in answer:
+            parts = [p.strip() for p in answer.split(",")]
+            for part in parts:
+                # Each part should be a single letter
+                letters = re.findall(r"\b([A-Z])\b", part)
+                ans_keys.update(letters)
+        else:
+            # Try finding individual uppercase letters
+            # "AB" → ["A", "B"], "B" → ["B"]
+            letters = re.findall(r"[A-Z]", answer)
+            ans_keys.update(letters)
+
+        # Only mark keys that actually exist as options
+        final_keys = ans_keys & valid_keys if valid_keys else ans_keys
+
+        for opt in q.options:
+            if opt.key.upper() in final_keys:
+                opt.is_correct = True
