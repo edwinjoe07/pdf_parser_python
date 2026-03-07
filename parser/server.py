@@ -24,11 +24,14 @@ from __future__ import annotations
 import json
 import logging
 import os
+import shutil
+import tempfile
 import threading
 import time
 import uuid
 from pathlib import Path
 
+from dotenv import load_dotenv
 from flask import Flask, jsonify, request, render_template, send_from_directory
 from flask_cors import CORS
 
@@ -37,6 +40,10 @@ from . import crud
 from . import database as db
 from . import storage as fs_storage
 from . import background_worker
+from . import s3_uploader
+
+# Load environment variables from .env file
+load_dotenv()
 
 logger = logging.getLogger(__name__)
 
@@ -167,7 +174,296 @@ def info():
     })
 
 
-# ─── Parse Endpoint ──────────────────────────────────────────────────────────
+# ─── Stateless Parse Endpoint (for Laravel) ──────────────────────────────────
+# This is the primary production endpoint. It accepts a PDF, parses it,
+# uploads images to S3, and returns structured JSON. No local state is kept.
+
+
+@app.route("/parse", methods=["POST"])
+def parse_stateless():
+    """
+    Stateless PDF parsing endpoint for Laravel integration.
+
+    Accepts a PDF via multipart/form-data, parses it using the existing
+    parsing engine, uploads extracted images to AWS S3, and returns
+    structured JSON with S3 image URLs.
+
+    No files are permanently stored locally. All temp files are cleaned up.
+
+    Request:
+        POST /parse
+        Content-Type: multipart/form-data
+        Fields:
+            file: PDF file (required)
+            exam_name: Optional exam name
+            exam_provider: Optional provider name
+            exam_version: Optional version string
+
+    Response (200):
+        {
+            "questions": [
+                {
+                    "question_number": 1,
+                    "question": "Question text here",
+                    "question_images": ["https://cdn.examsqa.in/..."],
+                    "options": [
+                        {
+                            "key": "A",
+                            "text": "Option A text",
+                            "is_correct": true,
+                            "images": []
+                        }
+                    ],
+                    "answer": "A",
+                    "explanation": "Explanation text",
+                    "explanation_images": ["https://cdn.examsqa.in/..."],
+                    "images": ["https://cdn.examsqa.in/..."]
+                }
+            ],
+            "metadata": {
+                "total_questions": 50,
+                "total_pages": 120,
+                "source_pdf": "exam.pdf",
+                "parser_version": "1.0.0"
+            }
+        }
+    """
+    # ── Validate request ──────────────────────────────────────────────
+    if "file" not in request.files:
+        return jsonify({"error": "No file provided. Send PDF as 'file' in multipart/form-data"}), 400
+
+    file = request.files["file"]
+    if not file.filename:
+        return jsonify({"error": "No file selected"}), 400
+
+    if not file.filename.lower().endswith(".pdf"):
+        return jsonify({"error": "Only PDF files are accepted"}), 400
+
+    # ── Read optional metadata ────────────────────────────────────────
+    exam_name = request.form.get("exam_name", "") or Path(file.filename).stem
+    exam_provider = request.form.get("exam_provider", "")
+    exam_version = request.form.get("exam_version", "")
+
+    # ── Create temp workspace ─────────────────────────────────────────
+    temp_dir = tempfile.mkdtemp(prefix="pdf_parser_")
+    temp_pdf_path = os.path.join(temp_dir, file.filename)
+    temp_image_dir = os.path.join(temp_dir, "images")
+    temp_output_dir = os.path.join(temp_dir, "output")
+
+    os.makedirs(temp_image_dir, exist_ok=True)
+    os.makedirs(temp_output_dir, exist_ok=True)
+
+    try:
+        # ── Save PDF to temp ──────────────────────────────────────────
+        file.save(temp_pdf_path)
+        logger.info(f"[/parse] Received PDF: {file.filename} ({os.path.getsize(temp_pdf_path)} bytes)")
+
+        # ── Generate a unique parse ID for S3 paths ───────────────────
+        parse_id = f"pdf_{uuid.uuid4().hex[:12]}"
+
+        # ── Configure and run parser engine ───────────────────────────
+        config = ParserConfig(
+            output_dir=temp_output_dir,
+            image_base_dir=temp_image_dir,
+            exam_name=exam_name,
+            exam_provider=exam_provider,
+            exam_version=exam_version,
+            exam_id=parse_id,
+            save_raw_blocks=False,
+            save_snapshots=False,
+        )
+
+        engine = ParserEngine(config)
+        result = engine.parse(temp_pdf_path)
+
+        logger.info(
+            f"[/parse] Parsed {len(result.questions)} questions from {file.filename}"
+        )
+
+        if len(result.questions) == 0:
+            return jsonify({
+                "error": "Parser returned zero questions. PDF may be empty, corrupt, or unsupported.",
+                "metadata": {
+                    "source_pdf": file.filename,
+                    "total_pages": result.exam.total_pages,
+                }
+            }), 422
+
+        # ── Upload images to S3 ───────────────────────────────────────
+        # The engine saves images to: temp_image_dir/{parse_id}/
+        image_source_dir = os.path.join(temp_image_dir, parse_id)
+        s3_url_map: dict[str, str] = {}
+
+        if os.path.exists(image_source_dir) and os.listdir(image_source_dir):
+            try:
+                s3_url_map = s3_uploader.upload_directory_to_s3(
+                    local_dir=image_source_dir,
+                    s3_prefix=parse_id,
+                )
+                logger.info(
+                    f"[/parse] Uploaded {len(s3_url_map)} images to S3"
+                )
+            except Exception as s3_err:
+                logger.error(
+                    f"[/parse] S3 upload failed: {s3_err}", exc_info=True
+                )
+                return jsonify({
+                    "error": f"S3 image upload failed: {str(s3_err)}",
+                    "hint": "Check AWS credentials and S3 bucket configuration in .env",
+                }), 500
+
+        # ── Build response JSON ───────────────────────────────────────
+        questions_output = []
+        for q in result.questions:
+            q_data = q.model_dump()
+
+            # Collect ALL images for this question (flat list)
+            all_images = []
+
+            # Remap question images
+            q_images = _remap_images_to_s3(
+                q_data.get("question_images", []), s3_url_map
+            )
+            all_images.extend(q_images)
+
+            # Remap answer images
+            answer_images = _remap_images_to_s3(
+                q_data.get("answer_images", []), s3_url_map
+            )
+            all_images.extend(answer_images)
+
+            # Remap explanation images
+            explanation_images = _remap_images_to_s3(
+                q_data.get("explanation_images", []), s3_url_map
+            )
+            all_images.extend(explanation_images)
+
+            # Build options with remapped images
+            options_output = []
+            for opt in q_data.get("options", []):
+                opt_images = _remap_images_to_s3(
+                    opt.get("images", []), s3_url_map
+                )
+                all_images.extend(opt_images)
+                options_output.append({
+                    "key": opt.get("key", ""),
+                    "text": opt.get("text", ""),
+                    "is_correct": opt.get("is_correct", False),
+                    "images": opt_images,
+                })
+
+            # Determine correct answer letter(s)
+            correct_keys = [
+                opt["key"] for opt in options_output if opt["is_correct"]
+            ]
+            answer_str = ", ".join(correct_keys) if correct_keys else q_data.get("answer_text", "")
+
+            questions_output.append({
+                "question_number": q_data.get("question_number", 0),
+                "question": q_data.get("question_text", ""),
+                "question_images": q_images,
+                "options": options_output,
+                "answer": answer_str,
+                "explanation": q_data.get("explanation_text", ""),
+                "explanation_images": explanation_images,
+                "answer_images": answer_images,
+                "images": all_images,  # Flat list of all images for this question
+            })
+
+        response = {
+            "questions": questions_output,
+            "metadata": {
+                "parse_id": parse_id,
+                "total_questions": len(questions_output),
+                "total_pages": result.exam.total_pages,
+                "source_pdf": file.filename,
+                "file_hash": result.exam.file_hash,
+                "file_size_bytes": result.exam.file_size_bytes,
+                "parser_version": result.parse_version.parser_version,
+                "total_images_uploaded": len(s3_url_map),
+                "exam_name": exam_name,
+                "exam_provider": exam_provider,
+                "exam_version": exam_version,
+            },
+        }
+
+        logger.info(
+            f"[/parse] Returning {len(questions_output)} questions, "
+            f"{len(s3_url_map)} images uploaded to S3"
+        )
+
+        return jsonify(response), 200
+
+    except FileNotFoundError as e:
+        return jsonify({"error": str(e)}), 404
+
+    except ValueError as e:
+        return jsonify({"error": str(e)}), 422
+
+    except Exception as e:
+        logger.error(f"[/parse] Parse failed: {e}", exc_info=True)
+        return jsonify({
+            "error": f"Parsing failed: {str(e)}",
+            "type": type(e).__name__,
+        }), 500
+
+    finally:
+        # ── Cleanup: remove ALL temp files ────────────────────────────
+        try:
+            shutil.rmtree(temp_dir, ignore_errors=True)
+            logger.info(f"[/parse] Cleaned up temp directory: {temp_dir}")
+        except Exception as cleanup_err:
+            logger.warning(f"[/parse] Temp cleanup failed: {cleanup_err}")
+
+
+@app.route("/parse/health", methods=["GET"])
+def parse_health():
+    """
+    Health check for the stateless parse endpoint.
+    Verifies S3 connectivity.
+    """
+    s3_status = s3_uploader.verify_s3_config()
+    return jsonify({
+        "status": "healthy" if s3_status["status"] == "ok" else "degraded",
+        "service": "pdf-parser-stateless",
+        "version": "1.0.0",
+        "s3": s3_status,
+    })
+
+
+def _remap_images_to_s3(
+    image_paths: list[str],
+    url_map: dict[str, str],
+) -> list[str]:
+    """
+    Replace local image path references with S3 CDN URLs.
+
+    Args:
+        image_paths: List of relative image paths from parser output.
+        url_map: Mapping of filename → S3 CDN URL.
+
+    Returns:
+        List of S3 CDN URLs (empty strings filtered out).
+    """
+    result = []
+    for path in image_paths:
+        if not path:
+            continue
+        # Extract just the filename from the path
+        # Parser outputs paths like "questions/{exam_id}/filename.png"
+        filename = Path(path).name
+        if filename in url_map and url_map[filename]:
+            result.append(url_map[filename])
+        else:
+            # Image not found in S3 map — keep original reference
+            logger.warning(
+                f"Image not found in S3 map: {path} (filename={filename})"
+            )
+            result.append(path)
+    return result
+
+
+# ─── Legacy Parse Endpoint (with local storage) ─────────────────────────────
 
 
 @app.route("/api/parse", methods=["POST"])
