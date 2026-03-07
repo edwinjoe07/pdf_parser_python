@@ -196,8 +196,10 @@ def parse_stateless():
         Fields:
             file: PDF file (required)
             exam_name: Optional exam name
+            exam_title: Optional exam title
             exam_provider: Optional provider name
             exam_version: Optional version string
+            certificate_name: Optional certificate name
 
     Response (200):
         {
@@ -241,8 +243,10 @@ def parse_stateless():
 
     # ── Read optional metadata ────────────────────────────────────────
     exam_name = request.form.get("exam_name", "") or Path(file.filename).stem
+    exam_title = request.form.get("exam_title", "")
     exam_provider = request.form.get("exam_provider", "")
     exam_version = request.form.get("exam_version", "")
+    certificate_name = request.form.get("certificate_name", "")
 
     # ── Create temp workspace ─────────────────────────────────────────
     temp_dir = tempfile.mkdtemp(prefix="pdf_parser_")
@@ -382,8 +386,10 @@ def parse_stateless():
                 "parser_version": result.parse_version.parser_version,
                 "total_images_uploaded": len(s3_url_map),
                 "exam_name": exam_name,
+                "exam_title": exam_title,
                 "exam_provider": exam_provider,
                 "exam_version": exam_version,
+                "certificate_name": certificate_name,
             },
         }
 
