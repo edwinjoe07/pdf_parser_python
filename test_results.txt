@@ -1,0 +1,246 @@
+PDF: AHIMA/RHIA-qnzvxc.pdf
+  Pages: 464
+  Blocks extracted: 4969
+  Questions parsed: 1828
+  Success rate: 99.78%
+  Missing answer: 0
+  Missing explanation: 1825
+  Duplicates: 0
+  Missing numbers: 0
+  --- Q1 (pages 2-2) ---
+    Text: In preparation for an HER, you are conducting a total facility inventory of all forms currently used. You must name each...
+    Options: 4
+      A. recovery room record.
+      B. pathology report. ✓
+      C. operative report.
+      D. discharge summary.
+    Answer: B
+    Explanation: (none)
+    Anomaly Score: 0
+  --- Q2 (pages 2-2) ---
+    Text: Patient data collection requirements vary according to health care setting. A data element you would expect to be collec...
+    Options: 4
+      A. personal identification.
+      B. cognitive patterns. ✓
+      C. procedures and dates.
+      D. principal diagnosis.
+    Answer: B
+    Explanation: (none)
+    Anomaly Score: 0
+  --- Q3 (pages 2-2) ---
+    Text: A good first step toward protecting the security of data contained in a health information computer system would be to...
+    Options: 4
+      A. establish a good record tracking system.
+      B. define levels of security for different types of information, depending on sensi ✓
+      C. provide remote terminals for improved access to the record.
+      D. provide internet access to facility records.
+    Answer: B
+    Explanation: (none)
+    Anomaly Score: 0
+  ✓ No boilerplate contamination detected
+
+PDF: CIW/1D0-61A-9a4z5a.pdf
+  Pages: 21
+  Blocks extracted: 269
+  Questions parsed: 57
+  Success rate: 100.0%
+  Missing answer: 0
+  Missing explanation: 57
+  Duplicates: 0
+  Missing numbers: 0
+  --- Q1 (pages 2-2) ---
+    Text: You opened an e-mail attachment and it launches a virus. The virus takes control of your system and you are unable to ru...
+    Options: 4
+      A. Let the virus run its course.
+      B. Call your local authorities to report an identity theft.
+      C. Turn off your computer and reboot from a known, clean system disk. ✓
+      D. Plug in your backup drive to try to initiate an immediate backup of important fi
+    Answer: C
+    Explanation: (none)
+    Anomaly Score: 0
+  --- Q2 (pages 2-2) ---
+    Text: You just received a joke that was c-mailed to you by a co-worker. You find the joke funny and consider forwarding it to ...
+    Options: 4
+      A. Forgetting to include others who might find the joke funny
+      B. Copyright infringement by not providing credit to the originator of the joke
+      C. Offending a recipient who receives the joke as a result from further forwarding ✓
+      D. Reducing the effectiveness of spam filters
+    Answer: C
+    Explanation: (none)
+    Anomaly Score: 0
+  --- Q3 (pages 2-2) ---
+    Text: Which of the following strategies is recommended when conducting keyword searches?...
+    Options: 4
+      A. Use nouns instead of verbs for keywords. ✓
+      B. Use verbs instead of nouns for keywords.
+      C. Use as few keywords as possible.
+      D. Include at least one preposition such as “the” or “an” in your list of keywords.
+    Answer: A
+    Explanation: (none)
+    Anomaly Score: 0
+  ✓ No boilerplate contamination detected
+
+PDF: Fortinet/NSE5_FAZ-6.0-21rjtd.pdf
+  Pages: 10
+  Blocks extracted: 124
+  Questions parsed: 25
+  Success rate: 100.0%
+  Missing answer: 0
+  Missing explanation: 25
+  Duplicates: 0
+  Missing numbers: 0
+  --- Q1 (pages 2-2) ---
+    Text: View the exhibit: What does the 1000MB maximum for disk utilization refer to?...
+    Options: 4
+      A. The disk quota for the FortiAnalyzer model
+      B. The disk quota for all devices in the ADOM ✓
+      C. The disk quota for each device in the ADOM
+      D. The disk quota for the ADOM type
+    Answer: B
+    Explanation: (none)
+    Anomaly Score: 0
+  --- Q2 (pages 2-2) ---
+    Text: You’ve moved a registered logging device out of one ADOM and into a new ADOM. What happens when you rebuild the new ADOM...
+    Options: 4
+      A. FortiAnalyzer resets the disk quota of the new ADOM to default.
+      B. FortiAnalyzer migrates archive logs to the new ADOM.
+      C. FortiAnalyzer migrates analytics logs to the new ADOM. ✓
+      D. FortiAnalyzer removes logs from the old ADOM.
+    Answer: C
+    Explanation: (none)
+    Anomaly Score: 0
+  --- Q3 (pages 2-2) ---
+    Text: What happens when a log file saved on FortiAnalyzer disks reaches the size specified in the device log settings?...
+    Options: 4
+      A. The log file is stored as a raw log and is available for analytic support.
+      B. The log file rolls over and is archived. ✓
+      C. The log file is purged from the database.
+      D. The log file is overwritten.
+    Answer: B
+    Explanation: (none)
+    Anomaly Score: 0
+  ✓ No boilerplate contamination detected
+
+PDF: Scrum/SAFE-RTE-sl8wb0.pdf
+  Pages: 120
+  Blocks extracted: 1306
+  Questions parsed: 219
+  Success rate: 100.0%
+  Missing answer: 0
+  Missing explanation: 1
+  Duplicates: 0
+  Missing numbers: 0
+  --- Q1 (pages 2-2) ---
+    Text: Which tool is useful in facilitating scrum of scrums meetings?...
+    Options: 4
+      A. Microsoft project schedule
+      B. Agile lifecycle management software
+      C. Program board ✓
+      D. Team velocity comparison report
+    Answer: C
+    Explanation: The Program Board is a crucial tool used in the SAFe framework to facilitate Scrum of Scrums meeting
+    Anomaly Score: 0
+  --- Q2 (pages 2-2) ---
+    Text: Which two behaviors are an important part of the Release Train Engineer role? (Choose two.)...
+    Options: 5
+      A. Drive teams to specific outcomes
+      B. Provide answers about Features
+      C. Coach leaders to increase alignment ✓
+      D. Encourage teams to self-organize ✓
+      E. Manage dependencies for teams
+    Answer: C, D
+    Explanation: The Release Train Engineer (RTE) is a servant leader and coach for the Agile Release Train (ART). Ac
+    Anomaly Score: 0
+  --- Q3 (pages 3-3) ---
+    Text: Which statement is true about teams?...
+    Options: 4
+      A. Products are more robust when individuals on teams have specific skill sets
+      B. Agile Teams can manage daily interruptions
+      C. Teams are more productive than the same number of individuals ✓
+      D. Changes in team composition do not impact productivity
+    Answer: C
+    Explanation: The SAFe framework emphasizes the importance of teams over individuals in terms of productivity. Acc
+    Anomaly Score: 0
+  ✓ No boilerplate contamination detected
+
+PDF: ISC2/Certified-in-Cybersecurity-lx8zil.pdf
+  Pages: 117
+  Blocks extracted: 1899
+  Questions parsed: 407
+  Success rate: 100.0%
+  Missing answer: 0
+  Missing explanation: 407
+  Duplicates: 0
+  Missing numbers: 0
+  --- Q1 (pages 2-2) ---
+    Text: What is meant by non-repudiation?...
+    Options: 4
+      A. If a user does something, they can't later claim that they didn't do it. ✓
+      B. Controls to protect the organization's reputation from harm due to inappropriate
+      C. It is part of the rules set by administrative controls.
+      D. It is a security feature that prevents session replay attacks.
+    Answer: A
+    Explanation: (none)
+    Anomaly Score: 0
+  --- Q2 (pages 2-2) ---
+    Text: Which of these components is very likely to be instrumental to any disaster recovery (DR) effort?...
+    Options: 4
+      A. Routers
+      B. Laptops
+      C. Firewalls
+      D. Backups ✓
+    Answer: D
+    Explanation: (none)
+    Anomaly Score: 0
+  --- Q3 (pages 2-2) ---
+    Text: Derrick logs on to a system in order to read a file. In this example. Derrick is the______?...
+    Options: 4
+      A. Subject ✓
+      B. Object
+      C. Process
+      D. Predicate
+    Answer: A
+    Explanation: (none)
+    Anomaly Score: 0
+  ✓ No boilerplate contamination detected
+
+PDF: Alibaba/220-1201-1-g14lvs.pdf
+  Pages: 328
+  Blocks extracted: 4851
+  Questions parsed: 312
+  Success rate: 98.72%
+  Missing answer: 4
+  Missing explanation: 7
+  Duplicates: 0
+  Missing numbers: 0
+  --- Q1 (pages 2-2) ---
+    Text: A technician is troubleshooting a connectivity issue on a network computer. The technician runs ipconfig in a command pr...
+    Options: 4
+      A. DHCP reservation assignment
+      B. Dynamic assignment
+      C. Self-assignment ✓
+      D. Static assignment
+    Answer: C
+    Explanation: An IP address starting with169.254.x.xis aself-assigned address(also calledAPIPA– Automatic Private 
+    Anomaly Score: 0
+  --- Q2 (pages 3-3) ---
+    Text: A recently installed printer is incorrectly aligning printed documents Which of the following should the technician do f...
+    Options: 4
+      A. Run the maintenance application. ✓
+      B. Clean the rollers ✓
+      C. Upgrade the firmware ✓
+      D. Reinstall the drivers ✓
+    Answer: A Takeaway: The maintenance application should be run first to resolve alignment issues in a newly installed printer.
+    Explanation: A . Run the maintenance application: Most modern printers include a built-in maintenance application
+    Anomaly Score: 0
+  --- Q3 (pages 4-4) ---
+    Text: An IT specialist compares Bluetooth and NFC technologies for mobile device connectivity. Which of the following statemen...
+    Options: 4
+      A. NFC is faster than Bluetooth when transferring large files between devices.
+      B. NFC consumes more power than Bluetooth, making it less suitable for devices in w
+      C. NFC requires pairing with the receiving host, whereas Bluetooth just needs the a
+      D. NFC works best within a few centimeters, but Bluetooth can connect devices that  ✓
+    Answer: D
+    Explanation: NFC (Near-Field Communication)operates atvery short ranges usually less than 4cm, and is ideal for q
+    Anomaly Score: 0
+  ✓ No boilerplate contamination detected

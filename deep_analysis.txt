@@ -1,0 +1,2204 @@
+
+================================================================================
+FOLDER: AHIMA | FILE: RHIA-qnzvxc.pdf
+================================================================================
+Total Pages: 464
+
+--- PAGE 1 (full text) ---
+Questions and Answers PDF
+1/464
+Thank you for choosing us for your RHIA preparation! 
+We're confident these materials will help you succeed. 
+Best of luck with your studies!
+RHIA
+1828
+
+--- END PAGE 1 ---
+
+--- PAGE 2 (full text) ---
+Question: 1
+In preparation for an HER, you are conducting a total facility inventory of all forms currently used.
+You must name each form for bar coding and indexing into a document management system. The
+unnamed document in front of you includes a microscopic description of tissue excised during
+surgery. The document type you are most likely to give to this form is
+A. recovery room record.
+B. pathology report.
+C. operative report.
+D. discharge summary.
+Answer: B
+Question: 2
+Patient data collection requirements vary according to health care setting. A data element you would
+expect to be collected in the MDS, but not in the UHDDS would be
+A. personal identification.
+B. cognitive patterns.
+C. procedures and dates.
+D. principal diagnosis.
+Answer: B
+Question: 3
+A good first step toward protecting the security of data contained in a health information computer
+system would be to
+A. establish a good record tracking system.
+B. define levels of security for different types of information, depending on sensitivity.
+C. provide remote terminals for improved access to the record.
+D. provide internet access to facility records.
+Answer: B
+Question: 4
+In the number “99-0001” listed in a tumor registry accession register, what does the prefix “99”
+represent?
+Questions and Answers PDF
+2/464
+
+--- END PAGE 2 ---
+
+--- PAGE 2 BLOCK STRUCTURE ---
+  BLOCK[0] type=TEXT bbox=(57.8267707824707, 120.75968933105469, 123.44420623779297, 139.51852416992188)
+    content: 'Question: 1'
+  BLOCK[1] type=TEXT bbox=(57.8267707824707, 154.6642303466797, 508.9373779296875, 213.88247680664062)
+    content: 'In preparation for an HER, you are conducting a total facility inventory of all forms currently used.\nYou must name each form for bar coding and indexing into a document management system. The\nunnamed'
+  BLOCK[2] type=TEXT bbox=(57.8267707824707, 228.83396911621094, 168.8236541748047, 288.0511169433594)
+    content: 'A. recovery room record.\nB. pathology report.\nC. operative report.\nD. discharge summary.'
+  BLOCK[3] type=TEXT bbox=(417.1067810058594, 303.7972717285156, 474.3592529296875, 322.5561218261719)
+    content: 'Answer: B'
+  BLOCK[4] type=TEXT bbox=(57.8267707824707, 338.4975891113281, 123.44420623779297, 357.2564392089844)
+    content: 'Question: 2'
+  BLOCK[5] type=TEXT bbox=(57.8267707824707, 372.4032897949219, 508.9866638183594, 401.9518737792969)
+    content: 'Patient data collection requirements vary according to health care setting. A data element you would\nexpect to be collected in the MDS, but not in the UHDDS would be'
+  BLOCK[6] type=TEXT bbox=(57.8267707824707, 416.9033508300781, 172.6356658935547, 476.1205139160156)
+    content: 'A. personal identification.\nB. cognitive patterns.\nC. procedures and dates.\nD. principal diagnosis.'
+  BLOCK[7] type=TEXT bbox=(417.1067810058594, 491.8677673339844, 474.3592529296875, 510.6266174316406)
+    content: 'Answer: B'
+  BLOCK[8] type=TEXT bbox=(57.8267707824707, 526.568115234375, 123.44420623779297, 545.3269653320312)
+    content: 'Question: 3'
+  BLOCK[9] type=TEXT bbox=(57.8267707824707, 560.4737548828125, 508.9929504394531, 590.0234985351562)
+    content: 'A good first step toward protecting the security of data contained in a health information computer\nsystem would be to'
+  BLOCK[10] type=TEXT bbox=(57.8267707824707, 604.973876953125, 440.97265625, 664.192138671875)
+    content: 'A. establish a good record tracking system.\nB. define levels of security for different types of information, depending on sensitivity.\nC. provide remote terminals for improved access to the record.\nD.'
+  BLOCK[11] type=TEXT bbox=(417.1067810058594, 679.9382934570312, 474.3592529296875, 698.6971435546875)
+    content: 'Answer: B'
+  BLOCK[12] type=TEXT bbox=(57.8267707824707, 714.6386108398438, 123.44420623779297, 733.3974609375)
+    content: 'Question: 4'
+  BLOCK[13] type=TEXT bbox=(57.8267707824707, 748.5431518554688, 509.02996826171875, 778.0928955078125)
+    content: 'In the number “99-0001” listed in a tumor registry accession register, what does the prefix “99”\nrepresent?'
+  BLOCK[14] type=TEXT bbox=(45.119998931884766, 28.35401153564453, 550.1599731445312, 41.15801239013672)
+    content: 'Questions and Answers PDF\n2/464'
+--- END PAGE 2 BLOCK STRUCTURE ---
+
+--- PAGE 3 (full text) ---
+A. the number of primary cancers reported for that patient
+B. the year the case was entered into the database of the registry
+C. the sequence number of the case
+D. the stage of the tumor based upon the TNM system of staging
+Answer: B
+Question: 5
+A risk manager needs to locate a full report of a patient’s fall from his bed, including witness reports
+and probable reasons for the fall. She would most likely find this information in the
+A. doctors’ progress notes.
+B. integrated progress notes.
+C. incident report.
+D. nurses’ notes.
+Answer: C
+Question: 6
+For continuity of care, ambulatory care providers are more likely than providers of acute care
+services to rely on the documentation found in the
+A. interdisciplinary patient care plan.
+B. discharge summary.
+C. transfer record.
+D. problem list.
+Answer: D
+Question: 7
+Joint Commission does not approve of auto authentication of entries in a health record. The primary
+objection to this practice is that
+A. it is too easy to delegate use of computer passwords.
+B. evidence cannot be provided that the physician actually reviewed and approved each report.
+C. electronic signatures are not acceptable in every state.
+D. tampering too often occurs with this method of authentication.
+Answer: B
+Question: 8
+Questions and Answers PDF
+3/464
+
+--- END PAGE 3 ---
+
+--- PAGE 233 (full text) ---
+SPECT bone imaging
+A. 76977
+B. 78320
+C. 77080
+D. 76977
+Answer: B
+Question: 957
+Vitamin B12
+A. 84590
+B. 82180
+C. 84591
+D. 82607
+Answer: D
+Question: 958
+Hepatitis C antibody.
+A. 86804
+B. 86803
+C. 87522
+D. 87520
+Answer: B
+Question: 959
+Creatinine clearance.
+Questions and Answers PDF
+233/464
+
+--- END PAGE 233 ---
+
+--- PAGE 4 (full text) ---
+As part of quality improvement study you have been asked to provide information on the menstrual
+history, number of pregnancies, and number of living children on each OB patient from a stack of old
+obstetrical records the best place in the record to locate this information is the
+A. prenatal record.
+B. labor and delivery record.
+C. postpartum record.
+D. discharge summary.
+Answer: A
+Question: 9
+As a concurrent record reviewer for an acute care facility, you have asked Dr. Crossman to provide an
+updated history and physical for one of her recent admissions. Dr. Crossman pages through the
+medical record to a copy of an H&P performed in her office a week before admission. You tell Dr.
+Crossman.
+A. a new H&P is required for every inpatient admissions.
+B. that you apologize for not noticing the H&P she provided.
+C. the H&P copy is acceptable as long as she documents any interval changes.
+D. Joint Commission standards do not allow copies of any kind in the original record.
+Answer: C
+Question: 10
+As a new CTR, you are interested in identifying every reportable case of cancer from the previous
+year. A key resource will be the facility’s
+A. disease index.
+B. number control index.
+C. physicians’ index.
+D. patient index.
+Answer: A
+Question: 11
+Joint Comission requires the attending physician to countersign health record documentation that is
+entered by
+A. interns or medical students.
+B. midwives.
+C. consulting physicians.
+D. physician partners.
+Questions and Answers PDF
+4/464
+
+--- END PAGE 4 ---
+
+
+================================================================================
+FOLDER: CIW | FILE: 1D0-61A-9a4z5a.pdf
+================================================================================
+Total Pages: 21
+
+--- PAGE 1 (full text) ---
+Questions and Answers PDF
+1/21
+Thank you for choosing us for your 1D0-61A 
+preparation! We're confident these materials 
+will help you succeed. Best of luck with your 
+studies!
+1D0-61A
+57
+
+--- END PAGE 1 ---
+
+--- PAGE 2 (full text) ---
+Question: 1
+You opened an e-mail attachment and it launches a virus. The virus takes control of your system and
+you are unable to run your anti-virus software. Which of the following is the best step for you to take
+next?
+A. Let the virus run its course.
+B. Call your local authorities to report an identity theft.
+C. Turn off your computer and reboot from a known, clean system disk.
+D. Plug in your backup drive to try to initiate an immediate backup of important files.
+Answer: C
+Explanation:
+Question: 2
+You just received a joke that was c-mailed to you by a co-worker. You find the joke funny and consider
+forwarding it to another co-worker that you trust. Which human resources issue do you risk by
+forwarding the e-mail message?
+A. Forgetting to include others who might find the joke funny
+B. Copyright infringement by not providing credit to the originator of the joke
+C. Offending a recipient who receives the joke as a result from further forwarding
+D. Reducing the effectiveness of spam filters
+Answer: C
+Explanation:
+Question: 3
+Which of the following strategies is recommended when conducting keyword searches?
+A. Use nouns instead of verbs for keywords.
+B. Use verbs instead of nouns for keywords.
+C. Use as few keywords as possible.
+Questions and Answers PDF
+2/21
+
+--- END PAGE 2 ---
+
+--- PAGE 2 BLOCK STRUCTURE ---
+  BLOCK[0] type=TEXT bbox=(57.8267707824707, 211.35130310058594, 124.1642074584961, 230.11013793945312)
+    content: 'Question: 1'
+  BLOCK[1] type=TEXT bbox=(57.8267707824707, 245.2570037841797, 508.9954528808594, 289.6404724121094)
+    content: 'You opened an e-mail attachment and it launches a virus. The virus takes control of your system and\nyou are unable to run your anti-virus software. Which of the following is the best step for you to t'
+  BLOCK[2] type=TEXT bbox=(57.8267707824707, 304.5919189453125, 435.4535827636719, 363.8080139160156)
+    content: 'A. Let the virus run its course.\nB. Call your local authorities to report an identity theft.\nC. Turn off your computer and reboot from a known, clean system disk.\nD. Plug in your backup drive to try t'
+  BLOCK[3] type=TEXT bbox=(416.62677001953125, 379.55523681640625, 474.6304626464844, 398.3140869140625)
+    content: 'Answer: C'
+  BLOCK[4] type=TEXT bbox=(57.8267707824707, 413.4598083496094, 113.52427673339844, 428.17578125)
+    content: 'Explanation:'
+  BLOCK[5] type=TEXT bbox=(57.8267707824707, 443.92303466796875, 124.1642074584961, 462.681884765625)
+    content: 'Question: 2'
+  BLOCK[6] type=TEXT bbox=(57.8267707824707, 477.8287048339844, 508.9841003417969, 522.212158203125)
+    content: 'You just received a joke that was c-mailed to you by a co-worker. You find the joke funny and consider\nforwarding it to another co-worker that you trust. Which human resources issue do you risk by\nfor'
+  BLOCK[7] type=TEXT bbox=(57.8267707824707, 537.16357421875, 418.8788146972656, 596.3807983398438)
+    content: 'A. Forgetting to include others who might find the joke funny\nB. Copyright infringement by not providing credit to the originator of the joke\nC. Offending a recipient who receives the joke as a result'
+  BLOCK[8] type=TEXT bbox=(57.8267707824707, 612.126953125, 474.6304626464844, 645.9148559570312)
+    content: 'Answer: C\nExplanation:'
+  BLOCK[9] type=TEXT bbox=(57.8267707824707, 661.6610107421875, 124.1642074584961, 680.4198608398438)
+    content: 'Question: 3'
+  BLOCK[10] type=TEXT bbox=(57.8267707824707, 695.566650390625, 448.5712890625, 710.2826538085938)
+    content: 'Which of the following strategies is recommended when conducting keyword searches?'
+  BLOCK[11] type=TEXT bbox=(57.8267707824707, 725.234130859375, 252.82693481445312, 769.6175537109375)
+    content: 'A. Use nouns instead of verbs for keywords.\nB. Use verbs instead of nouns for keywords.\nC. Use as few keywords as possible.'
+  BLOCK[12] type=TEXT bbox=(45.119998931884766, 28.35401153564453, 550.1599731445312, 41.15801239013672)
+    content: 'Questions and Answers PDF\n2/21'
+--- END PAGE 2 BLOCK STRUCTURE ---
+
+--- PAGE 3 (full text) ---
+D. Include at least one preposition such as “the” or “an” in your list of keywords.
+Answer: A
+Explanation:
+Question: 4
+Evonka is listening to music from an online music provider (such as Pandora or Jango). She builds a
+list of music preferences, including favorite songs. The music service then suggests additional songs
+she might enjoy. The music provider is an example of a cloud-computing application that uses a
+technology for collaborative filtering, which helps define the list of songs available to listeners.
+Which term describes this technology?
+A. Bit-torrent
+B. Crowd sourcing
+C. Grid computing
+D. Software as a Service
+Answer: B
+Explanation:
+Question: 5
+You have just finished designing a Web site to support a charity organization’s fund-raising efforts.
+You need to meet with the board members to get their feedback and address some questions before
+you implement the final design. The board members are dispersed throughout the country and want
+to avoid spending charity funds on traveling to this meeting. Which of the following solutions would
+best support the charity and provide you with an opportunity to discuss the design as a group?
+A. Plan a Web conference using a service such as WebEx or GoToMeeting that supports screen
+sharing and phone conferencing.
+B. Plan a Webinar that reviews the layout of the site and request that board members submit their
+feedback by e-mail after the Webinar.
+C. Create a PowerPoint slideshow that contains pictures of your Web site design and create a survey
+to gather the board members’ feedback.
+D. Create an audio Webcast and distribute it to the board members over the Internet.
+Answer: A
+Explanation:
+Question: 6
+Which of the following is used to help non-technical users collectively classify and find information
+on a site?
+A. Tagging
+Questions and Answers PDF
+3/21
+
+--- END PAGE 3 ---
+
+--- PAGE 11 (full text) ---
+Question: 28
+The official CIW Web site has an IP address of 72.44.192.233. Which technology allows Web users to
+enter the URL www.CIWcertified.com in the browser address bar to access the site, instead of having
+to remember and enter the IP address?
+A. SSL
+B. DNS
+C. HTTP
+D. NNTP
+Answer: B
+Explanation:
+Question: 29
+You have volunteered to give a presentation to the parents at your child’s school about the dangers
+of the Internet. Which of the following would you include in your recommendations to parents?
+A. Warn children to never provide personal information over the Internet.
+B. Direct parents to ask other users in the children’s chat rooms to provide identification.
+C. Remind the parents that the anonymity of chat rooms provides security.
+D. To reduce fear, claim that the threat of predators has been reduced in recent times.
+Answer: A
+Explanation:
+Question: 30
+You have just checked the balance in your bank account by logging into your bank’s Web site. Which
+protocol was most likely used for the transmission of your information?
+A. IMAPS
+B. HTTPS
+C. POP
+D. FTPS
+Answer: B
+Explanation:
+Question: 31
+Consider the following address:
+http://www.CIWcertified.com/certifications/web_foundations/iba.php
+Questions and Answers PDF
+11/21
+
+--- END PAGE 11 ---
+
+--- PAGE 4 (full text) ---
+B. A wiki
+C. Web feed
+D. Ajax
+Answer: A
+Explanation:
+Question: 7
+You received a text and a threatening voicemail from an angry customer who wants to immediately
+discuss the shortcomings of a recently released product. You are about to walk into a mandatory
+meeting with your top-level leadership team. Which of the following is your best course of action?
+A. Continue to send text messages to the customer hoping to smooth things over until you can call
+him on the phone after your meeting.
+B. Request that the customer send his complaints by e-mail, knowing that any inappropriate
+communication will be well documented.
+C. Do not respond to the customer.
+D. Skip the meeting and call the customer.
+Answer: B
+Explanation:
+Question: 8
+Raoul has received a file attachment from a known individual. He has no reason to expect files from
+this individual. Which of the following is an effective security strategy for Raoul to take?
+A. Open the file attachment and use anti-virus software to scan it.
+B. Before opening the attachment, use anti-virus software to scan the system’s hard disk.
+C. Make back-up copies of important files so that it is possible to recover them in case of an incident.
+D. Before opening the attachment, call or send a text or instant message to the individual to verify
+that he or she meant to send it.
+Answer: D
+Explanation:
+Question: 9
+You accidentally dropped your mobile phone, which was submerged in water and no longer works.
+Upon replacing the phone with an upgraded unit you must reconfigure many of the services. The
+instructions say that all you need to do is enter your e-mail address and the unit will configure the e-
+mail client for you. Even though you have tried this several times, it does not work. The mobile
+phone vendor says that because you are trying to sync your e-mail account with an enterprise mail
+server, you will need to configure the e-mail client manually. Which choice lists the information you
+will need to configure the e-mail client?
+Questions and Answers PDF
+4/21
+
+--- END PAGE 4 ---
+
+
+================================================================================
+FOLDER: Alibaba | FILE: 220-1201-1-g14lvs.pdf
+================================================================================
+Total Pages: 328
+
+--- PAGE 1 (full text) ---
+Questions and Answers PDF
+1/328
+220-1201
+312
+
+--- END PAGE 1 ---
+
+--- PAGE 2 (full text) ---
+Product Questions: 312 
+Topic 1, Main Questions
+Question: 1
+A technician is troubleshooting a connectivity issue on a network computer. The technician runs
+ipconfig in a command prompt and receives the following IP address:169.254.0.6. Which of the
+following is most likely the type of IP address being assigned?
+A. DHCP reservation assignment
+B. Dynamic assignment
+C. Self-assignment
+D. Static assignment
+Answer: C
+Explanation:
+Questions and Answers PDF
+2/328
+
+--- END PAGE 2 ---
+
+--- PAGE 2 BLOCK STRUCTURE ---
+  BLOCK[0] type=TEXT bbox=(151.91976928710938, 82.6685791015625, 427.91973876953125, 120.60053253173828)
+    content: 'Product Questions: 312 '
+  BLOCK[1] type=TEXT bbox=(57.8267707824707, 265.38848876953125, 164.3266143798828, 280.1044616699219)
+    content: 'Topic 1, Main Questions'
+  BLOCK[2] type=TEXT bbox=(57.8267707824707, 321.8096618652344, 124.1642074584961, 340.5685119628906)
+    content: 'Question: 1'
+  BLOCK[3] type=TEXT bbox=(57.8267707824707, 368.6937561035156, 484.251953125, 417.31646728515625)
+    content: 'A technician is troubleshooting a connectivity issue on a network computer. The technician runs\nipconfig in a command prompt and receives the following IP address:169.254.0.6. Which of the\nfollowing i'
+  BLOCK[4] type=TEXT bbox=(57.8267707824707, 486.04022216796875, 201.87850952148438, 500.7561950683594)
+    content: 'A. DHCP reservation assignment'
+  BLOCK[5] type=TEXT bbox=(57.8267707824707, 513.853515625, 161.7985076904297, 528.5695190429688)
+    content: 'B. Dynamic assignment'
+  BLOCK[6] type=TEXT bbox=(57.8267707824707, 541.6666870117188, 140.43849182128906, 556.3826904296875)
+    content: 'C. Self-assignment'
+  BLOCK[7] type=TEXT bbox=(57.8267707824707, 569.47998046875, 147.87850952148438, 584.1959838867188)
+    content: 'D. Static assignment'
+  BLOCK[8] type=TEXT bbox=(416.62677001953125, 681.527587890625, 474.6304626464844, 700.2864379882812)
+    content: 'Answer: C'
+  BLOCK[9] type=TEXT bbox=(57.8267707824707, 756.2249145507812, 113.52427673339844, 770.94091796875)
+    content: 'Explanation:'
+  BLOCK[10] type=TEXT bbox=(45.119998931884766, 28.35401153564453, 550.1599731445312, 41.15801239013672)
+    content: 'Questions and Answers PDF\n2/328'
+--- END PAGE 2 BLOCK STRUCTURE ---
+
+--- PAGE 3 (full text) ---
+An IP address starting with169.254.x.xis aself-assigned address(also calledAPIPA– Automatic Private
+IP Addressing). It’s used when a client device cannot contact a DHCP server. This address allows
+limited communication on the local network segment butno internet access.
+Option A:DHCP reservations assign specific IPs from the DHCP server they don’t result in APIPA.
+Option B:Dynamic assignment from DHCP assigns valid IPs in the proper subnet, not 169.254.x.x.
+Option D:Static IPs are manually set and would not fall in the 169.254.x.x range unless set incorrectly.
+CompTIA A+ Core 1 Exam Objective Reference:
+Objective 2.6: Given a scenario, configure and troubleshoot network connectivity.
+Question: 2
+A recently installed printer is incorrectly aligning printed documents Which of the following should
+the technician do first to fix this issue?
+A. Run the maintenance application.
+B. Clean the rollers
+C. Upgrade the firmware
+D. Reinstall the drivers
+Answer: A
+Explanation:
+Questions and Answers PDF
+3/328
+
+--- END PAGE 3 ---
+
+--- PAGE 165 (full text) ---
+C. Sandbox
+D. SaaS
+Answer: B
+Explanation:
+A hypervisor is software or firmware that allows multiple operating systems (virtual machines) to run
+on a single physical host. It manages the allocation of resources and isolation of each VM.
+From CompTIA A+ 220-1101 Official Study Guide, Objective 3.7 – Virtualization concepts:
+“A hypervisor is the key component of virtualization, enabling a physical server to host multiple
+virtual machines (VMs), each with its own OS and resources.”
+Verified Source:
+CompTIA A+ Core 1 (220-1101) Official Study Guide, Chapter 3: Virtualization
+CompTIA Exam Objectives 220-1101, Domain 3.7
+============
+Question: 178
+Which of the following virtualization technologies is best suited for running microservices?
+A. Containers
+B. VDI
+C. Type 2 hypervisors
+D. Type 1 hypervisors
+Questions and Answers PDF
+165/328
+
+--- END PAGE 165 ---
+
+--- PAGE 4 (full text) ---
+A . Run the maintenance application:
+Most modern printers include a built-in maintenance application that can calibrate the print heads
+and correct alignment issues. Running this tool is the first step to address misalignment.
+Incorrect Options:
+B . Clean the rollers: Cleaning rollers is typically done to resolve paper feed or jamming issues, not
+alignment problems.
+C . Upgrade the firmware: While updating firmware is beneficial for performance improvements, it is
+not the first step for fixing alignment.
+D . Reinstall the drivers: Misaligned printing is usually hardware-related, not a driver issue.
+Key Takeaway: The maintenance application should be run first to resolve alignment issues in a newly
+installed printer.
+Reference: CompTIA A+ Core 1 Exam Objectives (220-1201), Domain 5.5 – Printer troubleshooting.
+Question: 3
+An IT specialist compares Bluetooth and NFC technologies for mobile device connectivity. Which of
+the following statements accurately describes a key difference between the two?
+A. NFC is faster than Bluetooth when transferring large files between devices.
+B. NFC consumes more power than Bluetooth, making it less suitable for devices in which battery
+conservation is crucial.
+C. NFC requires pairing with the receiving host, whereas Bluetooth just needs the available
+connection.
+D. NFC works best within a few centimeters, but Bluetooth can connect devices that are up to 32ft
+(10m) apart.
+Questions and Answers PDF
+4/328
+
+--- END PAGE 4 ---
+
+
+================================================================================
+FOLDER: PRINCE2 | FILE: PRINCE2-PRACTITIONER-bpcbvx.pdf
+================================================================================
+Total Pages: 552
+
+--- PAGE 1 (full text) ---
+Questions and Answers PDF
+1/552
+Thank you for choosing us for your PRINCE2 
+Practitioner preparation! We're confident 
+these materials will help you succeed. Best 
+of luck with your studies!
+PRINCE2 Practitioner
+293
+
+--- END PAGE 1 ---
+
+--- PAGE 2 (full text) ---
+Topic 1, PRINCE2 Principles
+Question: 1
+Project Scenario – Health and Safety Training Project:
+ABC Company is a well-established training company that uses a standard model to develop training
+materials and deliver courses to customers.
+ABC Company has commissioned a project in response to recent changes in government legislation
+relating to health and safety on construction sites. The project will deliver “capability to provide
+health and safety training”, including the materials needed for classroom-based training and e-
+learning. The expected benefits for construction companies include a reduction in lost days and legal
+costs due to accidents.
+The e-learning course will be developed by a specialist external consultancy. The materials for
+classroom-based training will be delivered by ABC Company’s development team. All course
+materials will be piloted before they are used. ABC Company will deliver training to its customers
+and also hopes to sell the course materials to other training companies as part of their operational
+business. ABC Company will use their own sales and marketing departments to promote the courses.
+Questions and Answers PDF
+2/552
+
+--- END PAGE 2 ---
+
+--- PAGE 2 BLOCK STRUCTURE ---
+  BLOCK[0] type=TEXT bbox=(57.8267707824707, 265.38848876953125, 178.72666931152344, 280.1044616699219)
+    content: 'Topic 1, PRINCE2 Principles'
+  BLOCK[1] type=TEXT bbox=(57.8267707824707, 321.8096618652344, 124.1642074584961, 340.5685119628906)
+    content: 'Question: 1'
+  BLOCK[2] type=TEXT bbox=(57.8267707824707, 396.5080871582031, 294.0406799316406, 411.22406005859375)
+    content: 'Project Scenario – Health and Safety Training Project:'
+  BLOCK[3] type=TEXT bbox=(57.8267707824707, 452.1345520019531, 503.11517333984375, 483.8033752441406)
+    content: 'ABC Company is a well-established training company that uses a standard model to develop training\nmaterials and deliver courses to customers.'
+  BLOCK[4] type=TEXT bbox=(57.8267707824707, 524.7138671875, 504.81005859375, 607.2401123046875)
+    content: 'ABC Company has commissioned a project in response to recent changes in government legislation\nrelating to health and safety on construction sites. The project will deliver “capability to provide\nheal'
+  BLOCK[5] type=TEXT bbox=(57.8267707824707, 648.1516723632812, 507.69720458984375, 730.6790161132812)
+    content: 'The e-learning course will be developed by a specialist external consultancy. The materials for\nclassroom-based training will be delivered by ABC Company’s development team. All course\nmaterials will '
+  BLOCK[6] type=TEXT bbox=(45.119998931884766, 28.35401153564453, 550.1599731445312, 41.15801239013672)
+    content: 'Questions and Answers PDF\n2/552'
+--- END PAGE 2 BLOCK STRUCTURE ---
+
+--- PAGE 3 (full text) ---
+The legislation requires construction companies to comply with the new legislation within two years.
+The course materials and trainers have to be accredited by a government agency before courses can
+be delivered. ABC Company is planning to deliver pilot courses within five months of starting the
+project.
+The ABC Company standard development model for new courses recommends the following stages:
+End of the Project scenario.
+Additional Information:
+The Chief Executive Officer (CEO) founded the company five years ago. Under her leadership, ABC
+Company has grown quickly into a successful training company. It delivers a range of accredited
+professional training.
+The Finance Director is also a founder member of ABC Company and is responsible for authorizing
+Questions and Answers PDF
+3/552
+
+--- END PAGE 3 ---
+
+--- PAGE 277 (full text) ---
+The service level agreement between MFH and the selected service provider will specify the type
+and quality of service required. The selected service provider must follow the industry standards for
+providing outsourced services.
+MFH has a quality management system which contains a document control procedure for all its
+documentation, however this does not include change management.
+All project documents will be subject to a quality review. Nominated products will require a formal
+approval record signed-off by the quality review chair.
+Extract from the draft Quality Management Strategy (may contain errors)
+Introduction
+1. This document defines the approach to be taken to achieve the required quality levels during the
+project.
+2. The Project Board will have overall responsibility for the Quality Management Strategy.
+3. Project Assurance will provide assurance on the implementation of the Quality Management
+Strategy.
+Quality management procedure - Quality standards
+4. The selected service provider will operate to industry standards for providing outsourced services.
+5. MFH document standards will be used.
+Records
+6. A Quality Register will be maintained to record the planned quality events and the actual results
+from the quality activities.
+7. Configuration Item Records will be maintained for each product to describe its status, version and
+variant.
+8. Approval records for products that require them will be stored in the quality database.
+Roles and responsibilities
+9. The DIT will check that the employment contracts for outsourced staff adhere to employment law.
+Questions and Answers PDF
+277/552
+
+--- END PAGE 277 ---
+
+--- PAGE 4 (full text) ---
+budgets for the Operations and Development Teams. She authorizes all large contracts personally.
+The Purchasing Manager reports to the Finance Director and is responsible for managing and
+monitoring supplier contracts.
+The Operations Director is responsible for the delivery off all training and for the training
+development budget. His department organizes courses, venues and trainers. They work with the
+Product and the Sales teams to provide a comprehensive training schedule. ABC Company’s IT
+manager reports to the Operations Director.
+The Business Development Director has recently been appointed to identify new training needs and
+propose new products. She will work with the Operations. Director to ensure a cost-conscious
+approach and that appropriate development technologies are used for the health and safety course.
+The Training Development Manager reports to the Business Development Director and is responsible
+for developing training materials and gaining accreditation, in accordance with the standard course
+development model. Course developers in his team have skills in a range of development
+technologies and are allocated to projects as needed.
+The Training Delivery Manager, who reports to the Operations Director, is responsible for ensuring
+that internal and external trainers deliver ABC Company training courses to the required standard.
+He also checks course materials to ensure they are fit for purpose and of the required quality.
+The Central Services Director has responsibility for corporate communications, facilities management
+and configuration management. He recently led a project to consolidate all company quality systems
+into one quality management system and set up a corporate quality department, now managed by
+the Corporate Quality Manager.
+The Corporate Document Manager reports to the Central Services Director. She helped establish the
+company’s document management system and now operates it across the business. She manages a
+team of administrators and contracts staff when workload is high.
+Questions and Answers PDF
+4/552
+
+--- END PAGE 4 ---
+
+
+================================================================================
+FOLDER: Fortinet | FILE: NSE5_FAZ-6.0-21rjtd.pdf
+================================================================================
+Total Pages: 10
+
+--- PAGE 1 (full text) ---
+Questions and Answers PDF
+1/10
+Thank you for choosing us for your 
+NSE5_FAZ-6.0 preparation! We're confident 
+these materials will help you succeed. Best 
+of luck with your studies!
+NSE5_FAZ-6.0
+25
+
+--- END PAGE 1 ---
+
+--- PAGE 2 (full text) ---
+Question: 1
+View the exhibit:
+What does the 1000MB maximum for disk utilization refer to?
+A. The disk quota for the FortiAnalyzer model
+B. The disk quota for all devices in the ADOM
+C. The disk quota for each device in the ADOM
+D. The disk quota for the ADOM type
+Answer: B
+Question: 2
+You’ve moved a registered logging device out of one ADOM and into a new ADOM. What happens
+when you rebuild the new ADOM database?
+A. FortiAnalyzer resets the disk quota of the new ADOM to default.
+B. FortiAnalyzer migrates archive logs to the new ADOM.
+C. FortiAnalyzer migrates analytics logs to the new ADOM.
+D. FortiAnalyzer removes logs from the old ADOM.
+Answer: C
+Question: 3
+What happens when a log file saved on FortiAnalyzer disks reaches the size specified in the device
+Questions and Answers PDF
+2/10
+
+--- END PAGE 2 ---
+
+--- PAGE 2 BLOCK STRUCTURE ---
+  BLOCK[0] type=TEXT bbox=(57.8267707824707, 211.35130310058594, 124.1642074584961, 230.11013793945312)
+    content: 'Question: 1'
+  BLOCK[1] type=TEXT bbox=(57.8267707824707, 245.2570037841797, 133.21817016601562, 259.9729919433594)
+    content: 'View the exhibit:'
+  BLOCK[2] type=TEXT bbox=(57.8267707824707, 396.2431945800781, 333.5980224609375, 410.95916748046875)
+    content: 'What does the 1000MB maximum for disk utilization refer to?'
+  BLOCK[3] type=TEXT bbox=(57.8267707824707, 425.9106750488281, 264.44219970703125, 485.1278076171875)
+    content: 'A. The disk quota for the FortiAnalyzer model\nB. The disk quota for all devices in the ADOM\nC. The disk quota for each device in the ADOM\nD. The disk quota for the ADOM type'
+  BLOCK[4] type=TEXT bbox=(416.38677978515625, 500.8739318847656, 474.8359069824219, 519.6328125)
+    content: 'Answer: B'
+  BLOCK[5] type=TEXT bbox=(57.8267707824707, 535.5742797851562, 124.1642074584961, 554.3331298828125)
+    content: 'Question: 2'
+  BLOCK[6] type=TEXT bbox=(57.8267707824707, 569.47998046875, 508.96429443359375, 599.0297241210938)
+    content: 'You’ve moved a registered logging device out of one ADOM and into a new ADOM. What happens\nwhen you rebuild the new ADOM database?'
+  BLOCK[7] type=TEXT bbox=(57.8267707824707, 613.9811401367188, 355.04803466796875, 673.1983032226562)
+    content: 'A. FortiAnalyzer resets the disk quota of the new ADOM to default.\nB. FortiAnalyzer migrates archive logs to the new ADOM.\nC. FortiAnalyzer migrates analytics logs to the new ADOM.\nD. FortiAnalyzer re'
+  BLOCK[8] type=TEXT bbox=(416.62677001953125, 688.9444580078125, 474.6304626464844, 707.7033081054688)
+    content: 'Answer: C'
+  BLOCK[9] type=TEXT bbox=(57.8267707824707, 723.644775390625, 124.1642074584961, 742.4036254882812)
+    content: 'Question: 3'
+  BLOCK[10] type=TEXT bbox=(57.8267707824707, 757.54931640625, 508.945556640625, 772.2653198242188)
+    content: 'What happens when a log file saved on FortiAnalyzer disks reaches the size specified in the device'
+  BLOCK[11] type=TEXT bbox=(45.119998931884766, 28.35401153564453, 550.1599731445312, 41.15801239013672)
+    content: 'Questions and Answers PDF\n2/10'
+--- END PAGE 2 BLOCK STRUCTURE ---
+
+--- PAGE 3 (full text) ---
+log settings?
+A. The log file is stored as a raw log and is available for analytic support.
+B. The log file rolls over and is archived.
+C. The log file is purged from the database.
+D. The log file is overwritten.
+Answer: B
+Question: 4
+What is the purpose of employing RAID with FortiAnalyzer?
+A. To introduce redundancy to your log data
+B. To provide data separation between ADOMs
+C. To separate analytical and archive data
+D. To back up your logs
+Answer: A
+Question: 5
+Which FortiAnalyzer feature allows you to retrieve the archived logs matching a specific timeframe
+from another FortiAnalyzer device?
+A. Log upload
+B. Indicators of Compromise
+C. Log forwarding an aggregation mode
+D. Log fetching
+Answer: D
+Question: 6
+What is the recommended method of expanding disk space on a FortiAnalyzer VM?
+A. From the VM host manager, add an additional virtual disk and use the #execute lvm extend <disk
+number> command to expand the storage
+B. From the VM host manager, expand the size of the existing virtual disk
+C. From the VM host manager, expand the size of the existing virtual disk and use the # execute
+format disk command to reformat the disk
+D. From the VM host manager, add an additional virtual disk and rebuild your RAID array
+Answer: A
+Questions and Answers PDF
+3/10
+
+--- END PAGE 3 ---
+
+--- PAGE 6 (full text) ---
+Why is the total quota less than the total system storage?
+A. 3.6% of the system storage is already being used.
+B. Some space is reserved for system use, such as storage of compression files, upload files, and
+temporary report files
+C. The oftpd process has not archived the logs yet
+D. The logfiled process is just estimating the total quota
+Answer: B
+Question: 15
+What purposes does the auto-cache setting on reports serve? (Choose two.)
+A. To reduce report generation time
+B. To automatically update the hcache when new logs arrive
+C. To reduce the log insert lag rate
+D. To provide diagnostics on report generation time
+Answer: AB
+Question: 16
+If you upgrade your FortiAnalyzer firmware, what report elements can be affected?
+A. Output profiles
+B. Report settings
+C. Report scheduling
+D. Custom datasets
+Answer: D
+Question: 17
+How does FortiAnalyzer retrieve specific log data from the database?
+Questions and Answers PDF
+6/10
+
+--- END PAGE 6 ---
+
+--- PAGE 4 (full text) ---
+Question: 7
+How are logs forwarded when FortiAnalyzer is using aggregation mode?
+A. Logs are forwarded as they are received and content files are uploaded at a scheduled time.
+B. Logs and content files are stored and uploaded at a scheduled time.
+C. Logs are forwarded as they are received.
+D. Logs and content files are forwarded as they are received.
+Answer: B
+Question: 8
+How do you restrict an administrator’s access to a subset of your organization’s ADOMs?
+A. Set the ADOM mode to Advanced
+B. Assign the ADOMs to the administrator’s account
+C. Configure trusted hosts
+D. Assign the default Super_User administrator profile
+Answer: B
+Question: 9
+In order for FortiAnalyzer to collect logs from a FortiGate device, what configuration is required?
+(Choose two.)
+A. Remote logging must be enabled on FortiGate
+B. Log encryption must be enabled
+C. ADOMs must be enabled
+D. FortiGate must be registered with FortiAnalyzer
+Answer: AD
+Question: 10
+What can the CLI command # diagnose test application oftpd 3 help you to determine?
+A. What devices and IP addresses are connecting to FortiAnalyzer
+B. What logs, if any, are reaching FortiAnalyzer
+C. What ADOMs are enabled and configured
+D. What devices are registered and unregistered
+Answer: A
+Questions and Answers PDF
+4/10
+
+--- END PAGE 4 ---
+
+
+================================================================================
+FOLDER: American College | FILE: HS330-znhukr.pdf
+================================================================================
+Total Pages: 132
+
+--- PAGE 1 (full text) ---
+Questions and Answers PDF
+1/132
+Thank you for choosing us for your HS330 
+preparation! We're confident these materials 
+will help you succeed. Best of luck with your 
+studies!
+HS330
+400
+
+--- END PAGE 1 ---
+
+--- PAGE 2 (full text) ---
+Question: 1
+Which of the following is an example of a taxable gift for federal gift tax purposes?
+A. A father gives his 19-year-old daughter a note promising to give her his Rolls Royce when she
+reaches the age of 21.
+B. Instead of parents paying an outside executive $60,000, a son runs their business for 8 months
+without charging a fee.
+C. The parents of a married son permit their son and his family to use a summer cottage that rents
+for $3,000 per month on a rent-free basis.
+D. A father cancels a $50,000 note his daughter gave him when he made a loan to her 2 years ago.
+Answer: D
+Question: 2
+The following are facts concerning a decedent’s estate:
+Taxable estate $1.700, 000
+Pre-1977 taxable gifts 200, 000
+Post-1976 adjusted taxable gifts 50, 000
+Post-1976 gifts made to a qualified charity 100, 000
+The tentative tax base of this estate is
+A. $1,700,000
+B. $1,750,000
+C. $1,850,000
+D. $1,900,000
+Answer: B
+Question: 3
+An executor elects to value the assets of the estate at the alternative valuation date 6 months after
+death. Which of the following statements concerning the estate tax value of assets included in this
+estate is correct?
+A. An annuity included in the gross estate that diminishes with the mere passage of time is includible
+at the date of death value.
+B. Property sold before the alternate valuation date is valued at the alternate valuation date.
+C. Property that has increased in value since the date of death may be valued at the date of death if
+the executor so elects.
+D. Property distributed under the will before the alternate valuation date is valued at the date of
+Questions and Answers PDF
+2/132
+
+--- END PAGE 2 ---
+
+--- PAGE 2 BLOCK STRUCTURE ---
+  BLOCK[0] type=TEXT bbox=(57.8267707824707, 118.90531921386719, 124.1642074584961, 137.66415405273438)
+    content: 'Question: 1'
+  BLOCK[1] type=TEXT bbox=(57.8267707824707, 152.81053161621094, 423.5925598144531, 167.52651977539062)
+    content: 'Which of the following is an example of a taxable gift for federal gift tax purposes?'
+  BLOCK[2] type=TEXT bbox=(57.8267707824707, 182.47801208496094, 508.9814453125, 286.1963806152344)
+    content: 'A. A father gives his 19-year-old daughter a note promising to give her his Rolls Royce when she\nreaches the age of 21.\nB. Instead of parents paying an outside executive $60,000, a son runs their busi'
+  BLOCK[3] type=TEXT bbox=(415.9067687988281, 301.9429016113281, 475.3163757324219, 320.7017517089844)
+    content: 'Answer: D'
+  BLOCK[4] type=TEXT bbox=(57.8267707824707, 336.6432800292969, 124.1642074584961, 355.4021301269531)
+    content: 'Question: 2'
+  BLOCK[5] type=TEXT bbox=(57.8267707824707, 370.5484924316406, 302.20263671875, 459.4331359863281)
+    content: 'The following are facts concerning a decedent’s estate:\nTaxable estate $1.700, 000\nPre-1977 taxable gifts 200, 000\nPost-1976 adjusted taxable gifts 50, 000\nPost-1976 gifts made to a qualified charity '
+  BLOCK[6] type=TEXT bbox=(57.8267707824707, 474.3846130371094, 119.54641723632812, 533.601806640625)
+    content: 'A. $1,700,000\nB. $1,750,000\nC. $1,850,000\nD. $1,900,000'
+  BLOCK[7] type=TEXT bbox=(416.38677978515625, 549.3483276367188, 474.8359069824219, 568.107177734375)
+    content: 'Answer: B'
+  BLOCK[8] type=TEXT bbox=(57.8267707824707, 584.0487060546875, 124.1642074584961, 602.8075561523438)
+    content: 'Question: 3'
+  BLOCK[9] type=TEXT bbox=(57.8267707824707, 617.9539184570312, 509.0057067871094, 662.3373413085938)
+    content: 'An executor elects to value the assets of the estate at the alternative valuation date 6 months after\ndeath. Which of the following statements concerning the estate tax value of assets included in thi'
+  BLOCK[10] type=TEXT bbox=(57.8267707824707, 677.288818359375, 508.9936218261719, 766.1734619140625)
+    content: 'A. An annuity included in the gross estate that diminishes with the mere passage of time is includible\nat the date of death value.\nB. Property sold before the alternate valuation date is valued at the'
+  BLOCK[11] type=TEXT bbox=(45.119998931884766, 28.35401153564453, 550.1599731445312, 41.15801239013672)
+    content: 'Questions and Answers PDF\n2/132'
+--- END PAGE 2 BLOCK STRUCTURE ---
+
+--- PAGE 3 (full text) ---
+death.
+Answer: A
+Question: 4
+A father and son have been farming land owned by the father for the past 12 years. Just prior to his
+death, the father was offered $1200, 000 for his farm because of its possible use as a shopping
+center. The son would like to continue to farm the land if it can be included in his father’s estate at its
+current use value. Additional facts are:
+1. Average annual gross rentals from nearby farms of similar acreage are $56,000.
+2. Average annual state and local real estate taxes on the farm are $6,000.
+3. The interest rate for loans from the Federal Land Sank is 8 percent.
+For federal estate tax purposes, the farm method valuation formula would result in a current use
+value for the farm of
+A. $500,000
+B. $600,000
+C. $700,000
+D. $820,000
+Answer: B
+Question: 5
+Which of the following types of real properly ownership will be deemed to be a tenancy in common?
+A. Two brothers own equal amounts of all the common stock in a corporation, the only asset of
+which is real property.
+B. Two brothers own equal undivided interests in a piece of real properly, with each brother being
+able to divest himself of his interest by sale, gift, or will.
+C. Two brothers are equal partners in a general partnership that owns a piece of real property used in
+the partnership business.
+D. Two brothers own equal fractional interests in a piece of real property and at the death of one of
+the brothers the survivor will own the entire piece of property.
+Answer: B
+Question: 6
+Which of the following statements concerning property ownership by a married couple residing in a
+community-property state is correct?
+A. All property owned by the couple is community property.
+B. Community property loses its identity when a couple moves from a community-property state to a
+common-law state.
+Questions and Answers PDF
+3/132
+
+--- END PAGE 3 ---
+
+--- PAGE 67 (full text) ---
+A. Nonqualified joint tenants may have unequal interests in the property.
+B. Qualified joint tenancies cannot be severed without mutual consent.
+C. Upon the death of a joint tenant, the surviving joint tenant receives the decedent’s interest by
+operation of law.
+D. This form of ownership is limited to real property.
+Answer: C
+Question: 203
+A man died in February of this year. Last year, when he learned that he had terminal illness, he
+immediately made the following gifts and filed the required gift tax return:
+Fair Market Value
+Gift of listed stock to a
+qualified charity $200,000
+Gift of listed bonds to his wife 300,000
+Gift of a boat to his son 10,000
+Gift of a sports car to his daughter 10,000
+What amount must be brought back to the man’s estate as an adjusted taxable gift in the calculation
+of his federal estate taxes?
+A. 0
+B. $200,000
+C. $290,000
+D. $520,000
+Answer: A
+Question: 204
+A father and son have been farming land owned by the father for the past 12 years. Just prior to his
+death, the father was offered $900,000 for his farm because of its possible use as a shopping center.
+The son would like to continue to farm the land if it can be included in his father’s estate at its
+current use value. Additional facts are:
+1 Average annual gross rentals from nearby farms of similar acreage are $36,000.
+2.Average annual state and local real estate taxes on the farm are $4,000.
+3.The interest rate for loans from the Federal Land Bank is 8 percent. For federal estate tax purposes,
+the farm method valuation formula would result in a current use value for the farm of
+A. $300,000
+B. $400,000
+C. $500,000
+D. $600,000
+Answer: B
+Questions and Answers PDF
+67/132
+
+--- END PAGE 67 ---
+
+--- PAGE 4 (full text) ---
+C. Property inherited by one spouse during a marriage becomes community property
+D. Income earned by one spouse becomes community property.
+Answer: D
+Question: 7
+Which of the following statements concerning a simple trust is correct?
+A. Income and principal may be distributed to a qualified charily.
+B. It receives a special tax deduction for income distributed to its beneficiaries.
+C. Income is accumulated at the discretion of the trustee.
+D. It limits the number of permissible beneficiaries.
+Answer: B
+Question: 8
+On the advice of their attorney and accountant, Betsy and John have decided to make substantial
+transfers. They would like to pass most of their considerable wealth to their grandchildren. Which of
+the following statements concerning gifts made to their grandchildren is correct?
+A. The GSTT annual exclusion may be utilized by Betsy and John for each grandchild during life time
+and at death.
+B. The value of Betsy and John’s GSTT exemption amounts are slightly increased when used at death
+rather than during life time.
+C. The GSTT annual exclusion is unavailable for years in which Betsy and John make tuition gifts for
+the grandchildren.
+D. Betsy and John may elect to split any GSTT transfers to the grandchildren.
+Answer: D
+Question: 9
+The decedent, D, died this year. The facts concerning D estate are:
+Gross estate $3,400,000
+Marital deduction 0
+Charitable deduction 600,000
+Funeral & administration expenses 00,000
+Gifts made after 1976 170,000
+State death taxes payable 192,000
+What is D taxable estate?
+A. $2,138,000
+B. $2,358,000
+C. $2,528,000
+Questions and Answers PDF
+4/132
+
+--- END PAGE 4 ---
+
+
+================================================================================
+FOLDER: Scrum | FILE: SAFE-RTE-sl8wb0.pdf
+================================================================================
+Total Pages: 120
+
+--- PAGE 1 (full text) ---
+Questions and Answers PDF
+1/120
+Thank you for choosing us for your SAFe-
+RTE preparation! We're confident these 
+materials will help you succeed. Best of luck 
+with your studies!
+SAFe-RTE
+219
+
+--- END PAGE 1 ---
+
+--- PAGE 2 (full text) ---
+Question: 1
+Which tool is useful in facilitating scrum of scrums meetings?
+A. Microsoft project schedule
+B. Agile lifecycle management software
+C. Program board
+D. Team velocity comparison report
+Answer: C
+Explanation:
+ The Program Board is a crucial tool used in the SAFe framework to facilitate Scrum of Scrums
+meetings. It helps visualize the features planned for the current Program Increment (PI), along with
+the dependencies between different teams. This board is instrumental during the PI planning
+process, where Release Train Engineers (RTEs) and teams identify and highlight these dependencies
+to ensure alignment and coordination across the Agile Release Train (ART). The Program Board thus
+provides a clear and shared understanding of the ART’s objectives and aids in the management of
+cross-team dependencies, which is essential during Scrum of Scrums meetings12.
+Question: 2
+Which two behaviors are an important part of the Release Train Engineer role? (Choose two.)
+A. Drive teams to specific outcomes
+B. Provide answers about Features
+C. Coach leaders to increase alignment
+D. Encourage teams to self-organize
+E. Manage dependencies for teams
+Answer: C, D
+Explanation:
+The Release Train Engineer (RTE) is a servant leader and coach for the Agile Release Train
+(ART). According to the information provided by the Scaled Agile Framework, two of the key
+behaviors of an RTE include coaching leaders to increase alignment and encouraging teams to self-
+organize1.
+Questions and Answers PDF
+2/120
+
+--- END PAGE 2 ---
+
+--- PAGE 2 BLOCK STRUCTURE ---
+  BLOCK[0] type=TEXT bbox=(57.8267707824707, 196.5176239013672, 124.1642074584961, 215.27645874023438)
+    content: 'Question: 1'
+  BLOCK[1] type=TEXT bbox=(57.8267707824707, 230.4221649169922, 330.0106201171875, 245.13815307617188)
+    content: 'Which tool is useful in facilitating scrum of scrums meetings?'
+  BLOCK[2] type=TEXT bbox=(57.8267707824707, 260.09075927734375, 233.43092346191406, 319.3078918457031)
+    content: 'A. Microsoft project schedule\nB. Agile lifecycle management software\nC. Program board\nD. Team velocity comparison report'
+  BLOCK[3] type=TEXT bbox=(416.62677001953125, 335.0540466308594, 474.6304626464844, 353.8128967285156)
+    content: 'Answer: C'
+  BLOCK[4] type=TEXT bbox=(57.8267707824707, 368.9586181640625, 501.77081298828125, 487.51177978515625)
+    content: 'Explanation:\n\xa0The Program Board is a crucial tool used in the SAFe framework to facilitate Scrum of Scrums\nmeetings. It helps visualize the features planned for the current Program Increment (PI), alo'
+  BLOCK[5] type=TEXT bbox=(57.8267707824707, 503.2579040527344, 124.1642074584961, 522.0167846679688)
+    content: 'Question: 2'
+  BLOCK[6] type=TEXT bbox=(57.8267707824707, 537.16357421875, 472.2476806640625, 551.8795776367188)
+    content: 'Which two behaviors are an important part of the Release Train Engineer role? (Choose two.)'
+  BLOCK[7] type=TEXT bbox=(57.8267707824707, 566.8310546875, 230.6756134033203, 640.8820190429688)
+    content: 'A. Drive teams to specific outcomes\nB. Provide answers about Features\nC. Coach leaders to increase alignment\nD. Encourage teams to self-organize\nE. Manage dependencies for teams'
+  BLOCK[8] type=TEXT bbox=(408.94677734375, 656.6281127929688, 482.5163879394531, 675.386962890625)
+    content: 'Answer: C, D'
+  BLOCK[9] type=TEXT bbox=(57.8267707824707, 690.5338134765625, 496.768310546875, 764.584716796875)
+    content: 'Explanation:\nThe Release Train Engineer (RTE) is a servant leader and coach for the Agile Release Train\n(ART).\xa0According to the information provided by the Scaled Agile Framework, two of the key\nbehav'
+  BLOCK[10] type=TEXT bbox=(45.119998931884766, 28.35401153564453, 550.1599731445312, 41.15801239013672)
+    content: 'Questions and Answers PDF\n2/120'
+--- END PAGE 2 BLOCK STRUCTURE ---
+
+--- PAGE 3 (full text) ---
+Coaching Leaders to Increase Alignment: The RTE has a responsibility to coach leaders, teams, and
+Scrum Masters in Lean-Agile practices and mindsets. This coaching is aimed at increasing alignment
+at all levels of the organization, which is essential for the success of the ART.
+Encouraging Teams to Self-Organize: While the RTE facilitates ART events and processes, they also
+support the teams in delivering value. A fundamental aspect of this support is encouraging teams to
+self-organize, which is aligned with the principles of Lean and Agile that emphasize team autonomy
+and empowerment1.
+These behaviors are crucial as they help ensure that the ART operates effectively within the SAFe
+framework, delivering value continuously and efficiently.
+Question: 3
+Which statement is true about teams?
+A. Products are more robust when individuals on teams have specific skill sets
+B. Agile Teams can manage daily interruptions
+C. Teams are more productive than the same number of individuals
+D. Changes in team composition do not impact productivity
+Answer: C
+Explanation:
+ The SAFe framework emphasizes the importance of teams over individuals in terms of productivity.
+According to SAFe, Agile teams are cross-functional groups that have all the skills necessary to
+define, build, test, and where applicable, deploy value in short, sustainable bursts of work. This cross-
+functionality and collaboration enable teams to be more productive and deliver value more
+effectively than individuals working separately. The Release Train Engineer (RTE) role within SAFe is
+designed to support these teams by facilitating ART events and processes, helping manage risks, and
+driving relentless improvement, which further enhances team productivity1.
+Question: 4
+Which one SAFe core value creates an environment where facts are always friendly?
+A. Transparency
+B. Respect for People and Culture
+C. Flow
+D. Innovation
+Answer: A
+Explanation:
+The core value of Transparency in SAFe is key to creating an environment where “facts are always
+friendly.” This is because transparency encourages an open culture where information is shared
+openly, and everyone has access to the facts, which allows for better decision-making and fosters
+trust within the organization. The SAFe Core Values page explains that transparency is one of the four
+core values that guide the behaviors and actions of everyone participating in a SAFe portfolio. It
+Questions and Answers PDF
+3/120
+
+--- END PAGE 3 ---
+
+--- PAGE 61 (full text) ---
+A. The Solution Owner
+B. The Scrum Master
+C. The team
+D. The Product Owner
+Answer: C
+Explanation:
+Iteration goals are a high-level summary of the business and technical goals that the Agile Team
+agrees to accomplish in an Iteration. As described in the Iteration Planning article on the SAFe
+website, the planning process produces a set of committed iteration goals. These goals are agreed
+upon by the Agile Team, which aligns team members to a common purpose and aligns teams to
+common Program Increment (PI) Objectives. It is the Agile Team that commits to the iteration goals,
+providing transparency and management information, and ensuring alignment and the ability to
+make necessary adjustments during the execution of the Planning Interval1.
+Question: 113
+Who are two key collaborators with the RTE to support the ART? (Choose two)
+A. Release Management
+B. System Architects/Engineers
+C. Product Owners
+D. Scrum Masters
+E. Product Management
+Answer: B, E
+Explanation:
+According to the SAFe 6 Release Train Engineer documentation, the Release Train Engineer (RTE) is a
+servant leader and coach for the Agile Release Train (ART). The RTE’s role involves facilitating ART
+events and processes, assisting teams in delivering value, communicating with stakeholders,
+escalating impediments, managing risk, and driving relentless improvement.
+Key collaborators with the RTE include:
+System Architects/Engineers1: They collaborate with the RTE to ensure that the architectural vision
+and technical aspects are integrated into the ART’s work, supporting the teams in delivering a
+solution that is technically robust and aligns with the organization’s strategic goals.
+Product Management1: They work closely with the RTE to align the ART with the product vision and
+roadmap, ensuring that the features developed by the teams contribute to the overall strategy and
+deliver value to the customers.
+These roles are essential for the effective functioning of the ART, providing the necessary technical
+guidance and strategic alignment to support the RTE in leading the ART towards successful delivery.
+Question: 114
+In the SAFe work item hierarchy, Features are decomposed into what?
+Questions and Answers PDF
+61/120
+
+--- END PAGE 61 ---
+
+--- PAGE 4 (full text) ---
+emphasizes that work and decisions must be visible, debated, resolved, and transparent to ensure
+alignment and enable the building of trust through a culture where facts can be discussed openly1.
+Question: 5
+The business must depend on the team for what in order to do any meaningful planning?
+A. Team capabilities
+B. Commitment to the plan
+C. Measurements
+D. A cross-functional skill set
+Answer: A
+Explanation:
+The business must depend on the team’s capabilities to do any meaningful planning. This is because
+the team’s capabilities determine the amount and complexity of work they can handle during a
+Program Increment (PI). SAFe emphasizes the importance of understanding the team’s capacity and
+skills to ensure that the planning is realistic and achievable1.
+During PI planning, teams create PI objectives they intend to accomplish in the upcoming PI. These
+objectives are based on the team’s understanding of their capacity and the features they need to
+deliver. The process requires estimating and planning, knowledge of the team’s capacity, analysis of
+upcoming features, defining stories for the Team Backlog, and summarizing the information into
+simple business terms everyone can understand2.
+Furthermore, the Release Train Engineer (RTE) plays a vital role in facilitating PI planning events,
+which align all the teams on the Agile Release Train (ART) to a shared mission and vision. The RTE
+helps ensure planning readiness, which includes leadership and team preparedness for the event
+(content readiness), part of which is understanding the team’s capabilities1.
+Question: 6
+How can a ReleaseTrain Engineer be aware of employee satisfaction?
+A. Gather employee Metrics immediately after the Agile Release Train launches
+B. Address and resolve any problems areas
+C. Conduct an employee Net Promoter Score survey
+D. Survey full-time employees
+Answer: C
+Explanation:
+The Release Train Engineer (RTE) in SAFe® is responsible for facilitating ART events and processes,
+and part of this role involves understanding and improving team and employee satisfaction. One
+effective method for assessing employee satisfaction within an organization is through the use of an
+employee Net Promoter Score (eNPS) survey1. This survey measures the willingness of employees to
+recommend their workplace to friends and acquaintances. An eNPS survey is a tool that can provide
+Questions and Answers PDF
+4/120
+
+--- END PAGE 4 ---
+
+
+================================================================================
+FOLDER: Tableau | FILE: SCA-C01-qtu4sr.pdf
+================================================================================
+Total Pages: 64
+
+--- PAGE 1 (full text) ---
+Questions and Answers PDF
+1/64
+Thank you for choosing us for your 
+SCA-C01 preparation! We're confident 
+these materials will help you succeed. 
+Best of luck with your studies!
+SCA-C01
+186
+
+--- END PAGE 1 ---
+
+--- PAGE 2 (full text) ---
+Question: 1
+Select the correct statements that pertain to static and dynamic IP addresses when running Tableau
+Server:
+A. For a single-node installation of Tableau Server, a static IP address must be used
+B. For a single-node installation of Tableau Server, a dynamic IP address must be used
+C. For a multi-node installation of Tableau Server, a static IP address must be used
+D. For a multi-node installation of Tableau Server, a dynamic IP address must be used
+Answer: A, C
+Explanation:
+Link
+to
+Tableau
+Server
+documentation:
+https://help.tableau.com/current/server/en-
+us/distrib_requ.htm
+Question: 2
+As defined in the End User License Agreement, how many non-production environments are allowed
+for a Tableau Server license?
+A. 2
+B. 1
+C. 3
+D. 4
+E. 5
+Answer: A
+Explanation:
+Link to Tableau Server documentation: https://kb.tableau.com/articles/howto/test-environment-
+license
+Question: 3
+Which of the following are correct statements that describe silent installs? (Select all)
+A. To start Tableau Server, use tbcmd start
+B. To start Tableau Server, use tsm start
+Questions and Answers PDF
+2/64
+
+--- END PAGE 2 ---
+
+--- PAGE 2 BLOCK STRUCTURE ---
+  BLOCK[0] type=TEXT bbox=(57.8267707824707, 196.5176239013672, 124.1642074584961, 215.27645874023438)
+    content: 'Question: 1'
+  BLOCK[1] type=TEXT bbox=(57.8267707824707, 230.4221649169922, 508.9915466308594, 259.9729919433594)
+    content: 'Select the correct statements that pertain to static and dynamic IP addresses when running Tableau\nServer:'
+  BLOCK[2] type=TEXT bbox=(57.8267707824707, 274.92449951171875, 437.4791259765625, 334.1416320800781)
+    content: 'A. For a single-node installation of Tableau Server, a static IP address must be used\nB. For a single-node installation of Tableau Server, a dynamic IP address must be used\nC. For a multi-node install'
+  BLOCK[3] type=TEXT bbox=(408.94677734375, 349.8877868652344, 482.3104553222656, 368.6466369628906)
+    content: 'Answer: A, C'
+  BLOCK[4] type=TEXT bbox=(57.8267707824707, 383.7923583984375, 509.0083312988281, 447.84814453125)
+    content: 'Explanation:\nLink\nto\nTableau\nServer\ndocumentation:\nhttps://help.tableau.com/current/server/en-\nus/distrib_requ.htm\nQuestion: 2'
+  BLOCK[5] type=TEXT bbox=(57.8267707824707, 462.993896484375, 508.9903869628906, 492.544677734375)
+    content: 'As defined in the End User License Agreement, how many non-production environments are allowed\nfor a Tableau Server license?'
+  BLOCK[6] type=TEXT bbox=(57.8267707824707, 507.49615478515625, 75.12320709228516, 581.5470581054688)
+    content: 'A. 2\nB. 1\nC. 3\nD. 4\nE. 5'
+  BLOCK[7] type=TEXT bbox=(416.14678955078125, 597.293212890625, 475.2222900390625, 616.0520629882812)
+    content: 'Answer: A'
+  BLOCK[8] type=TEXT bbox=(57.8267707824707, 631.1988525390625, 509.0083312988281, 695.2535400390625)
+    content: 'Explanation:\nLink to Tableau Server documentation: https://kb.tableau.com/articles/howto/test-environment-\nlicense\nQuestion: 3'
+  BLOCK[9] type=TEXT bbox=(57.8267707824707, 710.400390625, 436.9646911621094, 725.1163940429688)
+    content: 'Which of the following are correct statements that describe silent installs? (Select all)'
+  BLOCK[10] type=TEXT bbox=(57.8267707824707, 740.0667114257812, 243.8881378173828, 769.6175537109375)
+    content: 'A. To start Tableau Server, use tbcmd start\nB. To start Tableau Server, use tsm start'
+  BLOCK[11] type=TEXT bbox=(45.119998931884766, 28.35401153564453, 550.1599731445312, 41.15801239013672)
+    content: 'Questions and Answers PDF\n2/64'
+--- END PAGE 2 BLOCK STRUCTURE ---
+
+--- PAGE 3 (full text) ---
+C. Tableau Server does not start automatically when installed in /silent or /quiet mode
+D. Tableau Server does not start automatically when installed in /silent or /hush mode
+Answer: B, C
+Explanation:
+Link
+to
+Tableau
+Server
+documentation:
+https://help.tableau.com/current/server/en-
+us/silent_installer_flags.htm
+Question: 4
+What is the minimum number of Tableau Server nodes required to satisfy High Availability (HA)
+requirements?
+A. 6
+B. 4
+C. 3
+D. 2
+E. 8
+Answer: C
+Explanation:
+Link
+to
+Tableau
+Server
+documentation:
+https://help.tableau.com/current/server/en-
+us/server_process_coordination.htm
+Question: 5
+Which Tableau Server process is being described?
+• Runs server tasks, including extract refreshes, subscriptions, ‘Run Now’ tasks
+• Tasks initiated from tabcmd
+A. Backgrounder
+B. Application Server
+C. Ask Data
+D. Cache Server
+Answer: A
+Explanation:
+Link to Tableau Server documentation:
+https://help.tableau.com/current/server/en-us/processes.htm
+Question: 6
+Select the INCORRECT statement about the default configuration rule for the following Tableau
+Server processes:
+Questions and Answers PDF
+3/64
+
+--- END PAGE 3 ---
+
+--- PAGE 33 (full text) ---
+Question: 96
+Which tsm command is being described?
+"Clears the initial admin user so that you can enter a new one. After running this command, you
+must rerun tabcmd initialuser to create a new initial admin."
+A. tsm reset
+B. tsm restart
+C. tsm reload
+D. tsm recommence
+Answer: A
+Explanation:
+Link to Tableau Server documentation:
+https://help.tableau.com/current/server/en-us/cli_reset_tsm.htm
+Question: 97
+Which tsm command should you run to show help for all tsm commands?
+A. tsm assist
+B. tsm ?
+C. tsm help
+D. tsm list-commands
+Answer: C
+Explanation:
+Link to Tableau Server documentation:
+https://help.tableau.com/current/server-linux/en-us/tsm.htm#synopsis
+Question: 98
+Select the correct Tableau Server monitoring tool that is being described:
+• A “point-and-run” load and performance testing tool specifically designed to work easily with
+Tableau Server
+• Used to inform scalability and capacity needs for Tableau Server
+• Used to establish a baseline for server performance and test deployments before pushing them to
+production environments
+A. TabMon
+B. TabJolt
+C. Scout
+D. Replayer
+Answer: B
+Questions and Answers PDF
+33/64
+
+--- END PAGE 33 ---
+
+--- PAGE 4 (full text) ---
+A. VizQL: Equal to the number of cores divided by four, up to a maximum of four process instances.
+B. VizQL: Equal to the number of cores divided by four, up to a maximum of six process instances.
+C. Backgrounder: Set to two unless the number of cores is fewer than eight.
+D. Data Server: Set to two unless the number of cores is fewer than eight.
+Answer: B
+Explanation:
+Link
+to
+Tableau
+Server
+documentation:
+https://help.tableau.com/current/server/en-
+us/single_server_install_defaults.htm
+Question: 7
+Select all the correct statements about Guest User access in Tableau Server:
+A. Guest users can interact with Tableau views only
+B. To share views with Guest users, provide them a generic and secure guest user username and
+password
+C. Both core-based and user-based licensing offer guest user access capabilities
+D. Guest user access is enabled by default with a core-based license, but it is not available with user-
+based licenses
+E. To share views with Guest users, either provide URL links or embed views into web pages
+F. Guest users can interact with Tableau views, and browse through the Tableau Server UI in a limited
+capacity
+Answer: A, D, E
+Explanation:
+Link
+to
+Tableau
+Server
+documentation:
+https://help.tableau.com/current/server/en-
+us/users_guest.htm
+Question: 8
+Select the correct statements about the TSM Controller process:
+A. There can only be one instance of TSM Controller in the entire cluster
+B. Also referred to as the Administration Controller
+C. Responsible for rendering static images on Tableau Server
+D. Hosts the TSM REST API for configuring Tableau Server
+Answer: A, B, D
+Explanation:
+Link
+to
+Tableau
+Server
+documentation:
+https://help.tableau.com/current/server/en-
+us/server_process_tsm-admin-controller.htm
+Question: 9
+Which Tableau Server process is being described?
+Questions and Answers PDF
+4/64
+
+--- END PAGE 4 ---
+
+
+================================================================================
+FOLDER: SOFE | FILE: AFE-luzmee.pdf
+================================================================================
+Total Pages: 79
+
+--- PAGE 1 (full text) ---
+Questions and Answers PDF
+1/79
+Thank you for choosing us for your AFE 
+preparation! We're confident these 
+materials will help you succeed. Best of 
+luck with your studies!
+286
+AFE
+
+--- END PAGE 1 ---
+
+--- PAGE 2 (full text) ---
+Question: 1
+Many companies have developed an asset/liability management approach that is founded on
+understanding product liabilities. Mortgages meet the primary objective of maintaining:
+A. A tight asset/liability match
+B. A well-diversified core of investments
+C. A tight asset/liability match with a well-diversified core of investments.
+D. Real estate lending by insurance companies
+Answer: C
+Question: 2
+___________ is an amount of money, loaned at interest for a specified term, secured by real estate
+and by its improvements such as buildings and infrastructure. This form of instrument itself varies by
+jurisdiction, but the debt is always evidenced by an accompanying promissory note.
+A. Mortgage Loan
+B. Real estate lending
+C. Conventional Commercial Loans
+D. CMBS
+Answer: A
+Question: 3
+Prepayment of a conventional mortgage loan, prior to its specified maturity, is discouraged through
+the general market acceptance of significant prepayment penalties. Often these penalties are
+calculated so that when prevailing market interest rates are:
+A. Lower than the rate on the loan being repaid the borrower has to make up the interest rate
+differential and the lender is essentially “made whole” for a potential loss of interest.
+B. Greater than the rate on the loan being repaid the borrower has to make up the interest rate
+differential and the lender is essentially “made whole” for a potential loss of interest.
+C. Equal to the rate on the loan being repaid the borrower has to make up the interest rate
+differential and the lender is essentially “made whole” for a potential loss of interest.
+Questions and Answers PDF
+2/79
+
+--- END PAGE 2 ---
+
+--- PAGE 2 BLOCK STRUCTURE ---
+  BLOCK[0] type=TEXT bbox=(57.8267707824707, 185.92210388183594, 124.1642074584961, 204.68093872070312)
+    content: 'Question: 1'
+  BLOCK[1] type=TEXT bbox=(57.8267707824707, 234.66038513183594, 508.9945983886719, 264.2112121582031)
+    content: 'Many companies have developed an asset/liability management approach that is founded on\nunderstanding product liabilities. Mortgages meet the primary objective of maintaining:'
+  BLOCK[2] type=TEXT bbox=(57.8267707824707, 279.1627197265625, 385.77838134765625, 338.3798522949219)
+    content: 'A. A tight asset/liability match\nB. A well-diversified core of investments\nC. A tight asset/liability match with a well-diversified core of investments.\nD. Real estate lending by insurance companies'
+  BLOCK[3] type=TEXT bbox=(416.62677001953125, 354.1259460449219, 474.6304626464844, 372.8847961425781)
+    content: 'Answer: C'
+  BLOCK[4] type=TEXT bbox=(57.8267707824707, 388.8262939453125, 124.1642074584961, 407.58514404296875)
+    content: 'Question: 2'
+  BLOCK[5] type=TEXT bbox=(57.8267707824707, 422.73199462890625, 508.9493408203125, 467.1154479980469)
+    content: '___________ is an amount of money, loaned at interest for a specified term, secured by real estate\nand by its improvements such as buildings and infrastructure. This form of instrument itself varies b'
+  BLOCK[6] type=TEXT bbox=(57.8267707824707, 482.06689453125, 212.56253051757812, 541.2841186523438)
+    content: 'A. Mortgage Loan\nB. Real estate lending\nC. Conventional Commercial Loans\nD. CMBS'
+  BLOCK[7] type=TEXT bbox=(416.14678955078125, 557.0302124023438, 475.2222900390625, 575.7890625)
+    content: 'Answer: A'
+  BLOCK[8] type=TEXT bbox=(57.8267707824707, 591.7305297851562, 124.1642074584961, 610.4893798828125)
+    content: 'Question: 3'
+  BLOCK[9] type=TEXT bbox=(57.8267707824707, 625.6351318359375, 508.9938049316406, 670.0196533203125)
+    content: 'Prepayment of a conventional mortgage loan, prior to its specified maturity, is discouraged through\nthe general market acceptance of significant prepayment penalties. Often these penalties are\ncalcula'
+  BLOCK[10] type=TEXT bbox=(57.8267707824707, 684.9711303710938, 508.9493408203125, 773.8546752929688)
+    content: 'A. Lower than the rate on the loan being repaid the borrower has to make up the interest rate\ndifferential and the lender is essentially “made whole” for a potential loss of interest.\nB. Greater than '
+  BLOCK[11] type=TEXT bbox=(45.119998931884766, 28.35401153564453, 550.1599731445312, 41.15801239013672)
+    content: 'Questions and Answers PDF\n2/79'
+--- END PAGE 2 BLOCK STRUCTURE ---
+
+--- PAGE 3 (full text) ---
+D. Lower than the rate of interest being paid to the borrower has to make up the interest rate
+differential and the lender is essentially “made whole” for a potential loss of interest.
+Answer: A
+Question: 4
+These are securities whose underlying assets consist of commercial mortgage loans. The commercial
+loans are pooled, which brings diversification and liquidity to the asset class.
+What are these?
+A. Conventional securities
+B. CMBS
+C. Subordinated securities
+D. Securitization
+Answer: B
+Question: 5
+There are many different sources of CMBS. Conduits and aggregate pools generally consist of loans
+newly originated, purchased or held by investment bankers until the pool is large enough for an
+efficient execution. Government agencies such as the Federal National Mortgage Association (FNMA)
+and the Federal Home Loan Mortgage Corp. (FHLMC) are important sources of:
+A. Residential financing
+B. B2B financing.
+C. Commercial financing.
+D. Mortgage loans
+Answer: A
+Question: 6
+_________________ is a special variation on a second mortgage. In this form, the new lender
+assumes the original or first mortgage and has the responsibility of collecting all payments and
+remitting a portion of these payments to the first lender.
+A. Conventional Residential Loan
+B. FHA loan
+C. Wrap-around loan
+D. VA loan
+Answer: C
+Question: 7
+Questions and Answers PDF
+3/79
+
+--- END PAGE 3 ---
+
+--- PAGE 40 (full text) ---
+C. Temporal method
+D. Cash inflow/outflow method
+Answer: C
+Question: 136
+The financial statements of which accounts maintained by insurance company that must be
+presented separately from the insurance company’s general account business?
+A. Business
+B. Temporal
+C. Principal
+D. Segregated
+Answer: D
+Question: 137
+Most life insurance companies that are taxable in Canada fall into which one of the following
+classifications:
+A. Domestic life insurance companies
+B. Multinational life insurance companies resident in Canada
+C. Nonresident life insurance companies operating in Canada through a branch
+D. All of the above
+Answer: D
+Question: 138
+_______________ reserves for income tax purposes are referred to as maximum tax actuarial
+reserves (MTAR) and replace the actuarial liabilities used for accounting purposes in computing
+taxable income.
+A. Procedure-related
+B. Policy-related
+C. Standardized- related act
+D. None of the above
+Answer: B
+Question: 139
+The deduction must be based on identification of specific doubtful amounts and is limited to the
+maximum of doubtful debts identified in the year or a preceding year and 75 percent of the amount
+Questions and Answers PDF
+40/79
+
+--- END PAGE 40 ---
+
+--- PAGE 4 (full text) ---
+Generally, residential loans are open to prepayment at any time without penalty. To protect against a
+deficiency, mortgage loans should not exceed the market value of the mortgaged property and in fact
+are usually made for:
+A. No more than 80 percent of the value
+B. Not less than 80 percent of the value
+C. No more than 90 percent of the value
+D. Not less than 70 percent of the value
+Answer: A
+Question: 8
+Federal Housing Administration:
+A. Agency does not make loans; it only insures them. For this protection the borrower must pay an
+annual insurance premium to the FHA of 0.5 percent of the outstanding principal amount of the loan
+B. Agency does not make loans; upon default, the lender has the option either of assigning the
+mortgage to the FHA and receiving cash and/or securities equal to the loan amount at the date of the
+default or of foreclosing on the mortgaged property
+C. Establishes standards for property that can not be insured and maximum terms, interest rates, and
+amounts for the insured loans
+D. All of these
+Answer: A,B
+Question: 9
+These are the loans in which:
+Arrangement is usually called commitment When the structure is completed and put in service, the
+loan is paid off from the proceeds of the long term financing, whatever its source Proper controls
+would require the lender to obtain documentation for the disbursed portion of the construction loan
+and be assured that the cost of the structure to date is equivalent to the disbursed portion of the
+construction loan. What are these?
+A. Undeveloped Land Loans
+B. Construction Loans
+C. Development Loans
+D. Residential Loans
+Answer: D
+Question: 10
+________ allow investments to be made, up to a certain percent of invested or total admitted assets,
+Questions and Answers PDF
+4/79
+
+--- END PAGE 4 ---
+
+
+================================================================================
+FOLDER: AFP | FILE: CTP-4xgkvy.pdf
+================================================================================
+Total Pages: 317
+
+--- PAGE 1 (full text) ---
+Questions and Answers PDF
+1/317
+Thank you for choosing us for your CTP preparation! 
+We're confident these materials will help you succeed. 
+Best of luck with your studies!
+CTP
+1076
+
+--- END PAGE 1 ---
+
+--- PAGE 2 (full text) ---
+Topic 1, Volume A
+Question: 1
+Which of the following are important uses of variance analysis in comparing actual cash flows with
+projected cash flows?
+I . Identifying unanticipated changes in inventory
+II . Enhancing short-term investment income
+III . Validating a capital budget
+IV . Identifying delays in accounts receivable collections
+A. I and II only
+B. I and IV only
+C. II and IV only
+D. I, II, III, and IV
+Answer: B
+Explanation:
+Question: 2
+An instrument that gives the right to buy a stated number of shares of common stock at a specified
+price is known as:
+A. an equity warrant
+B. a put option
+C. a zero coupon bond
+D. a subordinated debenture
+Answer: A
+Explanation:
+Question: 3
+A company plans to issue additional equity within the next 12 months but needs to issue debt at a
+low interest rate now. Which of the following instruments would BEST meet this objective?
+A. Convertible bonds
+B. Private placement issue
+Questions and Answers PDF
+2/317
+
+--- END PAGE 2 ---
+
+--- PAGE 2 BLOCK STRUCTURE ---
+  BLOCK[0] type=TEXT bbox=(57.8267707824707, 195.7229461669922, 137.1094512939453, 210.43893432617188)
+    content: 'Topic 1, Volume A'
+  BLOCK[1] type=TEXT bbox=(57.8267707824707, 226.18504333496094, 496.0364990234375, 274.8067321777344)
+    content: 'Question: 1\nWhich of the following are important uses of variance analysis in comparing actual cash flows with\nprojected cash flows?'
+  BLOCK[2] type=TEXT bbox=(57.8267707824707, 289.75823974609375, 304.71795654296875, 348.9742736816406)
+    content: 'I . Identifying unanticipated changes in inventory\nII . Enhancing short-term investment income\nIII . Validating a capital budget\nIV . Identifying delays in accounts receivable collections'
+  BLOCK[3] type=TEXT bbox=(57.8267707824707, 363.9257507324219, 130.9789276123047, 423.1429138183594)
+    content: 'A. I and II only\nB. I and IV only\nC. II and IV only\nD. I, II, III, and IV'
+  BLOCK[4] type=TEXT bbox=(57.8267707824707, 438.89013671875, 474.8359069824219, 472.6780700683594)
+    content: 'Answer: B\nExplanation:'
+  BLOCK[5] type=TEXT bbox=(57.8267707824707, 488.4242248535156, 497.7169494628906, 537.0458984375)
+    content: 'Question: 2\nAn instrument that gives the right to buy a stated number of shares of common stock at a specified\nprice is known as:'
+  BLOCK[6] type=TEXT bbox=(57.8267707824707, 551.997314453125, 185.90196228027344, 611.2145385742188)
+    content: 'A. an equity warrant\nB. a put option\nC. a zero coupon bond\nD. a subordinated debenture'
+  BLOCK[7] type=TEXT bbox=(57.8267707824707, 626.9606323242188, 475.2222900390625, 660.7485961914062)
+    content: 'Answer: A\nExplanation:'
+  BLOCK[8] type=TEXT bbox=(57.8267707824707, 676.4946899414062, 493.8574523925781, 725.1163940429688)
+    content: 'Question: 3\nA company plans to issue additional equity within the next 12 months but needs to issue debt at a\nlow interest rate now. Which of the following instruments would BEST meet this objective?'
+  BLOCK[9] type=TEXT bbox=(57.8267707824707, 740.0667114257812, 175.33279418945312, 769.6175537109375)
+    content: 'A. Convertible bonds\nB. Private placement issue'
+  BLOCK[10] type=TEXT bbox=(45.119998931884766, 28.35401153564453, 550.1599731445312, 41.15801239013672)
+    content: 'Questions and Answers PDF\n2/317'
+--- END PAGE 2 BLOCK STRUCTURE ---
+
+--- PAGE 3 (full text) ---
+C. Preferred stock
+D. Subordinated debentures
+Answer: A
+Explanation:
+Question: 4
+An arrangement in which a borrower makes periodic payments to a separate custodial account that
+is used to repay debt is known as a:
+A. sinking fund
+B. balloon payment
+C. mortgage
+D. zero-coupon bond
+Answer: A
+Explanation:
+Question: 5
+Which of the following instruments simplifies the paperwork connected with loans that have
+multiple advance features?
+A. Master note
+B. Banker's acceptance
+C. Indenture agreement
+D. Note purchase agreement
+Answer: A
+Explanation:
+Question: 6
+A put option on a company's stock has an exercise price of $20. On the delivery date, the stock is
+trading at $24 per share. What should the investor who has paid $2 for the option do?
+A. Not exercise the option and lose $2.
+B. Not exercise the option and lose $6.
+C. Exercise the option and gain $2.
+D. Exercise the option and gain $4.
+Answer: A
+Explanation:
+Question: 7
+A call option for a company has an exercise price of $50. The stock is currently trading at $60. At
+maturity, what should an investor who paid $3 for the option do?
+Questions and Answers PDF
+3/317
+
+--- END PAGE 3 ---
+
+--- PAGE 159 (full text) ---
+Answer: A
+Explanation:
+Question: 518
+Which of the following can be considered key responsibilities of daily cash management?
+I . Overseeing compensation for bank services
+II . Management of short-term borrowing and investing
+III . Projecting future cash shortages and surpluses
+A. I only
+B. I and II only
+C. II and III only
+D. I, II, and III
+Answer: D
+Explanation:
+Question: 519
+Which of the following is responsible for examining national banks?
+A. The Federal Reserve
+B. The Federal Deposit Insurance Corporation
+C. The Office of the Comptroller of the Currency
+D. The Securities and Exchange Commission
+Answer: C
+Explanation:
+Question: 520
+A grocery store chain would be likely to use all of the following services EXCEPT:
+A. armored car.
+B. cash vault.
+C. retail lockbox.
+D. debit card.
+Answer: C
+Explanation:
+Question: 521
+A company has a $2 million line of credit requiring a 5% compensating balance on usage. For the next
+year, the company projects a usage of 75% and a 10.375% interest rate. If the balance requirement is
+eliminated, by how many basis points will the company's effective interest rate be reduced?
+A. 18
+Questions and Answers PDF
+159/317
+
+--- END PAGE 159 ---
+
+--- PAGE 4 (full text) ---
+A. Exercise the option and gain $7.
+B. Exercise the option and gain $10.
+C. Not exercise the option and lose $3.
+D. Not exercise the option and lose $13.
+Answer: A
+Explanation:
+Question: 8
+In a typical swap transaction, two parties agree to exchange:
+A. notional principal amounts.
+B. amortization schedules.
+C. maturity dates of obligations.
+D. cash flows at future points in time.
+Answer: D
+Explanation:
+Question: 9
+A Chicago meat processor is concerned about the volatility of pork belly prices. Which of the
+following derivative products would be used to fix these prices within a given range?
+A. Collar
+B. Swap
+C. Cap
+D. Spot purchase
+Answer: A
+Explanation:
+Question: 10
+On the basis of the following exchange rates,
+which of the following currency amounts has the greatest value in U.S. dollars?
+Questions and Answers PDF
+4/317
+
+--- END PAGE 4 ---
+
+
+================================================================================
+FOLDER: Esri | FILE: EADE105-cqs2de.pdf
+================================================================================
+Total Pages: 31
+
+--- PAGE 1 (full text) ---
+Questions and Answers PDF
+1/31
+Thank you for choosing us for your EADE105 
+preparation! We're confident these materials will 
+help you succeed. Best of luck with your studies!
+EADE105
+80
+
+--- END PAGE 1 ---
+
+--- PAGE 2 (full text) ---
+Question: 1
+An ArcGIS Pro project requires an additional file geodatabase be created and associated with the
+project
+How should this be accomplished?
+A. Project tab of the ribbon > Options > Current Settings > Change Default geodatabase
+B. Catalog window in ArcMap > Navigate into the project home directory > Use the context menu and
+choose New > File Geodatabase
+C. Open the Create File GDB geoprocessing tool in ArcCatalog > Set the output location as the project
+home directory
+D. Project pane's Databases item > Use the New File Geodatabase context menu
+Answer: D
+Reference:
+https://pro.arcgis.com/en/pro-app/help/projects/connect-to-a-database.htm
+Question: 2
+Which two ways can values be entered into the scale box to set map scale in ArcMap or ArcGIS Pro?
+(Choose two )
+A. 1:100000
+B. 1 mile
+C. 1 cm = 100 m
+D. One to one hundred
+E. 100000:1
+Answer: AC
+Reference:
+https://pro.arcgis.com/en/pro-app/help/mapping/navigation/map-scales-and-scale-properties.htm
+Question: 3
+ARCGIS technician needs to export multiple maps of individual county parcels.
+Which action should the technician take to achieve this in ArcGIS Pro?
+Questions and Answers PDF
+2/31
+
+--- END PAGE 2 ---
+
+--- PAGE 2 BLOCK STRUCTURE ---
+  BLOCK[0] type=TEXT bbox=(57.8267707824707, 181.6838836669922, 124.1642074584961, 200.44271850585938)
+    content: 'Question: 1'
+  BLOCK[1] type=TEXT bbox=(57.8267707824707, 215.5895233154297, 508.94110107421875, 259.9729919433594)
+    content: 'An ArcGIS Pro project requires an additional file geodatabase be created and associated with the\nproject\nHow should this be accomplished?'
+  BLOCK[2] type=TEXT bbox=(57.8267707824707, 274.92449951171875, 509.08319091796875, 363.8080139160156)
+    content: 'A. Project tab of the ribbon > Options > Current Settings > Change Default geodatabase\nB. Catalog window in ArcMap > Navigate into the project home directory > Use the context menu and\nchoose New > Fi'
+  BLOCK[3] type=TEXT bbox=(415.9067687988281, 379.55523681640625, 475.3163757324219, 398.3140869140625)
+    content: 'Answer: D'
+  BLOCK[4] type=TEXT bbox=(57.8267707824707, 413.4598083496094, 402.7785949707031, 443.009521484375)
+    content: 'Reference:\nhttps://pro.arcgis.com/en/pro-app/help/projects/connect-to-a-database.htm'
+  BLOCK[5] type=TEXT bbox=(57.8267707824707, 458.7567443847656, 124.1642074584961, 477.5155944824219)
+    content: 'Question: 2'
+  BLOCK[6] type=TEXT bbox=(57.8267707824707, 492.66241455078125, 509.0458984375, 522.212158203125)
+    content: 'Which two ways can values be entered into the scale box to set map scale in ArcMap or ArcGIS Pro?\n(Choose two )'
+  BLOCK[7] type=TEXT bbox=(57.8267707824707, 537.16357421875, 159.5515899658203, 611.2145385742188)
+    content: 'A. 1:100000\nB. 1 mile\nC. 1 cm = 100 m\nD. One to one hundred\nE. 100000:1'
+  BLOCK[8] type=TEXT bbox=(412.5467834472656, 626.9606323242188, 478.7110290527344, 645.719482421875)
+    content: 'Answer: AC'
+  BLOCK[9] type=TEXT bbox=(57.8267707824707, 660.8663330078125, 502.62451171875, 690.4160766601562)
+    content: 'Reference:\nhttps://pro.arcgis.com/en/pro-app/help/mapping/navigation/map-scales-and-scale-properties.htm'
+  BLOCK[10] type=TEXT bbox=(57.8267707824707, 706.1621704101562, 124.1642074584961, 724.9210205078125)
+    content: 'Question: 3'
+  BLOCK[11] type=TEXT bbox=(57.8267707824707, 740.0667114257812, 406.17816162109375, 769.6175537109375)
+    content: 'ARCGIS technician needs to export multiple maps of individual county parcels.\nWhich action should the technician take to achieve this in ArcGIS Pro?'
+  BLOCK[12] type=TEXT bbox=(45.119998931884766, 28.35401153564453, 550.1599731445312, 41.15801239013672)
+    content: 'Questions and Answers PDF\n2/31'
+--- END PAGE 2 BLOCK STRUCTURE ---
+
+--- PAGE 3 (full text) ---
+A. Enable Map Series pages
+B. Export a map at the county scale
+C. Export a layout to a pdf format
+D. Export a layout with compressed vector graphics
+Answer: A
+Question: 4
+ARCGIS analyst is working with labels in ArcMap. The labels do NOT stand out from the underlying
+vector dat
+a. The underlying data is complex The analyst must configure the labels so they stand out distinctly
+from the background without sacrificing the overall integrity of the map theme.
+Which action should the analyst take to achieve this?
+A. Convert the labels to annotation
+B. Increase the font size
+C. Change the font color
+D. Add a halo or mask to the labels
+Answer: A
+Reference:
+https://community.esri.com/thread/205362-labels-behind-line-features
+Question: 5
+An ArcGIS Pro user makes a selection on a feature layer using the following expression:
+Suburb is Equal to Abbey Caves
+The user opens the attribute table and notices the expression has been entered incorrectly. The
+expression should have been:
+Suburb does Not Equal Abbey Caves
+How should the user efficiently apply the correct selection expression?
+A. Attribute Table > Calculate
+B. Geoprocessing Pane > Select By Attributes > Build the correct query > Run
+C. Attribute Table > Switch
+D. Geoprocessing Pane > Select By Attributes > Clear the current selection > Build the correct query >
+Run
+Answer: B
+Question: 6
+Questions and Answers PDF
+3/31
+
+--- END PAGE 3 ---
+
+--- PAGE 16 (full text) ---
+Question: 39
+An ArcGIS Pro user wants to add a new 2D map to a project using an existing ArcMap map document
+Which workflow should the user follow?
+A. Project pane > Maps > New Map
+B. Folder Connection > 3D file > Import and Open
+C. Catalog window > Drag into ArcGIS Pro
+D. Insert Tab > Import Map
+Answer: D
+Reference:
+https://pro.arcgis.com/en/pro-app/help/projects/add-maps-to-a-project.htm
+Question: 40
+In ArcMap or ArcGIS Pro, which tab in the Layer Properties allows a user to determine raster cell size?
+A. Display
+B. General
+C. Source
+D. Symbology
+Answer: A
+Question: 41
+A city planner receives a very large feature class with thousands of records The city planner only
+needs to work with a small subset of features based on a specific value in a specific field.
+How should the city planner efficiently create a permanent, separate feature class with only this
+subset of features?
+A. Use the Select By Attribute tool > Select the subset > Export the selected features to a new feature
+class
+B. Use the Select By Rectangular tool > Individually select a subset of features
+C. Use the Select By Location tool > Select the subset > Export the selected features to a new feature
+class
+D. Define a scale range on the layer to display at a large scale
+Answer: C
+Reference:
+http://sites.tufts.edu/gis/files/2013/11/Creating-a-subset-shape-file.pdf
+Questions and Answers PDF
+16/31
+
+--- END PAGE 16 ---
+
+--- PAGE 4 (full text) ---
+An ArcMap user must determine the coordinate system of a dataset
+Where is this information located?
+A. Data Frame Properties > Source tab
+B. Feature Class Properties > XY Coordinate System tab
+C. Layer Properties > XY Coordinate System tab
+D. Feature Class Properties > Source tab
+Answer: A
+Reference:
+https://support.esri.com/en/technical-article/000007880
+Question: 7
+A researcher is opening a new, blank ArcGIS Pro Project Upon creating the ArcGIS Pro Project, a map
+is NOT visible
+What should the researcher do to begin the project?
+A. Insert a new basemap from the Insert tab
+B. Make a folder connection to the file geodatabase
+C. Insert a new map from the Insert tab
+D. Insert a new layout from the Insert tab
+Answer: B
+Question: 8
+Which application organizes and manages many types of geographic information as its primary
+function?
+A. ArcMap
+B. ArcGIS Pro
+C. ArcGlobe
+D. ArcCatalog
+Answer: B
+Question: 9
+ARCGIS user creates a folder connection in ArcGIS Pro Most of the user's work is typically done with
+the same collection of data The user finishes that project and creates a new ArcGIS Pro project to
+begin working in a new geographic are
+a. The folder connection has disappeared.
+Questions and Answers PDF
+4/31
+
+--- END PAGE 4 ---
+
+
+================================================================================
+FOLDER: ISC2 | FILE: Certified-in-Cybersecurity-lx8zil.pdf
+================================================================================
+Total Pages: 117
+
+--- PAGE 1 (full text) ---
+Questions and Answers PDF
+1/117
+Certified in Cybersecurity
+407
+Thank you for choosing us for your Certified in Cybersecurity 
+preparation! We're confident these materials will help you 
+succeed. Best of luck with your studies!
+
+--- END PAGE 1 ---
+
+--- PAGE 2 (full text) ---
+Question: 1
+What is meant by non-repudiation?
+A. If a user does something, they can't later claim that they didn't do it.
+B. Controls to protect the organization's reputation from harm due to inappropriate social media
+postings by employees, even if on their private accounts and personal time.
+C. It is part of the rules set by administrative controls.
+D. It is a security feature that prevents session replay attacks.
+Answer: A
+Question: 2
+Which of these components is very likely to be instrumental to any disaster recovery (DR) effort?
+A. Routers
+B. Laptops
+C. Firewalls
+D. Backups
+Answer: D
+Question: 3
+Derrick logs on to a system in order to read a file. In this example. Derrick is the______?
+A. Subject
+B. Object
+Questions and Answers PDF
+2/117
+https://dumpsgate.com/dumps/cc-exam-dumps/
+
+--- END PAGE 2 ---
+
+--- PAGE 2 BLOCK STRUCTURE ---
+  BLOCK[0] type=TEXT bbox=(57.8267707824707, 256.6471862792969, 124.1642074584961, 275.4060363769531)
+    content: 'Question: 1'
+  BLOCK[1] type=TEXT bbox=(57.8267707824707, 290.5517578125, 216.46261596679688, 305.2677307128906)
+    content: 'What is meant by non-repudiation?'
+  BLOCK[2] type=TEXT bbox=(57.8267707824707, 320.2203369140625, 489.53448486328125, 394.271240234375)
+    content: "A. If a user does something, they can't later claim that they didn't do it.\nB. Controls to protect the organization's reputation from harm due to inappropriate social media\npostings by employees, even"
+  BLOCK[3] type=TEXT bbox=(416.14678955078125, 410.0173645019531, 475.2222900390625, 428.7762145996094)
+    content: 'Answer: A'
+  BLOCK[4] type=TEXT bbox=(57.8267707824707, 489.2188720703125, 124.1642074584961, 507.97772216796875)
+    content: 'Question: 2'
+  BLOCK[5] type=TEXT bbox=(57.8267707824707, 523.12451171875, 487.9214782714844, 537.8405151367188)
+    content: 'Which of these components is very likely to be instrumental to any disaster recovery (DR) effort?'
+  BLOCK[6] type=TEXT bbox=(57.8267707824707, 552.7908935546875, 110.80574035644531, 612.0092163085938)
+    content: 'A. Routers\nB. Laptops\nC. Firewalls\nD. Backups'
+  BLOCK[7] type=TEXT bbox=(415.9067687988281, 627.7553100585938, 475.3163757324219, 646.51416015625)
+    content: 'Answer: D'
+  BLOCK[8] type=TEXT bbox=(57.8267707824707, 677.2893676757812, 124.1642074584961, 696.0482177734375)
+    content: 'Question: 3'
+  BLOCK[9] type=TEXT bbox=(57.8267707824707, 711.195068359375, 448.56072998046875, 725.9110717773438)
+    content: 'Derrick logs on to a system in order to read a file. In this example. Derrick is the______?'
+  BLOCK[10] type=TEXT bbox=(57.8267707824707, 740.8624877929688, 102.51490020751953, 770.4122314453125)
+    content: 'A. Subject\nB. Object'
+  BLOCK[11] type=TEXT bbox=(45.119998931884766, 28.35401153564453, 550.1599731445312, 41.15801239013672)
+    content: 'Questions and Answers PDF\n2/117'
+  BLOCK[12] type=TEXT bbox=(192.32000732421875, 804.3860473632812, 402.9499816894531, 818.0360717773438)
+    content: 'https://dumpsgate.com/dumps/cc-exam-dumps/'
+--- END PAGE 2 BLOCK STRUCTURE ---
+
+--- PAGE 3 (full text) ---
+C. Process
+D. Predicate
+Answer: A
+Question: 4
+Which of the following is a subject?
+A. file
+B. fence
+C. filename
+D. user
+Answer: D
+Question: 5
+Common network device used to connect networks?
+A. Server
+B. Endpoint
+C. Router
+D. Switch
+Answer: C
+Question: 6
+A common network device used to filter traffic?
+A. Server
+B. Endpoint
+C. Ethernet
+D. Firewa
+Answer: D
+Question: 7
+Who is responsible for publishing and signing the organization s policies?
+Questions and Answers PDF
+3/117
+https://dumpsgate.com/dumps/cc-exam-dumps/
+
+--- END PAGE 3 ---
+
+--- PAGE 59 (full text) ---
+C. To prepare for any incident
+D. To resume interrupted operations as soon as possible
+Answer: C
+Question: 196
+Which ensure maintaining business operations during or after an incident
+A. Incident Response
+B. Business Continuity
+C. Disaster Recovery
+D. AII
+Answer: C
+Question: 197
+Which of the following is unlikely to be a member of the disaster recovery team
+A. Executive Management
+B. Public Relations
+C. Billing Clerk
+D. IT personnel
+Answer: C
+Question: 198
+When responding to a security incident, your team determines that the vulnerability that was
+exploited was not widely known to the security community, and that there are no currently known
+definitions/listings in common vulnerability databases or collections. This vulnerability and exploit
+might be called______
+A. Malware
+B. Zero-day
+C. Event
+D. Attack
+Answer: B
+Question: 199
+Questions and Answers PDF
+59/117
+https://dumpsgate.com/dumps/cc-exam-dumps/
+
+--- END PAGE 59 ---
+
+--- PAGE 4 (full text) ---
+A. The security office
+B. Human resources
+C. Senior management
+D. The legal department
+Answer: C
+Question: 8
+A set of security controls or system settings used to ensure uniformity of configuration through the IT
+environment?
+A. Patches
+B. Inventory
+C. Baseline
+D. Policy
+Answer: C
+Question: 9
+What is the BEST defense against dumpster diving attacks?
+A. Anti-malware software
+B. Clean desk policy
+C. Data loss prevention tools
+D. Shredding
+Answer: D
+Question: 10
+What type of attack does the attacker store and reuse login information. Select the BEST answer?
+A. Man-in-the-middle attack
+B. Smurf attack
+C. DDoS attack
+D. Replay attack
+Answer: D
+Question: 11
+Questions and Answers PDF
+4/117
+https://dumpsgate.com/dumps/cc-exam-dumps/
+
+--- END PAGE 4 ---
+
