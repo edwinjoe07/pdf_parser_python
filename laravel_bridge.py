@@ -24,6 +24,7 @@ from __future__ import annotations
 import json
 import logging
 import os
+import random
 import sys
 import traceback
 
@@ -104,6 +105,27 @@ def main():
 
         # Output clean JSON to stdout
         output = result.model_dump()
+        assign_access = options.get("assign_access_levels", True)
+        if assign_access:
+            free_count = options.get("free_count", 10)
+            access_level = options.get("access_level", "premium")
+            questions = output.get("questions", [])
+            total = len(questions)
+            free_count = max(0, min(int(free_count), total))
+            if access_level == "free":
+                for q in questions:
+                    q["access_level"] = "free"
+            else:
+                if free_count > 0:
+                    free_indices = set(random.sample(range(total), free_count))
+                    for i, q in enumerate(questions):
+                        q["access_level"] = "free" if i in free_indices else "premium"
+                    output["free_question_numbers"] = sorted(
+                        [questions[i].get("question_number") for i in free_indices]
+                    )
+                else:
+                    for q in questions:
+                        q["access_level"] = "premium"
         print(json.dumps(output, ensure_ascii=False, default=str))
         sys.exit(0)
 

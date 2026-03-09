@@ -36,6 +36,7 @@ import base64
 import json
 import logging
 import os
+import random
 import sys
 from pathlib import Path
 
@@ -180,6 +181,7 @@ def transform_parsed_to_laravel(
     parse_result: dict,
     image_base_dir: str,
     access_level: str = "premium",
+    free_count: int = 10,
 ) -> list[dict]:
     """
     Transform parser output questions into the Laravel API format.
@@ -258,10 +260,22 @@ def transform_parsed_to_laravel(
         transformed.append({
             "question": question_html,
             "explanation": explanation_html,
-            "access_level": access_level,
+            "access_level": "free" if access_level == "free" else "premium",
             "options": laravel_options,
         })
 
+    if access_level == "free":
+        return transformed
+
+    total = len(transformed)
+    free_count = max(0, min(int(free_count), total))
+    if free_count > 0:
+        free_indices = set(random.sample(range(total), free_count))
+        for i, q in enumerate(transformed):
+            q["access_level"] = "free" if i in free_indices else "premium"
+        logger.info(
+            f"Assigned free questions: {free_count}, premium questions: {total - free_count}"
+        )
     return transformed
 
 
@@ -385,6 +399,12 @@ def main():
         choices=["free", "premium"],
         help="Default access level for imported questions (default: premium)",
     )
+    parser.add_argument(
+        "--free-count",
+        type=int,
+        default=10,
+        help="Number of questions to mark as free when access level is premium",
+    )
 
     # Page range
     parser.add_argument("--page-start", type=int, help="Start page (1-indexed)")
@@ -472,6 +492,7 @@ def main():
         parse_result,
         image_base_dir=image_base_dir,
         access_level=args.access_level,
+        free_count=args.free_count,
     )
 
     if not laravel_questions:

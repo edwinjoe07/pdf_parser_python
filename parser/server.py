@@ -28,6 +28,7 @@ import threading
 import time
 import uuid
 from pathlib import Path
+from urllib.parse import urlparse
 
 from flask import Flask, jsonify, request, render_template, send_from_directory
 from flask_cors import CORS
@@ -69,6 +70,7 @@ def create_app(config: dict = None) -> Flask:
     app.config.setdefault("IMAGE_BASE_DIR", str(
         project_root / "output" / "questions"))
     app.config.setdefault("MAX_CONTENT_LENGTH", 500 * 1024 * 1024)  # 500MB
+    app.config.setdefault("ABSOLUTE_IMAGE_URLS", False)
 
     # Ensure directories exist
     Path(app.config["UPLOAD_DIR"]).mkdir(parents=True, exist_ok=True)
@@ -118,6 +120,108 @@ def create_app(config: dict = None) -> Flask:
         return send_from_directory(str(target.parent), target.name)
 
     return app
+
+
+def _get_public_base_url() -> str:
+    explicit = (
+        app.config.get("PUBLIC_BASE_URL")
+        or os.getenv("PUBLIC_BASE_URL")
+        or os.getenv("PARSER_PUBLIC_URL")
+    )
+    if explicit:
+        return explicit.rstrip("/")
+    forwarded_proto = request.headers.get("X-Forwarded-Proto", "")
+    forwarded_host = request.headers.get("X-Forwarded-Host", "")
+    forwarded_port = request.headers.get("X-Forwarded-Port", "")
+    proto = forwarded_proto.split(",")[0].strip()
+    host = forwarded_host.split(",")[0].strip() or request.headers.get("Host", "").strip()
+    port = forwarded_port.split(",")[0].strip()
+    if host and port and ":" not in host and port not in ("80", "443"):
+        host = f"{host}:{port}"
+    if proto and host:
+        return f"{proto}://{host}"
+    if host:
+        scheme = proto or request.scheme or "http"
+        return f"{scheme}://{host}"
+    return request.url_root.rstrip("/")
+
+
+def _should_rewrite_images() -> bool:
+    value = app.config.get("ABSOLUTE_IMAGE_URLS")
+    if value is None:
+        value = os.getenv("ABSOLUTE_IMAGE_URLS")
+    if isinstance(value, str):
+        return value.strip().lower() in {"1", "true", "yes", "on"}
+    return bool(value)
+
+
+def _normalize_image_path(path: str) -> str:
+    if not isinstance(path, str):
+        return path
+    parsed = urlparse(path)
+    if parsed.scheme in {"http", "https"} and parsed.netloc:
+        return parsed.path.lstrip("/").replace("\\", "/")
+    return path.replace("\\", "/")
+
+
+def _image_url(path: str) -> str:
+    if not path:
+        return path
+    if not _should_rewrite_images():
+        return _normalize_image_path(path)
+    if isinstance(path, str) and (
+        path.startswith("http://") or path.startswith("https://")
+    ):
+        return path
+    base = _get_public_base_url()
+    normalized = path.replace("\\", "/").lstrip("/")
+    if normalized.startswith("questions/"):
+        normalized = normalized[len("questions/"):]
+    return f"{base}/questions/{normalized}"
+
+
+def _rewrite_question_images(question: dict) -> dict:
+    if not question:
+        return question
+    for key in ("question_images", "answer_images", "explanation_images"):
+        question[key] = [_image_url(p) for p in question.get(key, [])]
+    for opt in question.get("options", []):
+        opt["images"] = [_image_url(p) for p in opt.get("images", [])]
+    blocks = question.get("blocks")
+    if isinstance(blocks, dict):
+        for section in blocks.values():
+            if isinstance(section, list):
+                for block in section:
+                    if block.get("type") == "image":
+                        block["content"] = _image_url(block.get("content", ""))
+    return question
+
+
+def _normalize_question_images(question: dict) -> dict:
+    if not question:
+        return question
+    for key in ("question_images", "answer_images", "explanation_images"):
+        question[key] = [_normalize_image_path(p) for p in question.get(key, [])]
+    for opt in question.get("options", []):
+        opt["images"] = [_normalize_image_path(p) for p in opt.get("images", [])]
+    blocks = question.get("blocks")
+    if isinstance(blocks, dict):
+        for section in blocks.values():
+            if isinstance(section, list):
+                for block in section:
+                    if block.get("type") == "image":
+                        block["content"] = _normalize_image_path(block.get("content", ""))
+    return question
+
+
+def _rewrite_payload_images(payload: dict) -> dict:
+    if not payload:
+        return payload
+    for q in payload.get("questions", []):
+        _normalize_question_images(q)
+        if _should_rewrite_images():
+            _rewrite_question_images(q)
+    return payload
 
 
 # ─── Dashboard ────────────────────────────────────────────────────────────────
@@ -302,7 +406,9 @@ def parse_pdf_sync():
     try:
         engine = ParserEngine(config)
         result = engine.parse(pdf_path)
-        return jsonify(result.model_dump()), 200
+        payload = result.model_dump()
+        _rewrite_payload_images(payload)
+        return jsonify(payload), 200
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
@@ -374,6 +480,7 @@ def get_result(job_id: str):
         # Ensure blocks are present (handles jobs stored before enrichment)
         result_data = job["result"]
         crud.enrich_result_with_blocks(result_data)
+        _rewrite_payload_images(result_data)
         return jsonify(result_data)
 
     # ── Fallback: load from SQLite ────────────────────────────────
@@ -385,11 +492,9 @@ def get_result(job_id: str):
     result_json_str = exam.get("result_json", "")
     if result_json_str:
         try:
-            return app.response_class(
-                response=result_json_str,
-                status=200,
-                mimetype="application/json",
-            )
+            payload = json.loads(result_json_str)
+            _rewrite_payload_images(payload)
+            return jsonify(payload), 200
         except Exception:
             logger.warning(
                 f"Failed to serve stored result_json for job {job_id}")
@@ -484,6 +589,7 @@ def get_result(job_id: str):
         "validation": validation_obj,
         "exam_db_id": exam.get("id"),
     }
+    _rewrite_payload_images(reconstructed)
     return jsonify(reconstructed)
 
 
@@ -863,6 +969,7 @@ def get_exam(exam_id: int):
     exam = crud.get_exam(exam_id)
     if not exam:
         return jsonify({"error": "Exam not found"}), 404
+    _rewrite_payload_images(exam)
     return jsonify(exam)
 
 
@@ -875,6 +982,9 @@ def get_exam_question(exam_id: int, number: int):
     question = crud.get_exam_question(exam_id, number)
     if not question:
         return jsonify({"error": "Question not found"}), 404
+    _normalize_question_images(question)
+    if _should_rewrite_images():
+        _rewrite_question_images(question)
     return jsonify(question)
 
 

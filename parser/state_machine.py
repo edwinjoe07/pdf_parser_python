@@ -47,9 +47,9 @@ QUESTION_PATTERN = re.compile(
     r"^\s*Question\s*:?\s*(\d+)", re.IGNORECASE
 )
 
-# Matches "A.", "B.", "A)", "(A)" style options — letter followed by . or )
+# Matches "A.", "B.", "A)", "(A)", "A:", "A -" style options
 OPTION_PATTERN = re.compile(
-    r"^\s*\(?([A-Z])\s*[\.\)]\s*", re.IGNORECASE
+    r"^\s*\(?([A-Z])\s*[\.\):\-\u2013\u2014]\s*", re.IGNORECASE
 )
 
 # Matches "Answer:", "Answer", "ANSWER:", "Correct Answer:", "Ans:", "Ans."
