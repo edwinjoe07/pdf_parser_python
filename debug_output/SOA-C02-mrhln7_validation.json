@@ -1,0 +1,26 @@
+{
+  "total_questions_detected": 557,
+  "structured_successfully": 551,
+  "missing_question_numbers": [],
+  "duplicate_question_numbers": [],
+  "questions_missing_answer": [],
+  "questions_missing_explanation": [
+    28,
+    97,
+    176,
+    177,
+    380,
+    455
+  ],
+  "failed_to_structure": [
+    251,
+    300,
+    483,
+    554,
+    555,
+    556
+  ],
+  "orphan_images": 0,
+  "anomaly_breakdown": {},
+  "success_rate": 98.92
+}

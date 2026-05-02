@@ -1,0 +1,222 @@
+[
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n727/737",
+    "page_number": 726,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 0,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "C. Configure the application to use exponential backoff and retries to query the table.",
+    "page_number": 726,
+    "bbox": [
+      57.8267707824707,
+      56.1264533996582,
+      437.37420654296875,
+      70.84243774414062
+    ],
+    "order_index": 1,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "D. Configure the application to use strongly consistent reads.",
+    "page_number": 726,
+    "bbox": [
+      57.8267707824707,
+      83.93968200683594,
+      327.9419250488281,
+      98.65567016601562
+    ],
+    "order_index": 2,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Answer: C\nExplanation:",
+    "page_number": 726,
+    "bbox": [
+      57.8267707824707,
+      140.3612518310547,
+      474.6304626464844,
+      174.14871215820312
+    ],
+    "order_index": 3,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Sporadic HTTP 500 errors in an application that depends on DynamoDB often indicate intermittent\ndownstream failures (for example, transient throttling, temporary network issues, request timeouts,\nor service-side retryable exceptions). The prompt notes that the DynamoDB table is in on-demand\nmode and other applications use it without problems, which suggests the issue is not a sustained\ncapacity shortfall or a systemic DynamoDB outage. Instead, the web application likely needs to\nhandle occasional retryable failures more gracefully.",
+    "page_number": 726,
+    "bbox": [
+      57.8267707824707,
+      215.0592498779297,
+      504.0733337402344,
+      314.5393981933594
+    ],
+    "order_index": 4,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Option C is the best practice for improving reliability when calling AWS services: implement\nexponential backoff with retries. AWS SDKs commonly include retry behavior, but many systems still\nrequire tuning (for example, increasing maximum retries, adding jitter, ensuring idempotent\noperations where required, and retrying only on retryable errors). Exponential backoff reduces the\nchance of overwhelming a service during brief contention periods and helps the application recover\nquickly from transient errors without user-visible failures. This approach is also minimally disruptive\nbecause it is a configuration and logic improvement rather than an architectural migration.",
+    "page_number": 726,
+    "bbox": [
+      57.8267707824707,
+      327.63665771484375,
+      502.5331726074219,
+      444.0696105957031
+    ],
+    "order_index": 5,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Option A is not a standard DynamoDB configuration; DynamoDB has item size limits and throughput\nis managed via on-demand or provisioned capacity, not by “supporting larger write requests.” Option\nB (Streams) provides a change data capture feed but does not prevent or mitigate request failures; it\nis for event processing, replication, or auditing. Option D (strongly consistent reads) addresses stale\nreads, not HTTP 500 errors, and could increase read cost/RCU consumption without solving the root\ncause.",
+    "page_number": 726,
+    "bbox": [
+      57.8267707824707,
+      457.1669006347656,
+      508.5091247558594,
+      556.6470336914062
+    ],
+    "order_index": 6,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Therefore, adding exponential backoff and retries is the most appropriate and operationally sound\nway to reduce sporadic failures without disrupting the application’s architecture or performance.",
+    "page_number": 726,
+    "bbox": [
+      57.8267707824707,
+      569.7442626953125,
+      495.0662841796875,
+      601.4131469726562
+    ],
+    "order_index": 7,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Question: 717\nA security team needs to enforce the rotation of all IAM users' access keys every 90 days. If an access\nkey is found to be older, the key must be made inactive and removed. A solutions architect must\ncreate a solution that will check for and remediate any keys older than 90 days.",
+    "page_number": 726,
+    "bbox": [
+      57.8267707824707,
+      643.1187133789062,
+      506.5833740234375,
+      710.8118896484375
+    ],
+    "order_index": 8,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Which solution meets these requirements with the LEAST operational effort?",
+    "page_number": 726,
+    "bbox": [
+      57.8267707824707,
+      723.9091186523438,
+      400.5628662109375,
+      738.6251220703125
+    ],
+    "order_index": 9,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A. Create an AWS Config rule to check for the key age. Configure the AWS Config rule to run an AWS",
+    "page_number": 726,
+    "bbox": [
+      57.8267707824707,
+      751.7223510742188,
+      501.80712890625,
+      766.4383544921875
+    ],
+    "order_index": 10,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  }
+]

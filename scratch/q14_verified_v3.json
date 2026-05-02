@@ -1,0 +1,238 @@
+﻿{
+  "exam": {
+    "name": "SAA-C03-g0ldvk",
+    "provider": "",
+    "version": "",
+    "source_pdf": "SAA-C03-g0ldvk.pdf",
+    "total_pages": 736,
+    "file_hash": "b34cf8da0a75a8551a69765d6c37dc114ae883b463af0316d33273ad5290019d",
+    "file_size_bytes": 4184020
+  },
+  "parse_version": {
+    "parser_version": "1.0.0",
+    "parse_timestamp": "2026-05-01T11:14:55.473170+00:00",
+    "raw_block_count": 51,
+    "structured_question_count": 3
+  },
+  "questions": [
+    {
+      "question_number": 13,
+      "question_type": "mcq",
+      "question_text": "A company has applications that run on Amazon EC2 instances in a VPC One of the applications needs to call the Amazon S3 API to store and read objects. According to the company's security regulations, no traffic from the applications is allowed to travel across the internet. Which solution will meet these requirements?",
+      "question_images": [],
+      "options": [
+        {
+          "key": "A",
+          "text": "Configure an S3 gateway endpoint.",
+          "is_correct": true,
+          "images": [],
+          "bbox": [
+            57.8267707824707,
+            248.9648895263672,
+            224.71768188476562,
+            263.6808776855469
+          ]
+        },
+        {
+          "key": "B",
+          "text": "Create an S3 bucket in a private subnet.",
+          "is_correct": false,
+          "images": [],
+          "bbox": [
+            57.8267707824707,
+            276.77813720703125,
+            245.60983276367188,
+            291.4941101074219
+          ]
+        },
+        {
+          "key": "C",
+          "text": "Create an S3 bucket in the same AWS Region as the EC2 instances.",
+          "is_correct": false,
+          "images": [],
+          "bbox": [
+            57.8267707824707,
+            304.5914306640625,
+            363.2091064453125,
+            319.3074035644531
+          ]
+        },
+        {
+          "key": "D",
+          "text": "Configure a NAT gateway in the same subnet as the EC2 instances",
+          "is_correct": false,
+          "images": [],
+          "bbox": [
+            57.8267707824707,
+            332.40460205078125,
+            360.4082336425781,
+            347.1205749511719
+          ]
+        }
+      ],
+      "answer_text": "A",
+      "answer_images": [],
+      "explanation_text": "VPC Endpoint for S3: A gateway endpoint for Amazon S3 enables you to privately connect your VPC to S3 without requiring an internet gateway, NAT device, VPN connection, or AWS Direct Connect connection. Configuration Steps: In the VPC console, navigate to \"Endpoints\" and create a new endpoint. Select the service name for S3 (com.amazonaws.region.s3). Choose the VPC and the subnets where your EC2 instances are running. Update the route tables for the selected subnets to include a route pointing to the endpoint. Security Compliance: By configuring an S3 gateway endpoint, all traffic between the VPC and S3 stays within the AWS network, complying with the company's security regulations to avoid internet traversal. VPC Endpoints for Amazon S3",
+      "explanation_images": [],
+      "page_start": 14,
+      "page_end": 14,
+      "anomalies": [],
+      "raw_text": "",
+      "anomaly_score": 0,
+      "has_question_text": true,
+      "has_answer": true,
+      "has_explanation": true,
+      "image_count": 0
+    },
+    {
+      "question_number": 14,
+      "question_type": "mcq",
+      "question_text": "A company wants to isolate its workloads by creating an AWS account for each workload. The company needs a solution that centrally manages networking components for the workloads. The solution also must create accounts with automatic security controls (guardrails). Which solution will meet these requirements with the LEAST operational overhead?",
+      "question_images": [],
+      "options": [
+        {
+          "key": "A",
+          "text": "Use AWS Control Tower to deploy accounts. Create a networking account that has a VPC with private subnets and public subnets. Use AWS Resource Access Manager (AWS RAM) to share the subnets with the workload accounts.",
+          "is_correct": true,
+          "images": [],
+          "bbox": [
+            57.8267707824707,
+            193.3384246826172,
+            486.6211242675781,
+            241.96005249023438
+          ]
+        },
+        {
+          "key": "B",
+          "text": "Use AWS Organizations to deploy accounts. Create a networking account that has a VPC with private subnets and public subnets. Use AWS Resource Access Manager (AWS RAM) to share the subnets with the workload accounts.",
+          "is_correct": false,
+          "images": [],
+          "bbox": [
+            57.8267707824707,
+            255.0572967529297,
+            486.6211242675781,
+            303.6789245605469
+          ]
+        },
+        {
+          "key": "C",
+          "text": "Use AWS Control Tower to deploy accounts. Deploy a VPC in each workload account. Configure each VPC to route through an inspection VPC by using a transit gateway attachment.",
+          "is_correct": false,
+          "images": [],
+          "bbox": [
+            57.8267707824707,
+            316.7762451171875,
+            491.1744689941406,
+            348.4450378417969
+          ]
+        },
+        {
+          "key": "D",
+          "text": "Use AWS Organizations to deploy accounts. Deploy a VPC in each workload account. Configure each VPC to route through an inspection VPC by using a transit gateway attachment.",
+          "is_correct": false,
+          "images": [],
+          "bbox": [
+            57.8267707824707,
+            361.54229736328125,
+            489.7344665527344,
+            393.21112060546875
+          ]
+        }
+      ],
+      "answer_text": "A",
+      "answer_images": [],
+      "explanation_text": "AWS Control Tower: Provides a managed service to set up and govern a secure, multi-account AWS environment based on AWS best practices. It automates the setup of AWS Organizations and applies security controls (guardrails). Networking Account: Create a centralized networking account that includes a VPC with both private and public subnets. This centralized VPC will manage and control the networking resources. AWS Resource Access Manager (AWS RAM): Use AWS RAM to share the subnets from the networking account with the other workload accounts. This allows different workload accounts to utilize the shared networking resources without the need to manage their own VPCs. Operational Efficiency: Using AWS Control Tower simplifies the setup and governance of multiple AWS accounts, while AWS RAM facilitates centralized management of networking resources, reducing operational overhead and ensuring consistent security and compliance. AWS Control Tower AWS Resource Access Manager",
+      "explanation_images": [],
+      "page_start": 15,
+      "page_end": 15,
+      "anomalies": [],
+      "raw_text": "",
+      "anomaly_score": 0,
+      "has_question_text": true,
+      "has_answer": true,
+      "has_explanation": true,
+      "image_count": 0
+    },
+    {
+      "question_number": 15,
+      "question_type": "mcq",
+      "question_text": "A company's SAP application has a backend SQL Server database in an on-premises environment. The company wants to migrate its on-premises application and database server to AWS. The company needs an instance type that meets the high demands of its SAP database. On-premises performance data shows that both the SAP application and the database have high memory utilization. Which solution will meet these requirements?",
+      "question_images": [],
+      "options": [
+        {
+          "key": "A",
+          "text": "Use the compute optimized Instance family for the application Use the memory optimized instance family for the database.",
+          "is_correct": false,
+          "images": [],
+          "bbox": [
+            57.8267707824707,
+            338.4970703125,
+            471.31146240234375,
+            370.1658630371094
+          ]
+        },
+        {
+          "key": "B",
+          "text": "Use the storage optimized instance family for both the application and the database",
+          "is_correct": false,
+          "images": [],
+          "bbox": [
+            57.8267707824707,
+            383.2631530761719,
+            442.4555358886719,
+            397.9791259765625
+          ]
+        },
+        {
+          "key": "C",
+          "text": "Use the memory optimized instance family for both the application and the database",
+          "is_correct": true,
+          "images": [],
+          "bbox": [
+            57.8267707824707,
+            411.07635498046875,
+            447.2555236816406,
+            425.7923278808594
+          ]
+        },
+        {
+          "key": "D",
+          "text": "Use the high performance computing (HPC) optimized instance family for the application. Use the memory optimized instance family for the database.",
+          "is_correct": false,
+          "images": [],
+          "bbox": [
+            57.8267707824707,
+            438.8896179199219,
+            504.62109375,
+            470.55841064453125
+          ]
+        }
+      ],
+      "answer_text": "C",
+      "answer_images": [],
+      "explanation_text": "Memory Optimized Instances: These instances are designed to deliver fast performance for workloads that process large data sets in memory. They are ideal for high-performance databases like SAP and applications with high memory utilization. High Memory Utilization: Both the SAP application and the SQL Server database have high memory demands as per the on-premises performance data. Memory optimized instances provide the necessary memory capacity and performance. Instance Types: For the SAP application, using a memory optimized instance ensures the application has sufficient memory to handle the high workload efficiently.",
+      "explanation_images": [],
+      "page_start": 16,
+      "page_end": 16,
+      "anomalies": [],
+      "raw_text": "",
+      "anomaly_score": 0,
+      "has_question_text": true,
+      "has_answer": true,
+      "has_explanation": true,
+      "image_count": 0
+    }
+  ],
+  "validation": {
+    "total_questions_detected": 3,
+    "structured_successfully": 3,
+    "missing_question_numbers": [],
+    "duplicate_question_numbers": [],
+    "questions_missing_answer": [],
+    "questions_missing_explanation": [],
+    "failed_to_structure": [],
+    "orphan_images": 0,
+    "anomaly_breakdown": {},
+    "success_rate": 100.0
+  }
+}

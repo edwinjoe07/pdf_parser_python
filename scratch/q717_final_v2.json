@@ -1,0 +1,142 @@
+﻿{
+  "exam": {
+    "name": "SAA-C03-g0ldvk",
+    "provider": "",
+    "version": "",
+    "source_pdf": "SAA-C03-g0ldvk.pdf",
+    "total_pages": 736,
+    "file_hash": "b34cf8da0a75a8551a69765d6c37dc114ae883b463af0316d33273ad5290019d",
+    "file_size_bytes": 4184020
+  },
+  "parse_version": {
+    "parser_version": "1.0.0",
+    "parse_timestamp": "2026-05-01T11:23:38.944524+00:00",
+    "raw_block_count": 23,
+    "structured_question_count": 2
+  },
+  "questions": [
+    {
+      "question_number": 717,
+      "question_type": "mcq",
+      "question_text": "A security team needs to enforce the rotation of all IAM users' access keys every 90 days. If an access key is found to be older, the key must be made inactive and removed. A solutions architect must create a solution that will check for and remediate any keys older than 90 days. Which solution meets these requirements with the LEAST operational effort?",
+      "question_images": [],
+      "options": [
+        {
+          "key": "A",
+          "text": "Create an AWS Config rule to check for the key age. Configure the AWS Config rule to run an AWS Batch job to remove the key.",
+          "is_correct": false,
+          "images": [],
+          "bbox": [
+            57.8267707824707,
+            751.7223510742188,
+            501.80712890625,
+            766.4383544921875
+          ]
+        },
+        {
+          "key": "B",
+          "text": "Create an Amazon EventBridge rule to check for the key age. Configure the rule to run an AWS Batch job to remove the key.",
+          "is_correct": false,
+          "images": [],
+          "bbox": [
+            57.8267707824707,
+            83.93968200683594,
+            488.12713623046875,
+            115.60848999023438
+          ]
+        },
+        {
+          "key": "C",
+          "text": "Create an AWS Config rule to check for the key age. Define an Amazon EventBridge rule to schedule an AWS Lambda function to remove the key.",
+          "is_correct": true,
+          "images": [],
+          "bbox": [
+            57.8267707824707,
+            128.70579528808594,
+            469.9020690917969,
+            160.37454223632812
+          ]
+        },
+        {
+          "key": "D",
+          "text": "Create an Amazon EventBridge rule to check for the key age. Define an EventBridge rule to run an AWS Batch job to remove the key.",
+          "is_correct": false,
+          "images": [],
+          "bbox": [
+            57.8267707824707,
+            173.4718475341797,
+            503.9596862792969,
+            205.14065551757812
+          ]
+        }
+      ],
+      "answer_text": "C",
+      "answer_images": [],
+      "explanation_text": "The requirement has two parts: (1) continuously or regularly evaluate IAM access key age against a 90-day policy, and (2) remediate noncompliant keys by disabling and deleting them. The least operational effort generally comes from using managed compliance evaluation and lightweight serverless remediation. AWS Config is designed to assess resource configuration compliance over time. Using an AWS Config rule to check access key age fits the governance model because Config maintains a compliance history, supports central reporting, and can evaluate keys across an account (and commonly across an organization with aggregation patterns). After detection, remediation should be automated with minimal infrastructure, and AWS Lambda is the lightest operational tool for directly calling IAM APIs (UpdateAccessKey to Inactive, then DeleteAccessKey) on a schedule. Option C pairs these appropriately: Config performs compliance evaluation, and an EventBridge scheduled rule triggers a Lambda function to remediate keys older than 90 days. This avoids running and maintaining compute fleets or batch infrastructure. It also provides clear separation of duties: Config for detection and evidence, Lambda for corrective action. Options A, B, and D rely on AWS Batch, which introduces additional operational overhead (compute environments, job definitions, queues, scaling, and monitoring) that is unnecessary for a simple IAM housekeeping task. Also, EventBridge by itself is not a compliance evaluation service; it can schedule a job, but it does not inherently track ôkey ageö state or compliance posture the way Config does. Therefore, C best meets the requirement with the least operational effort by using Config for continuous compliance visibility and a scheduled Lambda for automated key deactivation and deletion.",
+      "explanation_images": [],
+      "page_start": 726,
+      "page_end": 726,
+      "anomalies": [],
+      "raw_text": "",
+      "anomaly_score": 0,
+      "has_question_text": true,
+      "has_answer": true,
+      "has_explanation": true,
+      "image_count": 0
+    },
+    {
+      "question_number": 718,
+      "question_type": "mcq",
+      "question_text": "",
+      "question_images": [],
+      "options": [],
+      "answer_text": "",
+      "answer_images": [],
+      "explanation_text": "",
+      "explanation_images": [],
+      "page_start": 727,
+      "page_end": 727,
+      "anomalies": [
+        {
+          "type": "missing_question_text",
+          "severity": 80,
+          "message": "Question has no text content",
+          "context": null
+        },
+        {
+          "type": "missing_answer",
+          "severity": 60,
+          "message": "Question has no answer section",
+          "context": null
+        }
+      ],
+      "raw_text": "",
+      "anomaly_score": 100,
+      "has_question_text": false,
+      "has_answer": false,
+      "has_explanation": false,
+      "image_count": 0
+    }
+  ],
+  "validation": {
+    "total_questions_detected": 2,
+    "structured_successfully": 1,
+    "missing_question_numbers": [],
+    "duplicate_question_numbers": [],
+    "questions_missing_answer": [
+      718
+    ],
+    "questions_missing_explanation": [
+      718
+    ],
+    "failed_to_structure": [
+      718
+    ],
+    "orphan_images": 0,
+    "anomaly_breakdown": {
+      "missing_question_text": 1,
+      "missing_answer": 1
+    },
+    "success_rate": 50.0
+  }
+}

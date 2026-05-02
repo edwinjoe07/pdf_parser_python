@@ -1,0 +1,322 @@
+[
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n16/737",
+    "page_number": 15,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 0,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Question: 14\nA company wants to isolate its workloads by creating an AWS account for each workload. The\ncompany needs a solution that centrally manages networking components for the workloads. The\nsolution also must create accounts with automatic security controls (guardrails).",
+    "page_number": 15,
+    "bbox": [
+      57.8267707824707,
+      84.73478698730469,
+      493.0973815917969,
+      152.42788696289062
+    ],
+    "order_index": 1,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Which solution will meet these requirements with the LEAST operational overhead?",
+    "page_number": 15,
+    "bbox": [
+      57.8267707824707,
+      165.5251922607422,
+      432.00787353515625,
+      180.24118041992188
+    ],
+    "order_index": 2,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "A. Use AWS Control Tower to deploy accounts. Create a networking account that has a VPC with\nprivate subnets and public subnets. Use AWS Resource Access Manager (AWS RAM) to share the\nsubnets with the workload accounts.",
+    "page_number": 15,
+    "bbox": [
+      57.8267707824707,
+      193.3384246826172,
+      486.6211242675781,
+      241.96005249023438
+    ],
+    "order_index": 3,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "B. Use AWS Organizations to deploy accounts. Create a networking account that has a VPC with\nprivate subnets and public subnets. Use AWS Resource Access Manager (AWS RAM) to share the\nsubnets with the workload accounts.",
+    "page_number": 15,
+    "bbox": [
+      57.8267707824707,
+      255.0572967529297,
+      486.6211242675781,
+      303.6789245605469
+    ],
+    "order_index": 4,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "C. Use AWS Control Tower to deploy accounts. Deploy a VPC in each workload account. Configure\neach VPC to route through an inspection VPC by using a transit gateway attachment.",
+    "page_number": 15,
+    "bbox": [
+      57.8267707824707,
+      316.7762451171875,
+      491.1744689941406,
+      348.4450378417969
+    ],
+    "order_index": 5,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "D. Use AWS Organizations to deploy accounts. Deploy a VPC in each workload account. Configure\neach VPC to route through an inspection VPC by using a transit gateway attachment.",
+    "page_number": 15,
+    "bbox": [
+      57.8267707824707,
+      361.54229736328125,
+      489.7344665527344,
+      393.21112060546875
+    ],
+    "order_index": 6,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Answer: A\nExplanation:",
+    "page_number": 15,
+    "bbox": [
+      57.8267707824707,
+      434.9167175292969,
+      475.2222900390625,
+      468.7041931152344
+    ],
+    "order_index": 7,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "AWS Control Tower: Provides a managed service to set up and govern a secure, multi-account AWS\nenvironment based on AWS best practices. It automates the setup of AWS Organizations and applies\nsecurity controls (guardrails).",
+    "page_number": 15,
+    "bbox": [
+      57.8267707824707,
+      509.61468505859375,
+      503.6820068359375,
+      558.2363891601562
+    ],
+    "order_index": 8,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Networking Account:",
+    "page_number": 15,
+    "bbox": [
+      57.8267707824707,
+      571.3336181640625,
+      152.18893432617188,
+      586.0496215820312
+    ],
+    "order_index": 9,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Create a centralized networking account that includes a VPC with both private and public subnets.",
+    "page_number": 15,
+    "bbox": [
+      57.8267707824707,
+      599.1468505859375,
+      494.00860595703125,
+      613.8628540039062
+    ],
+    "order_index": 10,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "This centralized VPC will manage and control the networking resources.",
+    "page_number": 15,
+    "bbox": [
+      57.8267707824707,
+      626.9600830078125,
+      376.4274597167969,
+      641.6760864257812
+    ],
+    "order_index": 11,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "AWS Resource Access Manager (AWS RAM):",
+    "page_number": 15,
+    "bbox": [
+      57.8267707824707,
+      654.7733154296875,
+      253.95565795898438,
+      669.4893188476562
+    ],
+    "order_index": 12,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Use AWS RAM to share the subnets from the networking account with the other workload accounts.",
+    "page_number": 15,
+    "bbox": [
+      57.8267707824707,
+      682.5866088867188,
+      503.84881591796875,
+      697.3026123046875
+    ],
+    "order_index": 13,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "This allows different workload accounts to utilize the shared networking resources without the need\nto manage their own VPCs.",
+    "page_number": 15,
+    "bbox": [
+      57.8267707824707,
+      710.3998413085938,
+      503.7251892089844,
+      742.0686645507812
+    ],
+    "order_index": 14,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Operational Efficiency: Using AWS Control Tower simplifies the setup and governance of multiple",
+    "page_number": 15,
+    "bbox": [
+      57.8267707824707,
+      755.1658935546875,
+      489.24609375,
+      769.8818969726562
+    ],
+    "order_index": 15,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  }
+]

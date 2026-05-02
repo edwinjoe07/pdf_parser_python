@@ -130,6 +130,7 @@ class QuestionOption(BaseModel):
     text: str = ""
     is_correct: bool = False
     images: list[str] = Field(default_factory=list)
+    bbox: Optional[tuple[float, float, float, float]] = None
 
 
 class ParsedQuestion(BaseModel):

@@ -1,0 +1,242 @@
+[
+  {
+    "type": "text",
+    "content": "Questions and Answers PDF\n728/737",
+    "page_number": 727,
+    "bbox": [
+      45.119998931884766,
+      28.35401153564453,
+      550.1599731445312,
+      41.15801239013672
+    ],
+    "order_index": 0,
+    "font_info": {
+      "name": "DejaVuSerifCondensed",
+      "size": 11.0,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Batch job to remove the key.",
+    "page_number": 727,
+    "bbox": [
+      57.8267707824707,
+      56.1264533996582,
+      184.911865234375,
+      70.84243774414062
+    ],
+    "order_index": 1,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "B. Create an Amazon EventBridge rule to check for the key age. Configure the rule to run an AWS\nBatch job to remove the key.",
+    "page_number": 727,
+    "bbox": [
+      57.8267707824707,
+      83.93968200683594,
+      488.12713623046875,
+      115.60848999023438
+    ],
+    "order_index": 2,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "C. Create an AWS Config rule to check for the key age. Define an Amazon EventBridge rule to\nschedule an AWS Lambda function to remove the key.",
+    "page_number": 727,
+    "bbox": [
+      57.8267707824707,
+      128.70579528808594,
+      469.9020690917969,
+      160.37454223632812
+    ],
+    "order_index": 3,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "D. Create an Amazon EventBridge rule to check for the key age. Define an EventBridge rule to run an\nAWS Batch job to remove the key.",
+    "page_number": 727,
+    "bbox": [
+      57.8267707824707,
+      173.4718475341797,
+      503.9596862792969,
+      205.14065551757812
+    ],
+    "order_index": 4,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Answer: C\nExplanation:",
+    "page_number": 727,
+    "bbox": [
+      57.8267707824707,
+      246.8462371826172,
+      474.6304626464844,
+      280.6336975097656
+    ],
+    "order_index": 5,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "The requirement has two parts: (1) continuously or regularly evaluate IAM access key age against a\n90-day policy, and (2) remediate noncompliant keys by disabling and deleting them. The least\noperational effort generally comes from using managed compliance evaluation and lightweight\nserverless remediation.",
+    "page_number": 727,
+    "bbox": [
+      57.8267707824707,
+      321.544189453125,
+      497.6974792480469,
+      387.11871337890625
+    ],
+    "order_index": 6,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "AWS Config is designed to assess resource configuration compliance over time. Using an AWS Config\nrule to check access key age fits the governance model because Config maintains a compliance\nhistory, supports central reporting, and can evaluate keys across an account (and commonly across\nan organization with aggregation patterns). After detection, remediation should be automated with\nminimal infrastructure, and AWS Lambda is the lightest operational tool for directly calling IAM APIs\n(UpdateAccessKey to Inactive, then DeleteAccessKey) on a schedule.",
+    "page_number": 727,
+    "bbox": [
+      57.8267707824707,
+      400.2159423828125,
+      504.55670166015625,
+      499.69610595703125
+    ],
+    "order_index": 7,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Option C pairs these appropriately: Config performs compliance evaluation, and an EventBridge\nscheduled rule triggers a Lambda function to remediate keys older than 90 days. This avoids running\nand maintaining compute fleets or batch infrastructure. It also provides clear separation of duties:\nConfig for detection and evidence, Lambda for corrective action.",
+    "page_number": 727,
+    "bbox": [
+      57.8267707824707,
+      512.7933349609375,
+      503.83160400390625,
+      578.3678588867188
+    ],
+    "order_index": 8,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Options A, B, and D rely on AWS Batch, which introduces additional operational overhead (compute\nenvironments, job definitions, queues, scaling, and monitoring) that is unnecessary for a simple IAM\nhousekeeping task. Also, EventBridge by itself is not a compliance evaluation service; it can schedule\na job, but it does not inherently track “key age” state or compliance posture the way Config does.",
+    "page_number": 727,
+    "bbox": [
+      57.8267707824707,
+      591.465087890625,
+      505.33209228515625,
+      657.0396118164062
+    ],
+    "order_index": 9,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Therefore, C best meets the requirement with the least operational effort by using Config for\ncontinuous compliance visibility and a scheduled Lambda for automated key deactivation and\ndeletion.",
+    "page_number": 727,
+    "bbox": [
+      57.8267707824707,
+      670.1368408203125,
+      474.9154968261719,
+      718.7584838867188
+    ],
+    "order_index": 10,
+    "font_info": {
+      "name": "Calibri",
+      "size": 11.472238540649414,
+      "flags": 4,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  },
+  {
+    "type": "text",
+    "content": "Question: 718",
+    "page_number": 727,
+    "bbox": [
+      57.8267707824707,
+      760.464111328125,
+      138.08876037597656,
+      779.2229614257812
+    ],
+    "order_index": 11,
+    "font_info": {
+      "name": "Calibri,Bold",
+      "size": 14.623952865600586,
+      "flags": 20,
+      "color": 0,
+      "is_bold": false,
+      "is_italic": false
+    }
+  }
+]

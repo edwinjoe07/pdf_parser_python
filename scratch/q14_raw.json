@@ -1,0 +1,25 @@
+﻿
++-----------------------------+
+| PDF Parser Engine v1.0.0    |
+| Parsing: SAA-C03-g0ldvk.pdf |
++-----------------------------+
+
+  Extracting blocks... ---------------------------------------- 3/3 0:00:00
+
+          Exam Information           
++-----------------------------------+
+| Property    | Value               |
+|-------------+---------------------|
+| Name        | SAA-C03-g0ldvk      |
+| Provider    | (not set)           |
+| Source PDF  | SAA-C03-g0ldvk.pdf  |
+| Total Pages | 736                 |
+| File Hash   | b34cf8da0a75a855... |
++-----------------------------------+
+
+                   Validation Report                   
++-----------------------------------------------------+
+| Metric                        |      Value | Status |
+|-------------------------------+------------+--------|
+| Total Questions Detected      |          1 |   Parse complete: 1 questions
+Success rate: 100.0%

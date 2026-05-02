@@ -1,0 +1,73 @@
+{
+  "exam": {
+    "name": "SAA-C03-g0ldvk",
+    "provider": "",
+    "version": "",
+    "source_pdf": "SAA-C03-g0ldvk.pdf",
+    "total_pages": 736,
+    "file_hash": "b34cf8da0a75a8551a69765d6c37dc114ae883b463af0316d33273ad5290019d",
+    "file_size_bytes": 4184020
+  },
+  "parse_version": {
+    "parser_version": "1.0.0",
+    "parse_timestamp": "2026-05-01T11:20:27.821912+00:00",
+    "raw_block_count": 12,
+    "structured_question_count": 1
+  },
+  "questions": [
+    {
+      "question_number": 718,
+      "question_type": "mcq",
+      "question_text": "",
+      "question_images": [],
+      "options": [],
+      "answer_text": "",
+      "answer_images": [],
+      "explanation_text": "",
+      "explanation_images": [],
+      "page_start": 727,
+      "page_end": 727,
+      "anomalies": [
+        {
+          "type": "missing_question_text",
+          "severity": 80,
+          "message": "Question has no text content",
+          "context": null
+        },
+        {
+          "type": "missing_answer",
+          "severity": 60,
+          "message": "Question has no answer section",
+          "context": null
+        }
+      ],
+      "raw_text": "",
+      "anomaly_score": 100,
+      "has_question_text": false,
+      "has_answer": false,
+      "has_explanation": false,
+      "image_count": 0
+    }
+  ],
+  "validation": {
+    "total_questions_detected": 1,
+    "structured_successfully": 0,
+    "missing_question_numbers": [],
+    "duplicate_question_numbers": [],
+    "questions_missing_answer": [
+      718
+    ],
+    "questions_missing_explanation": [
+      718
+    ],
+    "failed_to_structure": [
+      718
+    ],
+    "orphan_images": 0,
+    "anomaly_breakdown": {
+      "missing_question_text": 1,
+      "missing_answer": 1
+    },
+    "success_rate": 0.0
+  }
+}

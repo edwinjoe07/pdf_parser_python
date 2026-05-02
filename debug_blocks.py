@@ -3,7 +3,7 @@ import sys
 import io
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
-pdf_path = r"D:\coreminds\AWS (2)\AWS\SOA-C02-mrhln7.pdf"
+pdf_path = r"D:\CoreMinds\PDF\AWS\SOA-C02-mrhln7.pdf"
 doc = fitz.open(pdf_path)
 
 for page_num in [13, 14]:

@@ -84,6 +84,7 @@ class ValidationEngine:
             is_structured = (
                 q.has_question_text
                 and q.has_answer
+                and len(q.options) > 0
             )
 
             if is_structured:

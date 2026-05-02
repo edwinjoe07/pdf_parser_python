@@ -42,6 +42,7 @@ class BlockExtractor:
         self.dpi = dpi
 
         self.image_output_dir.mkdir(parents=True, exist_ok=True)
+        self._boilerplate_blocks = set() # (rounded_bbox, text_hash)
 
     @staticmethod
     def get_page_count_static(pdf_path: str) -> int:
@@ -115,7 +116,8 @@ class BlockExtractor:
                     ))
 
         # ─── 3. Sort & Re-index ───────────────────────────────────────
-        current_page_blocks.sort(key=lambda x: (x.bbox[1], x.bbox[0]))
+        current_page_blocks = self._sort_blocks_by_reading_order(
+            current_page_blocks)
         for i, b in enumerate(current_page_blocks):
             b.order_index = global_order + i
 
@@ -160,6 +162,10 @@ class BlockExtractor:
                 page = doc[page_idx]
                 page_num = page_idx + 1
 
+                # ─── 0. Pre-analyze for Boilerplate (on first pass or first few pages) ───
+                if page_idx == 0:
+                    self._analyze_boilerplate(doc, start_page, end_page)
+
                 # ─── 1. Extract Images First (High Quality) ────────────────────────
                 page_images = self._extract_images_from_page(
                     page, page_num, global_order)
@@ -180,6 +186,9 @@ class BlockExtractor:
                     if block["type"] == 0:  # Text
                         text_content = self._process_text_block(block)
                         if text_content.strip():
+                            # Filter dynamic boilerplate
+                            if self._is_boilerplate(block["bbox"], text_content):
+                                continue
                             # Extract font info from first span
                             font_info = None
                             if block.get("lines") and block["lines"][0].get("spans"):
@@ -203,8 +212,9 @@ class BlockExtractor:
                             ))
 
                 # ─── 3. Final Page Sort & Indexing ─────────────────────────────────
-                # Sort by vertical position (Y) primarily -> Reading Order
-                current_page_blocks.sort(key=lambda x: (x.bbox[1], x.bbox[0]))
+                # Sort by horizontal rows (Reading Order)
+                current_page_blocks = self._sort_blocks_by_reading_order(
+                    current_page_blocks)
 
                 # Add to main list
                 all_blocks.extend(current_page_blocks)
@@ -223,6 +233,52 @@ class BlockExtractor:
 
         return all_blocks
 
+    def _analyze_boilerplate(self, doc: fitz.Document, start_page: int, end_page: int):
+        """
+        Identify recurring text blocks at same coordinates across pages.
+        Useful for dynamic header/footer removal.
+        """
+        occurrences = {} # (bbox, text) -> count
+        
+        # Sample up to 10 pages for speed
+        sample_pages = list(range(start_page - 1, end_page))
+        if len(sample_pages) > 10:
+            sample_pages = sample_pages[:5] + sample_pages[-5:]
+            
+        for p_idx in sample_pages:
+            page = doc[p_idx]
+            blocks = page.get_text("blocks")
+            for b in blocks:
+                if b[6] == 0: # Text
+                    text = b[4].strip()
+                    if not text: continue
+                    # Round bbox to ignore minor offsets
+                    bbox = tuple(round(x/2)*2 for x in b[:4]) 
+                    key = (bbox, text)
+                    occurrences[key] = occurrences.get(key, 0) + 1
+        
+        # If text repeats at same coords on >30% of sampled pages, it's boilerplate
+        threshold = len(sample_pages) * 0.3
+        for (bbox, text), count in occurrences.items():
+            if count > threshold:
+                self._boilerplate_blocks.add((bbox, text))
+        
+        if self._boilerplate_blocks:
+            logger.info(f"Detected {len(self._boilerplate_blocks)} dynamic boilerplate blocks (headers/footers)")
+
+    def _is_boilerplate(self, bbox: tuple, text: str) -> bool:
+        """Check if a block is identified as recurring boilerplate."""
+        text_clean = text.strip()
+        
+        # NEVER filter lines that look like structural anchors
+        # This prevents "Question:" labels from being swallowed if they repeat at same coords
+        lower_text = text_clean.lower()
+        if any(anchor in lower_text for anchor in ["question:", "answer:", "ans:", "q:"]):
+            return False
+            
+        rounded_bbox = tuple(round(x/2)*2 for x in bbox)
+        return (rounded_bbox, text_clean) in self._boilerplate_blocks
+
     def _process_text_block(self, block: dict) -> str:
         """Combine spans in a text block into a single string."""
         lines = []
@@ -230,6 +286,49 @@ class BlockExtractor:
             line_text = "".join(span["text"] for span in line.get("spans", []))
             lines.append(line_text)
         return "\n".join(lines)
+
+    def _sort_blocks_by_reading_order(
+        self, blocks: list[ContentBlock], tolerance: float = 5.0
+    ) -> list[ContentBlock]:
+        """
+        Sort blocks into a natural reading order (top-to-bottom, left-to-right).
+        Uses 'line-binning' to group blocks that are on roughly the same horizontal line.
+        """
+        if not blocks:
+            return []
+
+        # 1. Group blocks into horizontal lines
+        lines: list[list[ContentBlock]] = []
+        # Sort by top coordinate first to process in vertical order
+        for b in sorted(blocks, key=lambda x: x.bbox[1]):
+            y_mid = (b.bbox[1] + b.bbox[3]) / 2
+            
+            added = False
+            for line in lines:
+                # Calculate average Y-mid for the line
+                line_y_mid = sum((bl.bbox[1] + bl.bbox[3]) / 2 for bl in line) / len(line)
+                
+                # If block is within tolerance of this line, add it
+                if abs(y_mid - line_y_mid) < tolerance:
+                    line.append(b)
+                    added = True
+                    break
+            
+            if not added:
+                lines.append([b])
+
+        # 2. Sort each line by X-coordinate
+        # 3. Sort lines by their average Y-coordinate
+        sorted_lines = sorted(
+            lines, 
+            key=lambda l: sum((bl.bbox[1] + bl.bbox[3]) / 2 for bl in l) / len(l)
+        )
+        
+        final_blocks = []
+        for line in sorted_lines:
+            final_blocks.extend(sorted(line, key=lambda x: x.bbox[0]))
+            
+        return final_blocks
 
     def _extract_images_from_page(
         self, page: fitz.Page, page_num: int, start_order: int

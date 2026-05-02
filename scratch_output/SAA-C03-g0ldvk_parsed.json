@@ -1,0 +1,51 @@
+{
+  "exam": {
+    "name": "SAA-C03-g0ldvk",
+    "provider": "",
+    "version": "",
+    "source_pdf": "SAA-C03-g0ldvk.pdf",
+    "total_pages": 736,
+    "file_hash": "b34cf8da0a75a8551a69765d6c37dc114ae883b463af0316d33273ad5290019d",
+    "file_size_bytes": 4184020
+  },
+  "parse_version": {
+    "parser_version": "1.0.0",
+    "parse_timestamp": "2026-05-01T11:13:44.901718+00:00",
+    "raw_block_count": 16,
+    "structured_question_count": 1
+  },
+  "questions": [
+    {
+      "question_number": 14,
+      "question_type": "mcq",
+      "question_text": "A company wants to isolate its workloads by creating an AWS account for each workload. The company needs a solution that centrally manages networking components for the workloads. The",
+      "question_images": [],
+      "options": [],
+      "answer_text": "A",
+      "answer_images": [],
+      "explanation_text": "also must create accounts with automatic security controls (guardrails). Which solution will meet these requirements with the LEAST operational overhead? A. Use AWS Control Tower to deploy accounts. Create a networking account that has a VPC with private subnets and public subnets. Use AWS Resource Access Manager (AWS RAM) to share the subnets with the workload accounts. B. Use AWS Organizations to deploy accounts. Create a networking account that has a VPC with private subnets and public subnets. Use AWS Resource Access Manager (AWS RAM) to share the subnets with the workload accounts. C. Use AWS Control Tower to deploy accounts. Deploy a VPC in each workload account. Configure each VPC to route through an inspection VPC by using a transit gateway attachment. D. Use AWS Organizations to deploy accounts. Deploy a VPC in each workload account. Configure each VPC to route through an inspection VPC by using a transit gateway attachment. AWS Control Tower: Provides a managed service to set up and govern a secure, multi-account AWS environment based on AWS best practices. It automates the setup of AWS Organizations and applies security controls (guardrails). Networking Account: Create a centralized networking account that includes a VPC with both private and public subnets. This centralized VPC will manage and control the networking resources. AWS Resource Access Manager (AWS RAM): Use AWS RAM to share the subnets from the networking account with the other workload accounts. This allows different workload accounts to utilize the shared networking resources without the need to manage their own VPCs. Operational Efficiency: Using AWS Control Tower simplifies the setup and governance of multiple",
+      "explanation_images": [],
+      "page_start": 15,
+      "page_end": 15,
+      "anomalies": [],
+      "raw_text": "",
+      "anomaly_score": 0,
+      "has_question_text": true,
+      "has_answer": true,
+      "has_explanation": true,
+      "image_count": 0
+    }
+  ],
+  "validation": {
+    "total_questions_detected": 1,
+    "structured_successfully": 1,
+    "missing_question_numbers": [],
+    "duplicate_question_numbers": [],
+    "questions_missing_answer": [],
+    "questions_missing_explanation": [],
+    "failed_to_structure": [],
+    "orphan_images": 0,
+    "anomaly_breakdown": {},
+    "success_rate": 100.0
+  }
+}

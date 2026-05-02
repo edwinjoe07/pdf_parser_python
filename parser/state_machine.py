@@ -42,9 +42,9 @@ logger = logging.getLogger(__name__)
 
 # ─── Anchor Patterns ──────────────────────────────────────────────────────────
 
-# Matches "Question: 1", "Question 42", "Question: 123" at start of line
+# Matches "Question: 1", "Question 42", "Q: 1", "item 1"
 QUESTION_PATTERN = re.compile(
-    r"^\s*Question\s*:?\s*(\d+)", re.IGNORECASE
+    r"^\s*(?:Question|Q|item)\b\s*:?\s*(\d+)", re.IGNORECASE
 )
 
 # Matches "A.", "B.", "A)", "(A)", "A:", "A -" style options
@@ -52,14 +52,16 @@ OPTION_PATTERN = re.compile(
     r"^\s*\(?([A-Z])\s*[\.\):\-\u2013\u2014]\s*", re.IGNORECASE
 )
 
-# Matches "Answer:", "Answer", "ANSWER:", "Correct Answer:", "Ans:", "Ans."
+# Matches "Answer: A", "Ans: A", "Key: A", "Correct Answer: A"
+# Must have a colon OR be followed directly by a single letter A-E (using lookahead)
 ANSWER_PATTERN = re.compile(
-    r"^\s*(?:Correct\s+)?(?:Answer|Ans|Key)[\s.:]*", re.IGNORECASE
+    r"^\s*(?:Correct\s+)?(?:Answer|Ans|Key|Correct\s+Key)\s*(?::\s*|(?=\s+[A-E]\b))", re.IGNORECASE
 )
 
-# Matches "Explanation:", "Reference:", "Rationale:", "Solution:"
+# Matches "Explanation:", "Reference:", "Rationale:", "Solution:", "References:"
+# MUST have a colon to avoid false positives in body text.
 EXPLANATION_PATTERN = re.compile(
-    r"^\s*(Explanation|Reference|Rationale|Solution)\s*:?\s*", re.IGNORECASE
+    r"^\s*(?:Explanation|Rationale|Solution|Reference|References)\s*:\s*", re.IGNORECASE
 )
 
 # Matches standalone "HOTSPOT" line (case-insensitive)
@@ -106,9 +108,15 @@ IGNORE_PATTERNS = [
     re.compile(r"certification.s*prep", re.IGNORECASE),
     re.compile(r"dumpsgate\.com", re.IGNORECASE),
 
-    # ── Box/drag-drop noise ──
-    re.compile(r"^\s*Box\s*\d+\s*:", re.IGNORECASE),
-    re.compile(r"^\s*Select and Place:", re.IGNORECASE),
+    # ── Common Exam Dump Headers ──
+    # e.g. "CY0-001: Actual Exam Q&A |", "MS-900: Actual Exam Q&A", "Latest Exam Questions"
+    re.compile(r"^\s*[A-Z0-9\-]+\s*:\s*Actual\s+Exam\s+Q&A\s*\|?.*$", re.IGNORECASE),
+    re.compile(r"^\s*Actual\s+Exam\s+Questions\s*&\s*Answers\s*$", re.IGNORECASE),
+    re.compile(r"^\s*Practice\s+Questions\s*&\s*Answers\s*$", re.IGNORECASE),
+    re.compile(r"^\s*Guaranteed\s+Success\b", re.IGNORECASE),
+    re.compile(r"^\s*Pass\s+Exam\s+with\s+High\s+Score\s*$", re.IGNORECASE),
+    # ── Exam Instructions ──
+    re.compile(r"^\s*\(?Choose\s+(the\s+)?(best|all\s+that\s+apply)\s+answer\.?\)?\s*$", re.IGNORECASE),
 ]
 
 # Cover page noise: standalone lines that are just a number or short exam code
@@ -234,13 +242,32 @@ class StateMachineParser:
                 continue
 
             # Option Anchor (e.g. "A.")
-            opt_match = OPTION_PATTERN.match(line_str)
-            if opt_match and self.state in [ParserState.QUESTION_BODY, ParserState.OPTION]:
-                key = opt_match.group(1).upper()
-                self._start_new_option(key)
-                remainder = line_str[opt_match.end():].strip()
-                if remainder:
-                    self._append_text(remainder)
+            # Special handling: if multiple options are in one line, we need to split them.
+            # e.g. "A. Option A B. Option B"
+            # Option Anchor (e.g. "A.", "1.", "(A)")
+            # Support letters A-Z or numbers 1-9
+            # Allow dots, parens, colons, dashes, tabs, or at least 2 consecutive spaces as a separator
+            # Negative lookahead (?!\d) protects IP addresses like "10.0.1.1" by ensuring a dot after a number isn't followed by another number.
+            opt_matches = list(re.finditer(r"(?:^|(?<=\s))\(?([A-Z]|\d{1,2})\b\s*(?:(?:[\.\-\u2013\u2014](?!\d))|[\):\t]|\s{2,})\s*", line_str))
+            
+            # If we find options, we process them.
+            if opt_matches and self.state in [ParserState.QUESTION_BODY, ParserState.OPTION, ParserState.ANSWER]:
+                # If the first match doesn't start at 0, the text before it belongs to the previous state
+                if opt_matches[0].start() > 0:
+                    prefix = line_str[:opt_matches[0].start()].strip()
+                    if prefix:
+                        self._append_text(prefix)
+                
+                # Process each segment
+                for i, match in enumerate(opt_matches):
+                    key = match.group(1).upper()
+                    self._start_new_option(key, block.bbox)
+                    
+                    # End of current option is the start of next match or end of line
+                    end_pos = opt_matches[i+1].start() if i + 1 < len(opt_matches) else len(line_str)
+                    remainder = line_str[match.end():end_pos].strip()
+                    if remainder:
+                        self._append_text(remainder)
                 continue
 
             # Answer Anchor (e.g. "Answer: B")
@@ -299,10 +326,10 @@ class StateMachineParser:
         self.state = ParserState.QUESTION_BODY
         self.question_numbers.add(q_num)
 
-    def _start_new_option(self, key: str):
+    def _start_new_option(self, key: str, bbox: Optional[tuple[float, float, float, float]] = None):
         """Switch to OPTION state and create structure."""
         self.state = ParserState.OPTION
-        self.current_option = QuestionOption(key=key)
+        self.current_option = QuestionOption(key=key, bbox=bbox)
         self.current_question.options.append(self.current_option)
 
     def _append_text(self, text: str):
@@ -336,21 +363,47 @@ class StateMachineParser:
                 self.current_question.explanation_text = text
 
     def _assign_image(self, block: ContentBlock):
-        """Strict assignment of images based on state."""
+        """Strict assignment of images based on state and spatial proximity."""
         q = self.current_question
         path = block.content
-
-        # Debug logging as requested
-        print(f"[Q{q.question_number}] Assigning image to {self.state}")
+        img_bbox = block.bbox
 
         if self.state == ParserState.QUESTION_BODY:
             q.question_images.append(path)
 
         elif self.state == ParserState.OPTION:
-            if self.current_option:
-                self.current_option.images.append(path)
+            # Spatial Assignment Logic:
+            # If multiple options exist on the current page, find the one with the best X-overlap
+            # or the one directly above this image.
+            
+            target_option = self.current_option
+            
+            # If there are multiple options, check if another option on the same row is a better fit
+            if len(q.options) > 1:
+                # Find options on the same page as the image
+                # (We assume options are already added to q.options in order)
+                
+                # Check for X-overlap if the image is below some options
+                best_opt = None
+                max_overlap = -1.0
+                
+                for opt in q.options:
+                    if not opt.bbox:
+                        continue
+                    
+                    # Check horizontal overlap (X-axis)
+                    overlap = min(img_bbox[2], opt.bbox[2]) - max(img_bbox[0], opt.bbox[0])
+                    if overlap > max_overlap:
+                        max_overlap = overlap
+                        best_opt = opt
+                
+                if best_opt and max_overlap > 0:
+                    target_option = best_opt
+                    logger.debug(f"[Q{q.question_number}] Spatially assigned image to Option {target_option.key}")
+
+            if target_option:
+                target_option.images.append(path)
             else:
-                # Fallback to question body if option object missing
                 q.question_images.append(path)
 
         elif self.state == ParserState.ANSWER:
@@ -434,22 +487,16 @@ class StateMachineParser:
         # Get the set of valid option keys for this question
         valid_keys = {opt.key.upper() for opt in q.options}
 
-        # Strategy 1: Find comma/space separated letters
-        # e.g., "C, D" → ["C", "D"], "A,B" → ["A", "B"]
-        ans_keys = set()
-
-        # Try splitting by comma first
-        if "," in answer:
-            parts = [p.strip() for p in answer.split(",")]
-            for part in parts:
-                # Each part should be a single letter
-                letters = re.findall(r"\b([A-Z])\b", part)
-                ans_keys.update(letters)
-        else:
-            # Try finding individual uppercase letters
-            # "AB" → ["A", "B"], "B" → ["B"]
-            letters = re.findall(r"[A-Z]", answer)
-            ans_keys.update(letters)
+        # Strategy 1: Find standalone uppercase letters
+        # e.g., "B" → ["B"], "C, D" → ["C", "D"], "A,B" → ["A", "B"]
+        # We use word boundaries \b to avoid picking up letters from inside words 
+        # like "THE" or "CORRECT"
+        ans_keys = set(re.findall(r"\b([A-Z])\b", answer))
+        
+        # Strategy 2: If no standalone letters found, try finding any uppercase letters
+        # but only if the string is very short (likely just the keys)
+        if not ans_keys and len(answer) <= 5:
+            ans_keys.update(re.findall(r"([A-Z])", answer))
 
         # Only mark keys that actually exist as options
         final_keys = ans_keys & valid_keys if valid_keys else ans_keys
